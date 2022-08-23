@@ -18,3 +18,9 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .light_shadow {
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.03);
+    }
+}
