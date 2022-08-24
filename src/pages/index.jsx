@@ -154,7 +154,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                <Link href="/">
+                <Link href="/#student_testimonials">
                     <a className="hidden mx-auto rounded-full w-16 h-16 md:flex items-center justify-center bg-capabl_primary p-5">
                         <img className="w-full object-contain pt-1" src="/images/svgs/chevron_down.svg" alt="chevron" />
                     </a>
