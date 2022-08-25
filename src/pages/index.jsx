@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import ExposureAccordian from "../components/homePage/ExposureAccordian";
 import { studentTestimonials } from "../utils/data/student_testimonials";
 
 export default function Home() {
@@ -188,7 +189,7 @@ export default function Home() {
                 </section>
 
                 {/* Associations */}
-                <section id="associations" className="mt-8 container mx-auto max-w-7xl px-4 py-4 md:py-16">
+                <section id="associations" className="mt-8 container mx-auto max-w-7xl px-4 pt-4 md:pt-16">
                     <h2 className="text-center font-normal text-lg md:text-5xl mb-4 md:mb-24">
                         {`You're in a`} <br /> <span className="text-capabl_primary font-semibold">Capabl Company</span>
                     </h2>
@@ -268,6 +269,44 @@ export default function Home() {
                                 </div>
                                 <div className="w-full max-w-[5rem]">
                                     <img className="w-full object-contain" src="/images/raw_images/ansys_logo.jpg" alt="ansys" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Exposure */}
+                <section id="exposure" className="p-4 pt-0 md:pt-8">
+                    <div className="bg-[#F2F4F7] rounded-3xl max-w-screen-2xl mx-auto px-4">
+                        <div className="max-w-6xl mx-auto pb-4 pt-8 md:pt-16 md:pb-6 grid grid-cols-2 md:flex md:items-center gap-4 md:gap-10 justify-content-center md:justify-center">
+                            <div className="p-4 flex items-center justify-center max-w-[13rem] md:max-w-[17.5rem]">
+                                <img src="/images/svgs/focus_man.svg" alt="focus man" />
+                            </div>
+                            <div className="block md:flex md:items-start md:gap-10">
+                                <div className="relative mb-4 flex-shrink-0">
+                                    <h3 className="font-semibold text-base md:text-4xl md:leading-[3rem] whitespace-nowrap">
+                                        A better than IIT <br />
+                                        Ecosystem!
+                                    </h3>
+                                    <img
+                                        className="absolute top-[2rem] md:top-[4rem] left-[4rem] md:left-[9rem] max-w-[3rem] md:max-w-[7rem] w-full"
+                                        src="/images/svgs/arrow_curved.svg"
+                                        alt="curved arrow"
+                                    />
+                                </div>
+                                <p className="text-[#636363] font-medium text-[9px] md:text-base max-w-xs">
+                                    1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and
+                                    industrial exposure.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="hidden md:block">
+                            <hr />
+                            <div className="max-w-6xl mx-auto flex items-start justify-between gap-10 py-20">
+                                <ExposureAccordian />
+                                <div>
+                                    <img src="/images/raw_images/teaching.png" alt="teaching" />
                                 </div>
                             </div>
                         </div>
