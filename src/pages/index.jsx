@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ExposureAccordian from "../components/homePage/ExposureAccordian";
 import { studentTestimonials } from "../utils/data/student_testimonials";
+import HelpingAreasSlider from "../components/homePage/HelpingAreasSlider";
 
 export default function Home() {
     return (
@@ -311,6 +314,27 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </section>
+
+                {/* We help you make a career */}
+                <section id="helps_you_make_career" className="p-2 pt-8 md:pt-20">
+                    <div className="max-w-xs md:max-w-3xl mx-auto mb-3">
+                        <h3 className="font-medium text-base md:text-5xl text-center mb-3 md:mb-8">We help you make a Career</h3>
+                        <p className="font-medium text-[10px] md:text-base text-center text-[#636363] md:px-20 md:mb-10">
+                            We don't just teach a course - Only platform that has programs defined as per outcome you are looking for - because it matters to
+                            you!
+                        </p>
+                    </div>
+
+                    <HelpingAreasSlider />
+                </section>
+
+                <section id="cta" className="px-4 pt-0 pb-8 md:pt-0 md:pb-16 flex items-center justify-center">
+                    <Link href="/">
+                        <a className="bg-capabl_primary rounded-lg py-2 px-6 font-medium text-base text-[#272727] border-2 border-transparent hover:border-capabl_primary hover:bg-transparent transition duration-300">
+                            Join Our Tribe
+                        </a>
+                    </Link>
                 </section>
             </main>
         </div>
