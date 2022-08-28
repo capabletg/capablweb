@@ -321,8 +321,8 @@ export default function Home() {
                     <div className="max-w-xs md:max-w-3xl mx-auto mb-3">
                         <h3 className="font-medium text-base md:text-5xl text-center mb-3 md:mb-8">We help you make a Career</h3>
                         <p className="font-medium text-[10px] md:text-base text-center text-[#636363] md:px-20 md:mb-10">
-                            We don't just teach a course - Only platform that has programs defined as per outcome you are looking for - because it matters to
-                            you!
+                            {`We don't just teach a course - Only platform that has programs defined as per outcome you are looking for - because it matters to
+                            you!`}
                         </p>
                     </div>
 
