@@ -361,7 +361,7 @@ export default function Home() {
                                 <div className="max-w-sm flex-shrink-0">
                                     <h3 className="font-semibold text-lg md:text-4xl text-[#002639] mb-3 md:mb-8">Choose your domain</h3>
                                     <p className="font-medium text-sm md:text-base text-[#002639]">
-                                        Designed Specially for College Students. And, we provide you 'licence to skill' - pay for one, get them all!!!
+                                        {`Designed Specially for College Students. And, we provide you 'licence to skill' - pay for one, get them all!!!`}
                                     </p>
                                 </div>
                                 <div className="md:col-span-2 hidden w-full min-h-[13rem] relative md:block flex-grow overflow-hidden rounded-tr-3xl">
