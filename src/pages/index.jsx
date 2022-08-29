@@ -336,6 +336,152 @@ export default function Home() {
                         </a>
                     </Link>
                 </section>
+
+                {/* Choose you domain */}
+                <section id="choose_your_domain" className="container mx-auto max-w-7xl px-0 md:px-4 relative mb-40 mt-20">
+                    {/* Top Circle */}
+                    <div
+                        style={{ background: "radial-gradient(147.01% 539.45% at 50% 50%, #FFAF00 0%, #FF0000 100%)" }}
+                        className="rounded-full absolute top-0 left-0 transform -translate-x-[30%] md:-translate-x-[10%] -translate-y-[25%] md:translate-y-[17%] z-0 w-1/2 min-w-[200px] max-w-md aspect-square transition duration-300"
+                    />
+
+                    {/* Bottom Circle */}
+                    <div
+                        style={{ background: "radial-gradient(400.82% 264.77% at 50% 50%, #FFAF00 0%, #FF0000 100%)" }}
+                        className="rounded-full absolute bottom-0 right-0 transform translate-x-[7%] -translate-y-[90%] z-0 w-1/2 min-w-[200px] max-w-xs aspect-square transition duration-300"
+                    />
+
+                    {/* Content */}
+                    <div
+                        style={{ background: "linear-gradient(180deg, rgba(255, 175, 0, 0.32) 0%, rgba(243, 243, 243, 0.73) 100%)" }}
+                        className="w-full backdrop-blur-md py-8 md:px-12 md:py-12 md:rounded-xl relative z-[1]"
+                    >
+                        <div className="px-6">
+                            <div className="md:grid md:grid-cols-3 md:gap-10">
+                                <div className="max-w-sm flex-shrink-0">
+                                    <h3 className="font-semibold text-lg md:text-4xl text-[#002639] mb-3 md:mb-8">Choose your domain</h3>
+                                    <p className="font-medium text-sm md:text-base text-[#002639]">
+                                        Designed Specially for College Students. And, we provide you 'licence to skill' - pay for one, get them all!!!
+                                    </p>
+                                </div>
+                                <div className="md:col-span-2 hidden w-full min-h-[13rem] relative md:block flex-grow overflow-hidden rounded-tr-3xl">
+                                    <img
+                                        className="absolute object-cover w-full h-full rounded-bl-[9.5rem]"
+                                        src="/images/raw_images/discussion.jpg"
+                                        alt="discussion"
+                                    />
+                                </div>
+                            </div>
+
+                            <hr className="border-[#CBC09B] my-3 md:my-6" />
+                        </div>
+
+                        <div className="overflow-x-scroll w-full mt-6 md:mt-8 mb-8 md:mb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
+                            {[
+                                {
+                                    title: "Electric Vehicle",
+                                    description:
+                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
+                                    target: "/",
+                                    image: "",
+                                },
+                                {
+                                    title: "Vehicle Dynamics",
+                                    description:
+                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
+                                    target: "/",
+                                    image: "",
+                                },
+                                {
+                                    title: "Engineering Design (CAD)",
+                                    description:
+                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
+                                    target: "/",
+                                    image: "",
+                                },
+                            ]?.map(({ title, description, image, target }, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white rounded-2xl p-4 w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0 hover:transform hover:scale-[0.96] group transition duration-1000"
+                                >
+                                    <div
+                                        className={`w-full rounded-2xl h-[150px] md:h-[160px] ${index % 2 === 0 ? "bg-[#F6E372]" : "bg-[#FF4949]"} mb-4`}
+                                    ></div>
+                                    <div className="pr-6">
+                                        <h4 className="font-medium text-base md:text-xl mb-2 md:mb-4 text-black">{title}</h4>
+                                        <p className="font-normal text-[10px] md:text-sm text-black mb-4 md:mb-6">{description}</p>
+
+                                        <Link href={target}>
+                                            <a className="flex w-fit items-center justify-start gap-2 text-sm md:text-[15px] text-[#1F28CF] hover:transform hover:translate-x-2 transition duration-500">
+                                                Explore <img src="/images/svgs/arrow_right.svg" alt="arrow right" className="h-3 object-contain" />
+                                            </a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="overflow-x-scroll w-full mt-6 mb-8 md:mb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
+                            {[
+                                {
+                                    title: "Electric Vehicle",
+                                    description:
+                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
+                                    target: "/",
+                                    image: "",
+                                },
+                                {
+                                    title: "Vehicle Dynamics",
+                                    description:
+                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
+                                    target: "/",
+                                    image: "",
+                                },
+                                {
+                                    title: "Engineering Design (CAD)",
+                                    description:
+                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
+                                    target: "/",
+                                    image: "",
+                                },
+                            ]?.map(({ title, description, image, target }, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white rounded-2xl p-4 w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0 hover:transform hover:scale-[0.96] group transition duration-1000"
+                                >
+                                    <div
+                                        className={`w-full rounded-2xl h-[150px] md:h-[160px] ${index % 2 === 0 ? "bg-[#F6E372]" : "bg-[#FF4949]"} mb-4`}
+                                    ></div>
+                                    <div className="pr-6">
+                                        <h4 className="font-medium text-base md:text-xl mb-2 md:mb-4 text-black">{title}</h4>
+                                        <p className="font-normal text-[10px] md:text-sm text-black mb-4 md:mb-6">{description}</p>
+
+                                        <Link href={target}>
+                                            <a className="flex w-fit items-center justify-start gap-2 text-sm md:text-[15px] text-[#1F28CF] hover:transform hover:translate-x-2 transition duration-500">
+                                                Explore <img src="/images/svgs/arrow_right.svg" alt="arrow right" className="h-3 object-contain" />
+                                            </a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="px-4 mb-4 md:mt-20">
+                            <div className="bg-[#14213D] rounded-xl px-6 md:px-10 py-8 md:py-12 relative md:flex md:items-center md:justify-between md:gap-7">
+                                <div>
+                                    <p className="text-white font-medium text-2xl mb-4 md:mb-2 text-center md:text-left">
+                                        Book a counseling session with Mentor.
+                                    </p>
+                                    <p className="text-white font-light text-sm mb-8 md:mb-0 text-center md:text-left">{`Only thing you need to start is a will to do great. Everything else, we will take care of :)`}</p>
+                                </div>
+                                <Link href="/">
+                                    <a className="bg-capabl_primary rounded-lg px-4 py-3 text-black font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0">
+                                        Talk to Counselor
+                                    </a>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     );
