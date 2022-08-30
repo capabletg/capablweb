@@ -521,7 +521,7 @@ export default function Home() {
                             ))}
                         </div>
 
-                        <div className="flex-shrink-0 md:flex-shrink md:flex-grow overflow-x-scroll">
+                        <div className="w-[40%] sm:w-[50%] md:w-auto flex-shrink-0 md:flex-shrink md:flex-grow overflow-x-scroll">
                             <div className="flex items-start justify-start md:grid md:grid-cols-4">
                                 <div className="bg-white rounded-b-lg">
                                     <div
