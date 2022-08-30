@@ -320,7 +320,7 @@ export default function Home() {
                 <section id="helps_you_make_career" className="p-2 pt-8 md:pt-20">
                     <div className="max-w-xs md:max-w-3xl mx-auto mb-3">
                         <h3 className="font-medium text-base md:text-5xl text-center mb-3 md:mb-8">We help you make a Career</h3>
-                        <p className="font-medium text-[10px] md:text-base text-center text-[#636363] md:px-20 md:mb-10">
+                        <p className="font-medium text-[10px] md:text-sm text-center text-[#636363] md:px-20 md:mb-10">
                             {`We don't just teach a course - Only platform that has programs defined as per outcome you are looking for - because it matters to
                             you!`}
                         </p>
@@ -338,7 +338,7 @@ export default function Home() {
                 </section>
 
                 {/* Choose you domain */}
-                <section id="choose_your_domain" className="container mx-auto max-w-7xl px-0 md:px-4 relative mb-40 mt-20">
+                <section id="choose_your_domain" className="container mx-auto max-w-7xl px-0 md:px-4 relative mb-10 md:mb-20 mt-20">
                     {/* Top Circle */}
                     <div
                         style={{ background: "radial-gradient(147.01% 539.45% at 50% 50%, #FFAF00 0%, #FF0000 100%)" }}
@@ -478,6 +478,121 @@ export default function Home() {
                                         Talk to Counselor
                                     </a>
                                 </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Features */}
+                <section id="features" className="bg-[#F2F4F7] w-full rounded-3xl max-w-screen-2xl mx-auto px-2 py-10 md:py-16 mb-40">
+                    <div className="mb-10 md:mb-12 max-w-sm md:max-w-3xl mx-auto px-4">
+                        <h2 className="text-center text-black font-semibold text-base md:font-medium md:text-4xl mb-4 md:mb-6">
+                            We're better than the rest! If not, take the program for free
+                        </h2>
+                        <p className="text-center font-normal text-[#636363] text-xs md:font-medium md:text-base">
+                            Parents spends lakhs to get you a college degree, we add value to your parent's hard-earned money and to your time.
+                        </p>
+                    </div>
+
+                    <div className="rounded-md flex items-start overflow-hidden max-w-5xl mx-auto">
+                        <div className="w-[60%] sm:w-[50%] md:w-full md:max-w-md flex-shrink-0">
+                            {[
+                                "",
+                                "All Programs from Industry Experts",
+                                "International Exposure",
+                                "Dedicated Counsellor",
+                                "Build Profile in Linkedin, Github, resume, kaggle, research",
+                                "Events, Competition & Networking",
+                                "Accredited Certificates",
+                                "Offline Programs (Selective Locations)",
+                                "Community",
+                                "Multiple Domain Expertise",
+                                "Internships",
+                                "Placement Guarantee/ Higher Studies/ Startup Support",
+                            ].map((item, index) => (
+                                <p
+                                    key={index}
+                                    className={`${
+                                        index % 2 === 0 ? "bg-[#FCFDFD]" : "bg-white"
+                                    } flex items-center justify-start px-3 md:pl-8 md:pr-4 py-1 h-16 font-medium text-xs md:text-base text-[#636363]`}
+                                >
+                                    {item}
+                                </p>
+                            ))}
+                        </div>
+
+                        <div className="flex-shrink-0 md:flex-shrink md:flex-grow overflow-x-scroll">
+                            <div className="flex items-start justify-start md:grid md:grid-cols-4">
+                                <div className="bg-white rounded-b-lg">
+                                    <div
+                                        style={{ boxShadow: "0px 4px 21px rgba(255, 175, 0, 0.5)" }}
+                                        className="bg-capabl_primary rounded-lg w-20 md:w-auto flex-shrink-0 pb-2"
+                                    >
+                                        <p className="h-16 flex items-center justify-center font-semibold text-[10px] md:text-sm px-4 text-balck md:px-4">
+                                            Capable
+                                        </p>
+                                        {[...Array(11)].map((_, index) => (
+                                            <p
+                                                key={index}
+                                                className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-[#F2F4F6] bg-opacity-10" : ""}`}
+                                            >
+                                                <img src="/images/svgs/white_tick.svg" className="w-full max-w-[21px] object-contain" alt="white tick" />
+                                            </p>
+                                        ))}
+                                        <div className="mt-2 md:mt-4 flex items-center justify-center px-2">
+                                            <Link href="/">
+                                                <a className="bg-white w-full py-3 px-2 font-medium rounded-lg text-[10px] md:text-sm text-center text-black">
+                                                    Join Our Tribe
+                                                </a>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bg-white w-20 md:w-auto flex-shrink-0">
+                                    <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm px-4">
+                                        Coursera
+                                    </p>
+                                    {[true, true, true, false, false, false, false, false, false, false, false].map((el, index) => (
+                                        <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
+                                            {!!el ? (
+                                                <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
+                                            ) : (
+                                                <></>
+                                            )}
+                                        </p>
+                                    ))}
+                                </div>
+
+                                <div className="bg-white w-20 md:w-auto flex-shrink-0">
+                                    <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm md:whitespace-nowrap px-4">
+                                        YouTube / Udemy
+                                    </p>
+                                    {[true, false, false, false, true, true, true, false, false, false, false].map((el, index) => (
+                                        <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
+                                            {!!el ? (
+                                                <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
+                                            ) : (
+                                                <></>
+                                            )}
+                                        </p>
+                                    ))}
+                                </div>
+
+                                <div className="bg-white w-20 md:w-auto flex-shrink-0">
+                                    <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm px-4">
+                                        Offline
+                                    </p>
+                                    {[true, false, false, false, true, false, false, false, true, true, true].map((el, index) => (
+                                        <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
+                                            {!!el ? (
+                                                <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
+                                            ) : (
+                                                <></>
+                                            )}
+                                        </p>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
