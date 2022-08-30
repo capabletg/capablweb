@@ -487,7 +487,7 @@ export default function Home() {
                 <section id="features" className="bg-[#F2F4F7] w-full rounded-3xl max-w-screen-2xl mx-auto px-2 py-10 md:py-16 mb-40">
                     <div className="mb-10 md:mb-12 max-w-sm md:max-w-3xl mx-auto px-4">
                         <h2 className="text-center text-black font-semibold text-base md:font-medium md:text-4xl mb-4 md:mb-6">
-                            We're better than the rest! If not, take the program for free
+                            {`We're better than the rest! If not, take the program for free`}
                         </h2>
                         <p className="text-center font-normal text-[#636363] text-xs md:font-medium md:text-base">
                             Parents spends lakhs to get you a college degree, we add value to your parent's hard-earned money and to your time.
