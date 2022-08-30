@@ -490,7 +490,7 @@ export default function Home() {
                             {`We're better than the rest! If not, take the program for free`}
                         </h2>
                         <p className="text-center font-normal text-[#636363] text-xs md:font-medium md:text-base">
-                            Parents spends lakhs to get you a college degree, we add value to your parent's hard-earned money and to your time.
+                            {`Parents spends lakhs to get you a college degree, we add value to your parent's hard-earned money and to your time.`}
                         </p>
                     </div>
 
