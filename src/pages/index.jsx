@@ -444,7 +444,7 @@ export default function Home() {
                 </section>
 
                 {/* Features */}
-                <section id="features" className="bg-[#F2F4F7] w-full rounded-3xl max-w-screen-2xl mx-auto px-2 py-10 md:py-16 mb-40">
+                <section id="features" className="bg-[#F2F4F7] w-full rounded-3xl max-w-screen-2xl mx-auto px-2 py-10 pb-28 md:py-16 mb-40">
                     <div className="mb-10 md:mb-12 max-w-sm md:max-w-3xl mx-auto px-4">
                         <h2 className="text-center text-black font-semibold text-base md:font-medium md:text-4xl mb-4 md:mb-6">
                             {`We're better than the rest! If not, take the program for free`}
@@ -454,8 +454,8 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className="rounded-md flex items-start overflow-hidden max-w-5xl mx-auto">
-                        <div className="w-[60%] sm:w-[50%] md:w-full md:max-w-md flex-shrink-0">
+                    <div className="rounded-md flex items-start max-w-5xl mx-auto relative">
+                        <div className="w-[55%] sm:w-[50%] md:w-full md:max-w-md flex-shrink-0">
                             {["", ...features].map(({ feature }, index) => (
                                 <p
                                     key={index}
@@ -468,16 +468,37 @@ export default function Home() {
                             ))}
                         </div>
 
-                        <div className="w-[40%] sm:w-[50%] md:w-auto flex-shrink-0 md:flex-shrink md:flex-grow overflow-x-scroll scrollbar-hide">
+                        <div
+                            style={{ boxShadow: "0px 4px 21px rgba(255, 175, 0, 0.5)" }}
+                            className="bg-capabl_primary rounded-lg w-20 md:w-auto flex-shrink-0 pb-2 block md:hidden absolute top-0 left-[55%] sm:left-1/2"
+                        >
+                            <p className="h-16 flex items-center justify-center font-semibold text-[10px] md:text-sm px-4 text-balck md:px-4">Capabl</p>
+                            {features.map(({ capable }, index) => (
+                                <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-[#F2F4F6] bg-opacity-10" : ""}`}>
+                                    {!!capable ? (
+                                        <img src="/images/svgs/white_tick.svg" className="w-full max-w-[21px] object-contain" alt="white tick" />
+                                    ) : (
+                                        <></>
+                                    )}
+                                </p>
+                            ))}
+                            <div className="mt-2 md:mt-4 flex items-center justify-center px-2">
+                                <Link href="/">
+                                    <a className="bg-white w-full py-3 px-2 font-medium rounded-lg text-[10px] md:text-sm text-center text-black">
+                                        Join Our Tribe
+                                    </a>
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="w-[45%] sm:w-[50%] md:w-auto flex-shrink-0 md:flex-shrink md:flex-grow overflow-x-scroll scrollbar-hide">
                             <div className="flex items-start justify-start md:grid md:grid-cols-4">
-                                <div className="bg-white rounded-b-lg">
+                                <div className="bg-white rounded-b-lg hidden md:block">
                                     <div
                                         style={{ boxShadow: "0px 4px 21px rgba(255, 175, 0, 0.5)" }}
-                                        className="bg-capabl_primary rounded-lg w-20 md:w-auto flex-shrink-0 pb-2"
+                                        className="bg-capabl_primary rounded-lg w-auto flex-shrink-0 pb-2"
                                     >
-                                        <p className="h-16 flex items-center justify-center font-semibold text-[10px] md:text-sm px-4 text-balck md:px-4">
-                                            Capabl
-                                        </p>
+                                        <p className="h-16 flex items-center justify-center font-semibold text-sm px-4 text-balck">Capabl</p>
                                         {features.map(({ capable }, index) => (
                                             <p
                                                 key={index}
@@ -490,15 +511,17 @@ export default function Home() {
                                                 )}
                                             </p>
                                         ))}
-                                        <div className="mt-2 md:mt-4 flex items-center justify-center px-2">
+                                        <div className="mt-4 flex items-center justify-center px-2">
                                             <Link href="/">
-                                                <a className="bg-white w-full py-3 px-2 font-medium rounded-lg text-[10px] md:text-sm text-center text-black">
+                                                <a className="bg-white w-full py-3 px-2 font-medium rounded-lg text-sm text-center text-black">
                                                     Join Our Tribe
                                                 </a>
                                             </Link>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div className="bg-white w-20 md:hidden flex-shrink-0" />
 
                                 <div className="bg-white w-20 md:w-auto flex-shrink-0">
                                     <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm px-4">
