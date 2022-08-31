@@ -1,38 +1,37 @@
 import React from "react";
 import Slider from "react-slick";
-import { helpsYouMakeCareer } from "../../utils/data/helps_you_make_career";
+import { helpsYouMakeCareer } from "../../utils/data/homePage/helps_you_make_career";
+
+const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    pauseOnHover: false,
+    nextArrow: null,
+    prevArrow: null,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 2500,
+    cssEase: "ease",
+    responsive: [
+        {
+            breakpoint: 960,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+    ],
+};
 
 export default function HelpingAreasSlider() {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        swipeToSlide: true,
-        pauseOnHover: false,
-        nextArrow: null,
-        prevArrow: null,
-        autoplay: true,
-        speed: 1000,
-        autoplaySpeed: 2500,
-        cssEase: "ease",
-        responsive: [
-            {
-                breakpoint: 960,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    };
-
     return (
         <div className="max-w-5xl mx-auto">
             <Slider {...settings}>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { exposure } from "../../utils/data/homePage/exposure";
 
 export default function ExposureAccordian() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -6,40 +7,10 @@ export default function ExposureAccordian() {
     useEffect(() => {
         setActiveIndex(0);
     }, []);
+
     return (
         <div className="max-w-sm">
-            {[
-                {
-                    title: "Industrial Exposure",
-                    description:
-                        "1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial exposure.",
-                },
-                {
-                    title: "Real-life Projects",
-                    description:
-                        "1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial exposure.",
-                },
-                {
-                    title: "Events & Competition",
-                    description:
-                        "1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial exposure.",
-                },
-                {
-                    title: "Events & Competition",
-                    description:
-                        "1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial exposure.",
-                },
-                {
-                    title: "Likeminded Peers",
-                    description:
-                        "1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial exposure.",
-                },
-                {
-                    title: "Opportunity to work with the Industry",
-                    description:
-                        "1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial exposure.",
-                },
-            ]?.map(({ title, description }, index) => (
+            {exposure?.map(({ title, description }, index) => (
                 <div key={index} className="mb-8">
                     <div className="flex items-start justify-between gap-4 mb-4">
                         <h4 className="font-semibold text-lg text-black text-left">{title}</h4>

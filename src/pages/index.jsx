@@ -3,8 +3,12 @@ import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ExposureAccordian from "../components/homePage/ExposureAccordian";
-import { studentTestimonials } from "../utils/data/student_testimonials";
+import { studentTestimonials } from "../utils/data/homePage/student_testimonials";
 import HelpingAreasSlider from "../components/homePage/HelpingAreasSlider";
+import { presentColleges } from "../utils/data/homePage/present_colleges";
+import FaculyTestimonials from "../components/homePage/FaculyTestimonials";
+import { domainSet1, domainSet2 } from "../utils/data/homePage/domains";
+import { features } from "../utils/data/homePage/features";
 
 export default function Home() {
     return (
@@ -376,30 +380,8 @@ export default function Home() {
                             <hr className="border-[#CBC09B] my-3 md:my-6" />
                         </div>
 
-                        <div className="overflow-x-scroll w-full mt-6 md:mt-8 mb-8 md:mb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
-                            {[
-                                {
-                                    title: "Electric Vehicle",
-                                    description:
-                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
-                                    target: "/",
-                                    image: "",
-                                },
-                                {
-                                    title: "Vehicle Dynamics",
-                                    description:
-                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
-                                    target: "/",
-                                    image: "",
-                                },
-                                {
-                                    title: "Engineering Design (CAD)",
-                                    description:
-                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
-                                    target: "/",
-                                    image: "",
-                                },
-                            ]?.map(({ title, description, image, target }, index) => (
+                        <div className="overflow-x-scroll scrollbar-hide w-full mt-6 md:mt-8 mb-8 md:mb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
+                            {domainSet1?.map(({ title, description, image, target }, index) => (
                                 <div
                                     key={index}
                                     className="bg-white rounded-2xl p-4 w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0 hover:transform hover:scale-[0.96] group transition duration-1000"
@@ -420,30 +402,8 @@ export default function Home() {
                                 </div>
                             ))}
                         </div>
-                        <div className="overflow-x-scroll w-full mt-6 mb-8 md:mb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
-                            {[
-                                {
-                                    title: "Electric Vehicle",
-                                    description:
-                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
-                                    target: "/",
-                                    image: "",
-                                },
-                                {
-                                    title: "Vehicle Dynamics",
-                                    description:
-                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
-                                    target: "/",
-                                    image: "",
-                                },
-                                {
-                                    title: "Engineering Design (CAD)",
-                                    description:
-                                        "The experience and knowledge I learned at Coding Ninjas greatly sharpened my skills and allowed me to pass the HackerRank.The experience and knowledge I learned at Coding Ninjas greatly sharpened.",
-                                    target: "/",
-                                    image: "",
-                                },
-                            ]?.map(({ title, description, image, target }, index) => (
+                        <div className="overflow-x-scroll scrollbar-hide w-full mt-6 mb-8 md:mb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
+                            {domainSet2?.map(({ title, description, image, target }, index) => (
                                 <div
                                     key={index}
                                     className="bg-white rounded-2xl p-4 w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0 hover:transform hover:scale-[0.96] group transition duration-1000"
@@ -496,32 +456,19 @@ export default function Home() {
 
                     <div className="rounded-md flex items-start overflow-hidden max-w-5xl mx-auto">
                         <div className="w-[60%] sm:w-[50%] md:w-full md:max-w-md flex-shrink-0">
-                            {[
-                                "",
-                                "All Programs from Industry Experts",
-                                "International Exposure",
-                                "Dedicated Counsellor",
-                                "Build Profile in Linkedin, Github, resume, kaggle, research",
-                                "Events, Competition & Networking",
-                                "Accredited Certificates",
-                                "Offline Programs (Selective Locations)",
-                                "Community",
-                                "Multiple Domain Expertise",
-                                "Internships",
-                                "Placement Guarantee/ Higher Studies/ Startup Support",
-                            ].map((item, index) => (
+                            {["", ...features].map(({ feature }, index) => (
                                 <p
                                     key={index}
                                     className={`${
                                         index % 2 === 0 ? "bg-[#FCFDFD]" : "bg-white"
                                     } flex items-center justify-start px-3 md:pl-8 md:pr-4 py-1 h-16 font-medium text-xs md:text-base text-[#636363]`}
                                 >
-                                    {item}
+                                    {feature}
                                 </p>
                             ))}
                         </div>
 
-                        <div className="w-[40%] sm:w-[50%] md:w-auto flex-shrink-0 md:flex-shrink md:flex-grow overflow-x-scroll">
+                        <div className="w-[40%] sm:w-[50%] md:w-auto flex-shrink-0 md:flex-shrink md:flex-grow overflow-x-scroll scrollbar-hide">
                             <div className="flex items-start justify-start md:grid md:grid-cols-4">
                                 <div className="bg-white rounded-b-lg">
                                     <div
@@ -531,12 +478,16 @@ export default function Home() {
                                         <p className="h-16 flex items-center justify-center font-semibold text-[10px] md:text-sm px-4 text-balck md:px-4">
                                             Capable
                                         </p>
-                                        {[...Array(11)].map((_, index) => (
+                                        {features.map(({ capable }, index) => (
                                             <p
                                                 key={index}
                                                 className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-[#F2F4F6] bg-opacity-10" : ""}`}
                                             >
-                                                <img src="/images/svgs/white_tick.svg" className="w-full max-w-[21px] object-contain" alt="white tick" />
+                                                {!!capable ? (
+                                                    <img src="/images/svgs/white_tick.svg" className="w-full max-w-[21px] object-contain" alt="white tick" />
+                                                ) : (
+                                                    <></>
+                                                )}
                                             </p>
                                         ))}
                                         <div className="mt-2 md:mt-4 flex items-center justify-center px-2">
@@ -553,9 +504,9 @@ export default function Home() {
                                     <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm px-4">
                                         Coursera
                                     </p>
-                                    {[true, true, true, false, false, false, false, false, false, false, false].map((el, index) => (
+                                    {features.map(({ coursera }, index) => (
                                         <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                            {!!el ? (
+                                            {!!coursera ? (
                                                 <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
                                             ) : (
                                                 <></>
@@ -568,9 +519,9 @@ export default function Home() {
                                     <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm md:whitespace-nowrap px-4">
                                         YouTube / Udemy
                                     </p>
-                                    {[true, false, false, false, true, true, true, false, false, false, false].map((el, index) => (
+                                    {features.map(({ yt_udemy }, index) => (
                                         <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                            {!!el ? (
+                                            {!!yt_udemy ? (
                                                 <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
                                             ) : (
                                                 <></>
@@ -583,9 +534,9 @@ export default function Home() {
                                     <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm px-4">
                                         Offline
                                     </p>
-                                    {[true, false, false, false, true, false, false, false, true, true, true].map((el, index) => (
+                                    {features.map(({ offline }, index) => (
                                         <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                            {!!el ? (
+                                            {!!offline ? (
                                                 <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
                                             ) : (
                                                 <></>
@@ -594,6 +545,58 @@ export default function Home() {
                                     ))}
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Present Across */}
+                <section id="present_across" className="my-10">
+                    <div className="md:grid md:grid-cols-7 md:gap-2 max-w-5xl mx-auto">
+                        <div className="p-4 md:col-span-4">
+                            <h3 className="text-black font-medium text-lg md:text-4xl mb-4 md:mb-8 md:leading-[3rem] md:max-w-sm">{`Present across 400+ Colleges & Universities`}</h3>
+
+                            <div className="w-full">
+                                <p className="font-normal text-xs md:text-xl text-balck">
+                                    {`Increase avg`} <span className="text-capabl_primary font-bold">{`package by 40%+`}</span>
+                                </p>
+                                <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
+                                <p className="font-normal text-xs md:text-xl text-balck">
+                                    {`Improve Ranking & Ratings:`} <span className="text-capabl_primary font-bold">{`NIRF, NAAC, NBA`}</span>
+                                </p>
+                                <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
+                                <p className="font-normal text-xs md:text-xl text-balck">
+                                    {`Improve`} <span className="text-capabl_primary font-bold">{`College Reputation`}</span> {`with`}{" "}
+                                    <span className="text-capabl_primary font-bold">{`Event participations`}</span>
+                                </p>
+                                <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
+                                <p className="font-normal text-xs md:text-xl text-balck">
+                                    {`Consultancy`} <span className="text-capabl_primary font-bold">{`Projects`}</span> {`with`}{" "}
+                                    <span className="text-capabl_primary font-bold">{`Faculties`}</span>
+                                </p>
+                                <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
+                            </div>
+                        </div>
+
+                        <div className="overflow-x-scroll pt-0 pb-6 scrollbar-hide px-4 md:col-span-3 md:row-span-2 md:pl-12">
+                            <div className="flex items-center justify-start gap-4 md:gap-8 md:grid md:grid-cols-2 md:justify-items-end">
+                                {presentColleges?.map(({ image, name }, index) => (
+                                    <div
+                                        key={index}
+                                        style={{ boxShadow: "0px 2px 15px 2px #F2F4F6" }}
+                                        className="rounded-xl md:rounded-3xl flex flex-col items-center gap-2 justify-center p-3 w-24 md:w-40 h-24 md:h-40 flex-shrink-0"
+                                    >
+                                        <img className="w-full max-w-[45px] md:max-w-[90px]" src={image} alt={name} />
+                                        <p className="font-medium text-black text-[9px] md:text-base text-center">{name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="mt-2 max-w-sm md:max-w-none md:col-span-4">
+                            <p className="font-medium text-xs md:text-lg text-[#807E7E] mb-5 md:mb-10 px-4">
+                                Students from all colleges across India are joining the education revolution
+                            </p>
+                            <FaculyTestimonials />
                         </div>
                     </div>
                 </section>
