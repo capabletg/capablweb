@@ -550,7 +550,7 @@ export default function Home() {
                 </section>
 
                 {/* Present Across */}
-                <section id="present_across" className="my-10">
+                <section id="present_across" className="mt-10 mb-4 md:mb-6">
                     <div className="md:grid md:grid-cols-7 md:gap-2 max-w-5xl mx-auto">
                         <div className="p-4 md:col-span-4">
                             <h3 className="text-black font-medium text-lg md:text-4xl mb-4 md:mb-8 md:leading-[3rem] md:max-w-sm">{`Present across 400+ Colleges & Universities`}</h3>
@@ -600,7 +600,147 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+
+                {/* cta_illustration */}
+
+                <section id="cta_2" className="px-4 max-w-6xl mx-auto mb-16 md:mb-20">
+                    <div className="bg-capabl_primary rounded-xl px-6 md:px-10 py-8 md:py-12 relative md:flex md:items-center md:justify-between md:gap-7">
+                        <img className="absolute top-0 z-0 left-0 w-full h-full object-cover" src="/images/svgs/cta_illustration.svg" alt="cta illustration" />
+                        <div className="relative z-[1]">
+                            <p className="text-black font-medium text-2xl mb-4 md:mb-2 text-center md:text-left">{`Be an industry capabl college`}</p>
+                            <p className="text-black font-light text-sm mb-8 md:mb-0 text-center md:text-left">{`Only thing you need to start is a will to do great. Everything else, we will take care of :)`}</p>
+                        </div>
+                        <Link href="/">
+                            <a className="z-[1] bg-black rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0">
+                                Know More
+                            </a>
+                        </Link>
+                    </div>
+                </section>
             </main>
+
+            <footer className="bg-[#14213D] min-h-[200px] w-full px-6 pt-4 pb-4">
+                <div className="hidden md:block max-w-7xl mx-auto mt-10 mb-8">
+                    <div className="grid grid-cols-10 gap-4 justify-items-start">
+                        <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                            <h5 className="font-bold text-base text-white mb-3">Product</h5>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Employee database</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Payroll</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Absences</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Time tracking</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Shift planner</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Recruiting</a>
+                            </Link>
+                        </div>
+                        <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                            <h5 className="font-bold text-base text-white mb-3">Information</h5>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">FAQ</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Blog</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Support</a>
+                            </Link>
+                        </div>
+                        <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                            <h5 className="font-bold text-base text-white mb-3">Company</h5>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">About us</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Careers</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Contact us</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Lift Media</a>
+                            </Link>
+                        </div>
+
+                        <div className="bg-white py-6 px-10 bg-opacity-10 col-span-4 max-w-sm h-fit pb-10 justify-self-center">
+                            <h5 className="font-bold text-white text-base mb-5">Subscribe to our newsletter</h5>
+                            <form
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                }}
+                                className="flex w-full rounded-md overflow-hidden bg-white mb-5"
+                            >
+                                <input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    className="w-full py-3 px-3 placeholder:font-normal placeholder:text-[#7A7E92] placeholder:text-sm text-sm font-normal text-black border-none outline-none ring-0 hover:ring-0 active:ring-0 focus:ring-0"
+                                />
+                                <button
+                                    type="submit"
+                                    className="flex items-center justify-center bg-capabl_primary outline-none border-none py-1 flex-shrink-0 px-7"
+                                >
+                                    <img className="w-full max-w-[0.9rem] object-contain" src="/images/svgs/arrow_right_black.svg" alt="arrow black right" />
+                                </button>
+                            </form>
+                            <p className="font-light text-xs text-white text-opacity-60">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <hr className="mt-10 mb-8 border-white border-opacity-20" />
+                    <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-center justify-start gap-4">
+                            <img className="w-full max-w-[8rem] object-contain mr-4" src="/images/svgs/logo_white.svg" alt="capabl logo" />
+
+                            <Link href="/">
+                                <a className="font-medium text-white text-sm">Terms</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-medium text-white text-sm">Privacy</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-medium text-white text-sm">Cookies</a>
+                            </Link>
+                        </div>
+
+                        <div className="flex items-center justify-end gap-4">
+                            <a
+                                className="w-10 h-10 rounded-full flex items-center justify-center p-3 border border-white border-opacity-25"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img src="/images/svgs/linkedin.svg" alt="linkedin icon" />
+                            </a>
+                            <a
+                                className="w-10 h-10 rounded-full flex items-center justify-center p-3 border border-white border-opacity-25"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img src="/images/svgs/facebook.svg" alt="facebook icon" />
+                            </a>
+                            <a
+                                className="w-10 h-10 rounded-full flex items-center justify-center p-3 border border-white border-opacity-25"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img src="/images/svgs/twitter.svg" alt="twitter icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }
