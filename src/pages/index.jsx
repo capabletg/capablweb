@@ -476,7 +476,7 @@ export default function Home() {
                                         className="bg-capabl_primary rounded-lg w-20 md:w-auto flex-shrink-0 pb-2"
                                     >
                                         <p className="h-16 flex items-center justify-center font-semibold text-[10px] md:text-sm px-4 text-balck md:px-4">
-                                            Capable
+                                            Capabl
                                         </p>
                                         {features.map(({ capable }, index) => (
                                             <p
