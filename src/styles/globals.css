@@ -26,3 +26,7 @@ body {
         box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.03);
     }
 }
+
+.slick-arrow {
+    display: none !important;
+}

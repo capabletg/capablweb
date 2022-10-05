@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import ExposureAccordian from "../components/homePage/ExposureAccordian";
 import { studentTestimonials } from "../utils/data/homePage/student_testimonials";
 import HelpingAreasSlider from "../components/homePage/HelpingAreasSlider";

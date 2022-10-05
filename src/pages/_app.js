@@ -2,6 +2,9 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function MyApp({ Component, pageProps }) {
     const [showChild, setShowChild] = useState(false);
     const Layout = Component.Layout || EmptyLayout;
