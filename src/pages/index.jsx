@@ -26,7 +26,7 @@ export default function Home() {
                         <a href="tel:8998798798" target="_blank" rel="noreferrer" className="pr-2 border-r border-r-[#cdcdcd] text-black">
                             Call : 8998798798
                         </a>
-                        <Link href="/">
+                        <Link href="/login">
                             <a className="underline text-capabl_primary">Login</a>
                         </Link>
                     </div>
