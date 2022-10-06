@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { FaPlay } from "react-icons/fa";
+import { FaMinus, FaPlay, FaPlus } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
-import { FiChevronRight, FiChevronUp } from "react-icons/fi";
+import { FiChevronUp } from "react-icons/fi";
 import CrackedSdtSlider from "../../components/courses/CrackedSdtSlider";
+import Accordian from "../../components/courses/Accordian";
 
 export default function Courses() {
     return (
@@ -170,6 +171,46 @@ export default function Courses() {
 
                         <div className="col-span-1 md:col-span-5">
                             <CrackedSdtSlider />
+                        </div>
+                    </div>
+                </section>
+
+                {/* Take the journey now to be Capabl */}
+                {/* TODO: */}
+                <section className="hidden">
+                    <h2>
+                        Why wait, Take the journey now to be <span className="text-capabl_primary">Capabl</span>
+                    </h2>
+
+                    <div>
+                        <svg width="1728" height="195" viewBox="0 0 1728 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-178.503 192.577C145.293 48.6474 1015.57 -152.854 1906.33 192.577"
+                                stroke="#E1E1E1"
+                                strokeOpacity="0.5"
+                                strokeWidth="3.59868"
+                            />
+                        </svg>
+                    </div>
+                </section>
+
+                {/* Where you transform to an industry Capabl Engineer */}
+                <section className="px-4 lg:px-6 mt-12 md:mt-16 lg:mt-20 max-w-7xl mx-auto">
+                    <h2 className="text-center font-medium text-lg md:text-2xl mb-3 lg:mb-4">Where you transform to an Industry Capabl Engineer</h2>
+                    <p className="text-center text-[#636363] text-xs md:text-sm max-w-xl mx-auto">
+                        1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial
+                        exposure.
+                    </p>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 lg:mt-10">
+                        <div className="col-span-1 lg:order-1">
+                            <div className="w-full max-w-2xl mx-auto py-4 md:py-8">
+                                <img className="w-full object-contain" src="/images/courses/analysing.jpg" alt="analysing" />
+                            </div>
+                        </div>
+
+                        <div className="col-span-1">
+                            <Accordian />
                         </div>
                     </div>
                 </section>
