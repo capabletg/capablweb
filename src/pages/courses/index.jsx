@@ -355,7 +355,7 @@ export default function Courses() {
                                 <img className="w-full object-contain" src="/images/courses/school_boy.svg" alt="studying" />
                             </div>
 
-                            <div className="col-span-1 md:pt-8 max-w-lg mx-auto">
+                            <div className="col-span-1 md:pt-8 max-w-lg mx-auto relative z-[3]">
                                 <div className="mb-5 flex items-center justify-start gap-2">
                                     <span className="w-3 h-3 rounded-full bg-capabl_primary flex-shrink-0" />
                                     <span className="text-black text-base font-light">Process to get Scholarship</span>
@@ -370,12 +370,12 @@ export default function Courses() {
                                     veritatis labore debitis illum facilis ab? Illum minus quasi ratione incidunt eveniet ut sint aperiam!
                                 </p>
 
-                                <button className="rounded-lg px-10 md:px-12 py-3 bg-capabl_primary text-[#272727] text-center font-normal text-sm">
+                                <button className="rounded-lg px-10 md:px-12 py-2.5 bg-capabl_primary text-[#272727] text-center font-normal text-sm transition-all duration-300 border-2 border-transparent hover:border-capabl_primary hover:bg-transparent">
                                     Start Now
                                 </button>
                             </div>
 
-                            <div className="hidden col-span-2 md:order-2 md:flex items-center mt-10 pb-10 px-10">
+                            <div className="hidden col-span-2 md:order-2 md:flex items-center mt-10 pb-10 px-10 relative z-[3]">
                                 <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
                                     <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-light text-[#14213d] text-center">
                                         Talk to Counsellor
