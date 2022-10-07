@@ -214,6 +214,195 @@ export default function Courses() {
                         </div>
                     </div>
                 </section>
+
+                {/* how the scolarship system works */}
+                <section className="max-w-7xl my-20 mx-auto px-4">
+                    <div className="bg-transparent md:bg-[#F2F6F7] md:rounded-3xl p-0 md:p-6">
+                        <div className="bg-transparent md:bg-white md:bg-opacity-30 md:rounded-3xl md:px-6 md:pt-10 md:pb-4">
+                            <div className="hidden w-fit mx-auto mb-5 md:flex items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
+                                <span className="w-3 h-3 rounded-full bg-capabl_primary flex-shrink-0" />
+                                <span className="text-black text-sm font-light">The Scholarship Initiative</span>
+                            </div>
+
+                            <h3 className="hidden md:block text-center text-2xl font-medium mb-16 max-w-md mx-auto">How the Scholarship System Works</h3>
+
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+                                {[
+                                    {
+                                        label: "With",
+                                        desc: `Govt Bodies, Education Organizations and Industries`,
+                                    },
+                                    {
+                                        label: "To",
+                                        desc: `Create a world-class engineering ecosystem`,
+                                    },
+                                    {
+                                        label: "That",
+                                        desc: `Results in creating skilled Engineers right after Graduation!`,
+                                    },
+                                    {
+                                        label: "And",
+                                        desc: `Make Parents proud by graudating with a job in 1/20th of expense on degree`,
+                                    },
+                                ].map(({ label, desc }, index) => (
+                                    <div key={index} className="mb-6 group">
+                                        <div className="relative flex items-center justify-center mb-4">
+                                            <svg
+                                                className="w-full object-contain max-w-[5rem] relative z-0"
+                                                viewBox="0 0 93 101"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    className="origin-center transform rotate-0 transition duration-1000 group-hover:rotate-180"
+                                                    d="M4.23815 36.2118C0.201637 12.4226 27.7173 -4.04108 47.3099 10.4404L81.7497 35.896C97.1077 47.2476 95.9616 70.28 79.5501 80.0997L52.2057 96.4609C35.7942 106.281 14.4977 96.6765 11.3335 78.0287L4.23815 36.2118Z"
+                                                    fill="#FF696D"
+                                                />
+                                                <path
+                                                    className="origin-center transform rotate-0 transition duration-1000 group-hover:-rotate-180"
+                                                    opacity="0.5"
+                                                    d="M16.7797 17.4171C25.1447 -5.51308 58.3807 -5.5357 68.8058 17.3816L87.131 57.6658C95.303 75.6301 82.6272 95.1883 62.8038 95.2019L29.7746 95.2244C9.95121 95.2379 -4.48135 75.6982 2.07575 57.7238L16.7797 17.4171Z"
+                                                    fill="#CF2323"
+                                                />
+                                            </svg>
+
+                                            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-white text-xl z-[2] mt-1">
+                                                {label}
+                                            </p>
+                                        </div>
+                                        <p className="text-center text-sm max-w-[13rem] mx-auto">{desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/*  */}
+                            <div className="hidden w-fit mx-auto mt-16 mb-5 md:flex items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
+                                <span className="w-3 h-3 rounded-full bg-capabl_primary flex-shrink-0" />
+                                <span className="text-black text-sm font-light">Scholarship Breakdown</span>
+                            </div>
+
+                            <h3 className="hidden md:block text-center text-2xl font-medium mb-10 max-w-md mx-auto">{`ETG Contribution in Strengthening Future Engineers`}</h3>
+
+                            <div className="overflow-x-scroll scrollbar-hide p-6 mt-8 md:mt-0">
+                                <div
+                                    style={{ boxShadow: "0px 8px 20px rgba(177, 194, 193, 0.2)" }}
+                                    className="w-full min-w-[45rem] bg-white rounded-xl overflow-hidden"
+                                >
+                                    <table className="w-full">
+                                        <thead>
+                                            <tr className="relative after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-capabl_primary z-0 after:shadow-md after:rounded-xl">
+                                                <th className="align-middle text-left text-sm md:text-base font-medium text-[#231F20] pl-6 pr-4 py-4 md:py-5 relative z-[1]">
+                                                    Particulars
+                                                </th>
+                                                <th className="align-middle text-left text-sm md:text-base font-medium text-[#231F20] pl-6 pr-4 py-4 md:py-5 relative z-[1]">
+                                                    ETG Investment
+                                                </th>
+                                                <th className="align-middle text-left text-sm md:text-base font-medium text-[#231F20] pl-6 pr-4 py-4 md:py-5 relative z-[1]">
+                                                    Student Investment
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {[
+                                                { particulars: `Technical Training`, etg: `1,30,000`, st_investment: `30,000` },
+                                                { particulars: `Placement Training`, etg: `6,200`, st_investment: `0` },
+                                                { particulars: `Software Access`, etg: `25,000`, st_investment: `0` },
+                                                { particulars: `ETG - SAEINDIA, ARK-Ansys, Siemens, Altair Certification`, etg: `50,000`, st_investment: `0` },
+                                                { particulars: `SAE Membership of 1 Year`, etg: `400`, st_investment: `0` },
+                                                { particulars: `No Cost EMI Financing Benefits`, etg: `8,400`, st_investment: `0` },
+                                            ].map(({ particulars, etg, st_investment }, index) => (
+                                                <tr key={index}>
+                                                    <td className="pl-6 pr-4 py-4 md:py-4 text-sm text-[#545d61] border-b-[0.05rem] border-b-[#e9e9e9]">
+                                                        <p className="max-w-[18rem] md:max-w-xs flex items-start justify-start gap-2">
+                                                            <span>{index + 1}.</span>
+                                                            <span>{particulars}</span>
+                                                        </p>
+                                                    </td>
+                                                    <td className="pl-6 pr-4 py-4 md:py-4 text-sm text-[#545d61] border-b-[0.05rem] border-b-[#e9e9e9]">
+                                                        {etg}
+                                                    </td>
+                                                    <td className="pl-6 pr-4 py-4 md:py-4 text-sm text-[#545d61] border-b-[0.05rem] border-b-[#e9e9e9]">
+                                                        {st_investment}
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                            <tr>
+                                                <td className="pl-6 pr-4 py-4 md:py-4 text-sm font-medium text-[#231f20]">Total Investment</td>
+                                                <td className="pl-6 pr-4 py-4 md:py-4 text-sm font-medium text-[#231f20]">{`₹ 2,20,000`}</td>
+                                                <td className="pl-6 pr-4 py-4 md:py-4 text-sm font-medium text-[#231f20]">{`₹ 30,000`}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/*  */}
+                        <div className="bg-transparent text-[#231f20] relative z-[1] md:bg-white mt-10 md:mt-8 md:rounded-2xl p-0 md:px-10 md:pt-16 md:pb-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                            <div
+                                style={{ boxShadow: "0px 8px 20px rgba(177, 194, 193, 0.2)" }}
+                                className="hidden md:block absolute z-0 top-0 left-0 w-full h-full rounded-2xl"
+                            />
+
+                            <svg
+                                className="hidden xl:block absolute top-[-10%] left-[-4.5%] w-16 object-contain fill-capabl_primary"
+                                viewBox="0 0 108 238"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M105.593 3.79062C63.0871 8.94795 29.3178 35.3969 17.1444 65.5382C1.99134 103.044 16.6213 142.818 41.0084 176.18C52.7232 192.206 66.7477 207.205 81.569 221.712C82.6224 208.124 86.6182 194.315 95.355 182.433C97.5159 179.503 102.938 182.081 101.22 185.001C93.5762 197.993 87.1858 210.697 84.6012 224.663C86.3597 226.364 88.1277 228.06 89.903 229.75C94.3697 234.007 86.7246 240.022 82.0062 236.274C81.334 237.002 80.1842 237.453 78.8421 237.109C67.1519 234.119 55.2206 231.43 43.1949 229.313C37.9717 228.396 32.6959 227.645 27.4216 226.895L27.4206 226.894C20.5111 225.911 13.6044 224.928 6.82275 223.574C2.21913 222.65 3.17217 217.393 7.93685 217.383C31.354 217.345 55.6996 223.848 76.8691 231.411C44.6689 200.512 14.6101 167.044 3.97832 128.078C-6.11475 91.0739 2.08577 50.6481 39.1026 23.236C56.7923 10.1319 80.0792 1.69368 104.909 0.00801261C107.768 -0.192662 108.466 3.43944 105.593 3.79062Z" />
+                            </svg>
+
+                            <div className="col-span-1 md:order-1 max-w-lg md:max-w-md mx-auto md:ml-auto md:mr-0">
+                                <img className="w-full object-contain" src="/images/courses/school_boy.svg" alt="studying" />
+                            </div>
+
+                            <div className="col-span-1 md:pt-8 max-w-lg mx-auto">
+                                <div className="mb-5 flex items-center justify-start gap-2">
+                                    <span className="w-3 h-3 rounded-full bg-capabl_primary flex-shrink-0" />
+                                    <span className="text-black text-base font-light">Process to get Scholarship</span>
+                                </div>
+
+                                <h3 className="text-xl md:text-3xl font-light text-[#14213D] mb-3 md:mb-4">
+                                    Take <span className="font-semibold">Scholarship</span> Test
+                                </h3>
+
+                                <p className="text-sm text-[#808080] font-light mb-6 md:mb-7">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet asperiores provident in dolorum sequi! Recusandae
+                                    veritatis labore debitis illum facilis ab? Illum minus quasi ratione incidunt eveniet ut sint aperiam!
+                                </p>
+
+                                <button className="rounded-lg px-10 md:px-12 py-3 bg-capabl_primary text-[#272727] text-center font-normal text-sm">
+                                    Start Now
+                                </button>
+                            </div>
+
+                            <div className="hidden col-span-2 md:order-2 md:flex items-center mt-10 pb-10 px-10">
+                                <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
+                                    <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-light text-[#14213d] text-center">
+                                        Talk to Counsellor
+                                    </span>
+                                </div>
+                                <span className="h-1 bg-capabl_primary w-full" />
+                                <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
+                                    <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-medium text-[#14213d] text-center">
+                                        Take Scholarship Test
+                                    </span>
+                                </div>
+                                <span className="h-1 bg-capabl_primary w-full" />
+                                <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
+                                    <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-light text-[#14213d] text-center">
+                                        Crack the Interview
+                                    </span>
+                                </div>
+                                <span className="h-1 bg-capabl_primary w-full" />
+                                <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
+                                    <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-light text-[#14213d] text-center">
+                                        Get Admission
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     );
