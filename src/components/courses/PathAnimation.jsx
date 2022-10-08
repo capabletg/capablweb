@@ -223,13 +223,13 @@ export default function PathAnimation() {
 }
 
 function LottiePlayer({ progress = 0 }) {
-    if (progress < 99) return <></>;
-
     const [animationData, setAnimationData] = useState(null);
 
     useEffect(() => {
         import("../lotties/cracker.json").then(setAnimationData);
     }, []);
+
+    if (progress < 99) return <></>;
 
     return <Lottie loop={false} animationData={animationData} play={true} style={{ width: 200, height: 200 }} />;
 }
