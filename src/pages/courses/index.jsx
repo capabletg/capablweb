@@ -287,9 +287,9 @@ export default function Courses() {
                                     style={{ boxShadow: "0px 8px 20px rgba(177, 194, 193, 0.2)" }}
                                     className="w-full min-w-[45rem] bg-white rounded-xl overflow-hidden"
                                 >
-                                    <table className="w-full">
+                                    <table className="w-full relative">
                                         <thead>
-                                            <tr className="relative after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-capabl_primary z-0 after:shadow-md after:rounded-xl">
+                                            <tr className="relative after:content-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-capabl_primary z-0 after:shadow-md after:rounded-xl">
                                                 <th className="align-middle text-left text-sm md:text-base font-medium text-[#231F20] pl-6 pr-4 py-4 md:py-5 relative z-[1]">
                                                     Particulars
                                                 </th>
