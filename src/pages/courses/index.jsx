@@ -6,6 +6,8 @@ import { IoStar } from "react-icons/io5";
 import { FiChevronUp } from "react-icons/fi";
 import CrackedSdtSlider from "../../components/courses/CrackedSdtSlider";
 import Accordian from "../../components/courses/Accordian";
+import PathAnimation from "../../components/courses/PathAnimation";
+import AdmissionProcess from "../../components/courses/AdmissionProcess";
 
 export default function Courses() {
     return (
@@ -32,7 +34,8 @@ export default function Courses() {
                 <div className="w-full h-7 md:h-8" />
 
                 {/* fixed */}
-                <div className="fixed top-7 md:top-8 left-0 w-full bg-white z-20">
+                <div className="w-full bg-white z-20">
+                    {/* <div className="fixed top-7 md:top-8 left-0 w-full bg-white z-20"> */}
                     <div className="container max-w-7xl mx-auto flex items-center justify-between px-4 h-10 md:h-20">
                         <Link href="/">
                             <img src="/images/svgs/logo.svg" alt="capable logo" className="w-full max-w-[6rem] md:max-w-[8rem] object-contain cursor-pointer" />
@@ -67,7 +70,7 @@ export default function Courses() {
                     </div>
                 </div>
                 {/* spacer */}
-                <div className="w-full h-10 md:h-20" />
+                {/* <div className="w-full h-10 md:h-20" /> */}
             </header>
 
             <main className="min-h-screen w-full">
@@ -375,7 +378,9 @@ export default function Courses() {
                                 </button>
                             </div>
 
-                            <div className="hidden col-span-2 md:order-2 md:flex items-center mt-10 pb-10 px-10 relative z-[3]">
+                            <AdmissionProcess />
+
+                            {/* <div className="hidden col-span-2 md:order-2 md:flex items-center mt-10 pb-10 px-10 relative z-[3]">
                                 <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
                                     <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-light text-[#14213d] text-center">
                                         Talk to Counsellor
@@ -399,8 +404,15 @@ export default function Courses() {
                                         Get Admission
                                     </span>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
+                    </div>
+                </section>
+
+                {/* Path section */}
+                <section className="max-w-7xl mx-auto px-6">
+                    <div className="hidden md:block my-40 w-full px-6">
+                        <PathAnimation />
                     </div>
                 </section>
             </main>
