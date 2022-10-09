@@ -2,7 +2,7 @@ import { useScroll, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Lottie from "react-lottie-player";
 
-export default function PathAnimation() {
+export default function HorizontalPathAnimation() {
     const [progress, setProgress] = useState(0);
 
     const ref = useRef(null);
@@ -85,14 +85,14 @@ export default function PathAnimation() {
                 <div
                     style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)" }}
                     className={`absolute z-[2] top-[81.9%] left-[25.4%] rounded-full w-[4.8%] aspect-square border-2 transition duration-100 ${
-                        progress > 18 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
+                        progress > 21 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                     }`}
                 />
 
                 <span
                     style={{ top: "101.5%", left: "28%" }}
                     className={`text-sm font-medium transform -translate-x-1/2 text-center absolute w-[9rem] transition-all duration-200 ${
-                        progress > 18 ? "text-black" : "text-[#bbb]"
+                        progress > 21 ? "text-black" : "text-[#bbb]"
                     }`}
                 >{`400+ Hrs of Technical Training`}</span>
             </>
@@ -226,7 +226,7 @@ function LottiePlayer({ progress = 0 }) {
     const [animationData, setAnimationData] = useState(null);
 
     useEffect(() => {
-        import("../lotties/cracker.json").then(setAnimationData);
+        import("../../lotties/cracker.json").then(setAnimationData);
     }, []);
 
     if (progress < 99) return <></>;

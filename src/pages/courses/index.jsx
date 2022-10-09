@@ -1,13 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { FaMinus, FaPlay, FaPlus } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
 import { FiChevronUp } from "react-icons/fi";
 import CrackedSdtSlider from "../../components/courses/CrackedSdtSlider";
 import Accordian from "../../components/courses/Accordian";
-import PathAnimation from "../../components/courses/PathAnimation";
 import AdmissionProcess from "../../components/courses/AdmissionProcess";
+import HorizontalPathAnimation from "../../components/courses/PathAnimation/Horizontal";
+import VerticalPathAnimation from "../../components/courses/PathAnimation/Vertical";
 
 export default function Courses() {
     return (
@@ -219,7 +220,7 @@ export default function Courses() {
                 </section>
 
                 {/* how the scolarship system works */}
-                <section className="max-w-7xl my-20 mx-auto px-4">
+                <section className="max-w-7xl mt-20 mx-auto px-4">
                     <div className="bg-transparent md:bg-[#F2F6F7] md:rounded-3xl p-0 md:p-6">
                         <div className="bg-transparent md:bg-white md:bg-opacity-30 md:rounded-3xl md:px-6 md:pt-10 md:pb-4">
                             <div className="hidden w-fit mx-auto mb-5 md:flex items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
@@ -410,10 +411,18 @@ export default function Courses() {
                 </section>
 
                 {/* Path section */}
-                <section className="max-w-7xl mx-auto px-6">
-                    <div className="hidden md:block my-40 w-full px-6">
-                        <PathAnimation />
+                <section className="max-w-7xl mx-auto px-6 mt-16 md:mt-28 lg:mt-32">
+                    <div className="hidden md:block w-full px-6">
+                        <HorizontalPathAnimation />
                     </div>
+                    <div className="block md:hidden w-full px-4">
+                        <VerticalPathAnimation />
+                    </div>
+                </section>
+
+                <section className="mt-16 md:mt-28 lg:mt-32">
+                    <div className="w-full h-96" />
+                    <div className="w-full h-96" />
                 </section>
             </main>
         </div>
