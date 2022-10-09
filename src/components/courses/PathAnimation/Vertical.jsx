@@ -51,7 +51,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "11%", left: "54%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 ${
                             progress > 3.7 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                         }`}
                     />
@@ -61,7 +61,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "27.6%", left: "13%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 ${
                             progress > 21 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                         }`}
                     />
@@ -78,7 +78,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "34.9%", left: "44.5%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 ${
                             progress > 31 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                         }`}
                     />
@@ -94,7 +94,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "42.2%", left: "75%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 ${
                             progress > 41 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                         }`}
                     />
@@ -110,7 +110,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "56.7%", left: "27.2%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 ${
                             progress > 58 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                         }`}
                     />
@@ -126,7 +126,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "63.3%", left: "59.5%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 ${
                             progress > 69 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                         }`}
                     />
@@ -142,7 +142,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "70%", left: "87%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 ${
                             progress > 78 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                         }`}
                     />
@@ -158,7 +158,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "84.8%", left: "55%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 ${
                             progress > 92 ? "bg-capabl_primary border-white" : "bg-white border-transparent"
                         }`}
                     />
@@ -186,7 +186,7 @@ export default function VerticalPathAnimation() {
                 <>
                     <div
                         style={{ boxShadow: "0px 1px 20px rgba(0, 0, 0, 0.1)", top: "99.5%", left: "55.3%" }}
-                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 top-[40%] left-[97.5%] rounded-full w-[10%] max-w-[3.2rem] aspect-square border-2 transition duration-100 bg-white ${
+                        className={`absolute z-[2] transform -translate-x-1/2 -translate-y-1/2 top-[40%] left-[97.5%] rounded-full w-[10%] max-w-[3.2rem] aspect-square border sm:border-2 transition duration-100 bg-white ${
                             progress >= 99 ? "border-capabl_primary" : "border-transparent"
                         }`}
                     />
