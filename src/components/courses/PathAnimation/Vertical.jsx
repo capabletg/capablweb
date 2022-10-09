@@ -15,8 +15,6 @@ export default function VerticalPathAnimation() {
         setProgress(Number(val * 100)?.toFixed(2));
     });
 
-    console.log(progress);
-
     return (
         <div className="w-[70%] max-w-sm mx-auto pl-4">
             <div ref={ref} className="relative">

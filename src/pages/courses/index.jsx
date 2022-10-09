@@ -9,6 +9,8 @@ import Accordian from "../../components/courses/Accordian";
 import AdmissionProcess from "../../components/courses/AdmissionProcess";
 import HorizontalPathAnimation from "../../components/courses/PathAnimation/Horizontal";
 import VerticalPathAnimation from "../../components/courses/PathAnimation/Vertical";
+import JourneySlider from "../../components/courses/JourneySlider";
+import { journeySlider } from "../../utils/data/courses/journeySliderData";
 
 export default function Courses() {
     return (
@@ -180,26 +182,20 @@ export default function Courses() {
                 </section>
 
                 {/* Take the journey now to be Capabl */}
-                {/* TODO: */}
-                <section className="hidden">
-                    <h2>
+                <section className="mt-16 md:mt-20 max-w-7xl mx-auto">
+                    <h2 className="text-center font-medium text-lg md:text-2xl max-w-xs md:max-w-sm mx-auto px-4">
                         Why wait, Take the journey now to be <span className="text-capabl_primary">Capabl</span>
                     </h2>
 
-                    <div>
-                        <svg width="1728" height="195" viewBox="0 0 1728 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M-178.503 192.577C145.293 48.6474 1015.57 -152.854 1906.33 192.577"
-                                stroke="#E1E1E1"
-                                strokeOpacity="0.5"
-                                strokeWidth="3.59868"
-                            />
-                        </svg>
+                    <JourneySlider arr={journeySlider} />
+
+                    <div className="flex items-center justify-center mt-10 sm:mt-14 lg:mt-16">
+                        <span className="bg-[#CF2323] w-7 md:w-10 h-1.5 md:h-2" />
                     </div>
                 </section>
 
                 {/* Where you transform to an industry Capabl Engineer */}
-                <section className="px-4 lg:px-6 mt-12 md:mt-16 lg:mt-20 max-w-7xl mx-auto">
+                <section className="px-4 lg:px-6 mt-6 lg:mt-8 max-w-7xl mx-auto">
                     <h2 className="text-center font-medium text-lg md:text-2xl mb-3 lg:mb-4">Where you transform to an Industry Capabl Engineer</h2>
                     <p className="text-center text-[#636363] text-xs md:text-sm max-w-xl mx-auto">
                         1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial
