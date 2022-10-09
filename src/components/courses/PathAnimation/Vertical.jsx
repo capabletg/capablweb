@@ -209,5 +209,5 @@ function LottiePlayer({ progress = 0 }) {
 
     if (progress < 99) return <></>;
 
-    return <Lottie loop={true} animationData={animationData} play={true} style={{ width: 140, height: 140 }} />;
+    return <Lottie loop={false} animationData={animationData} play={true} style={{ width: 140, height: 140 }} />;
 }
