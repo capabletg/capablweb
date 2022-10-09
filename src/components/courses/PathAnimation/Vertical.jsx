@@ -191,8 +191,14 @@ export default function VerticalPathAnimation() {
                         }`}
                     />
 
-                    <div style={{ top: "99.5%", left: "55.3%" }} className={`absolute z-[3] transform -translate-x-1/2 -translate-y-1/2 `}>
-                        <LottiePlayer progress={progress} />
+                    <div style={{ top: "99.5%", left: "55.3%" }} className={`absolute z-[3] transform -translate-x-1/2 -translate-y-1/2 w-36 h-36`}>
+                        <div className="relative w-full h-full">
+                            <LottiePlayer progress={progress} />
+
+                            <div style={{ top: "40%", left: "50%" }} className="absolute transform -translate-x-1/2 -translate-y-1/2 w-12">
+                                <LottiePlayerCup progress={progress} />
+                            </div>
+                        </div>
                     </div>
                 </>
             </div>
@@ -209,5 +215,17 @@ function LottiePlayer({ progress = 0 }) {
 
     if (progress < 99) return <></>;
 
-    return <Lottie loop={false} animationData={animationData} play={true} style={{ width: 140, height: 140 }} />;
+    return <Lottie loop={false} animationData={animationData} play={true} className="w-full h-full" />;
+}
+
+function LottiePlayerCup({ progress = 0 }) {
+    const [animationData, setAnimationData] = useState(null);
+
+    useEffect(() => {
+        import("../../lotties/cup.json").then(setAnimationData);
+    }, []);
+
+    if (progress < 99) return <></>;
+
+    return <Lottie loop={false} animationData={animationData} play={true} className="w-full" />;
 }

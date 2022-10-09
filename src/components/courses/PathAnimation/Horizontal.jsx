@@ -214,8 +214,14 @@ export default function HorizontalPathAnimation() {
                     }`}
                 />
 
-                <div className={`absolute z-[3] top-[44%] left-[99%] transform -translate-x-1/2 -translate-y-1/2 `}>
-                    <LottiePlayer progress={progress} />
+                <div className={`absolute z-[3] top-[44%] left-[99%] transform -translate-x-1/2 -translate-y-1/2 w-48 h-48`}>
+                    <div className="relative w-full h-full">
+                        <LottiePlayer progress={progress} />
+
+                        <div style={{ top: "43%", left: "54%" }} className="absolute transform -translate-x-1/2 -translate-y-1/2 w-16">
+                            <LottiePlayerCup progress={progress} />
+                        </div>
+                    </div>
                 </div>
             </>
         </div>
@@ -231,5 +237,16 @@ function LottiePlayer({ progress = 0 }) {
 
     if (progress < 99) return <></>;
 
-    return <Lottie loop={false} animationData={animationData} play={true} style={{ width: 200, height: 200 }} />;
+    return <Lottie loop={false} animationData={animationData} play={true} className="w-full h-full" />;
+}
+function LottiePlayerCup({ progress = 0 }) {
+    const [animationData, setAnimationData] = useState(null);
+
+    useEffect(() => {
+        import("../../lotties/cup.json").then(setAnimationData);
+    }, []);
+
+    if (progress < 99) return <></>;
+
+    return <Lottie loop={false} animationData={animationData} play={true} className="w-full" />;
 }
