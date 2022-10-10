@@ -1,3 +1,5 @@
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import classes from "./style.module.css";
 
@@ -5,11 +7,13 @@ import classes from "./style.module.css";
 
 export default function JourneySlider({ arr = [] }) {
     const [slides, setSlides] = useState([]);
+    const [slideLeft, setSlideLeft] = useState(true);
 
     const timerRef = useRef();
 
     const shiftArray = (shift) => {
         if (shift > arr?.length) return;
+        setSlideLeft(shift > 0);
         setSlides((prev) => [...prev.slice(shift), ...prev.slice(0, shift)]);
     };
 
@@ -50,7 +54,9 @@ export default function JourneySlider({ arr = [] }) {
                 {/* Slider 1 */}
                 <div onClick={() => shiftArray(-2)} className="hidden lg:block cursor-pointer w-full max-w-[8rem] flex-shrink-0 mt-[10.5%]">
                     <div className="relative border-2 border-white w-fit mb-4 mx-auto">
-                        <img className="w-24 h-24 object-cover rounded-full" src={slides?.[0]?.image} alt={slides?.[0]?.name} />
+                        <div className="w-24 h-24 relative overflow-hidden rounded-full transition-all duration-300">
+                            <ImageOnChange src={slides?.[0]?.image} alt={slides?.[0]?.name} toLeft={slideLeft} />
+                        </div>
                         <div
                             style={{ boxShadow: "0px 0px 4.52439px #E8E8E8" }}
                             className="bg-white w-12 h-12 rounded-full p-1 flex items-center justify-center absolute bottom-[-15%] right-[-12%]"
@@ -71,11 +77,9 @@ export default function JourneySlider({ arr = [] }) {
                     className="flex-shrink-0 w-full max-w-[5.3rem] sm:max-w-[8rem] cursor-pointer mt-[4.2rem] sm:mt-[3.5rem] md:mt-[4rem] lg:mt-[7%]"
                 >
                     <div className="relative border-2 border-white w-fit mx-auto mb-2 lg:mb-5">
-                        <img
-                            className="w-14 sm:w-[5.5rem] lg:w-28 h-14 sm:h-[5.5rem] lg:h-28 object-cover rounded-full transition-all duration-300"
-                            src={slides?.[1]?.image}
-                            alt={slides?.[1]?.name}
-                        />
+                        <div className="w-14 sm:w-[5.5rem] lg:w-28 h-14 sm:h-[5.5rem] lg:h-28 relative overflow-hidden rounded-full transition-all duration-300">
+                            <ImageOnChange src={slides?.[1]?.image} alt={slides?.[1]?.name} toLeft={slideLeft} />
+                        </div>
                         <div
                             style={{ boxShadow: "0px 0px 4.52439px #E8E8E8" }}
                             className="bg-white w-7 sm:w-9 lg:w-14 h-7 sm:h-9 lg:h-14 rounded-full p-1 flex items-center justify-center absolute bottom-[-15%] right-[-12%] transition-all duration-300"
@@ -96,19 +100,15 @@ export default function JourneySlider({ arr = [] }) {
                         className={`rounded-full w-fit mx-auto p-2 relative z-[0] after:z-[0] after:absolute after:rounded-full after:left-0 after:top-0 after:w-full after:h-full after:border-2 after:border-capabl_primary after:border-r-[#dfe0e3] after:border-t-[#dfe0e3] ${classes.slider_main_border}`}
                     >
                         <div className="relative w-fit">
-                            <div className="w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 overflow-hidden rounded-full transition-all duration-300">
-                                <img className="w-full h-full object-cover" src={slides?.[2]?.image} alt={slides?.[2]?.name} />
+                            <div className="w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 relative overflow-hidden rounded-full transition-all duration-300">
+                                <ImageOnChange src={slides?.[2]?.image} alt={slides?.[2]?.name} toLeft={slideLeft} />
                             </div>
-                            {/* <img
-                                className="w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 object-cover rounded-full transition-all duration-300"
-                                src={slides?.[2]?.image}
-                                alt={slides?.[2]?.name}
-                            /> */}
                             <div
                                 style={{ boxShadow: "0px 0px 4.52439px #E8E8E8" }}
                                 className="bg-white w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 rounded-full p-1 flex items-center justify-center absolute z-[1] bottom-[-9%] right-[-6%] transition-all duration-300"
                             >
-                                <img className="w-full object-contain" src={slides?.[2]?.company} alt="company" />
+                                <Image layout="fill" className="w-full object-contain" src={slides?.[2]?.company} alt="company" />
+                                {/* <img className="w-full object-contain" src={slides?.[2]?.company} alt="company" /> */}
                             </div>
                         </div>
                     </div>
@@ -130,11 +130,9 @@ export default function JourneySlider({ arr = [] }) {
                     className="flex-shrink-0 w-full max-w-[5.3rem] sm:max-w-[8rem] cursor-pointer mt-[4.2rem] sm:mt-[3.5rem] md:mt-[4rem] lg:mt-[7%]"
                 >
                     <div className="relative border-2 border-white w-fit mb-2 lg:mb-5 mx-auto">
-                        <img
-                            className="w-14 sm:w-[5.5rem] lg:w-28 h-14 sm:h-[5.5rem] lg:h-28 object-cover rounded-full transition-all duration-300"
-                            src={slides?.[3]?.image}
-                            alt={slides?.[3]?.name}
-                        />
+                        <div className="w-14 sm:w-[5.5rem] lg:w-28 h-14 sm:h-[5.5rem] lg:h-28 relative overflow-hidden rounded-full transition-all duration-300">
+                            <ImageOnChange src={slides?.[3]?.image} alt={slides?.[3]?.name} toLeft={slideLeft} />
+                        </div>
                         <div
                             style={{ boxShadow: "0px 0px 4.52439px #E8E8E8" }}
                             className="bg-white w-7 sm:w-9 lg:w-14 h-7 sm:h-9 lg:h-14 rounded-full p-1 flex items-center justify-center absolute bottom-[-15%] right-[-12%] transition-all duration-300"
@@ -151,7 +149,9 @@ export default function JourneySlider({ arr = [] }) {
                 {/* Slider 5 */}
                 <div onClick={() => shiftArray(2)} className="cursor-pointer hidden lg:block w-full max-w-[8rem] flex-shrink-0 mt-[10.5%]">
                     <div className="relative border-2 border-white w-fit mb-4 mx-auto">
-                        <img className="w-24 h-24 object-cover rounded-full" src={slides?.[4]?.image} alt={slides?.[4]?.name} />
+                        <div className="w-24 h-24 relative overflow-hidden rounded-full transition-all duration-300">
+                            <ImageOnChange src={slides?.[4]?.image} alt={slides?.[4]?.name} toLeft={slideLeft} />
+                        </div>
                         <div
                             style={{ boxShadow: "0px 0px 4.52439px #E8E8E8" }}
                             className="bg-white w-12 h-12 rounded-full p-1 flex items-center justify-center absolute bottom-[-15%] right-[-12%]"
@@ -166,5 +166,22 @@ export default function JourneySlider({ arr = [] }) {
                 </div>
             </div>
         </div>
+    );
+}
+
+function ImageOnChange({ src = "", alt = "", toLeft = true }) {
+    return (
+        <AnimatePresence>
+            <motion.img
+                key={`${src}_${alt}`}
+                initial={{ opacity: 0, scale: 0, x: toLeft ? "100%" : "-100%" }}
+                animate={{ opacity: 1, x: "0%", scale: 1 }}
+                exit={{ opacity: 0, x: toLeft ? "-100%" : "100%", scale: 0 }}
+                transition={{ duration: 0.5 }}
+                src={src}
+                alt={alt}
+                className="w-full h-full absolute object-cover top-0 left-0 rounded-full transform"
+            />
+        </AnimatePresence>
     );
 }
