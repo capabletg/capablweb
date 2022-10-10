@@ -11,6 +11,7 @@ import HorizontalPathAnimation from "../../components/courses/PathAnimation/Hori
 import VerticalPathAnimation from "../../components/courses/PathAnimation/Vertical";
 import JourneySlider from "../../components/courses/JourneySlider";
 import { journeySlider } from "../../utils/data/courses/journeySliderData";
+import AceYourDreamSlider from "../../components/courses/AceYourDreamSlider";
 
 export default function Courses() {
     return (
@@ -37,8 +38,8 @@ export default function Courses() {
                 <div className="w-full h-7 md:h-8" />
 
                 {/* fixed */}
-                <div className="w-full bg-white z-20">
-                    {/* <div className="fixed top-7 md:top-8 left-0 w-full bg-white z-20"> */}
+                {/* <div className="w-full bg-white relative z-20"> */}
+                <div className="fixed top-7 md:top-8 left-0 w-full bg-white z-20">
                     <div className="container max-w-7xl mx-auto flex items-center justify-between px-4 h-10 md:h-20">
                         <Link href="/">
                             <img src="/images/svgs/logo.svg" alt="capable logo" className="w-full max-w-[6rem] md:max-w-[8rem] object-contain cursor-pointer" />
@@ -73,7 +74,7 @@ export default function Courses() {
                     </div>
                 </div>
                 {/* spacer */}
-                {/* <div className="w-full h-10 md:h-20" /> */}
+                <div className="w-full h-10 md:h-20" />
             </header>
 
             <main className="min-h-screen w-full">
@@ -407,13 +408,31 @@ export default function Courses() {
                 </section>
 
                 {/* Path section */}
-                <section className="max-w-7xl mx-auto px-6 mt-16 md:mt-28 lg:mt-32">
+                <section className="max-w-7xl mx-auto px-6 mt-16 mb-10 md:mb-16 md:mt-28 lg:mt-32">
                     <div className="hidden md:block w-full px-6">
                         <HorizontalPathAnimation />
                     </div>
                     <div className="block md:hidden w-full px-4">
                         <VerticalPathAnimation />
                     </div>
+                </section>
+
+                {/* Ace your dream career */}
+                <section className="mt-32 md:mt-40 mb-20 mx-auto max-w-6xl px-4 md:px-6">
+                    <div className="relative mb-8 md:mb-11">
+                        <svg
+                            className="w-16 md:w-[4.5rem] object-contain absolute -top-10 md:-top-11 left-1/2 transition-all duration-200 transform -translate-x-1/2 fill-capabl_primary"
+                            viewBox="0 0 108 58"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M1.8445 35.5129C9.30516 18.0189 24.767 6.88707 39.1312 5.42451C57.0058 3.60239 72.1618 14.7657 83.3751 29.2976C88.7616 36.2783 93.424 44.117 97.7779 52.2347C91.8514 51.0025 85.4661 50.9979 79.3161 53.2543C77.7989 53.8135 78.2278 56.4457 79.6859 56.0743C86.1741 54.4213 92.3842 53.2676 98.6614 53.8934C99.1698 54.8542 99.6743 55.8184 100.176 56.7849C101.439 59.217 104.95 56.7005 103.936 54.224C104.33 54.0275 104.665 53.5927 104.684 52.9775C104.855 47.6206 105.185 42.1982 105.77 36.8063C106.026 34.4647 106.358 32.1211 106.691 29.7783C107.126 26.7091 107.562 23.641 107.823 20.5805C107.999 18.5024 105.639 18.2583 105.045 20.2895C102.13 30.2743 101.891 41.4647 102.498 51.4313C93.3018 33.871 82.7452 16.9061 67.4389 7.54826C52.9028 -1.33695 34.6432 -2.84197 18.3685 9.55601C10.5893 15.4803 4.10768 24.3696 0.3156 34.7529C-0.123815 35.9476 1.33922 36.6947 1.8445 35.5129Z" />
+                        </svg>
+
+                        <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4">{`And Ace your Dream Career`}</h2>
+                        <p className="text-xs md:text-sm max-w-sm md:max-w-lg mx-auto text-center font-light text-[#636363]">{`1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial exposure.`}</p>
+                    </div>
+
+                    <AceYourDreamSlider />
                 </section>
 
                 <section className="mt-16 md:mt-28 lg:mt-32">
