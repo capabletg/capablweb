@@ -23,7 +23,7 @@ export default function AceYourDreamSlider() {
                 {/* diffuser */}
                 <div className="absolute z-[2] top-0 left-0 w-6 h-full bg-gradient-to-r from-[#f2f4f7] to-transparent rounded-full" />
                 <div className="absolute z-[2] top-0 right-0 w-6 h-full bg-gradient-to-l from-[#f2f4f7] to-transparent rounded-full" />
-                <div className="flex items-start justify-start gap-4 md:gap-6 overflow-x-scroll scrollbar-hide px-6 py-4 relative z-[1]">
+                <div className="flex items-start justify-start gap-4 md:gap-6 overflow-x-scroll scrollbar-hide px-6 md:px-7 lg:px-10 py-4 relative z-[1]">
                     {aceYourDreamData?.[activeCategory]?.contents?.map((item, index) => (
                         <div
                             key={index}

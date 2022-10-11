@@ -418,7 +418,7 @@ export default function Courses() {
                 </section>
 
                 {/* Ace your dream career */}
-                <section className="mt-32 md:mt-40 mb-20 mx-auto max-w-6xl px-4 md:px-6">
+                <section className="mt-32 md:mt-40 mx-auto max-w-7xl px-4 md:px-6">
                     <div className="relative mb-8 md:mb-11">
                         <svg
                             className="w-16 md:w-[4.5rem] object-contain absolute -top-10 md:-top-11 left-1/2 transition-all duration-200 transform -translate-x-1/2 fill-capabl_primary"
@@ -428,11 +428,116 @@ export default function Courses() {
                             <path d="M1.8445 35.5129C9.30516 18.0189 24.767 6.88707 39.1312 5.42451C57.0058 3.60239 72.1618 14.7657 83.3751 29.2976C88.7616 36.2783 93.424 44.117 97.7779 52.2347C91.8514 51.0025 85.4661 50.9979 79.3161 53.2543C77.7989 53.8135 78.2278 56.4457 79.6859 56.0743C86.1741 54.4213 92.3842 53.2676 98.6614 53.8934C99.1698 54.8542 99.6743 55.8184 100.176 56.7849C101.439 59.217 104.95 56.7005 103.936 54.224C104.33 54.0275 104.665 53.5927 104.684 52.9775C104.855 47.6206 105.185 42.1982 105.77 36.8063C106.026 34.4647 106.358 32.1211 106.691 29.7783C107.126 26.7091 107.562 23.641 107.823 20.5805C107.999 18.5024 105.639 18.2583 105.045 20.2895C102.13 30.2743 101.891 41.4647 102.498 51.4313C93.3018 33.871 82.7452 16.9061 67.4389 7.54826C52.9028 -1.33695 34.6432 -2.84197 18.3685 9.55601C10.5893 15.4803 4.10768 24.3696 0.3156 34.7529C-0.123815 35.9476 1.33922 36.6947 1.8445 35.5129Z" />
                         </svg>
 
-                        <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4">{`And Ace your Dream Career`}</h2>
+                        <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`And Ace your Dream Career`}</h2>
                         <p className="text-xs md:text-sm max-w-sm md:max-w-lg mx-auto text-center font-light text-[#636363]">{`1 in 100 engineers qualify for IIT. Can anything be better? Yes, Stanford/MIT kind of ecosystem focused on projects and industrial exposure.`}</p>
                     </div>
 
                     <AceYourDreamSlider />
+                </section>
+
+                {/* Be Ready for Companies */}
+                <section className="max-w-7xl mx-auto px-4 mt-12 md:mt-28">
+                    <div className="w-full px-4 md:px-6 pt-6 pb-16 md:pt-8 md:pb-24 bg-[#14213D] rounded-xl md:rounded-2xl relative">
+                        {/* illustration */}
+                        <img
+                            className="w-full object-contain z-0 absolute top-0 left-0"
+                            src="/images/courses/circuit_illustration.svg"
+                            alt="circuit illustration"
+                        />
+
+                        <div className="max-w-5xl mx-auto relative z-[1]">
+                            <h2 className="text-center text-white font-normal text-lg sm:text-xl md:text-2xl mb-2 md:mb-3">Be Ready for Companies like</h2>
+                            <p className="text-xs md:text-sm text-center italic text-white font-light">Actively Hiring</p>
+
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-14 mb-3 md:mb-5">
+                                <div className="flex flex-col items-center justify-start gap-5 mb-5">
+                                    <div className="h-6 sm:h-7 w-full max-w-[6rem] sm:ma-w-[7rem] flex items-start justify-center">
+                                        <img className="h-full w-full object-contain" src="/images/courses/company_1.png" alt="company" />
+                                    </div>
+                                    <div className="text-white text-opacity-80 font-light text-xs sm:text-sm text-center flex flex-col items-center justify-start gap-1">
+                                        <p>Data Scientist</p>
+                                        <p>Data Engineer</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-center justify-start gap-5 mb-5">
+                                    <div className="h-6 sm:h-7 w-full max-w-[6rem] sm:ma-w-[7rem] flex items-start justify-center">
+                                        <img className="h-full w-full object-contain" src="/images/courses/company_2.png" alt="company" />
+                                    </div>
+                                    <div className="text-white text-opacity-80 font-light text-xs sm:text-sm text-center flex flex-col items-center justify-start gap-1">
+                                        <p>Business Analyst</p>
+                                        <p>Data Analyst</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-center justify-start gap-5 mb-5">
+                                    <div className="h-6 sm:h-7 w-full max-w-[6rem] sm:ma-w-[7rem] flex items-start justify-center">
+                                        <img className="h-full w-full object-contain" src="/images/courses/company_3.png" alt="company" />
+                                    </div>
+                                    <div className="text-white text-opacity-80 font-light text-xs sm:text-sm text-center flex flex-col items-center justify-start gap-1">
+                                        <p>ML Engineer</p>
+                                        <p>NLP Engineer</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-center justify-start gap-5 mb-5">
+                                    <div className="h-6 sm:h-7 w-full max-w-[6rem] sm:ma-w-[7rem] flex items-start justify-center">
+                                        <img className="h-full w-full object-contain" src="/images/courses/company_4.png" alt="company" />
+                                    </div>
+                                    <div className="text-white text-opacity-80 font-light text-xs sm:text-sm text-center flex flex-col items-center justify-start gap-1">
+                                        <p>AI Specialist</p>
+                                        <p>Python Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr className="border-t-[0.025rem] border-t-[#434d64] mb-5 md:mb-8" />
+
+                            <h3 className="text-center text-white font-normal text-base md:text-lg mb-7 md:mb-9">Or Apply to best Universities</h3>
+
+                            <div className="flex items-start justify-evenly gap-4">
+                                <div className="flex items-center flex-col justify-start gap-2.5">
+                                    <div className="bg-white rounded-lg p-3 md:p-4 w-16 h-16 md:w-24 md:h-24 flex-shrink-0 flex items-center justify-center">
+                                        <img className="w-full object-contain" src="/images/courses/university_1.png" alt="university" />
+                                    </div>
+                                    <p className="italic text-[0.7rem] md:text-xs text-[#a1a6b1]">{`MS/PhD in`}</p>
+
+                                    <div className="flex items-start justify-start gap-1 flex-col text-xs md:text-sm text-white text-opacity-80 font-light">
+                                        <p>Data Engineer</p>
+                                        <p>Data Engineer</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center flex-col justify-start gap-2.5 md:gap-3">
+                                    <div className="bg-white rounded-lg p-3 md:p-4 w-16 h-16 md:w-24 md:h-24 flex-shrink-0 flex items-center justify-center">
+                                        <img className="w-full object-contain" src="/images/courses/university_2.png" alt="university" />
+                                    </div>
+                                    <p className="italic text-[0.7rem] md:text-xs text-[#a1a6b1]">{`MS/PhD in`}</p>
+
+                                    <div className="flex items-start justify-start gap-1 flex-col text-xs md:text-sm text-white text-opacity-80 font-light">
+                                        <p>Data Engineer</p>
+                                        <p>Data Engineer</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center flex-col justify-start gap-2.5">
+                                    <div className="bg-white rounded-lg p-3 md:p-4 w-16 h-16 md:w-24 md:h-24 flex-shrink-0 flex items-center justify-center">
+                                        <img className="w-full object-contain" src="/images/courses/university_3.png" alt="university" />
+                                    </div>
+                                    <p className="italic text-[0.7rem] md:text-xs text-[#a1a6b1]">{`MS/PhD in`}</p>
+
+                                    <div className="flex items-start justify-start gap-1 flex-col text-xs md:text-sm text-white text-opacity-80 font-light">
+                                        <p>Data Engineer</p>
+                                        <p>Data Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button className="absolute bottom-0 left-1/2 z-[2] transform -translate-x-1/2 translate-y-1/2 bg-capabl_primary rounded-md px-4 md:px-8 py-1.5 md:py-2.5 text-black text-[0.8rem] md:text-sm hover:scale-95 transition-all duration-300">
+                            Explore More
+                        </button>
+                    </div>
                 </section>
 
                 <section className="mt-16 md:mt-28 lg:mt-32">
