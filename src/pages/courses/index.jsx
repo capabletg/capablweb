@@ -14,6 +14,7 @@ import { journeySlider } from "../../utils/data/courses/journeySliderData";
 import AceYourDreamSlider from "../../components/courses/AceYourDreamSlider";
 import { skillsAcquired, toolsLearnt } from "../../utils/data/courses/toolsAndSkills";
 import DownloadBrochure from "../../components/courses/DownloadBrochure";
+import Projects from "../../components/courses/Projects/Projects";
 
 export default function Courses() {
     return (
@@ -549,8 +550,8 @@ export default function Courses() {
 
                     <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Pathway to become a kick-ass Data Scientist for college student`}</h2>
                     <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">
-                        Success isn't really that difficult. Right mentoring, active peers, good opportunities & most importantly, industrial skills to back
-                        your interests can help achieve impossible
+                        {`Success isn't really that difficult. Right mentoring, active peers, good opportunities & most importantly, industrial skills to back
+                        your interests can help achieve impossible`}
                     </p>
 
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -773,8 +774,17 @@ export default function Courses() {
                     </div>
                 </section>
 
+                {/* Minor & Major Projects */}
+                <section className="max-w-7xl px-4 mx-auto mt-20">
+                    <div className="bg-[#cf2323] w-8 md:w-12 h-1.5 md:h-2 mx-auto mb-4 md:mb-8" />
+                    <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`40+ of Minor and Major Projects`}</h2>
+                    <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">{`Success isn't really that difficult. Right mentoring, active peers, good opportunities & most importantly, industrial skills to back your interests can help achieve impossible`}</p>
+
+                    <Projects />
+                </section>
+
                 {/* All tools learnt & Skills Acquired */}
-                <section className="max-w-7xl mx-auto px-4 mt-24 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <section className="max-w-7xl mx-auto px-4 mt-4 md:mt-8 lg:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <div className="bg-[#f2f4f7] rounded-2xl px-6 pb-8 lg:pb-12 transition-all duration-200">
                         <div className="flex items-center justify-start gap-3.5">
                             <div className="bg-[#e3e7ec] rounded-b-full px-3 pt-4 pb-2.5 sm:pb-3 w-full max-w-[3rem] sm:max-w-[3.3rem]">
