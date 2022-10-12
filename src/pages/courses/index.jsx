@@ -16,6 +16,7 @@ import { skillsAcquired, toolsLearnt } from "../../utils/data/courses/toolsAndSk
 import DownloadBrochure from "../../components/courses/DownloadBrochure";
 import Projects from "../../components/courses/Projects/Projects";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
+import RegsiterForm from "../../components/courses/RegsiterForm";
 
 export default function Courses() {
     return (
@@ -905,6 +906,71 @@ export default function Courses() {
                         {`Leading`} <span className="font-semibold">{`Experts !`}</span>
                     </h1>
                     <LeadingExpertsSlider />
+                </section>
+
+                {/* Form Section */}
+                <section className="max-w-7xl mx-auto px-4 mt-16 md:mt-20">
+                    <div
+                        style={{ boxShadow: "-11px -15px 30px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)" }}
+                        className="bg-[#f4f4f4] rounded-2xl py-9 sm:py-10 md:py-12 px-1 md:px-4"
+                    >
+                        <h2 className="text-center text-[#181818] font-medium text-lg sm:text-xl md:text-2xl mb-10 md:mb-12">
+                            {`We're better than the rest! If not,`}
+                            <br />
+                            <span className="text-capabl_primary">{`take the program for free`}</span>
+                        </h2>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-0 md:px-2 lg:px-8">
+                            <div className="col-span-1 md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4 px-2 sm:px-6 md:px-0">
+                                {[
+                                    { count: "1.5 Crore", label: "Scholarship Budget", icon: "/images/courses/pig.svg" },
+                                    { count: "100", label: "No. of Seats", icon: "/images/courses/pig.svg" },
+                                    { count: "55", label: "Applications Received", icon: "/images/courses/pig.svg" },
+                                    { count: "25", label: "Seats Allocated", icon: "/images/courses/pig.svg" },
+                                    { count: "75", label: "Seats Vacant", icon: "/images/courses/pig.svg" },
+                                ]?.map((item, index) => (
+                                    <div key={index} className="flex flex-col sm:flex-row items-center justify-start gap-2 sm:gap-4 mb-4 md:mb-3">
+                                        <div
+                                            style={{ boxShadow: "-6px -6px 15px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)" }}
+                                            className="w-20 sm:w-16 md:w-[4.5rem] lg:w-20 h-20 sm:h-16 md:h-[4.5rem] lg:h-20 flex-shrink-0 flex items-center justify-center p-1 md:p-2 rounded-xl"
+                                        >
+                                            <img className="w-full object-contain mt-1" src={item?.icon} alt="count" />
+                                        </div>
+
+                                        <div className="flex flex-col items-center sm:items-start justify-start gap-0.5 mt-1.5 sm:mt-0">
+                                            <p className="text-capabl_primary font-semibold text-base lg:text-xl">{item?.count}</p>
+                                            <p className="text-xs lg:text-sm text-black text-center sm:text-left">{item?.label}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* form */}
+                            <div className="col-span-1 md:col-span-2 px-2 sm:px-6 md:px-0">
+                                <RegsiterForm />
+                            </div>
+
+                            <div className="col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
+                                <div
+                                    style={{ boxShadow: "-11px -15px 30px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)" }}
+                                    className="rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6"
+                                >
+                                    <div className="flex flex-col items-center justify-start gap-2">
+                                        <p className="text-[#545D61] text-sm font-light text-center">{`Get India’s Biggest Scholarship`}</p>
+                                        <p className="text-[#CF2323] text-base sm:text-lg md:text-xl text-center font-semibold">{`Societies`}</p>
+                                    </div>
+                                    <div className="flex flex-col items-center justify-start gap-2">
+                                        <p className="text-[#545D61] text-sm font-light text-center">{`Get Scholarships up to`}</p>
+                                        <p className="text-[#CF2323] text-base sm:text-lg md:text-xl text-center font-semibold">{`2.5 Lakhs`}</p>
+                                    </div>
+                                    <div className="flex flex-col items-center justify-start gap-2">
+                                        <p className="text-[#545D61] text-sm font-light text-center">{`Limited Seats Only`}</p>
+                                        <p className="text-[#CF2323] text-base sm:text-lg md:text-xl text-center font-semibold">{`100 Left`}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section className="mt-16 md:mt-28 lg:mt-32">
