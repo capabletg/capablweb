@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import { leadingExperts } from "../../utils/data/courses/leadingExperts";
 
 export default function LeadingExpertsSlider() {
-    const [aciveSlides, setActiveSlides] = useState(leadingExperts);
-    const [centerSlide, setCenterSlide] = useState(1);
+    const [centerSlide, setCenterSlide] = useState(0);
 
     const settings = {
         dots: false,
@@ -35,7 +34,7 @@ export default function LeadingExpertsSlider() {
 
             <div className="mt-2 md:mt-4">
                 <Slider {...settings}>
-                    {aciveSlides?.map((item, index) => (
+                    {leadingExperts?.map((item, index) => (
                         <div key={index} className={`px-0 pt-10 sm:pt-12 md:pt-14 lg:pt-16 py-4 relative ${centerSlide === index && "z-10"}`}>
                             <div className="bg-transparent mx-auto relative flex items-center justify-start flex-col">
                                 <div
