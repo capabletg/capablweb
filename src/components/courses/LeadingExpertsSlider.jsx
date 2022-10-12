@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaPlay } from "react-icons/fa";
 import Slider from "react-slick";
 import { leadingExperts } from "../../utils/data/courses/leadingExperts";
 
@@ -36,7 +37,7 @@ export default function LeadingExpertsSlider() {
                 <Slider {...settings}>
                     {leadingExperts?.map((item, index) => (
                         <div key={index} className={`px-0 pt-10 sm:pt-12 md:pt-14 lg:pt-16 py-4 relative ${centerSlide === index && "z-10"}`}>
-                            <div className="bg-transparent mx-auto relative flex items-center justify-start flex-col">
+                            <div className="bg-transparent mx-auto relative flex items-center justify-start flex-col cursor-pointer group">
                                 <div
                                     className={`overflow-hidden rounded-xl transition-all duration-300 relative h-[8rem] sm:h-[11rem] md:h-[13.6rem] lg:h-[16rem] ${
                                         centerSlide === index
@@ -44,9 +45,25 @@ export default function LeadingExpertsSlider() {
                                             : "scale-100 w-full max-w-[9rem] sm:max-w-[14rem] md:max-w-[15.3rem] lg:max-w-[18rem] opacity-60"
                                     }`}
                                 >
-                                    <img className="w-full h-full object-cover" src={item?.image} alt={item?.name} />
+                                    <img
+                                        className="w-full h-full object-cover group-hover:scale-110 transform transition-all duration-500"
+                                        src={item?.image}
+                                        alt={item?.name}
+                                    />
 
+                                    {/* fade */}
                                     <div className="bg-black bg-opacity-25 absolute top-0 left-0 w-full h-full" />
+
+                                    {/* play button */}
+                                    <div
+                                        className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-50 rounded-full w-9 sm:w-10 md:w-12 h-9 sm:h-10 md:h-12 flex items-center justify-center group-hover:scale-95 transition-all duration-500 ${
+                                            centerSlide === index ? "opacity-100 scale-100" : "opacity-0 scale-0"
+                                        }`}
+                                    >
+                                        <span className="text-xs sm:text-sm md:text-base ml-1 text-[#4B0AFF]">
+                                            <FaPlay />
+                                        </span>
+                                    </div>
                                 </div>
 
                                 <svg
