@@ -16,7 +16,7 @@ export default function DownloadBrochure() {
             <p className="text-center md:text-left md:max-w-md text-white text-sm font-light">{`Learning powered with right ecosystem and activities that make you industry capabl. Download the Brochure for details!`}</p>
             <button
                 onClick={() => download("/pdfs/brochure.pdf", "Brochure")}
-                className="bg-capabl_primary flex-shrink-0 flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm transition-all duration-300 border border-transparent hover:border-capabl_primary hover:text-capabl_primary hover:bg-transparent"
+                className="bg-capabl_primary flex-shrink-0 flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm border border-transparent hover:scale-95 transition-all duration-300"
             >
                 <HiOutlineDownload className="text-xl" />
                 Download Brochure

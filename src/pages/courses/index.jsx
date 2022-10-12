@@ -15,6 +15,7 @@ import AceYourDreamSlider from "../../components/courses/AceYourDreamSlider";
 import { skillsAcquired, toolsLearnt } from "../../utils/data/courses/toolsAndSkills";
 import DownloadBrochure from "../../components/courses/DownloadBrochure";
 import Projects from "../../components/courses/Projects/Projects";
+import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 
 export default function Courses() {
     return (
@@ -131,7 +132,7 @@ export default function Courses() {
                         <p className="text-[#636363] text-sm text-center md:text-left">{`Graduate not just with a degree but with a job!`}</p>
 
                         <div className="flex items-center justify-center md:justify-start gap-2 mt-6">
-                            <button className="font-medium text-center py-2 px-3 border border-transparent rounded-lg text-sm text-[#272727] bg-capabl_primary">
+                            <button className="font-normal text-center py-2 px-3 border border-transparent rounded-lg text-sm text-[#272727] bg-capabl_primary hover:scale-95 transition-all duration-300">
                                 Talk to Counselor
                             </button>
                         </div>
@@ -374,38 +375,12 @@ export default function Courses() {
                                     veritatis labore debitis illum facilis ab? Illum minus quasi ratione incidunt eveniet ut sint aperiam!
                                 </p>
 
-                                <button className="rounded-lg px-10 md:px-12 py-2.5 bg-capabl_primary text-[#272727] text-center font-normal text-sm transition-all duration-300 border-2 border-transparent hover:border-capabl_primary hover:bg-transparent">
+                                <button className="rounded-lg px-10 md:px-12 py-2.5 bg-capabl_primary text-[#272727] text-center font-normal text-sm border-2 border-transparent hover:scale-95 transition-all duration-300">
                                     Start Now
                                 </button>
                             </div>
 
                             <AdmissionProcess />
-
-                            {/* <div className="hidden col-span-2 md:order-2 md:flex items-center mt-10 pb-10 px-10 relative z-[3]">
-                                <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
-                                    <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-light text-[#14213d] text-center">
-                                        Talk to Counsellor
-                                    </span>
-                                </div>
-                                <span className="h-1 bg-capabl_primary w-full" />
-                                <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
-                                    <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-medium text-[#14213d] text-center">
-                                        Take Scholarship Test
-                                    </span>
-                                </div>
-                                <span className="h-1 bg-capabl_primary w-full" />
-                                <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
-                                    <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-light text-[#14213d] text-center">
-                                        Crack the Interview
-                                    </span>
-                                </div>
-                                <span className="h-1 bg-capabl_primary w-full" />
-                                <div className="relative flex-shrink-0 w-4 h-4 rounded-full bg-capabl_primary">
-                                    <span className="absolute whitespace-nowrap top-[150%] left-1/2 transform -translate-x-1/2 text-xs lg:text-sm font-light text-[#14213d] text-center">
-                                        Get Admission
-                                    </span>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 </section>
@@ -922,6 +897,14 @@ export default function Courses() {
                 {/* Download Brochure */}
                 <section className="max-w-7xl mx-auto px-4 mt-8 md:mt-[4.5rem]">
                     <DownloadBrochure />
+                </section>
+
+                {/* Leading Experts  */}
+                <section className="max-w-5xl mx-auto px-4 mt-16 md:mt-20">
+                    <h1 className="text-center text-xl md:text-2xl font-light text-[#14213D]">
+                        {`Leading`} <span className="font-semibold">{`Experts !`}</span>
+                    </h1>
+                    <LeadingExpertsSlider />
                 </section>
 
                 <section className="mt-16 md:mt-28 lg:mt-32">
