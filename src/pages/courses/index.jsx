@@ -973,6 +973,9 @@ export default function Courses() {
                     </div>
                 </section>
 
+                {/* Hear from our Students */}
+                <section className="max-w-7xl mx-auto"></section>
+
                 <section className="mt-16 md:mt-28 lg:mt-32">
                     <div className="w-full h-96" />
                     <div className="w-full h-96" />
