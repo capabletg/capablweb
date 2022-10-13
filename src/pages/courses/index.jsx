@@ -17,6 +17,7 @@ import DownloadBrochure from "../../components/courses/DownloadBrochure";
 import Projects from "../../components/courses/Projects/Projects";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
+import Faqs from "../../components/courses/Faqs";
 
 export default function Courses() {
     return (
@@ -986,26 +987,26 @@ export default function Courses() {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <path opacity="0.4" d="M1126.34 355.482L1235.75 112.58H1347.89" stroke="#89C5CC" strokWidth="2.83266" />
+                            <path opacity="0.4" d="M1126.34 355.482L1235.75 112.58H1347.89" stroke="#89C5CC" strokeWidth="2.83266" />
                             <path
                                 d="M1363.83 111.554C1363.83 116.206 1360.06 119.977 1355.41 119.977C1350.77 119.977 1347 116.206 1347 111.554C1347 106.902 1350.77 103.131 1355.41 103.131C1360.06 103.131 1363.83 106.902 1363.83 111.554Z"
                                 fill="#89C5CC"
                                 stroke="white"
-                                strokWidth="0.94422"
+                                strokeWidth="0.94422"
                             />
-                            <path opacity="0.4" d="M323.367 366.366L174.693 15.0859H22.3017" stroke="#89C5CC" strokWidth="2.83266" />
+                            <path opacity="0.4" d="M323.367 366.366L174.693 15.0859H22.3017" stroke="#89C5CC" strokeWidth="2.83266" />
                             <path
                                 d="M0.472691 13.6016C0.472691 20.4737 5.69715 25.9932 12.0804 25.9932C18.4636 25.9932 23.688 20.4737 23.688 13.6016C23.688 6.72944 18.4636 1.2099 12.0804 1.2099C5.69715 1.2099 0.472691 6.72944 0.472691 13.6016Z"
                                 fill="#89C5CC"
                                 stroke="white"
-                                strokWidth="0.94422"
+                                strokeWidth="0.94422"
                             />
-                            <path opacity="0.4" d="M442.034 435.633L293.36 84.353H140.969" stroke="#89C5CC" strokWidth="2.83266" />
+                            <path opacity="0.4" d="M442.034 435.633L293.36 84.353H140.969" stroke="#89C5CC" strokeWidth="2.83266" />
                             <path
                                 d="M119.139 82.8687C119.139 89.7408 124.363 95.2603 130.746 95.2603C137.13 95.2603 142.354 89.7408 142.354 82.8687C142.354 75.9965 137.13 70.477 130.746 70.477C124.363 70.477 119.139 75.9965 119.139 82.8687Z"
                                 fill="#89C5CC"
                                 stroke="white"
-                                strokWidth="0.94422"
+                                strokeWidth="0.94422"
                             />
                         </svg>
 
@@ -1016,33 +1017,33 @@ export default function Courses() {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <path opacity="0.4" d="M344.589 30.7912L186.367 382.071L24.1889 382.071" stroke="#89C5CC" stroke-width="2.83266" />
+                            <path opacity="0.4" d="M344.589 30.7912L186.367 382.071L24.1889 382.071" stroke="#89C5CC" strokeWidth="2.83266" />
                             <path
                                 d="M0.92702 383.556C0.927021 376.712 6.47156 371.164 13.3105 371.164C20.1494 371.164 25.6939 376.712 25.6939 383.556C25.6939 390.4 20.1494 395.947 13.3105 395.947C6.47156 395.947 0.92702 390.4 0.92702 383.556Z"
                                 fill="#89C5CC"
                                 stroke="white"
-                                stroke-width="0.94422"
+                                strokeWidth="0.94422"
                             />
-                            <path opacity="0.4" d="M371.914 81.2568L262.507 324.158L150.365 324.158" stroke="#89C5CC" stroke-width="2.83266" />
+                            <path opacity="0.4" d="M371.914 81.2568L262.507 324.158L150.365 324.158" stroke="#89C5CC" strokeWidth="2.83266" />
                             <path
                                 d="M134.426 325.185C134.426 320.532 138.195 316.762 142.843 316.762C147.492 316.762 151.26 320.532 151.26 325.185C151.26 329.837 147.492 333.607 142.843 333.607C138.195 333.607 134.426 329.837 134.426 325.185Z"
                                 fill="#89C5CC"
                                 stroke="white"
-                                stroke-width="0.94422"
+                                strokeWidth="0.94422"
                             />
-                            <path opacity="0.4" d="M1052.63 70.3717L1201.31 421.652L1353.7 421.652" stroke="#89C5CC" stroke-width="2.83266" />
+                            <path opacity="0.4" d="M1052.63 70.3717L1201.31 421.652L1353.7 421.652" stroke="#89C5CC" strokeWidth="2.83266" />
                             <path
                                 d="M1375.53 423.136C1375.53 416.264 1370.3 410.745 1363.92 410.745C1357.54 410.745 1352.31 416.264 1352.31 423.136C1352.31 430.008 1357.54 435.528 1363.92 435.528C1370.3 435.528 1375.53 430.008 1375.53 423.136Z"
                                 fill="#89C5CC"
                                 stroke="white"
-                                stroke-width="0.94422"
+                                strokeWidth="0.94422"
                             />
-                            <path opacity="0.4" d="M933.965 1.10514L1082.64 352.385L1235.03 352.385" stroke="#89C5CC" stroke-width="2.83266" />
+                            <path opacity="0.4" d="M933.965 1.10514L1082.64 352.385L1235.03 352.385" stroke="#89C5CC" strokeWidth="2.83266" />
                             <path
                                 d="M1256.86 353.87C1256.86 346.997 1251.63 341.478 1245.25 341.478C1238.87 341.478 1233.64 346.997 1233.64 353.87C1233.64 360.742 1238.87 366.261 1245.25 366.261C1251.63 366.261 1256.86 360.742 1256.86 353.87Z"
                                 fill="#89C5CC"
                                 stroke="white"
-                                stroke-width="0.94422"
+                                strokeWidth="0.94422"
                             />
                         </svg>
 
@@ -1168,11 +1169,143 @@ export default function Courses() {
                     </div>
                 </section>
 
-                <section className="mt-16 md:mt-28 lg:mt-32">
-                    <div className="w-full h-96" />
-                    <div className="w-full h-96" />
+                {/* faqs */}
+                <section className="max-w-2xl lg:max-w-4xl mx-auto px-4 mt-24 sm:mt-28 md:mt-40 relative mb-12 md:mb-20">
+                    <h2 className="text-center font-medium text-lg md:text-2xl mb-2 md:mb-3 text-black">{`Frequently Asked Questions`}</h2>
+                    <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-light text-[#959595]">{`Have question ? We're here to help.`}</p>
+
+                    <img
+                        className="w-full max-w-[6.5rem] md:max-w-[8rem] object-contain absolute -top-[2.6rem] md:-top-[3.7rem] left-1/2 transform -translate-x-1/2"
+                        src="/images/courses/faq.svg"
+                        alt="faq"
+                    />
+
+                    <Faqs />
                 </section>
             </main>
+
+            <footer className="bg-[#14213D] min-h-[200px] w-full px-6 pt-4 pb-4">
+                <div className="hidden md:block max-w-7xl mx-auto mt-10 mb-8">
+                    <div className="grid grid-cols-10 gap-4 justify-items-start">
+                        <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                            <h5 className="font-bold text-base text-white mb-3">Product</h5>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Employee database</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Payroll</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Absences</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Time tracking</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Shift planner</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Recruiting</a>
+                            </Link>
+                        </div>
+                        <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                            <h5 className="font-bold text-base text-white mb-3">Information</h5>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">FAQ</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Blog</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Support</a>
+                            </Link>
+                        </div>
+                        <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                            <h5 className="font-bold text-base text-white mb-3">Company</h5>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">About us</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Careers</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Contact us</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-normal text-base text-white text-opacity-75">Lift Media</a>
+                            </Link>
+                        </div>
+
+                        <div className="bg-white py-6 px-10 bg-opacity-10 col-span-4 max-w-sm h-fit pb-10 justify-self-center">
+                            <h5 className="font-bold text-white text-base mb-5">Subscribe to our newsletter</h5>
+                            <form
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                }}
+                                className="flex w-full rounded-md overflow-hidden bg-white mb-5"
+                            >
+                                <input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    className="w-full py-3 px-3 placeholder:font-normal placeholder:text-[#7A7E92] placeholder:text-sm text-sm font-normal text-black border-none outline-none ring-0 hover:ring-0 active:ring-0 focus:ring-0"
+                                />
+                                <button
+                                    type="submit"
+                                    className="flex items-center justify-center bg-capabl_primary outline-none border-none py-1 flex-shrink-0 px-7"
+                                >
+                                    <img className="w-full max-w-[0.9rem] object-contain" src="/images/svgs/arrow_right_black.svg" alt="arrow black right" />
+                                </button>
+                            </form>
+                            <p className="font-light text-xs text-white text-opacity-60">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                    <hr className="mt-10 mb-8 border-white border-opacity-20" />
+                    <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-center justify-start gap-4">
+                            <img className="w-full max-w-[8rem] object-contain mr-4" src="/images/svgs/logo_white.svg" alt="capabl logo" />
+
+                            <Link href="/">
+                                <a className="font-medium text-white text-sm">Terms</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-medium text-white text-sm">Privacy</a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-medium text-white text-sm">Cookies</a>
+                            </Link>
+                        </div>
+
+                        <div className="flex items-center justify-end gap-4">
+                            <a
+                                className="w-10 h-10 rounded-full flex items-center justify-center p-3 border border-white border-opacity-25"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img src="/images/svgs/linkedin.svg" alt="linkedin icon" />
+                            </a>
+                            <a
+                                className="w-10 h-10 rounded-full flex items-center justify-center p-3 border border-white border-opacity-25"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img src="/images/svgs/facebook.svg" alt="facebook icon" />
+                            </a>
+                            <a
+                                className="w-10 h-10 rounded-full flex items-center justify-center p-3 border border-white border-opacity-25"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img src="/images/svgs/twitter.svg" alt="twitter icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 }
