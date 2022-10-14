@@ -20,6 +20,10 @@ import RegsiterForm from "../../components/courses/RegsiterForm";
 import Faqs from "../../components/courses/Faqs";
 import { HiArrowRight } from "react-icons/hi";
 import Footer from "../../components/Footer";
+import Module1 from "../../components/courses/Modules/Module1";
+import Module2 from "../../components/courses/Modules/Module2";
+import Module3 from "../../components/courses/Modules/Module3";
+import Module4 from "../../components/courses/Modules/Module4";
 
 export default function Courses() {
     return (
@@ -522,9 +526,8 @@ export default function Courses() {
                     </div>
                 </section>
 
-                {/* TODO: on Hold */}
                 {/* Pathway to become a kick-ass Data Scientist for college student */}
-                <section className="max-w-7xl mx-auto px-4 mt-20 hidden">
+                <section className="max-w-7xl mx-auto px-4 mt-20">
                     <div className="bg-[#cf2323] w-8 md:w-12 h-1.5 md:h-2 mx-auto mb-6 md:mb-10" />
 
                     <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Pathway to become a kick-ass Data Scientist for college student`}</h2>
@@ -533,229 +536,51 @@ export default function Courses() {
                         your interests can help achieve impossible`}
                     </p>
 
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="mt-10 sm:mt-12 md:mt-14 lg:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 relative">
+                        <svg
+                            className="w-24 fill-capabl_primary z-10 hidden lg:block absolute -top-7 left-1/2 transform -translate-x-1/2"
+                            viewBox="0 0 111 53"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M31.5488 8.96001L31.5488 8.95999C48.1802 2.83538 65.4598 9.76289 79.8854 21.0127C87.9076 27.2688 95.2855 34.8832 102.427 42.8399C96.2437 43.094 89.881 44.6881 84.3293 48.5099L84.3287 48.5103C83.4194 49.1383 83.3767 50.2514 83.6972 51.0164C83.8609 51.4071 84.1402 51.7708 84.5241 51.9761C84.929 52.1926 85.4123 52.2099 85.8829 51.9524C92.3568 48.4097 98.5954 45.5742 105.506 44.9366C106.077 44.886 106.311 44.3672 106.36 44.0298C106.388 43.8401 106.377 43.6326 106.312 43.4403C106.307 43.4274 106.303 43.4144 106.298 43.4013C106.419 43.2768 106.531 43.1408 106.632 42.9955C106.682 43.1465 106.733 43.297 106.783 43.4472L106.784 43.449C106.935 43.8931 107.214 44.2191 107.593 44.3664C107.965 44.511 108.357 44.4537 108.678 44.2873C109.319 43.955 109.767 43.1542 109.559 42.2202C108.395 36.9977 107.368 31.6757 106.597 26.3221C106.263 23.9995 106.004 21.6545 105.743 19.3013L105.742 19.2945C105.402 16.2179 105.059 13.1271 104.55 10.0846L104.55 10.0843C104.448 9.48191 104.191 9.00726 103.817 8.69778C103.442 8.38725 102.978 8.26906 102.529 8.3358C101.618 8.47122 100.889 9.32148 100.848 10.556L100.848 10.5563C100.554 19.5416 102.403 28.8815 104.872 37.3647C91.51 22.5076 76.896 8.42691 59.4709 3.08472L59.4709 3.0847C43.0289 -1.95447 24.7535 1.15519 11.9316 17.3882C5.80926 25.1369 1.71056 35.4455 0.610827 46.5277C0.523706 47.388 1.03872 48.0222 1.69303 48.1654C2.01453 48.2357 2.36792 48.1837 2.66268 47.9739C2.96063 47.7618 3.15244 47.4223 3.21703 47.0028L3.2171 47.0023C6.07135 28.3514 18.1798 13.8815 31.5488 8.96001Z"
+                                fill="inherit"
+                                stroke="white"
+                                strokeWidth="0.94422"
+                            />
+                        </svg>
+
+                        <svg
+                            className="w-24 fill-capabl_primary z-10 hidden lg:block absolute -bottom-7 left-1/2 transform -translate-x-1/2"
+                            viewBox="0 0 112 53"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M32.0177 44.2917L32.0177 44.2917C48.9519 50.5008 66.5447 43.4772 81.2292 32.0751C89.3987 25.7318 96.9118 18.0109 104.184 9.94339C97.8867 9.68786 91.4062 8.07316 85.7523 4.19793L85.7517 4.19754C84.8298 3.56368 84.7856 2.43856 85.1114 1.66413C85.2777 1.26888 85.5613 0.901817 85.9498 0.694912C86.359 0.477009 86.8473 0.459461 87.3234 0.718884C93.9137 4.30964 100.266 7.18438 107.303 7.83054C107.876 7.88181 108.113 8.40172 108.164 8.74384C108.192 8.93551 108.181 9.1451 108.115 9.33916C108.11 9.35313 108.105 9.3672 108.099 9.3813C108.227 9.51212 108.345 9.65554 108.452 9.80901C108.505 9.6506 108.558 9.49262 108.611 9.33508L108.611 9.33327C108.765 8.884 109.048 8.5558 109.431 8.40768C109.806 8.26247 110.202 8.31984 110.527 8.48752C111.176 8.82241 111.632 9.63124 111.42 10.5765C110.235 15.8694 109.19 21.2632 108.404 26.6891C108.065 29.0431 107.801 31.4198 107.535 33.8047L107.535 33.8109C107.188 36.9293 106.84 40.0618 106.321 43.1454L106.321 43.1458C106.218 43.7556 105.956 44.2352 105.577 44.5475C105.197 44.8607 104.728 44.9795 104.274 44.9123C103.353 44.776 102.612 43.9187 102.57 42.6683L102.57 42.6681C102.27 33.5508 104.157 24.0733 106.675 15.4674C93.0669 30.5351 78.1854 44.8179 60.4402 50.2346L60.4402 50.2346C43.7075 55.3406 25.1092 52.1901 12.06 35.7409C5.8289 27.8888 1.65708 17.4421 0.537733 6.21108C0.449199 5.3405 0.972669 4.7018 1.63311 4.55795C1.95769 4.48726 2.31442 4.53946 2.6122 4.7505C2.91341 4.96395 3.10814 5.30639 3.17377 5.73077L3.17384 5.7312C6.07937 24.6347 18.4056 39.3025 32.0177 44.2917Z"
+                                fill="inherit"
+                                stroke="white"
+                                strokeWidth="0.94422"
+                            />
+                        </svg>
+
                         {/* Module 1 */}
-                        <div className="col-span-1 rounded-2xl bg-[#00253A] p-4 relative overflow-hidden">
-                            <img
-                                className="absolute z-0 top-0 left-0 min-w-[200%] object-contain"
-                                src="/images/courses/circuit_illustration_2.svg"
-                                alt="circuit illustration"
-                            />
-                            <img
-                                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full object-contain max-w-[16.67%] z-0 opacity-20"
-                                src="/images/courses/data_science.jpg"
-                                alt="data science"
-                            />
-
-                            <div className="relative z-[1]">
-                                <div className="items-center justify-start hidden md:flex md:mb-4">
-                                    <p className="uppercase text-[#ff696d] font-semibold text-xs bg-white rounded-full px-3 py-1">Module 1</p>
-                                </div>
-
-                                <div className="flex items-start justify-between gap-4 pt-4">
-                                    <p className="text-white text-base font-light">
-                                        Introduction to <br /> <span className="font-medium">Data Science</span>
-                                    </p>
-
-                                    <div className="flex items-center justify-end gap-2.5">
-                                        <p className="text-[0.6rem] text-white font-light">Experts from</p>
-                                        <div className="flex items-center justify-center gap-1">
-                                            <div className="w-6 h-6 rounded-full bg-[#f1f1f1]" />
-                                            <div className="w-6 h-6 rounded-full bg-[#f1f1f1]" />
-                                            <div className="w-6 h-6 rounded-full bg-[#f1f1f1]" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-2 gap-3">
-                                    <div>
-                                        <div className="bg-white mb-3">
-                                            <div className="">
-                                                <FaPlay />
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-start justify-end">
-                                            <div>
-                                                <p className="text-[0.6rem] text-white font-light mb-2">Softwares</p>
-                                                <div className="flex items-center gap-1">
-                                                    <div className="w-6 h-6 rounded-full bg-[#f1f1f1]" />
-                                                    <div className="w-6 h-6 rounded-full bg-[#f1f1f1]" />
-                                                    <div className="w-6 h-6 rounded-full bg-[#f1f1f1]" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div>
-                                            <p>{`See Industrial Use Case`}</p>
-                                            <p>{`Understand Data Science Evolution`}</p>
-                                            <p>{`Introduction to the program`}</p>
-                                            <p>{`4 Modules | 2 Projects`}</p>
-                                        </div>
-
-                                        <button>View Modules</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Module1 />
 
                         {/* Module 2 */}
-                        <div className="col-span-1">
-                            <img src="/images/courses/circuit_illustration_2.svg" alt="circuit illustration" />
-
-                            <div>
-                                <p>Module 2</p>
-                            </div>
-
-                            <div>
-                                <p>
-                                    Python for <br /> <span>Data Science</span>
-                                </p>
-
-                                <div>
-                                    <p>Experts from</p>
-                                    <div />
-                                    <div />
-                                    <div />
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>
-                                    <div>{/* white */}</div>
-
-                                    <div className="bg-white">
-                                        <div>
-                                            <FaPlay />
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div>
-                                            <p>Softwares</p>
-                                            <div>
-                                                <div />
-                                                <div />
-                                                <div />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div>
-                                        <p>{`See Industrial Use Case`}</p>
-                                        <p>{`Understand Data Science Evolution`}</p>
-                                        <p>{`Introduction to the program`}</p>
-                                        <p>{`4 Modules | 2 Projects`}</p>
-                                        <p>{`Roles you're ready for after the module`}</p>
-                                        <p>{`Data Analyst  |  Python Developer`}</p>
-                                    </div>
-
-                                    <button>View Modules</button>
-                                </div>
-                            </div>
-                        </div>
+                        <Module2 />
 
                         {/* Module 3 */}
-                        <div className="col-span-1">
-                            <img src="/images/courses/circuit_illustration_3.svg" alt="circuit illustration" />
-
-                            <div>
-                                <p>Module 3</p>
-                            </div>
-
-                            <div>
-                                <p>Statistics</p>
-
-                                <div>
-                                    <p>Experts from</p>
-                                    <div />
-                                    <div />
-                                    <div />
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>
-                                    <div>{/* white */}</div>
-
-                                    <div className="bg-white">
-                                        <div>
-                                            <FaPlay />
-                                        </div>
-                                    </div>
-
-                                    <div>{/* white */}</div>
-                                </div>
-
-                                <div>
-                                    <div>
-                                        <p>{`See Industrial Use Case`}</p>
-                                        <p>{`Understand Data Science Evolution`}</p>
-                                        <p>{`Introduction to the program`}</p>
-                                        <p>{`4 Modules | 2 Projects`}</p>
-                                    </div>
-
-                                    <button>View Modules</button>
-                                </div>
-                            </div>
-                        </div>
+                        <Module3 />
 
                         {/* Module 4 */}
-                        <div className="col-span-1">
-                            <img src="/images/courses/circuit_illustration_3.svg" alt="circuit illustration" />
-
-                            <div>
-                                <p>Module 4</p>
-                            </div>
-
-                            <div>
-                                <p>
-                                    Data <span>Analytics</span>
-                                </p>
-
-                                <div>
-                                    <p>Experts from</p>
-                                    <div />
-                                    <div />
-                                    <div />
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>
-                                    <div>{/* white */}</div>
-
-                                    <div className="bg-white">
-                                        <div>
-                                            <FaPlay />
-                                        </div>
-                                    </div>
-
-                                    <div>{/* white */}</div>
-                                </div>
-
-                                <div>
-                                    <div>
-                                        <p>{`See Industrial Use Case`}</p>
-                                        <p>{`Understand Data Science Evolution`}</p>
-                                        <p>{`Introduction to the program`}</p>
-                                        <p>{`4 Modules | 2 Projects`}</p>
-                                    </div>
-
-                                    <button>View Modules</button>
-                                </div>
-                            </div>
-                        </div>
+                        <Module4 />
                     </div>
                 </section>
 
                 {/* Minor & Major Projects */}
-                <section className="max-w-7xl px-4 mx-auto mt-20">
-                    <div className="bg-[#cf2323] w-8 md:w-12 h-1.5 md:h-2 mx-auto mb-4 md:mb-8" />
+                <section className="max-w-7xl px-4 mx-auto mt-16 sm:mt-20 lg:mt-24">
                     <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`40+ of Minor and Major Projects`}</h2>
                     <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">{`Success isn't really that difficult. Right mentoring, active peers, good opportunities & most importantly, industrial skills to back your interests can help achieve impossible`}</p>
 
