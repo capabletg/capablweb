@@ -8,6 +8,7 @@ export default function Faqs() {
     const [unWrapIndex, setunWrapIndex] = useState(0);
 
     useEffect(() => {
+        setunWrapIndex(0);
         setFilteredFaqs(faqs?.filter((el) => `${el?.question}${el?.answer}`.toLowerCase().indexOf(search?.toLowerCase()) > -1));
     }, [search, faqs]);
 
