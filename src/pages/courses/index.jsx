@@ -24,6 +24,8 @@ import Module1 from "../../components/courses/Modules/Module1";
 import Module2 from "../../components/courses/Modules/Module2";
 import Module3 from "../../components/courses/Modules/Module3";
 import Module4 from "../../components/courses/Modules/Module4";
+import { features } from "../../utils/data/homePage/features";
+import FeatureComparison from "../../components/courses/FeatureComparison";
 
 export default function Courses() {
     return (
@@ -993,6 +995,20 @@ export default function Courses() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                {/* Feature Comparison */}
+                <section className="mt-16 md:mt-52 max-w-7xl mx-auto px-4">
+                    <div className="bg-[#F2F4F7] w-full rounded-3xl pl-2 sm:px-4 py-10 pb-28 md:py-16">
+                        <h2 className="text-center font-medium text-lg md:text-2xl mb-4 md:mb-5 text-black pr-4 pl-2 sm:px-0">
+                            {`We're better than the rest! If not, take the program for free`}
+                        </h2>
+                        <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c] pr-4 pl-2 sm:px-0">
+                            {`Parents spends lakhs to get you a college degree, we add value to your parent's hard-earned money and to your time.`}
+                        </p>
+
+                        <FeatureComparison />
                     </div>
                 </section>
 
