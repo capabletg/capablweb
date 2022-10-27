@@ -309,7 +309,7 @@ export default function Courses() {
           </div>
         </section>
         <section id="accredition">
-          <div className="m-8 bg-[#14213D] rounded-lg p-8">
+          <div className="m-8 bg-[#14213D] rounded-lg p-4 md:p-8">
             <div className="flex items-left justify-left mt-10 mb-4">
               <span className="bg-capabl_primary w-7 md:w-12 h-1.5 md:h-2"></span>
             </div>
