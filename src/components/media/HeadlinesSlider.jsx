@@ -38,9 +38,9 @@ export default function HeadlinesSlider() {
             >
               <div className="bg-transparent mx-auto relative flex items-center justify-start flex-col cursor-pointer group">
                 <div
-                  className={`overflow-hidden rounded-xl transition-all duration-300 relative h-[8rem] sm:h-[11rem] md:h-[18.125rem] lg:h-[18.125rem] ${
+                  className={`overflow-hidden rounded-xl transition-all duration-300 relative h-96 sm:h-96 md:h-[18.125rem] lg:h-[18.125rem] ${
                     centerSlide === index
-                      ? "scale-125 w-[10rem] sm:w-[15rem] md:w-[46rem] lg:w-[46rem] opacity-100"
+                      ? "scale-125 w-[14rem] sm:w-[15rem] md:w-[46rem] lg:w-[46rem] opacity-100"
                       : "scale-100 w-full max-w-[9rem] sm:max-w-[14rem] md:max-w-[15.3rem] lg:max-w-[18rem] opacity-60"
                   }`}
                 >
@@ -55,10 +55,10 @@ export default function HeadlinesSlider() {
                   <div className="absolute left-4 top-8 w-32 md:w-48 md:top-12 md:left-16 lg:w-48 lg:top-12 lg:left-16 ">
                     <img src={item?.press_logo} alt={item?.press_logo} />
                   </div>
-                  <div className="absolute left-4 pt-12 top-8 w-32 md:w-48 md:top-12 md:left-16 lg:w-48 lg:top-12 lg:left-16">
+                  <div className="absolute left-4 pt-8 md:pt-12 top-8 w-32 md:w-48 md:top-12 md:left-16 lg:w-48 lg:top-12 lg:left-16">
                     <h6 className="text-white">{item.caption}</h6>
                   </div>
-                  <div className="absolute left-4 text-xs  top-8 w-32 md:w-[28rem] md:pt-20 md:top-12 md:left-16 lg:pt-20 lg:w-[28rem] lg:top-12 lg:left-16">
+                  <div className="absolute left-4 text-xs pt-16 top-8 w-48 md:w-[28rem] md:pt-20 md:top-12 md:left-16 lg:pt-20 lg:w-[28rem] lg:top-12 lg:left-16">
                     <p className="text-white text-xs">{item.content}</p>
                   </div>
                 </div>

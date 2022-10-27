@@ -28,3 +28,5 @@ export const headlines = [
     image: "/images/media/headlines_back.png",
   },
 ];
+
+export const achivements = [1, 2, 3, 4, 5, 6];
