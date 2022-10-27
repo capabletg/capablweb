@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { FaPlay } from "react-icons/fa";
-import { pressreleases } from "./pressrelease";
+import { pressreleases } from "../../utils/data/media/pressrelease";
 import { achivements } from "../../utils/data/media/headlines";
 import HeadlinesSlider from "../../components/media/HeadlinesSlider";
 import Footer from "../../components/Footer";
@@ -93,9 +93,9 @@ export default function Courses() {
         <section id="headlines" className="max-w-5xl mx-auto px-4 mt-2 md:mt-2">
           <HeadlinesSlider />
         </section>
-        <section id="about" className="mt-4 ml-8 mr-8">
+        <section id="about" className="mt-4 ml-8 mr-8 ">
           <div className="grid grid-cols-1 md:grid-cols-2 md:divide-y">
-            <div className="block p-8 rounded-lg shadow-sm bg-gray">
+            <div className="block p-8 rounded-lg  bg-gray-100">
               <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">
                 About Capabl
               </h5>
@@ -125,15 +125,15 @@ export default function Courses() {
                 offline programs across India, UAE, and South Africa.
               </p>
             </div>
-            <div className=" grid mx-auto grid-cols-3 rounded-lg shadow-lg bg-gray max-w-md">
-              <div className="aboutimages p-1 rounded-lg shadow-lg bg-gray max-w-md">
+            <div className=" grid mx-auto grid-cols-3 rounded-lg max-w-md">
+              <div className="aboutimages p-1 rounded-lg   max-w-md">
                 <img src="/images/media/about.png"></img>
               </div>
-              <div className="aboutimages p-1 rounded-lg shadow-lg bg-gray max-w-md">
-                <img src="/images/media/about.png"></img>
+              <div className="aboutimages p-1 rounded-lg  max-w-md">
+                <img src="/images/media/about_1.png"></img>
               </div>
-              <div className="aboutimages p-1 rounded-lg shadow-lg bg-gray max-w-md">
-                <img src="/images/media/about.png"></img>
+              <div className="aboutimages p-1 rounded-lg  max-w-md">
+                <img src="/images/media/about_2.png"></img>
               </div>
             </div>
           </div>
