@@ -35,7 +35,7 @@ body {
 }
 
 .slick-dots {
-  bottom: 4px !important;
+  bottom: 1.5rem !important;
 }
 
 .slick-dots li button:before {

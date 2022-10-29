@@ -2,11 +2,12 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { FaPlay } from "react-icons/fa";
-import { pressreleases } from "../../utils/data/media/pressrelease";
+import { pressreleases } from "../../utils/data/media/pressreleases";
 import { achivements } from "../../utils/data/media/headlines";
 import HeadlinesSlider from "../../components/media/HeadlinesSlider";
-import Footer from "../../components/Footer";
+import PressSlider from "../../components/media/PressSlider";
 import { accreditedby } from "../../utils/data/media/accreditedby";
+import Footer from "../../components/Footer";
 
 export default function Courses() {
   return (
@@ -90,11 +91,11 @@ export default function Courses() {
       </header>
 
       <main className="min-h-screen w-full mx-auto">
-        <section id="headlines" className="max-w-5xl mx-auto px-4 mt-2 md:mt-2">
+        <section id="headlines" className=" mx-auto px-4 md:px-12 mt-2 md:mt-2">
           <HeadlinesSlider />
         </section>
-        <section id="about" className="mt-4 ml-8 mr-8 ">
-          <div className="grid grid-cols-1 md:grid-cols-2 md:divide-y">
+        <section id="about" className="mt-4 mx-4 md:mx-12 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:divide-y max-w-7xl mx-auto">
             <div className="block p-8 rounded-lg  bg-gray-100">
               <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">
                 About Capabl
@@ -139,115 +140,15 @@ export default function Courses() {
           </div>
         </section>
         <section id="press">
-          <div className="mb-10 md:mb-12 max-w-sm md:max-w-3xl mx-auto px-4 mt-12">
+          <div className="mb-10 mt-12 md:mb-12 max-w-sm md:max-w-3xl mx-auto ">
             <h2 className="text-center text-black font-semibold text-base md:font-medium md:text-4xl mb-4 md:mb-6">
               Capabl in Press
             </h2>
           </div>
-          <div className="relative flex items-center justify-center">
-            <div
-              className="inline-flex shadow-md hover:shadow-lg focus:shadow-lg"
-              role="group"
-            >
-              <a
-                href="#"
-                aria-current="page"
-                className="
-        rounded-l
-        px-6
-        py-4
-        bg-capabl_primary
-        text-gray-900
-        font-medium
-        text-xs
-        leading-tight
-        uppercase
-        hover:bg-blue-700
-        focus:bg-blue-700 focus:outline-none focus:ring-0
-        active:.bg-capabl_primary
-        transition
-        duration-150
-        ease-in-out
-      "
-              >
-                Press Release
-              </a>
-              <a
-                href="#"
-                className="
-        px-6
-        py-4
-        bg-white
-        text-gray-900
-        font-medium
-        text-xs
-        leading-tight
-        uppercase
-        hover:bg-blue-700
-        focus:bg-blue-700 focus:outline-none focus:ring-0
-        active:bg-blue-800
-        transition
-        duration-150
-        ease-in-out
-      "
-              >
-                Article
-              </a>
-              <a
-                href="#"
-                className="
-        rounded-r
-        px-6
-        py-4
-        bg-white
-        text-gray-900
-        font-medium
-        text-xs
-        leading-tight
-        uppercase
-        hover:bg-blue-700
-        focus:bg-blue-700 focus:outline-none focus:ring-0
-        active:bg-blue-800
-        transition
-        duration-150
-        ease-in-out
-      "
-              >
-                Press Release
-              </a>
-            </div>
-          </div>
-          <div className="px-4 -mt-6 md:bg-[#14213D] grid grid-cols-1 divide-y md:grid-cols-3 p-24">
-            {!!pressreleases?.length &&
-              pressreleases.map((item, index) => (
-                <div key={index} className="rounded-lg shadow-lg bg-white m-2">
-                  <a href="#!" className="flex bg-[#F7F9FA] justify-center">
-                    <img
-                      className="rounded-t-lg object-center"
-                      src={item?.image}
-                      alt=""
-                    />
-                  </a>
-                  <div className="p-6">
-                    <h5 className="text-gray-900 text-xl font-medium mb-2">
-                      {item.name}
-                    </h5>
-                    <p className="text-gray-400 text-base mb-4">
-                      {item.description}
-                    </p>
-                    <a
-                      href="#"
-                      className="text-capabl_primary hover:text-purple-500 underline text-sm"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              ))}
-          </div>
+          <PressSlider />
         </section>
         <section id="leaders">
-          <div className="grid grid-cols-1 divide-y">
+          <div className="grid grid-cols-1 divide-y max-w-7xl mx-auto">
             <div>
               <h2 className="text-center text-black font-semibold text-base md:font-medium md:text-4xl mt-4">
                 Listen to our leaders
@@ -260,7 +161,7 @@ export default function Courses() {
                     key={index}
                     className="p-4 lg:p-8 flex-shrink-0 w-fit md:flex-shrink  border-white md:w-1/2"
                   >
-                    <div className="bg-white relative rounded-lg shadow-lg">
+                    <div className="bg-white relative rounded-lg">
                       <img
                         src="/images/media/leaders.png"
                         alt=""
@@ -285,7 +186,7 @@ export default function Courses() {
           </div>
         </section>
         <section id="awards">
-          <div className="m-8">
+          <div className="m-8 max-w-7xl mx-4 md:mx-auto">
             <div className="flex items-left justify-left mt-10 mb-4">
               <span className="bg-capabl_primary w-7 md:w-12 h-1.5 md:h-2"></span>
             </div>
@@ -302,14 +203,15 @@ export default function Courses() {
                 achivements.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-lg shadow-md w-32 h-32 justify-self-center md:w-56 md:h-56 m-8"
+                    className="bg-white rounded-lg shadow-2xl 
+                     w-32 h-32 justify-self-center md:w-56 md:h-56 m-8"
                   ></div>
                 ))}
             </div>
           </div>
         </section>
         <section id="accredition">
-          <div className="m-8 bg-[#14213D] rounded-lg p-4 md:p-8">
+          <div className="max-w-7xl mx-4 md:mx-auto m-8 bg-[#14213D] rounded-lg p-4 md:p-8">
             <div className="flex items-left justify-left mt-10 mb-4">
               <span className="bg-capabl_primary w-7 md:w-12 h-1.5 md:h-2"></span>
             </div>
@@ -333,7 +235,27 @@ export default function Courses() {
             </div>
           </div>
         </section>
-        <Footer />
+        <section id="footer">
+          <div className="md:mt-40">
+            <div className="relative md:pt-20 bg-[#14213D]">
+              <Footer />
+              <div className="hidden  absolute top-[-20%] w-full md:flex md:justify-center md:gap-4">
+                <div className="rounded-xl p-4 bg-[#FF696D] w-[290px] h-[160px]">
+                  <h6 className=" text-black text-lg font-semibold">
+                    Media Kit
+                  </h6>
+                  <p> Download everything you need to say about us!</p>
+                </div>
+                <div className="rounded-xl p-4 bg-[#FCA600] w-[290px] h-[160px]">
+                  <h6 className="text-black text-lg font-semibold">
+                    For Press Querries
+                  </h6>
+                  <p> Something is missing? Feel free to contact us!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
