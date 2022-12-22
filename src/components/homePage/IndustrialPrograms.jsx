@@ -73,7 +73,7 @@ const data2 = [
     },
 ];
 
-export default function IndustrialPrograms() {
+export default function IndustrialPrograms({ setShowCtaForm }) {
     return (
         <section id="choose_your_domain" className="container mx-auto max-w-7xl px-0 md:px-4 relative mb-10 md:mb-20 mt-20">
             {/* Top Circle */}
@@ -131,11 +131,13 @@ export default function IndustrialPrograms() {
                             <p className="text-white font-medium text-2xl mb-4 md:mb-2 text-center md:text-left">Book a counseling session with Mentor.</p>
                             <p className="text-white font-light text-sm mb-8 md:mb-0 text-center md:text-left">{`Only thing you need to start is a will to do great. Everything else, we will take care of :)`}</p>
                         </div>
-                        <Link href="/">
-                            <a className="bg-capabl_primary rounded-lg px-4 py-3 text-black font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0">
-                                Talk to Counselor
-                            </a>
-                        </Link>
+
+                        <button
+                            onClick={() => setShowCtaForm(true)}
+                            className="bg-capabl_primary rounded-lg px-4 py-3 text-black font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0"
+                        >
+                            Talk to Counselor
+                        </button>
                     </div>
                 </div>
             </div>
