@@ -469,8 +469,8 @@ export default function Home() {
                 </section>
 
                 <section className="max-w-7xl mx-auto px-4 md:px-6 mt-16 md:mt-24">
-                    <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Hear from our Students`}</h2>
-                    <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">{`Success isn't really that difficult. Right mentoring, active peers, good opportunities & most importantly, industrial skills to back your interests can help achieve impossible`}</p>
+                    <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`What our Students have to say!`}</h2>
+                    <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">{`We’re glad to have so much love from our students! We would love to keep working towards making our students dreams come true.`}</p>
 
                     <div className="relative z-0 mt-10 sm:mt-12 md:mt-16 lg:mt-[4.5rem]">
                         {/* Top illustration */}
