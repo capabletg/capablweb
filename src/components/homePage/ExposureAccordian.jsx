@@ -25,7 +25,7 @@ export default function ExposureAccordian() {
                             )}
                         </button>
                     </div>
-                    <div className={`overflow-hidden transition-all max-w-xs duration-300 ${activeIndex === index ? "h-28 opacity-100" : "h-0 opacity-0"}`}>
+                    <div className={`overflow-hidden transition-all max-w-xs duration-300 ${activeIndex === index ? "h-auto opacity-100" : "h-0 opacity-0"}`}>
                         <p className="font-normal text-sm text-[#636363] text-left">{description}</p>
                     </div>
                 </div>
