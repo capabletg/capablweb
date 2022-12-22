@@ -96,7 +96,7 @@ export default function Footer() {
                 <hr className="mt-10 mb-8 border-white border-opacity-20" />
                 <div className="flex items-center justify-between gap-4">
                     <div className="flex items-center justify-start gap-4">
-                        <img className="w-full max-w-[8rem] object-contain mr-4" src="/images/svgs/logo_white.svg" alt="capabl logo" />
+                        <img className="w-full max-w-[8rem] object-contain mr-4" src="/logo_white.svg" alt="capabl logo" />
 
                         {other?.map(({ label, href }, index) => (
                             <Link key={index} href={href}>

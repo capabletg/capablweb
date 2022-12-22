@@ -56,7 +56,7 @@ export default function Courses() {
                 <div className="fixed top-7 md:top-8 left-0 w-full bg-white z-20">
                     <div className="container max-w-7xl mx-auto flex items-center justify-between px-4 h-10 md:h-20">
                         <Link href="/">
-                            <img src="/images/svgs/logo.svg" alt="capable logo" className="w-full max-w-[6rem] md:max-w-[8rem] object-contain cursor-pointer" />
+                            <img src="/logo_dark.svg" alt="capable logo" className="w-full max-w-[6rem] md:max-w-[8rem] object-contain cursor-pointer" />
                         </Link>
 
                         <div>
