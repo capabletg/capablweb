@@ -1,26 +1,55 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
-import { HiCheckCircle } from "react-icons/hi2";
+import React, { useEffect, useState } from "react";
+import { HiCheckCircle, HiXCircle } from "react-icons/hi2";
+import { RiLoader2Line } from "react-icons/ri";
 import { VscChromeClose } from "react-icons/vsc";
 import OtpInput from "react-otp-input";
 import useForm from "../hooks/useForm";
 
+const otpStatuses = Object.freeze({
+    SUCCESS: "success",
+    FAILED: "failed",
+    NOT_INITIATED: "not_initiated",
+    LOADING: "loading",
+});
+
 export default function CtaForm({ show, setShow }) {
+    const [otp, setOtp] = useState("");
+    const [otpRequestLoading, setOtpRequestLoading] = useState(false);
+    const [otpRequestSend, setOtpRequestSend] = useState(false);
+    const [otpVerficationStatus, setOtpVerficationStatus] = useState(otpStatuses.NOT_INITIATED);
+
     const [details, handleDetails, resetDetails] = useForm({
         name: "",
         email: "",
+        mobile: "",
+        profile_info: "",
+        referral: "",
     });
 
     const closeModal = () => {
-        console.log("closing...");
         setShow(false);
+        setOtpRequestSend(false);
+        setOtpRequestLoading(false);
+        setOtpVerficationStatus(otpStatuses.NOT_INITIATED);
+        setOtp("");
         resetDetails();
     };
 
     const onFormSubmit = () => {
-        console.log("submitting...");
+        console.log("submitting..>>> ", details);
     };
 
+    useEffect(() => {
+        if (otp.length === 6) {
+            setOtpVerficationStatus(otpStatuses.LOADING);
+
+            setTimeout(() => {
+                if (otp === "123456") setOtpVerficationStatus(otpStatuses.SUCCESS);
+                else setOtpVerficationStatus(otpStatuses.FAILED);
+            }, 1500);
+        }
+    }, [otp]);
     return (
         <AnimatePresence>
             {show && (
@@ -55,6 +84,8 @@ export default function CtaForm({ show, setShow }) {
                                     type="text"
                                     placeholder="Name"
                                     required
+                                    value={details?.name}
+                                    onChange={(e) => handleDetails("name", e.target.value)}
                                     className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
                                 />
                             </div>
@@ -65,6 +96,8 @@ export default function CtaForm({ show, setShow }) {
                                     type="email"
                                     placeholder="Email"
                                     required
+                                    value={details?.email}
+                                    onChange={(e) => handleDetails("email", e.target.value)}
                                     className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
                                 />
                             </div>
@@ -76,49 +109,79 @@ export default function CtaForm({ show, setShow }) {
                                         +91
                                     </p>
                                     <input
-                                        type="number"
+                                        type="text"
                                         maxLength={10}
                                         minLength={10}
                                         required
                                         placeholder="XXXXXXXXXX"
+                                        value={details?.mobile}
+                                        onChange={(e) => (!isNaN(e.target.value) ? handleDetails("mobile", e.target.value?.trim()) : {})}
                                         className="w-full flex-grow bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
                                     />
                                     <button
                                         type="button"
-                                        className="text-black px-3 py-2 border border-transparent bg-capabl_primary rounded-md text-sm whitespace-nowrap hover:scale-95 transition-all duration-200"
+                                        disabled={details?.mobile?.length !== 10 || otpRequestLoading}
+                                        onClick={() => {
+                                            setOtpRequestLoading(true);
+                                            setTimeout(() => {
+                                                setOtpRequestLoading(false);
+                                                setOtpRequestSend(true);
+                                            }, 1500);
+                                        }}
+                                        className="text-black px-3 py-2 border border-transparent bg-capabl_primary rounded-md text-sm whitespace-nowrap hover:scale-95 transition-all duration-200 disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed"
                                     >
-                                        Sent OTP
+                                        {otpRequestLoading ? "Sending..." : "Sent OTP"}
                                     </button>
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-start justify-start mb-3">
-                                <p className="text-xs mb-1">Please enter OTP to verify your phone number</p>
-                                <div className="w-full flex items-center justify-between">
-                                    <OtpInput
-                                        value={details?.otp}
-                                        onChange={(val) => {
-                                            console.log(val);
-                                            handleDetails("otp", val);
-                                        }}
-                                        isInputNum={true}
-                                        className="w-full"
-                                        inputStyle="react_otp_input"
-                                        containerStyle="w-full flex items-center justify-between gap-4"
-                                        numInputs={6}
-                                        separator={" "}
-                                    />
+                            {otpRequestSend && (
+                                <div className="flex flex-col items-start justify-start mb-3">
+                                    <p className="text-xs mb-1">Please enter OTP to verify your phone number</p>
+                                    <div className="w-full flex items-center justify-between">
+                                        <OtpInput
+                                            value={otp}
+                                            onChange={setOtp}
+                                            isInputNum={true}
+                                            className="w-full"
+                                            inputStyle="react_otp_input"
+                                            containerStyle="w-full flex items-center justify-between gap-4"
+                                            numInputs={6}
+                                            separator={" "}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
+                            )}
 
-                            <div className="mb-5 flex items-center justify-start gap-1 text-xs text-[#04ca00]">
-                                <HiCheckCircle className="text-lg" />
-                                <p>OTP Verified Successfully</p>
-                            </div>
+                            {otpVerficationStatus === otpStatuses.SUCCESS && (
+                                <div className="mb-5 flex items-center justify-start gap-1 text-xs text-[#04ca00]">
+                                    <HiCheckCircle className="text-lg" />
+                                    <p>OTP Verified Successfully</p>
+                                </div>
+                            )}
+
+                            {otpVerficationStatus === otpStatuses.FAILED && (
+                                <div className="mb-5 flex items-center justify-start gap-1 text-xs text-red-500">
+                                    <HiXCircle className="text-lg" />
+                                    <p>Invalid OTP</p>
+                                </div>
+                            )}
+
+                            {otpVerficationStatus === otpStatuses.LOADING && (
+                                <div className="mb-5 flex items-center justify-start gap-1 text-xs text-gray-500">
+                                    <RiLoader2Line className="text-lg animate-spin" />
+                                    <p>Checking...</p>
+                                </div>
+                            )}
 
                             <div className="flex flex-col items-start justify-start mb-5">
                                 <p className="text-xs mb-0.5">{`I'm`}</p>
-                                <select required className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black">
+                                <select
+                                    required
+                                    className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
+                                    value={details?.profile_info}
+                                    onChange={(e) => handleDetails("profile_info", e.target.value)}
+                                >
                                     <option value="">Choose</option>
                                     {[
                                         { label: "1st Year Student", value: "1st_year_student" },
@@ -139,12 +202,21 @@ export default function CtaForm({ show, setShow }) {
                                     type="text"
                                     placeholder="XXXXXXX"
                                     className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
+                                    value={details?.referral}
+                                    onChange={(e) => handleDetails("referral", e.target.value)}
                                 />
                             </div>
 
                             <button
                                 type="submit"
-                                className="text-black w-full p-3 font-semibold uppercase border border-transparent bg-capabl_primary rounded-md text-sm whitespace-nowrap hover:scale-[0.98] transition-all duration-200"
+                                disabled={
+                                    otpVerficationStatus !== otpStatuses.SUCCESS ||
+                                    !details?.name ||
+                                    !details?.email ||
+                                    !details?.mobile ||
+                                    !details?.profile_info
+                                }
+                                className="text-black w-full p-3 font-semibold uppercase border border-transparent bg-capabl_primary rounded-md text-sm whitespace-nowrap hover:scale-[0.98] transition-all duration-200 disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed"
                             >
                                 Submit
                             </button>
