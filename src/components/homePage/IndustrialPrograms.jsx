@@ -7,6 +7,7 @@ const data1 = [
     {
         image: "/images/home/electric_vehicle.jpg",
         target: "/",
+        id: "electric-vehicle",
         title: "Electric Vehicle",
         short_desc: "Passionate about Electric Vehicles? This is the only program you need.",
         stat: {
@@ -23,6 +24,7 @@ const data1 = [
     {
         image: "/images/home/data_science.jpg",
         target: "/",
+        id: "data-science",
         title: "Data Science",
         short_desc: "Don't know coding or scared of how to start - the perfect program for you!",
         stat: {
@@ -39,6 +41,7 @@ const data1 = [
     {
         image: "/images/home/mechatronics.jpg",
         target: "/",
+        id: "mechatronics",
         title: "Mechatronics",
         short_desc: "Be a master of Robotics, Mechatronics, IoT, etc. - start from scratch & become pro!",
         stat: {
@@ -58,6 +61,7 @@ const data2 = [
     {
         image: "/images/home/design_cae.jpg",
         target: "/",
+        id: "design-and-engineering",
         title: "Design Engineering",
         short_desc: "Be it a ferrari, your water bottle or a rocket ship - be the engineer who can design it all!",
         stat: {
@@ -74,6 +78,7 @@ const data2 = [
     {
         image: "/images/home/full_stack.jpg",
         target: "/",
+        id: "full-stack-development",
         title: "Full Stack Development",
         short_desc: "Be it a ferrari, your water bottle or a rocket ship - be the engineer who can design it all!",
         stat: {
@@ -91,7 +96,7 @@ const data2 = [
 
 export default function IndustrialPrograms({ setShowCtaForm }) {
     return (
-        <section id="choose_your_domain" className="container mx-auto max-w-7xl px-0 md:px-4 relative mb-10 md:mb-20 mt-20">
+        <section id="programs" className="container mx-auto max-w-7xl px-0 md:px-4 relative mb-10 md:mb-20 mt-20">
             {/* Top Circle */}
             <div
                 style={{ background: "radial-gradient(147% 539.45% at 50% 50%, rgba(255, 175, 0, 0.4) 0%, rgba(255, 0, 0, 0.4) 100%)" }}
@@ -129,13 +134,13 @@ export default function IndustrialPrograms({ setShowCtaForm }) {
                     <hr className="border-t-[0.05rem] border-t-[#d2d2d2] my-3 md:my-6" />
                 </div>
 
-                <div className="overflow-x-scroll scrollbar-hide w-full mt-6 md:mt-8 mb-8 md:mb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
+                <div className="overflow-x-scroll scrollbar-hide w-full mt-6 md:mt-8 pb-8 md:pb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
                     {data1.map((item, index) => (
                         <Card key={index} details={item} />
                     ))}
                 </div>
 
-                <div className="overflow-x-scroll scrollbar-hide w-full mt-6 mb-8 md:mb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
+                <div className="overflow-x-scroll scrollbar-hide w-full mt-6 pb-8 md:pb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
                     {data2.map((item, index) => (
                         <Card key={index} details={item} />
                     ))}
@@ -164,8 +169,10 @@ export default function IndustrialPrograms({ setShowCtaForm }) {
 
 function Card({ details }) {
     return (
-        <div className="bg-white rounded-2xl p-4 w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0 group">
-            <div className={`w-full rounded-2xl h-[200px] md:h-[250px] bg-[#F6E372] mb-4 relative overflow-hidden`}>
+        <div id={details?.id} className="bg-white rounded-2xl p-4 w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0 group hover:shadow-lg">
+            <div
+                className={`w-full rounded-2xl h-[250px] group-hover:h-[200px] md:h-[250px] group-hover:md-h-[300px] bg-[#F6E372] mb-4 relative overflow-hidden transition-all duration-300`}
+            >
                 {!!details?.image && <img src={details?.image} alt={details.title} className="w-full h-full object-cover" />}
             </div>
             <div className="pr-6">
@@ -190,7 +197,7 @@ function Card({ details }) {
                     </div>
                 </div>
 
-                <ol className="flex flex-col items-start gap-2 text-xs md:text-sm font-light list-disc pl-3">
+                <ol className="flex flex-col items-start gap-2 text-xs md:text-sm font-light list-disc pl-3 max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-300">
                     {details.points.map((el, index) => (
                         <li key={index}>{el}</li>
                     ))}

@@ -91,7 +91,7 @@ export default function Home() {
                                 Talk to Counselor
                             </button>
 
-                            <Link href="/">
+                            <Link href="/#programs">
                                 <a className="text-[#ff696d] font-medium bg-transparent border border-[#ff696d] rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base">
                                     Explore Programs
                                 </a>

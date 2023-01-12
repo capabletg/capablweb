@@ -9,11 +9,11 @@ const navs = [
         key: "programs",
         href: "",
         subMenu: [
-            { label: "Electric Vehicle", href: "/" },
-            { label: "Data Science", href: "/" },
-            { label: "Mechatronics", href: "/" },
-            { label: "Design Engineering", href: "/" },
-            { label: "Full Stack Development", href: "/" },
+            { label: "Electric Vehicle", href: "/#electric-vehicle" },
+            { label: "Data Science", href: "/#data-science" },
+            { label: "Mechatronics", href: "/#mechatronics" },
+            { label: "Design Engineering", href: "/#design-and-engineering" },
+            { label: "Full Stack Development", href: "/#full-stack-development" },
         ],
     },
     {
@@ -46,14 +46,18 @@ const navs = [
 ];
 
 export default function Header() {
-    const [showSideMenu, setShowSideMenu] = useState(true);
+    const [showSideMenu, setShowSideMenu] = useState(false);
 
     return (
         <>
             <div className="fixed top-7 lg:top-8 left-0 w-full bg-white md:light_shadow z-20">
                 <div className="container max-w-7xl mx-auto flex items-center justify-between px-4 h-10 md:h-20">
                     <Link href="/">
-                        <img src="/logo_dark.svg" alt="capable logo" className="w-full max-w-[6.25rem] md:max-w-[10rem] object-contain cursor-pointer" />
+                        <img
+                            src="/logo_dark.svg"
+                            alt="capable logo"
+                            className="w-full max-w-[6.25rem] md:max-w-[8rem] object-contain cursor-pointer transition-all duration-300"
+                        />
                     </Link>
 
                     <div>
