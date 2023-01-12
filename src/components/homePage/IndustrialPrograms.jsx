@@ -182,15 +182,15 @@ function Card({ details }) {
                             <span className="flex items-center justify-start gap-0.5">
                                 {details.stat.rating} <AiFillStar className="text-capabl_primary" />
                             </span>
-                            Rating
+                            <span className="font-normal">Rating</span>
                         </p>
                         <p>
                             {details.stat.projects} <br />
-                            Projects
+                            <span className="font-normal">Projects</span>
                         </p>
                         <p>
                             {details.stat.companies} <br />
-                            Companies hiring
+                            <span className="font-normal">Companies hiring</span>
                         </p>
                     </div>
                 </div>
