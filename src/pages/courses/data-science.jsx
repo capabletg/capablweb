@@ -22,7 +22,7 @@ import Module1 from "../../components/courses/Modules/Module1";
 import Module2 from "../../components/courses/Modules/Module2";
 import Module3 from "../../components/courses/Modules/Module3";
 import Module4 from "../../components/courses/Modules/Module4";
-import FeatureComparison from "../../components/courses/FeatureComparison";
+import FeatureComparison from "../../components/FeatureComparison";
 import Header from "../../components/header";
 import useGeneralStore from "../../store/generalStore";
 import CtaForm from "../../components/CtaForm";
@@ -779,7 +779,7 @@ export default function Courses() {
                             {`Parents spends lakhs to get you a college degree, we add value to your parent's hard-earned money and to your time.`}
                         </p>
 
-                        <FeatureComparison />
+                        <FeatureComparison showAllFeatures={false} showCount={4} />
                     </div>
                 </section>
 

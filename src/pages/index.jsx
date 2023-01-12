@@ -14,6 +14,7 @@ import { HiXMark } from "react-icons/hi2";
 import { motion } from "framer-motion";
 import useGeneralStore from "../store/generalStore";
 import VideoGridTestimonials from "../components/VideoGridTestimonials";
+import FeatureComparison from "../components/FeatureComparison";
 
 export default function Home() {
     const openCtaForm = useGeneralStore((state) => state.openCtaForm);
@@ -127,22 +128,20 @@ export default function Home() {
                 </Link>
 
                 {/* Student Testimonials */}
-                <motion.section
-                    key={"student_testimonials"}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    id="student_testimonials"
-                    className="py-4 md:py-20 container mx-auto max-w-7xl"
-                >
+                <section id="student_testimonials" className="py-4 md:py-20 container mx-auto max-w-7xl">
+                    <div className="mb-10 md:mb-12 max-w-md md:max-w-3xl mx-auto px-4">
+                        <h2 className="text-center text-black font-semibold text-xl sm:text-3xl md:font-medium mb-4">{`Proud Stories`}</h2>
+                        <p className="text-center font-normal text-[#636363] text-sm md:text-base">{`Meet our alumni whom we could help live their career dreams`}</p>
+                    </div>
+
                     <div className="overflow-x-scroll scrollbar-hide mx-auto flex items-center justify-start md:justify-center px-4 box-content">
                         {!!studentTestimonials?.length &&
                             studentTestimonials.map((item, index) => (
                                 <div key={index} className="flex-shrink-0">
                                     <div className={`${index % 2 === 0 ? "bg-[#F8F7FF]" : "bg-[#FFFEFD]"} w-full max-w-xs h-[600px] mx-auto relative p-6`}>
-                                        <h2 className="text-left font-semibold text-xl mb-4">{item?.title}</h2>
-                                        <p className="text-left font-medium text-xs mb-4">{item?.description}</p>
-                                        <p className="font-semibold text-base">{item?.name}</p>
+                                        <h2 className="text-left font-semibold text-lg mb-4">{item?.title}</h2>
+                                        <p className="text-left font-light text-sm mb-4">{item?.description}</p>
+                                        <p className="font-medium text-sm">{item?.name}</p>
                                         <img
                                             style={{ transform: `rotate(-${60 * (index % 4)}deg)` }}
                                             className="absolute w-3/4 bottom-[11%] left-[12.5%] origin-center"
@@ -158,7 +157,7 @@ export default function Home() {
                                 </div>
                             ))}
                     </div>
-                </motion.section>
+                </section>
 
                 {/* Associations */}
                 <section id="associations" className="mt-8 container mx-auto max-w-7xl px-4 pt-4 md:pt-16">
@@ -273,133 +272,16 @@ export default function Home() {
                             {`See why we are the best Engineering Ecosystem!`}
                         </h2>
                         <p className="text-center font-normal text-[#636363] text-xs sm:text-sm">
-                            {`Don't believe us? Prove us wrong and you can take the programs for free. We care for you and your parents hard earned money. Hence, we are giving you our best - the best engineering ecosystem for you!`}
+                            {`Don't believe us? Prove us wrong and you can take the programs for free. We care for you and your parents' hard earned money. Hence, we are giving you our best - the best engineering ecosystem for you!`}
                         </p>
                     </div>
 
-                    <div className="rounded-md flex items-start max-w-5xl mx-auto relative">
-                        <div className="w-[55%] sm:w-[50%] md:w-full md:max-w-md flex-shrink-0">
-                            {["", ...features].map(({ feature }, index) => (
-                                <p
-                                    key={index}
-                                    className={`${
-                                        index % 2 === 0 ? "bg-[#FCFDFD]" : "bg-white"
-                                    } flex items-center justify-start px-3 md:pl-8 md:pr-4 py-1 h-16 font-medium text-xs md:text-base text-[#636363]`}
-                                >
-                                    {feature}
-                                </p>
-                            ))}
-                        </div>
-
-                        <div
-                            style={{ boxShadow: "0px 4px 21px rgba(255, 175, 0, 0.5)" }}
-                            className="bg-capabl_primary rounded-lg w-20 md:w-auto flex-shrink-0 pb-2 block md:hidden absolute top-0 left-[55%] sm:left-1/2"
-                        >
-                            <p className="h-16 flex items-center justify-center font-semibold text-[10px] md:text-sm px-4 text-balck md:px-4">Capabl</p>
-                            {features.map(({ capable }, index) => (
-                                <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-[#F2F4F6] bg-opacity-10" : ""}`}>
-                                    {!!capable ? (
-                                        <img src="/images/svgs/white_tick.svg" className="w-full max-w-[21px] object-contain" alt="white tick" />
-                                    ) : (
-                                        <></>
-                                    )}
-                                </p>
-                            ))}
-                            <div className="mt-2 md:mt-4 flex items-center justify-center px-2">
-                                <button
-                                    onClick={() => openCtaForm()}
-                                    className="bg-white w-full py-3 px-2 font-medium rounded-lg text-[10px] md:text-sm text-center text-black"
-                                >
-                                    Join Our Tribe
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="w-[45%] sm:w-[50%] md:w-auto flex-shrink-0 md:flex-shrink md:flex-grow overflow-x-scroll scrollbar-hide">
-                            <div className="flex items-start justify-start md:grid md:grid-cols-4">
-                                <div className="bg-white rounded-b-lg hidden md:block">
-                                    <div
-                                        style={{ boxShadow: "0px 4px 21px rgba(255, 175, 0, 0.5)" }}
-                                        className="bg-capabl_primary rounded-lg w-auto flex-shrink-0 pb-2"
-                                    >
-                                        <p className="h-16 flex items-center justify-center font-semibold text-sm px-4 text-balck">Capabl</p>
-                                        {features.map(({ capable }, index) => (
-                                            <p
-                                                key={index}
-                                                className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-[#F2F4F6] bg-opacity-10" : ""}`}
-                                            >
-                                                {!!capable ? (
-                                                    <img src="/images/svgs/white_tick.svg" className="w-full max-w-[21px] object-contain" alt="white tick" />
-                                                ) : (
-                                                    <></>
-                                                )}
-                                            </p>
-                                        ))}
-                                        <div className="mt-4 flex items-center justify-center px-2">
-                                            <button
-                                                onClick={() => openCtaForm()}
-                                                className="bg-white w-full py-3 px-2 font-medium rounded-lg text-sm text-center text-black"
-                                            >
-                                                Join Our Tribe
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white w-20 md:hidden flex-shrink-0" />
-
-                                <div className="bg-white w-20 md:w-auto flex-shrink-0">
-                                    <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm px-4">
-                                        Coursera
-                                    </p>
-                                    {features.map(({ coursera }, index) => (
-                                        <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                            {!!coursera ? (
-                                                <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
-                                            ) : (
-                                                <HiXMark className="text-slate-300 text-xl" />
-                                            )}
-                                        </p>
-                                    ))}
-                                </div>
-
-                                <div className="bg-white w-20 md:w-auto flex-shrink-0">
-                                    <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm md:whitespace-nowrap px-4">
-                                        YouTube / Udemy
-                                    </p>
-                                    {features.map(({ yt_udemy }, index) => (
-                                        <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                            {!!yt_udemy ? (
-                                                <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
-                                            ) : (
-                                                <HiXMark className="text-slate-300 text-xl" />
-                                            )}
-                                        </p>
-                                    ))}
-                                </div>
-
-                                <div className="bg-white w-20 md:w-auto flex-shrink-0">
-                                    <p className="h-16 flex items-center justify-center text-center text-[#565656] font-medium text-[10px] md:text-sm px-4">
-                                        Offline
-                                    </p>
-                                    {features.map(({ offline }, index) => (
-                                        <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                            {!!offline ? (
-                                                <img src="/images/svgs/orange_tick.svg" className="w-full max-w-[21px] object-contain" alt="orange tick" />
-                                            ) : (
-                                                <HiXMark className="text-slate-300 text-xl" />
-                                            )}
-                                        </p>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <FeatureComparison showAllFeatures={true} />
                 </section>
 
                 <section className="max-w-7xl mx-auto px-4 md:px-6 mt-16 md:mt-24">
                     <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`What our Students have to say!`}</h2>
-                    <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">{`We’re glad to have so much love from our students! We would love to keep working towards making our students dreams come true.`}</p>
+                    <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">{`We're glad to have so much love from our students! We would love to keep working towards making our students' dreams come true.`}</p>
 
                     <VideoGridTestimonials />
                 </section>
@@ -408,23 +290,29 @@ export default function Home() {
                 <section id="present_across" className="mt-10 md:mt-20 lg:mt-48 mb-4 md:mb-6">
                     <div className="md:grid md:grid-cols-7 md:gap-2 max-w-5xl mx-auto">
                         <div className="p-4 md:col-span-4">
-                            <h3 className="text-black font-medium text-lg md:text-4xl mb-4 md:mb-8 md:leading-[3rem] md:max-w-sm">{`Present across 400+ Colleges & Universities`}</h3>
+                            <h3 className="text-black font-medium text-lg md:text-3xl mb-4 md:mb-8 md:leading-[3rem] md:max-w-sm">{`Present across 400+ Colleges & Universities`}</h3>
+
+                            <div className="font-normal max-w-lg text-sm mb-6 md:mb-8 text-[#636363]">
+                                As per the NEP and directives by GoI, Academia Industry Collaboration (AIC) by Capabl help colleges improve Industrial exposure,
+                                infrastructure and make them part of an engineering Ecosystem - taking the college to the next level.
+                            </div>
 
                             <div className="w-full">
-                                <p className="font-normal text-xs md:text-xl text-balck">
+                                <p className="font-normal text-sm md:text-base text-balck">
                                     {`Increase avg`} <span className="text-capabl_primary font-bold">{`package by 40%+`}</span>
                                 </p>
                                 <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
 
-                                <p className="font-normal text-xs md:text-xl text-balck">{`Add labs & Infrastructure`}</p>
+                                <p className="font-normal text-sm md:text-base text-balck">{`Add Hitech labs & Infrastructure`}</p>
                                 <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
 
-                                <p className="font-normal text-xs md:text-xl text-balck">{`Offer 'Honours' Degrees`}</p>
+                                <p className="font-normal text-sm md:text-base text-balck">{`Offer 'Honours' Degrees`}</p>
                                 <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
 
-                                <p className="font-normal text-xs md:text-xl text-balck">
-                                    {`Improve Ranking & Ratings:`} <span className="text-capabl_primary font-bold">{`NIRF, NAAC, NBA`}</span>
-                                </p>
+                                <p className="font-normal text-sm md:text-base text-balck">{`Increase Admissions & Popularity`}</p>
+                                <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
+
+                                <p className="font-normal text-sm md:text-base text-balck">{`Improve NIRF, NAAC, NBA Ranking & Ratings`}</p>
                                 <hr className="w-3/4 my-2.5 md:my-3 max-w-xs md:w-full md:max-w-sm" />
                             </div>
                         </div>
@@ -459,8 +347,8 @@ export default function Home() {
                     <div className="bg-capabl_primary rounded-xl px-6 md:px-10 py-8 md:py-12 relative md:flex md:items-center md:justify-between md:gap-7">
                         <img className="absolute top-0 z-0 left-0 w-full h-full object-cover" src="/images/svgs/cta_illustration.svg" alt="cta illustration" />
                         <div className="relative z-[1]">
-                            <p className="text-black text-xl font-medium mb-4 md:mb-2 text-center md:text-left">{`Be part of the best ecosystem redefining engineering education`}</p>
-                            <p className="text-black font-light text-sm mb-8 md:mb-0 text-center md:text-left">{`What are you waiting for? Join only the best ecosystem to kickstart your career journey! `}</p>
+                            <p className="text-black text-xl font-medium mb-4 md:mb-2 text-center md:text-left">{`Join the engineering revolution`}</p>
+                            <p className="text-black font-light text-sm mb-8 md:mb-0 text-center md:text-left">{`Join AIC. Talk to our team to know about AIC and the process to join it.`}</p>
                         </div>
 
                         <button

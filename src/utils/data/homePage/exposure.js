@@ -5,15 +5,15 @@ export const exposure = [
     },
     {
         title: `Multidisciplinary Specializations`,
-        description: `Industry 4.0 and Industry 5.0 are about the integrated world and integrated technologies. Today’s time asks for skill development in multiple fields. Why stick to only 1 discipline when you can have exposure to all the important ones for your career?`,
+        description: `Industry 4.0 and Industry 5.0 are about the integrated world and integrated technologies. Today's time asks for skill development in multiple fields. Why stick to only 1 discipline when you can have exposure to all the important ones for your career?`,
     },
     {
         title: `Scholarship Support`,
-        description: `Worried about World-class quality skilling ecosystem costing a bomb! Well, we’ve got you covered - scholarships worth 2 Lakhs+ from industries and organizations to give students the best platform at affordable prices.`,
+        description: `Worried about a World-class quality skilling ecosystem costing a bomb! Well, we've got you covered - scholarships worth 2 Lakhs+ from industries and organizations to give students the best platform at affordable prices.`,
     },
     {
         title: `Industrial Projects`,
-        description: `Multiple industry projects = better industrial insights = Career growth. Simple equation made simpler via easy access. We provide you with top-notch industry projects, exciting boot camp, and 1-1 mentorship from industry experts.`,
+        description: `Multiple industry projects = better industrial insights = Career growth. Simple equations made simpler via easy access. We provide you with top-notch industry projects, exciting boot camp, and 1-1 mentorship from industry experts.`,
     },
     {
         title: `Community`,
@@ -21,6 +21,6 @@ export const exposure = [
     },
     {
         title: `Internships/Jobs`,
-        description: `Your search for a fortune 500 company ends here. With our projects and mentorship, you’re just a few steps away from your dream placement.`,
+        description: `Your search for a fortune 500 company ends here. With our projects and mentorship, you're just a few steps away from your dream placement.`,
     },
 ];

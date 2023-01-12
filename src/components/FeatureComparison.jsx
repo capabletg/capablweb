@@ -1,24 +1,50 @@
 import React, { useEffect, useState } from "react";
-import { features } from "../../utils/data/features";
+import { HiXMark } from "react-icons/hi2";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import useGeneralStore from "../../store/generalStore";
+import useGeneralStore from "../store/generalStore";
 
-export default function FeatureComparison() {
+const data = [
+    { feature: "Live Doubt Session", capable: true, coursera: false, yt_udemy: true, offline: true },
+    { feature: "Personal Tech-Guru", capable: true, coursera: false, yt_udemy: false, offline: true },
+    { feature: "1:1 Counselling", capable: true, coursera: false, yt_udemy: true, offline: false },
+    { feature: "Engagement with Industry Experts", capable: true, coursera: false, yt_udemy: true, offline: false },
+    { feature: "Engineering Community", capable: true, coursera: true, yt_udemy: false, offline: false },
+    { feature: "Internships", capable: true, coursera: false, yt_udemy: false, offline: false },
+    { feature: "Minor-Major Projects", capable: true, coursera: false, yt_udemy: true, offline: false },
+    { feature: "Events & Competition Support", capable: true, coursera: false, yt_udemy: false, offline: false },
+    { feature: "Research Paper & Project Support", capable: true, coursera: false, yt_udemy: false, offline: false },
+    { feature: "Scholarship for College Students", capable: true, coursera: false, yt_udemy: false, offline: false },
+    { feature: "Flexible learning as per college", capable: true, coursera: false, yt_udemy: false, offline: false },
+    { feature: "LoR/SoP support", capable: true, coursera: false, yt_udemy: false, offline: false },
+    { feature: "Internationally Accredited Certificate", capable: true, coursera: true, yt_udemy: true, offline: false },
+    { feature: "Offline Programs*", capable: true, coursera: false, yt_udemy: false, offline: true },
+    { feature: "Profile Building on Internet", capable: true, coursera: false, yt_udemy: true, offline: false },
+    { feature: "Multiple Domain Expertise", capable: true, coursera: true, yt_udemy: true, offline: false },
+    { feature: "Mock Interviews", capable: true, coursera: false, yt_udemy: true, offline: false },
+    { feature: "Placement Assistance", capable: true, coursera: false, yt_udemy: true, offline: false },
+];
+
+export default function FeatureComparison({ showAllFeatures = false, showCount = 4 }) {
     const openCtaForm = useGeneralStore((state) => state.openCtaForm);
 
     const [showAll, setShowAll] = useState(false);
     const [filteredFeatures, setFilteredFeatures] = useState([]);
 
     useEffect(() => {
-        setFilteredFeatures(showAll ? [...features] : [...features].splice(0, 4));
+        setFilteredFeatures(showAll ? [...data] : [...data].splice(0, showCount));
     }, [showAll]);
+
+    useEffect(() => {
+        setShowAll(showAllFeatures);
+    }, [showAllFeatures]);
+
     return (
         <div className="mt-12 md:mt-16 max-w-5xl mx-auto relative rounded-md grid grid-cols-2">
             <div className="flex-shrink-0 pt-4 md:pt-8">
                 {["", ...filteredFeatures]?.map(({ feature }, index) => (
                     <div
                         key={index}
-                        className={`${index % 2 === 0 ? "bg-[#FCFDFD]" : "bg-white"} ${index === features?.length ? "rounded-bl-md" : ""} ${
+                        className={`${index % 2 === 0 ? "bg-[#FCFDFD]" : "bg-white"} ${index === data?.length ? "rounded-bl-md" : ""} ${
                             index === 0 ? "rounded-tl-md" : ""
                         } flex items-center justify-start px-3 md:pl-8 md:pr-4 py-1 h-16`}
                     >
@@ -105,7 +131,11 @@ export default function FeatureComparison() {
                             </p>
                             {filteredFeatures?.map(({ coursera }, index) => (
                                 <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                    {!!coursera ? <IoIosCheckmarkCircle className="text-capabl_primary text-xl" /> : <></>}
+                                    {!!coursera ? (
+                                        <IoIosCheckmarkCircle className="text-capabl_primary text-xl" />
+                                    ) : (
+                                        <HiXMark className="text-xl text-gray-300" />
+                                    )}
                                 </p>
                             ))}
                         </div>
@@ -116,7 +146,11 @@ export default function FeatureComparison() {
                             </p>
                             {filteredFeatures?.map(({ yt_udemy }, index) => (
                                 <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                    {!!yt_udemy ? <IoIosCheckmarkCircle className="text-capabl_primary text-xl" /> : <></>}
+                                    {yt_udemy ? (
+                                        <IoIosCheckmarkCircle className="text-capabl_primary text-xl" />
+                                    ) : (
+                                        <HiXMark className="text-xl text-gray-300" />
+                                    )}
                                 </p>
                             ))}
                         </div>
@@ -127,7 +161,11 @@ export default function FeatureComparison() {
                             </p>
                             {filteredFeatures?.map(({ offline }, index) => (
                                 <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>
-                                    {!!offline ? <IoIosCheckmarkCircle className="text-capabl_primary text-xl" /> : <></>}
+                                    {!!offline ? (
+                                        <IoIosCheckmarkCircle className="text-capabl_primary text-xl" />
+                                    ) : (
+                                        <HiXMark className="text-xl text-gray-300" />
+                                    )}
                                 </p>
                             ))}
                         </div>

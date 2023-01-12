@@ -47,7 +47,7 @@ const data = [
         id: "mechatronics",
         title: "Mechatronics",
         background: "#fec749",
-        short_desc: "Be a master of Robotics, Mechatronics, IoT, etc. - start from scratch & become pro!",
+        short_desc: "Be a master of Robotics, Mechatronics, IoT, etc. - start from scratch & become a pro!",
         stat: {
             rating: "4.7",
             projects: "45+",
@@ -65,7 +65,7 @@ const data = [
         id: "design-and-engineering",
         title: "Design Engineering",
         background: "#fd6768",
-        short_desc: "Be it a ferrari, your water bottle or a rocket ship - be the engineer who can design it all!",
+        short_desc: "A ferrari, water bottle or may be a rocket - be the engineer who can design it all!",
         stat: {
             rating: "4.9",
             projects: "50+",
@@ -123,10 +123,10 @@ export default function IndustrialPrograms() {
                     <div className="md:grid md:grid-cols-5 md:gap-10">
                         <div className="max-w-sm flex-shrink-0 md:col-span-2">
                             <h3 className="font-semibold text-lg md:text-4xl text-[#002639] mb-3 md:mb-8">
-                                Indutrial Programs for a Capa<span className="text-capabl_primary">bl</span> you!
+                                Industrial Programs for a Capa<span className="text-capabl_primary">bl</span> you!
                             </h3>
                             <p className="font-medium text-sm md:text-base text-[#002639]">
-                                {`With Capabl. You get licence to (S)kill - skill in top domains all together. Specially designed for college students to make you `}
+                                {`With Capabl. You get license to (S)kill - skill in top domains all together. Specially designed for college students to make you `}
                                 <span className="font-bold">the Bond</span>
                                 {` of the Industry!`}
                             </p>
