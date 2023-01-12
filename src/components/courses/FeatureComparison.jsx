@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { features } from "../../utils/data/features";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import Link from "next/link";
+import useGeneralStore from "../../store/generalStore";
 
 export default function FeatureComparison() {
+    const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+
     const [showAll, setShowAll] = useState(false);
     const [filteredFeatures, setFilteredFeatures] = useState([]);
 
@@ -41,11 +43,12 @@ export default function FeatureComparison() {
                     ))}
                     <div className="mt-2 md:mt-4 flex items-center justify-center px-2">
                         {showAll && (
-                            <Link href="/courses">
-                                <a className="bg-white w-full py-3 px-2 font-medium rounded-lg text-[0.6rem] md:text-sm text-center text-black hover:scale-95 transition-all duration-300">
-                                    Join Our Tribe
-                                </a>
-                            </Link>
+                            <button
+                                onClick={() => openCtaForm()}
+                                className="bg-white w-full py-3 px-2 font-medium rounded-lg text-[0.6rem] md:text-sm text-center text-black hover:scale-95 transition-all duration-300"
+                            >
+                                Join Our Tribe
+                            </button>
                         )}
                         {!showAll && (
                             <button
@@ -75,11 +78,12 @@ export default function FeatureComparison() {
                                 ))}
                                 <div className="mt-4 flex items-center justify-center px-2">
                                     {showAll && (
-                                        <Link href="/courses">
-                                            <a className="bg-white w-full py-3 px-2 font-normal rounded-lg text-xs text-center text-black hover:scale-95 transition-all duration-300">
-                                                Join Our Tribe
-                                            </a>
-                                        </Link>
+                                        <button
+                                            onClick={() => openCtaForm()}
+                                            className="bg-white w-full py-3 px-2 font-normal rounded-lg text-xs text-center text-black hover:scale-95 transition-all duration-300"
+                                        >
+                                            Join Our Tribe
+                                        </button>
                                     )}
                                     {!showAll && (
                                         <button

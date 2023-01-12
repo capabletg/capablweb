@@ -173,7 +173,7 @@ function ImageOnChange({ src = "", alt = "", toLeft = true }) {
     return (
         <AnimatePresence>
             <motion.img
-                key={`${src}_${alt}`}
+                key={`slider_${src}_${alt}`}
                 initial={{ opacity: 0, scale: 0, x: toLeft ? "100%" : "-100%" }}
                 animate={{ opacity: 1, x: "0%", scale: 1 }}
                 exit={{ opacity: 0, x: toLeft ? "-100%" : "100%", scale: 0 }}

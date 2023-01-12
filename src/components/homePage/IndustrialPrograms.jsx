@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { HiArrowLongRight } from "react-icons/hi2";
+import useGeneralStore from "../../store/generalStore";
 
 const data = [
     {
@@ -24,7 +25,7 @@ const data = [
     },
     {
         image: "/images/home/data_science.jpg",
-        target: "/",
+        target: "/courses/data-science",
         id: "data-science",
         background: "#a442d7",
         title: "Data Science",
@@ -96,7 +97,9 @@ const data = [
     },
 ];
 
-export default function IndustrialPrograms({ setShowCtaForm }) {
+export default function IndustrialPrograms() {
+    const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+
     return (
         <section id="programs" className="container mx-auto max-w-7xl px-0 md:px-4 relative mb-10 md:mb-20 mt-20">
             {/* Top Circle */}
@@ -150,7 +153,7 @@ export default function IndustrialPrograms({ setShowCtaForm }) {
                         </div>
 
                         <button
-                            onClick={() => setShowCtaForm(true)}
+                            onClick={() => openCtaForm()}
                             className="bg-capabl_primary rounded-lg px-4 py-3 text-black font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0"
                         >
                             Talk to Counselor
@@ -201,7 +204,7 @@ function Card({ details }) {
                     ))}
                 </ol> */}
 
-                <Link href="/">
+                <Link href={details?.target}>
                     <a className="mt-4 flex w-fit items-center font-medium justify-start gap-2 text-sm text-[#1F28CF] hover:transform hover:translate-x-2 transition duration-500">
                         Explore <HiArrowLongRight className="text-xl" />
                     </a>

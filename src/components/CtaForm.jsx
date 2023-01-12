@@ -1,10 +1,11 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { HiCheckCircle, HiXCircle } from "react-icons/hi2";
 import { RiLoader2Line } from "react-icons/ri";
 import { VscChromeClose } from "react-icons/vsc";
 import OtpInput from "react-otp-input";
 import useForm from "../hooks/useForm";
+import useGeneralStore from "../store/generalStore";
 
 const otpStatuses = Object.freeze({
     SUCCESS: "success",
@@ -13,7 +14,10 @@ const otpStatuses = Object.freeze({
     LOADING: "loading",
 });
 
-export default function CtaForm({ show, setShow }) {
+export default function CtaForm() {
+    const isOpen = useGeneralStore((state) => state.show_cta_form);
+    const closeCtaForm = useGeneralStore((state) => state.closeCtaForm);
+
     const [otp, setOtp] = useState("");
     const [otpRequestLoading, setOtpRequestLoading] = useState(false);
     const [otpRequestSend, setOtpRequestSend] = useState(false);
@@ -28,7 +32,7 @@ export default function CtaForm({ show, setShow }) {
     });
 
     const closeModal = () => {
-        setShow(false);
+        closeCtaForm();
         setOtpRequestSend(false);
         setOtpRequestLoading(false);
         setOtpVerficationStatus(otpStatuses.NOT_INITIATED);
@@ -51,13 +55,16 @@ export default function CtaForm({ show, setShow }) {
         }
     }, [otp]);
     return (
-        <AnimatePresence>
-            {show && (
+        <>
+            {isOpen && <div className="fixed z-[49] top-0 left-0 w-full h-screen bg-black bg-opacity-60" />}
+            {isOpen && (
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="fixed z-50 top-0 left-0 w-full h-screen flex items-center justify-center bg-black bg-opacity-60 p-4 pr-6 overflow-auto"
+                    key="cta_form"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="fixed z-50 top-0 left-0 w-full h-screen flex items-center justify-center bg-transparent p-4 pr-6 overflow-auto"
                 >
                     <div className="bg-white w-full max-w-sm px-4 py-6 rounded-xl relative my-10">
                         {/* close button */}
@@ -224,6 +231,6 @@ export default function CtaForm({ show, setShow }) {
                     </div>
                 </motion.div>
             )}
-        </AnimatePresence>
+        </>
     );
 }

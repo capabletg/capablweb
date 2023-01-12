@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
+import useGeneralStore from "../../../store/generalStore";
 
 export default function Module2() {
+    const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+
     const [playing, setPlaying] = useState(true);
     const videoRef = useRef();
 
@@ -112,7 +115,10 @@ export default function Module2() {
                             {`Data Analyst`} <span className="text-[#738793]">{` | `}</span> {`Python Developer`}
                         </p>
 
-                        <button className="mt-4 sm:mt-6 md:mb-1 flex-shrink-0 bg-capabl_primary cursor-pointer rounded-md px-3 py-1 sm:py-1.5 text-black text-[0.6rem] sm:text-xs md:text-sm lg:text-xs hover:scale-95 transition-all duration-300">
+                        <button
+                            onClick={() => openCtaForm()}
+                            className="mt-4 sm:mt-6 md:mb-1 flex-shrink-0 bg-capabl_primary cursor-pointer rounded-md px-3 py-1 sm:py-1.5 text-black text-[0.6rem] sm:text-xs md:text-sm lg:text-xs hover:scale-95 transition-all duration-300"
+                        >
                             View Modules
                         </button>
                     </div>
