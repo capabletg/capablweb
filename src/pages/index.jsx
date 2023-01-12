@@ -11,6 +11,7 @@ import Services from "../components/homePage/Services";
 import { FaPlay } from "react-icons/fa";
 import CtaForm from "../components/CtaForm";
 import { useState } from "react";
+import Header from "../components/homePage/header";
 
 export default function Home() {
     const [showCtaForm, setShowCtaForm] = useState(false);
@@ -36,47 +37,10 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* fixed */}
-                <div className="fixed top-7 md:top-8 left-0 w-full bg-white md:light_shadow z-20">
-                    <div className="container max-w-7xl mx-auto flex items-center justify-between px-4 h-10 md:h-20">
-                        <Link href="/">
-                            <img src="/logo_dark.svg" alt="capable logo" className="w-full max-w-[6.25rem] md:max-w-[10rem] object-contain cursor-pointer" />
-                        </Link>
+                <Header />
 
-                        <div>
-                            <button className="inline-block md:hidden">
-                                <img src="/images/svgs/hamburger_icon.svg" alt="hamburger icon" />
-                            </button>
-
-                            {/* Nav Items */}
-                            <div className="hidden md:flex items-center justify-end gap-4">
-                                <Link href="/">
-                                    <a className="font-medium text-sm text-black">Programs</a>
-                                </Link>
-                                <Link href="/">
-                                    <a className="font-medium text-sm text-black">Careers Transformed</a>
-                                </Link>
-                                <Link href="/">
-                                    <a className="font-medium text-sm text-black">Hire</a>
-                                </Link>
-                                <Link href="/">
-                                    <a className="font-medium text-sm text-black">Others</a>
-                                </Link>
-
-                                <button
-                                    onClick={() => setShowCtaForm(true)}
-                                    style={{ boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)" }}
-                                    className="font-medium text-sm text-[#272727] rounded-lg py-3 px-6 bg-capabl_primary"
-                                >
-                                    Join Our Tribe
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 {/* spacer */}
                 <div className="w-full h-7 md:h-8" />
-                <div className="w-full h-10 md:h-20" />
             </header>
 
             <main className="min-h-screen w-full">
