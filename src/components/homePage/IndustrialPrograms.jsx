@@ -167,14 +167,14 @@ function Card({ details }) {
         <div id={details?.id} className="bg-white rounded-2xl p-4 w-full mx-auto md:h-[440px] md:max-w-xs flex-shrink-0 group md:hover:shadow-lg">
             <div
                 style={{ background: details?.background }}
-                className={`w-full rounded-2xl h-[300px] md:h-[250px] md:group-hover:h-[150px] mb-4 relative overflow-hidden transition-all duration-1000`}
+                className={`w-full rounded-2xl h-[300px] md:h-[250px] md:group-hover:h-[190px] mb-4 relative overflow-hidden transition-all duration-500`}
             >
                 {!!details?.image && <img src={details?.image} alt={details.title} className="w-full h-full object-contain" />}
             </div>
             <div className="pr-6">
                 <h4 className="font-medium text-md md:text-lg mb-2 md:mb-3 text-black">{details.title}</h4>
                 <div className="font-normal text-[10px] md:text-md text-black mb-4 md:mb-6">
-                    <p className="text-xs mb-4 overflow-hidden h-12 opacity-100 md:opacity-0 md:h-0 group-hover:h-12 group-hover:opacity-100 transition-all duration-1000">
+                    <p className="text-xs mb-4 overflow-hidden h-12 opacity-100 md:opacity-0 md:h-0 group-hover:h-12 group-hover:opacity-100 transition-all duration-500">
                         {details.short_desc}
                     </p>
                     <div className="flex items-start justify-start gap-5 font-semibold text-xs">
