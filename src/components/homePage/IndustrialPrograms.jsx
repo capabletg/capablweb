@@ -5,7 +5,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 
 const data1 = [
     {
-        image: "/",
+        image: "/images/home/electric_vehicle.jpg",
         target: "/",
         title: "Electric Vehicle",
         short_desc: "Passionate about Electric Vehicles? This is the only program you need.",
@@ -21,7 +21,7 @@ const data1 = [
         ],
     },
     {
-        image: "/",
+        image: "/images/home/data_science.jpg",
         target: "/",
         title: "Data Science",
         short_desc: "Don't know coding or scared of how to start - the perfect program for you!",
@@ -37,7 +37,7 @@ const data1 = [
         ],
     },
     {
-        image: "/",
+        image: "/images/home/mechatronics.jpg",
         target: "/",
         title: "Mechatronics",
         short_desc: "Be a master of Robotics, Mechatronics, IoT, etc. - start from scratch & become pro!",
@@ -56,9 +56,25 @@ const data1 = [
 
 const data2 = [
     {
-        image: "/",
+        image: "/images/home/design_cae.jpg",
         target: "/",
         title: "Design Engineering",
+        short_desc: "Be it a ferrari, your water bottle or a rocket ship - be the engineer who can design it all!",
+        stat: {
+            rating: "4.9",
+            projects: "50+",
+            companies: "700+",
+        },
+        points: [
+            `Design In Automotive Industry, Plastic Design, BIW & Sheet Metail, Solid Modeling, Surface Modeling, FEA, CFD`,
+            `Learn BIW, GDnT, Plastic Design, Turbomachinery analysis and more`,
+            `Siemens NX, Solidworks, Hypermesh, StarCCM and ANSYS workbench.`,
+        ],
+    },
+    {
+        image: "/images/home/full_stack.jpg",
+        target: "/",
+        title: "Full Stack Development",
         short_desc: "Be it a ferrari, your water bottle or a rocket ship - be the engineer who can design it all!",
         stat: {
             rating: "4.9",
@@ -123,6 +139,7 @@ export default function IndustrialPrograms({ setShowCtaForm }) {
                     {data2.map((item, index) => (
                         <Card key={index} details={item} />
                     ))}
+                    <div className="bg-transparent w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0"></div>
                 </div>
 
                 <div className="px-4 mb-4 md:mt-20">
@@ -148,7 +165,9 @@ export default function IndustrialPrograms({ setShowCtaForm }) {
 function Card({ details }) {
     return (
         <div className="bg-white rounded-2xl p-4 w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0 group">
-            <div className={`w-full rounded-2xl h-[200px] md:h-[250px] bg-[#F6E372] mb-4`}></div>
+            <div className={`w-full rounded-2xl h-[200px] md:h-[250px] bg-[#F6E372] mb-4 relative overflow-hidden`}>
+                {!!details?.image && <img src={details?.image} alt={details.title} className="w-full h-full object-cover" />}
+            </div>
             <div className="pr-6">
                 <h4 className="font-medium text-sm md:text-xl mb-2 md:mb-3 text-black">{details.title}</h4>
                 <div className="font-normal text-[10px] md:text-sm text-black mb-4 md:mb-6">
