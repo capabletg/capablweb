@@ -67,7 +67,9 @@ export default function Header() {
                                 <React.Fragment key={index}>
                                     {!subMenu?.length && (
                                         <Link href={href}>
-                                            <a className="font-normal text-sm text-black">{label}</a>
+                                            <a className="font-normal text-sm text-black transition-all duration-300 relative after:absolute after:-bottom-1 after:left-0 after:content-[''] after:w-0 hover:after:w-3/4 after:h-0.5 after:opacity-0 hover:after:opacity-100 after:bg-capabl_primary after:rounded-full after:block after:transition-all after:duration-500">
+                                                {label}
+                                            </a>
                                         </Link>
                                     )}
 
