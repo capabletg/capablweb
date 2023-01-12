@@ -59,8 +59,8 @@ export default function FeatureComparison({ showAllFeatures = false, showCount =
                     style={{ boxShadow: "0px 3px 14px rgba(255, 175, 0, 0.43)" }}
                     className="bg-capabl_primary rounded-lg w-20 md:w-auto flex-shrink-0 pb-2 block md:hidden absolute top-0 left-1/2 pt-4"
                 >
-                    <p className="h-16 flex items-center justify-center font-medium text-xs md:text-sm px-4 text-balck md:px-4">
-                        <span className="mb-3">Capabl</span>
+                    <p className="h-16 flex items-center justify-center font-semibold text-xs md:text-sm px-4 text-balck md:px-4">
+                        <span className="mb-7">Capabl</span>
                     </p>
                     {filteredFeatures?.map(({ capable }, index) => (
                         <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-[#F2F4F6] bg-opacity-10" : ""}`}>
@@ -94,8 +94,8 @@ export default function FeatureComparison({ showAllFeatures = false, showCount =
                                 style={{ boxShadow: "0px 3px 14px rgba(255, 175, 0, 0.43)" }}
                                 className="bg-capabl_primary rounded-lg w-auto flex-shrink-0 pb-2 pt-4 md:pt-8 -mt-4 md:-mt-8"
                             >
-                                <p className="h-16 flex items-center justify-center font-medium text-sm px-4 text-balck">
-                                    <span className="mb-5">Capabl</span>
+                                <p className="h-16 flex items-center justify-center font-semibold text-base px-4 text-balck">
+                                    <span className="mb-10">Capabl</span>
                                 </p>
                                 {filteredFeatures?.map(({ capable }, index) => (
                                     <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-[#F2F4F6] bg-opacity-10" : ""}`}>
@@ -126,7 +126,7 @@ export default function FeatureComparison({ showAllFeatures = false, showCount =
                         <div className="bg-white w-20 md:hidden flex-shrink-0" />
 
                         <div className="bg-white w-20 md:w-auto flex-shrink-0">
-                            <p className="h-16 flex items-center justify-center text-center text-[#565656] font-normal text-[0.63rem] md:text-xs px-4">
+                            <p className="h-16 flex items-center justify-center text-center text-[#565656] font-normal text-[0.63rem] md:text-sm px-4">
                                 Coursera
                             </p>
                             {filteredFeatures?.map(({ coursera }, index) => (
@@ -141,7 +141,7 @@ export default function FeatureComparison({ showAllFeatures = false, showCount =
                         </div>
 
                         <div className="bg-white w-20 md:w-auto flex-shrink-0">
-                            <p className="h-16 flex items-center justify-center text-center text-[#565656] font-normal text-[0.63rem] md:text-xs md:whitespace-nowrap px-4">
+                            <p className="h-16 flex items-center justify-center text-center text-[#565656] font-normal text-[0.63rem] md:text-sm md:whitespace-nowrap px-4">
                                 YouTube / Udemy
                             </p>
                             {filteredFeatures?.map(({ yt_udemy }, index) => (
@@ -156,7 +156,7 @@ export default function FeatureComparison({ showAllFeatures = false, showCount =
                         </div>
 
                         <div className="bg-white w-20 md:w-auto flex-shrink-0 rounded-r-md overflow-hidden">
-                            <p className="h-16 flex items-center justify-center text-center text-[#565656] font-normal text-[0.63rem] md:text-xs px-4">
+                            <p className="h-16 flex items-center justify-center text-center text-[#565656] font-normal text-[0.63rem] md:text-sm px-4">
                                 Offline
                             </p>
                             {filteredFeatures?.map(({ offline }, index) => (
