@@ -10,9 +10,9 @@ const navs = [
         key: "programs",
         href: "",
         subMenu: [
-            { label: "Electric Vehicle", href: "/#electric-vehicle" },
+            { label: "Electric Vehicle", href: "/courses/electric-vehicle" },
             { label: "Data Science", href: "/courses/data-science" },
-            { label: "Mechatronics", href: "/#mechatronics" },
+            { label: "Mechatronics", href: "/courses/mechatronics" },
             { label: "Design Engineering", href: "/#design-and-engineering" },
             { label: "Full Stack Development", href: "/#full-stack-development" },
         ],
@@ -120,7 +120,7 @@ export default function Header() {
                                 <button
                                     onClick={() => openCtaForm()}
                                     style={{ boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)" }}
-                                    className="relative z-10 font-medium text-sm text-[#272727] rounded-lg py-3 px-6 bg-capabl_primary"
+                                    className="relative z-10 font-medium text-sm text-[#272727] rounded-lg py-3 px-6 bg-capabl_primary hover:scale-95 transition-all duration-300"
                                 >
                                     Join Our Tribe
                                 </button>

@@ -7,7 +7,7 @@ import useGeneralStore from "../../store/generalStore";
 const data = [
     {
         image: "/images/home/electric_vehicle.jpg",
-        target: "/",
+        target: "/courses/electric-vehicle",
         id: "electric-vehicle",
         title: "Electric Vehicle",
         background: "#74cf5a",
@@ -43,7 +43,7 @@ const data = [
     },
     {
         image: "/images/home/mechatronics.jpg",
-        target: "/",
+        target: "/courses/mechatronics",
         id: "mechatronics",
         title: "Mechatronics",
         background: "#fec749",
