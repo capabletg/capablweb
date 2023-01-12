@@ -45,7 +45,7 @@ const navs = [
     },
 ];
 
-export default function Header() {
+export default function Header({ setShowCtaForm }) {
     const [showSideMenu, setShowSideMenu] = useState(false);
 
     return (

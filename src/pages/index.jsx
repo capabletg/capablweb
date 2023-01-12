@@ -37,7 +37,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <Header />
+                <Header setShowCtaForm={setShowCtaForm} />
 
                 {/* spacer */}
                 <div className="w-full h-7 md:h-8" />
@@ -167,85 +167,48 @@ export default function Home() {
 
                 {/* Associations */}
                 <section id="associations" className="mt-8 container mx-auto max-w-7xl px-4 pt-4 md:pt-16">
-                    <h2 className="text-center font-normal text-lg md:text-5xl mb-4 md:mb-24">
+                    <h2 className="text-center font-normal text-lg md:text-4xl mb-4 md:mb-24">
                         {`You're in a`} <br /> <span className="text-capabl_primary font-semibold">Capabl Company</span>
                     </h2>
 
                     <div>
-                        <div className="relative">
-                            <img className="w-2/3 md:w-1/2 object-contain -mb-2 mx-auto z-0 relative" src="/images/raw_images/won.jpg" alt="won" />
-
-                            <div className="hidden md:block">
-                                <h3 className="font-medium text-base absolute -top-[13%] left-[15%]">Accreditions, Accolades</h3>
-                                <img className="w-full max-w-[3rem] absolute top-[0%] left-[15%]" src="/images/raw_images/iso_logo_square.jpg" alt="iso" />
-                                <img className="w-full max-w-[8rem] absolute top-[18%] left-[6%]" src="/images/raw_images/nasscom_logo.jpg" alt="nasscom" />
-                                <img className="w-full max-w-[8rem] absolute top-[36%] left-[15%]" src="/images/raw_images/uincept_logo.jpg" alt="uincept" />
-                                <img className="w-full max-w-[3rem] absolute top-[54%] left-[24%]" src="/images/raw_images/iso_logo_square.jpg" alt="iso" />
-                                <img className="w-full max-w-[8rem] absolute top-[72%] left-[10%]" src="/images/raw_images/nasscom_logo.jpg" alt="nasscom" />
-                                {/*  */}
-                                <h3 className="font-medium text-base absolute -top-[13%] right-[20%]">Industry Connect</h3>
-                                <img className="w-full max-w-[8rem] absolute top-[5%] right-[16%]" src="/images/raw_images/saeindia_logo.jpg" alt="saeindia" />
-                                <img className="w-full max-w-[8rem] absolute top-[26%] right-[11%]" src="/images/raw_images/siemens_logo.jpg" alt="siemens" />
-                                <img className="w-full max-w-[8rem] absolute top-[48%] right-[17%]" src="/images/raw_images/altair_logo.jpg" alt="altair" />
-                                <img className="w-full max-w-[8rem] absolute top-[70%] right-[9%]" src="/images/raw_images/ansys_logo.jpg" alt="ansys" />
+                        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 mb-6 lg:mb-0">
+                            <div className="order-2 lg:order-1 flex flex-col items-center justify-center text-center">
+                                <p className="mb-6 text-sm md:text-base">{`To Give You The Best, We've Partnered With`}</p>
+                                <img src="/images/home/partners.png" alt="partners" className="w-full object-contain max-w-xs lg:max-w-sm" />
+                                <p className="mt-6 text-base lg:text-xl">{`& 20+ other industry partners`}</p>
+                            </div>
+                            <div className="w-full px-4 order-1 lg:order-2">
+                                <img
+                                    className="w-full object-contain max-w-lg md:max-w-2xl lg:max-w-none -mb-0.5 mx-auto z-0 relative transition-all duration-300"
+                                    src="/images/home/achievements.png"
+                                    alt="won"
+                                />
                             </div>
                         </div>
+
                         <div className="z-[1] relative bg-white border-2 border-capabl_primary rounded-lg p-4 md:p-7 grid grid-cols-5 gap-3 md:gap-6">
-                            <p className="text-left font-medium text-xs md:text-lg col-span-2 md:col-span-1 align-middle flex items-center">
+                            <p className="text-left font-medium text-xs md:text-base col-span-2 md:col-span-1 align-middle flex items-center">
                                 Courses Designed by Experts from
                             </p>
                             <div className="col-span-3 md:col-span-4 grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
-                                <div className="w-full max-w-[2rem] md:max-w-[3.7rem]">
+                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
                                     <img className="w-full object-contain" src="/images/raw_images/tesla_logo.jpg" alt="tesla" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3.7rem]">
+                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
                                     <img className="w-full object-contain" src="/images/raw_images/tata_logo.jpg" alt="tata" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3.7rem]">
+                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
                                     <img className="w-full object-contain" src="/images/raw_images/kn_logo.jpg" alt="kn" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3.7rem]">
+                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
                                     <img className="w-full object-contain" src="/images/raw_images/ather_logo.jpg" alt="ather" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3.7rem]">
+                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
                                     <img className="w-full object-contain" src="/images/raw_images/amazon_logo.jpg" alt="amazon" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3.7rem]">
+                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
                                     <img className="w-full object-contain" src="/images/raw_images/benz_logo.jpg" alt="benz" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="visible md:hidden">
-                        <div className="flex flex-col items-center gap-3 my-6">
-                            <h3 className="font-medium text-sm">Accreditions, Accolades</h3>
-                            <div className="flex items-center justify-center gap-4 w-full">
-                                <div className="w-full max-w-[5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/iso_logo.jpg" alt="iso" />
-                                </div>
-                                <div className="w-full max-w-[5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/nasscom_logo.jpg" alt="nasscom" />
-                                </div>
-                                <div className="w-full max-w-[5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/uincept_logo.jpg" alt="uincept" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-col items-center gap-3 my-8">
-                            <h3 className="font-medium text-sm">Industry Connect</h3>
-                            <div className="flex items-center justify-center gap-4 w-full">
-                                <div className="w-full max-w-[5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/saeindia_logo.jpg" alt="saeindia" />
-                                </div>
-                                <div className="w-full max-w-[5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/siemens_logo.jpg" alt="siemens" />
-                                </div>
-                                <div className="w-full max-w-[5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/altair_logo.jpg" alt="altair" />
-                                </div>
-                                <div className="w-full max-w-[5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/ansys_logo.jpg" alt="ansys" />
                                 </div>
                             </div>
                         </div>
@@ -253,26 +216,37 @@ export default function Home() {
                 </section>
 
                 {/* Exposure */}
-                <section id="exposure" className="p-4 pt-0 md:pt-8">
+                <section id="exposure" className="mt-16 md:mt-20 p-4 pt-0 md:pt-8">
                     <div className="bg-[#F2F4F7] rounded-3xl max-w-screen-2xl mx-auto px-4">
-                        <div className="max-w-6xl mx-auto pb-4 pt-8 md:pt-16 md:pb-6 grid grid-cols-2 md:flex md:items-center gap-4 md:gap-10 justify-content-center md:justify-center">
-                            <div className="p-4 flex items-center justify-center max-w-[13rem] md:max-w-[17.5rem]">
-                                <img src="/images/svgs/focus_man.svg" alt="focus man" />
+                        <div className="max-w-6xl mx-auto pb-4 pt-8 md:pt-16 md:pb-6 grid grid-cols-2 gap-4 lg:gap-10">
+                            <div className="p-4 flex items-center justify-center">
+                                <img src="/images/home/ecosystem.png" alt="focus man" className="w-full object-contain" />
                             </div>
-                            <div className="block md:flex md:items-start md:gap-10">
+                            <div className="block md:gap-10">
                                 <div className="relative mb-4 flex-shrink-0">
-                                    <h3 className="font-semibold text-base md:text-4xl md:leading-[3rem] whitespace-nowrap">
-                                        A Stanford/IIT
+                                    <h3 className="font-semibold text-base md:text-3xl md:leading-[3rem]">
+                                        <span className="relative">
+                                            <span className="relative z-[1]">An Ecosystem of</span>
+                                            <svg
+                                                className="w-5/6 object-contain absolute bottom-0 left-1/2 -translate-x-1/2 z-0"
+                                                viewBox="0 0 250 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M2.24707 5.03916L119 2.73438H247.995"
+                                                    stroke="#FFCC00"
+                                                    strokeWidth="4"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                        </span>
                                         <br />
-                                        Ecosystem!
+                                        Stanford/ Harvard/ IITs!!
                                     </h3>
-                                    <img
-                                        className="absolute top-[2rem] md:top-[4rem] left-[4rem] md:left-[9rem] max-w-[3rem] md:max-w-[7rem] w-full"
-                                        src="/images/svgs/arrow_curved.svg"
-                                        alt="curved arrow"
-                                    />
                                 </div>
-                                <p className="text-[#636363] font-medium text-[9px] md:text-base max-w-xs">
+                                <p className="text-[#636363] font-normal text-xs md:text-sm max-w-xs">
                                     {`We're proud to be the `}
                                     <span className="text-capabl_primary">only</span>
                                     {` platform who understands students like no one else :) An ecosystem that gives you an IIT/
@@ -283,10 +257,10 @@ export default function Home() {
 
                         <div className="hidden md:block">
                             <hr />
-                            <div className="max-w-6xl mx-auto flex items-start justify-between gap-10 py-20">
+                            <div className="max-w-6xl mx-auto grid grid-cols-5 gap-10 py-20">
                                 <ExposureAccordian />
-                                <div>
-                                    <img src="/images/raw_images/teaching.png" alt="teaching" />
+                                <div className="col-span-3">
+                                    <img className="w-full" src="/images/home/teaching.png" alt="teaching" />
                                 </div>
                             </div>
                         </div>

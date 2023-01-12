@@ -9,7 +9,7 @@ export default function ExposureAccordian() {
     }, []);
 
     return (
-        <div className="max-w-sm">
+        <div className="col-span-2">
             {exposure?.map(({ title, description }, index) => (
                 <div key={index} className="mb-8">
                     <div className="flex items-start justify-between gap-4 mb-4">
@@ -25,7 +25,11 @@ export default function ExposureAccordian() {
                             )}
                         </button>
                     </div>
-                    <div className={`overflow-hidden transition-all max-w-xs duration-300 ${activeIndex === index ? "h-auto opacity-100" : "h-0 opacity-0"}`}>
+                    <div
+                        className={`overflow-hidden transition-all max-w-xs duration-300 ${
+                            activeIndex === index ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                        }`}
+                    >
                         <p className="font-normal text-sm text-[#636363] text-left">{description}</p>
                     </div>
                 </div>

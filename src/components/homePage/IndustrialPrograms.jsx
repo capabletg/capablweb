@@ -9,6 +9,7 @@ const data1 = [
         target: "/",
         id: "electric-vehicle",
         title: "Electric Vehicle",
+        background: "#74cf5a",
         short_desc: "Passionate about Electric Vehicles? This is the only program you need.",
         stat: {
             rating: "4.8",
@@ -25,6 +26,7 @@ const data1 = [
         image: "/images/home/data_science.jpg",
         target: "/",
         id: "data-science",
+        background: "#a442d7",
         title: "Data Science",
         short_desc: "Don't know coding or scared of how to start - the perfect program for you!",
         stat: {
@@ -43,6 +45,7 @@ const data1 = [
         target: "/",
         id: "mechatronics",
         title: "Mechatronics",
+        background: "#fec749",
         short_desc: "Be a master of Robotics, Mechatronics, IoT, etc. - start from scratch & become pro!",
         stat: {
             rating: "4.7",
@@ -55,14 +58,12 @@ const data1 = [
             `PLC, Scada, ROS, STM Cube MX, factory automation, robodk, polyscope etc.`,
         ],
     },
-];
-
-const data2 = [
     {
         image: "/images/home/design_cae.jpg",
         target: "/",
         id: "design-and-engineering",
         title: "Design Engineering",
+        background: "#fd6768",
         short_desc: "Be it a ferrari, your water bottle or a rocket ship - be the engineer who can design it all!",
         stat: {
             rating: "4.9",
@@ -80,11 +81,12 @@ const data2 = [
         target: "/",
         id: "full-stack-development",
         title: "Full Stack Development",
-        short_desc: "Be it a ferrari, your water bottle or a rocket ship - be the engineer who can design it all!",
+        background: "#627ffd",
+        short_desc: "Completet Full-Stack made easy for students - Learn, code, practice under guidance!",
         stat: {
-            rating: "4.9",
-            projects: "50+",
-            companies: "700+",
+            rating: "4.8",
+            projects: "60+",
+            companies: "3000+",
         },
         points: [
             `Design In Automotive Industry, Plastic Design, BIW & Sheet Metail, Solid Modeling, Surface Modeling, FEA, CFD`,
@@ -134,17 +136,10 @@ export default function IndustrialPrograms({ setShowCtaForm }) {
                     <hr className="border-t-[0.05rem] border-t-[#d2d2d2] my-3 md:my-6" />
                 </div>
 
-                <div className="overflow-x-scroll scrollbar-hide w-full mt-6 md:mt-8 pb-8 md:pb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
+                <div className="w-full mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
                     {data1.map((item, index) => (
                         <Card key={index} details={item} />
                     ))}
-                </div>
-
-                <div className="overflow-x-scroll scrollbar-hide w-full mt-6 pb-8 md:pb-12 flex items-start justify-start lg:justify-between gap-4 px-4">
-                    {data2.map((item, index) => (
-                        <Card key={index} details={item} />
-                    ))}
-                    <div className="bg-transparent w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0"></div>
                 </div>
 
                 <div className="px-4 mb-4 md:mt-20">
@@ -169,16 +164,19 @@ export default function IndustrialPrograms({ setShowCtaForm }) {
 
 function Card({ details }) {
     return (
-        <div id={details?.id} className="bg-white rounded-2xl p-4 w-full max-w-[250px] min-h-[380px] md:max-w-xs flex-shrink-0 group hover:shadow-lg">
+        <div id={details?.id} className="bg-white rounded-2xl p-4 w-full mx-auto md:h-[440px] md:max-w-xs flex-shrink-0 group md:hover:shadow-lg">
             <div
-                className={`w-full rounded-2xl h-[250px] group-hover:h-[200px] md:h-[250px] group-hover:md-h-[300px] bg-[#F6E372] mb-4 relative overflow-hidden transition-all duration-300`}
+                style={{ background: details?.background }}
+                className={`w-full rounded-2xl h-[300px] md:h-[250px] md:group-hover:h-[150px] mb-4 relative overflow-hidden transition-all duration-1000`}
             >
-                {!!details?.image && <img src={details?.image} alt={details.title} className="w-full h-full object-cover" />}
+                {!!details?.image && <img src={details?.image} alt={details.title} className="w-full h-full object-contain" />}
             </div>
             <div className="pr-6">
-                <h4 className="font-medium text-sm md:text-xl mb-2 md:mb-3 text-black">{details.title}</h4>
-                <div className="font-normal text-[10px] md:text-sm text-black mb-4 md:mb-6">
-                    <p className="text-xs mb-4">{details.short_desc}</p>
+                <h4 className="font-medium text-md md:text-lg mb-2 md:mb-3 text-black">{details.title}</h4>
+                <div className="font-normal text-[10px] md:text-md text-black mb-4 md:mb-6">
+                    <p className="text-xs mb-4 overflow-hidden h-12 opacity-100 md:opacity-0 md:h-0 group-hover:h-12 group-hover:opacity-100 transition-all duration-1000">
+                        {details.short_desc}
+                    </p>
                     <div className="flex items-start justify-start gap-5 font-semibold text-xs">
                         <p>
                             <span className="flex items-center justify-start gap-0.5">
@@ -197,11 +195,11 @@ function Card({ details }) {
                     </div>
                 </div>
 
-                <ol className="flex flex-col items-start gap-2 text-xs md:text-sm font-light list-disc pl-3 max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-300">
+                {/* <ol className="flex flex-col items-start gap-2 text-xs md:text-sm font-light list-disc pl-3 max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-300">
                     {details.points.map((el, index) => (
                         <li key={index}>{el}</li>
                     ))}
-                </ol>
+                </ol> */}
 
                 <Link href="/">
                     <a className="mt-4 flex w-fit items-center font-medium justify-start gap-2 text-sm text-[#1F28CF] hover:transform hover:translate-x-2 transition duration-500">
