@@ -3,7 +3,7 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { HiArrowLongRight } from "react-icons/hi2";
 
-const data1 = [
+const data = [
     {
         image: "/images/home/electric_vehicle.jpg",
         target: "/",
@@ -137,7 +137,7 @@ export default function IndustrialPrograms({ setShowCtaForm }) {
                 </div>
 
                 <div className="w-full mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
-                    {data1.map((item, index) => (
+                    {data.map((item, index) => (
                         <Card key={index} details={item} />
                     ))}
                 </div>
