@@ -120,23 +120,40 @@ export default function IndustrialPrograms() {
                 className="w-full backdrop-blur-md py-8 md:px-12 md:py-12 border-[0.05rem] border-[#d2d2d2] md:rounded-xl relative z-[1]"
             >
                 <div className="px-6">
-                    <div className="md:grid md:grid-cols-5 md:gap-10">
-                        <div className="max-w-sm flex-shrink-0 md:col-span-2">
-                            <h3 className="font-semibold text-lg md:text-4xl text-[#002639] mb-3 md:mb-8">
-                                Industrial Programs for a Capa<span className="text-capabl_primary">bl</span> you!
+                    <div className="md:grid md:grid-cols-5 md:gap-10 items-end">
+                        <div className="order-2 max-w-sm flex-shrink-0 md:col-span-2 pb-4">
+                            <h3 className="font-semibold text-lg md:text-4xl text-[#002639] mb-3 md:mb-6">
+                                <span className="relative">
+                                    <span className="relative z-[1]">Industrial Programs</span>
+                                    <svg
+                                        className="w-5/6 object-contain absolute bottom-0 left-1/2 -translate-x-1/2 z-0"
+                                        viewBox="0 0 250 8"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            className="stroke-capabl_primary"
+                                            d="M2.24707 5.03916L119 2.73438H247.995"
+                                            strokeWidth="4"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
+                                </span>
+                                <br /> for a Capabl you!
                             </h3>
-                            <p className="font-medium text-sm md:text-base text-[#002639]">
+                            <p className="font-normal text-sm md:text-base text-[#002639]">
                                 {`With Capabl. You get license to (S)kill - skill in top domains all together. Specially designed for college students to make you `}
-                                <span className="font-bold">the Bond</span>
+                                <span className="font-semibold">the Bond</span>
                                 {` of the Industry!`}
                             </p>
                         </div>
-                        <div className="md:col-span-3 hidden w-full min-h-[13rem] relative md:block flex-grow overflow-hidden rounded-tr-3xl">
-                            <img className="absolute object-cover w-full h-full rounded-bl-[9.5rem]" src="/images/raw_images/discussion.jpg" alt="discussion" />
+                        <div className="order-1 md:col-span-3 hidden w-full min-h-[13rem] relative md:block flex-grow overflow-hidden rounded-tr-3xl -mb-1.5">
+                            <img className="absolute object-contain w-full h-full rounded-bl-[9.5rem]" src="/images/home/discussion.svg" alt="discussion" />
                         </div>
                     </div>
 
-                    <hr className="border-t-[0.05rem] border-t-[#d2d2d2] my-3 md:my-6" />
+                    <hr className="border-t-[0.05rem] border-t-[#d2d2d2] mb-3 md:mb-6" />
                 </div>
 
                 <div className="w-full mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
@@ -145,7 +162,7 @@ export default function IndustrialPrograms() {
                     ))}
                 </div>
 
-                <div className="px-4 mb-4 md:mt-20">
+                <div className="px-4 mb-4 mt-8 md:mt-16">
                     <div className="bg-[#14213D] rounded-xl px-6 md:px-10 py-8 md:py-12 relative md:flex md:items-center md:justify-between md:gap-7">
                         <div>
                             <p className="text-white font-medium text-2xl mb-4 md:mb-2 text-center md:text-left">Book a counseling session with Mentor.</p>
@@ -167,49 +184,49 @@ export default function IndustrialPrograms() {
 
 function Card({ details }) {
     return (
-        <div id={details?.id} className="bg-white rounded-2xl p-4 w-full mx-auto md:h-[440px] md:max-w-xs flex-shrink-0 group md:hover:shadow-lg">
-            <div
-                style={{ background: details?.background }}
-                className={`w-full rounded-2xl h-[300px] md:h-[250px] md:group-hover:h-[190px] mb-4 relative overflow-hidden transition-all duration-500`}
-            >
-                {!!details?.image && <img src={details?.image} alt={details.title} className="w-full h-full object-contain" />}
-            </div>
-            <div className="pr-6">
-                <h4 className="font-medium text-md md:text-lg mb-2 md:mb-3 text-black">{details.title}</h4>
-                <div className="font-normal text-[10px] md:text-md text-black mb-4 md:mb-6">
-                    <p className="text-xs mb-4 overflow-hidden h-12 opacity-100 md:opacity-0 md:h-0 group-hover:h-12 group-hover:opacity-100 transition-all duration-500">
-                        {details.short_desc}
-                    </p>
-                    <div className="flex items-start justify-start gap-5 font-semibold text-xs">
-                        <p>
-                            <span className="flex items-center justify-start gap-0.5">
-                                {details.stat.rating} <AiFillStar className="text-capabl_primary" />
-                            </span>
-                            <span className="font-normal">Rating</span>
-                        </p>
-                        <p>
-                            {details.stat.projects} <br />
-                            <span className="font-normal">Projects</span>
-                        </p>
-                        <p>
-                            {details.stat.companies} <br />
-                            <span className="font-normal">Companies hiring</span>
-                        </p>
-                    </div>
+        <Link href={details?.target}>
+            <div className="bg-white rounded-2xl p-4 w-full mx-auto md:h-[440px] md:max-w-xs flex-shrink-0 group md:hover:shadow-lg cursor-pointer">
+                <div
+                    style={{ background: details?.background }}
+                    className={`w-full rounded-2xl h-[300px] md:h-[250px] md:group-hover:h-[190px] mb-4 relative overflow-hidden transition-all duration-500`}
+                >
+                    {!!details?.image && <img src={details?.image} alt={details.title} className="w-full h-full object-contain" />}
                 </div>
+                <div className="pr-6">
+                    <h4 className="font-medium text-md md:text-lg mb-2 md:mb-3 text-black">{details.title}</h4>
+                    <div className="font-normal text-[10px] md:text-md text-black mb-4 md:mb-6">
+                        <p className="text-xs mb-4 overflow-hidden h-12 opacity-100 md:opacity-0 md:h-0 group-hover:h-12 group-hover:opacity-100 transition-all duration-500">
+                            {details.short_desc}
+                        </p>
+                        <div className="flex items-start justify-start gap-5 font-semibold text-xs">
+                            <p>
+                                <span className="flex items-center justify-start gap-0.5">
+                                    {details.stat.rating} <AiFillStar className="text-capabl_primary" />
+                                </span>
+                                <span className="font-normal">Rating</span>
+                            </p>
+                            <p>
+                                {details.stat.projects} <br />
+                                <span className="font-normal">Projects</span>
+                            </p>
+                            <p>
+                                {details.stat.companies} <br />
+                                <span className="font-normal">Companies hiring</span>
+                            </p>
+                        </div>
+                    </div>
 
-                {/* <ol className="flex flex-col items-start gap-2 text-xs md:text-sm font-light list-disc pl-3 max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-300">
+                    {/* <ol className="flex flex-col items-start gap-2 text-xs md:text-sm font-light list-disc pl-3 max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-300">
                     {details.points.map((el, index) => (
                         <li key={index}>{el}</li>
                     ))}
                 </ol> */}
 
-                <Link href={details?.target}>
-                    <a className="mt-4 flex w-fit items-center font-medium justify-start gap-2 text-sm text-[#1F28CF] hover:transform hover:translate-x-2 transition duration-500">
-                        Explore <HiArrowLongRight className="text-xl" />
+                    <a className="mt-4 flex w-fit items-center font-medium justify-start gap-2 text-sm text-[#1F28CF]">
+                        Explore <HiArrowLongRight className="text-xl group-hover:transform group-hover:translate-x-1 transition duration-500" />
                     </a>
-                </Link>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }

@@ -142,7 +142,7 @@ export default function FeatureComparison({ showAllFeatures = false, showCount =
 
                         <div className="bg-white w-20 md:w-auto flex-shrink-0">
                             <p className="h-16 flex items-center justify-center text-center text-[#565656] font-normal text-[0.63rem] md:text-sm md:whitespace-nowrap px-4">
-                                YouTube / Udemy
+                                Upgrad/ Others
                             </p>
                             {filteredFeatures?.map(({ yt_udemy }, index) => (
                                 <p key={index} className={`h-16 flex items-center justify-center ${index % 2 === 0 ? "bg-white" : "bg-[#FCFDFD]"}`}>

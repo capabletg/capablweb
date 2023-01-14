@@ -11,7 +11,7 @@ export default function FaculyTestimonials() {
     const prev = () => sliderRef.current?.slickPrev();
 
     const settings = {
-        dots: false,
+        dots: true,
         infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -49,7 +49,7 @@ export default function FaculyTestimonials() {
             <div className="w-full">
                 <Slider {...settings} ref={sliderRef}>
                     {facultyTestimonials.map((item, index) => (
-                        <div key={index} className="py-3 px-3">
+                        <div key={index} className="py-3 px-3 pb-12">
                             <div
                                 style={{ boxShadow: "0px 2.05193px 20.0064px 2.05193px #F2F4F6" }}
                                 className="bg-white rounded-lg md:rounded-2xl w-full mx-auto grid grid-cols-7 pt-2"

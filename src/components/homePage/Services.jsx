@@ -88,9 +88,7 @@ export default function Services() {
     return (
         <section id="helps_you_make_career" className="p-2 pt-8 md:pt-20 mb-12">
             <div className="max-w-xs md:max-w-3xl mx-auto mb-3">
-                <h3 className="font-medium text-base md:text-4xl text-center mb-3 md:mb-8">
-                    Power Your Career the Capa<span className="text-capabl_primary">bl</span> Way!
-                </h3>
+                <h3 className="font-medium text-base md:text-4xl text-center mb-3 md:mb-8">Power Your Career the Capabl Way!</h3>
                 <p className="font-normal text-[10px] md:text-sm text-center text-[#636363] md:px-20 md:mb-10">
                     {`No matter what path you choose, we help you enhance your skills at every step of the way`}
                 </p>
