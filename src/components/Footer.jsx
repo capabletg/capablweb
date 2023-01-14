@@ -111,7 +111,7 @@ export default function Footer() {
                             </button>
                         </form>
                         <p className="font-light text-xs text-white text-opacity-60">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            To get latest update about our courses and programs, please subscribe to our newsletter.
                         </p>
                     </div>
                 </div>
