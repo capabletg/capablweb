@@ -209,28 +209,27 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="z-[1] relative bg-white border-2 border-capabl_primary rounded-lg p-4 md:p-7 grid grid-cols-5 gap-3 md:gap-6">
-                            <p className="text-left font-medium text-xs md:text-base col-span-2 md:col-span-1 align-middle flex items-center">
-                                {`To give the best We've partenered with`}
+                        <div className="z-[1] relative bg-white border-2 border-capabl_primary rounded-lg p-4 md:p-7 flex items-center justify-start gap-3 md:gap-10 lg:gap-20">
+                            <p className="text-left font-medium text-xs md:text-base col-span-2 md:col-span-1 align-middle flex items-center whitespace-nowrap">
+                                {`To give the best`}
+                                <br />
+                                {`We've partenered with`}
                             </p>
-                            <div className="col-span-3 md:col-span-4 grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
-                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/tesla_logo.jpg" alt="tesla" />
+                            <div className="flex-grow flex flex-wrap gap-x-4 md:gap-x-6 gap-y-3 items-center justify-center md:justify-between">
+                                <div className="w-full max-w-[4rem] md:max-w-[5.5rem] lg:max-w-[7rem]">
+                                    <img className="w-full object-contain" src="/images/home/partner_1.jpg" alt="tesla" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/tata_logo.jpg" alt="tata" />
+                                <div className="w-full max-w-[4rem] md:max-w-[5.5rem] lg:max-w-[7rem]">
+                                    <img className="w-full object-contain" src="/images/home/partner_2.jpg" alt="tata" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/kn_logo.jpg" alt="kn" />
+                                <div className="w-full max-w-[4rem] md:max-w-[5.5rem] lg:max-w-[7rem]">
+                                    <img className="w-full object-contain" src="/images/home/partner_5.jpg" alt="kn" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/ather_logo.jpg" alt="ather" />
+                                <div className="w-full max-w-[4rem] md:max-w-[5.5rem] lg:max-w-[7rem]">
+                                    <img className="w-full object-contain" src="/images/home/partner_4.jpg" alt="ather" />
                                 </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/amazon_logo.jpg" alt="amazon" />
-                                </div>
-                                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
-                                    <img className="w-full object-contain" src="/images/raw_images/benz_logo.jpg" alt="benz" />
+                                <div className="w-full max-w-[4rem] md:max-w-[5.5rem] lg:max-w-[7rem]">
+                                    <img className="w-full object-contain" src="/images/home/partner_5.jpg" alt="amazon" />
                                 </div>
                             </div>
                         </div>
@@ -303,15 +302,8 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="hidden md:block">
-                            <hr />
-                            <div className="max-w-6xl mx-auto grid grid-cols-5 gap-10 py-20">
-                                <ExposureAccordian />
-                                <div className="col-span-3">
-                                    <img className="w-full" src="/images/home/teaching.png" alt="teaching" />
-                                </div>
-                            </div>
-                        </div>
+                        <hr />
+                        <ExposureAccordian />
                     </div>
                 </section>
 

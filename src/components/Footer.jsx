@@ -3,58 +3,14 @@ import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 
-const jobOrientedPrograms = [
-    { label: "Electric Vehicle", href: "/courses/electric-vehicle" },
-    { label: "Data Science", href: "/courses/data-science" },
-    { label: "Programming", href: "/" },
-    { label: "Mechatronics", href: "/courses/mechatronics" },
-    { label: "Design Engineering", href: "/" },
-];
-
-const capablQuickLinks = [
-    { label: "About", href: "/" },
-    { label: "Careers", href: "/" },
-    { label: "Counselling", href: "/" },
-    { label: "Careers Transformed", href: "/" },
-    { label: "Colleges", href: "/" },
-    { label: "Club", href: "/" },
-    { label: "Community", href: "/" },
-    { label: "Read", href: "/" },
-    { label: "Free Courses", href: "/" },
-    { label: "Competitions", href: "/" },
-    { label: "Projects", href: "/" },
-];
-
-const information = [
-    { label: "FAQ", href: "/" },
-    { label: "Blog", href: "/" },
-    { label: "Support", href: "/" },
-    { label: "Capabl in Media", href: "/" },
-    { label: "Interview Corner", href: "/" },
-    { label: "Experts Talks", href: "/" },
-    { label: "Events", href: "/" },
-];
-
-const socialMedia = [
-    { icon: FaLinkedinIn, href: "#", name: "LinkedIn" },
-    { icon: FaFacebookF, href: "#", name: "Facebook" },
-    { icon: FaTwitter, href: "#", name: "Twitter" },
-];
-
-const other = [
-    { label: "Terms", href: "/courses" },
-    { label: "Privacy", href: "/courses" },
-    { label: "Cookies", href: "/courses" },
-];
-
 export default function Footer() {
     return (
         <footer className="bg-[#14213D] text-white min-h-[200px] w-full px-6 pt-4 pb-4">
-            <div className="hidden md:block max-w-7xl mx-auto mt-10 mb-8">
+            <div className="max-w-7xl mx-auto mt-10 mb-8">
                 {/* Capabl */}
                 <div className="mb-8">
                     <h4 className="text-sm font-medium mb-2">Capabl</h4>
-                    <p className="text-sm font-light text-[#bfbfbf]">
+                    <p className="text-xs md:text-sm font-light text-[#bfbfbf]">
                         Capabl is the best engineering ecosystem that allows engineering students, companies, and colleges to collaborate on jobs, upskilling,
                         hands-on training online or offline, mentorship, research and networking to build future engineers.
                     </p>
@@ -63,7 +19,7 @@ export default function Footer() {
                 {/* Capabl Ecosystem */}
                 <div className="mb-8">
                     <h4 className="text-sm font-medium mb-2">Capabl Ecosystem</h4>
-                    <p className="text-sm font-light text-[#bfbfbf]">
+                    <p className="text-xs md:text-sm font-light text-[#bfbfbf]">
                         You can opt for one training program or join multiple to upskill yourself to be a multi-domain expert. Each program comes up with 1:1
                         personal support, live sessions both online and offline, offline events, hackathons, design competitions, internship/job opportunities,
                         peer connect, events, industry connect, industrial projects, resume making, interviews, and more! The ecosystem also enable
@@ -74,38 +30,66 @@ export default function Footer() {
                 {/* Cities */}
                 <div className="mb-8">
                     <h4 className="text-sm font-medium mb-2">Cities</h4>
-                    <p className="text-sm font-light text-[#bfbfbf]">
+                    <p className="text-xs md:text-sm font-light text-[#bfbfbf]">
                         City wise presence (eg. learn data science in Bangalore, Chennai, Coimbatore, Mumbai, etc.)
                     </p>
                 </div>
 
-                <div className="grid grid-cols-10 gap-4 justify-items-start">
-                    <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                <div className="grid grid-cols-12 gap-x-4 gap-y-4 justify-items-start">
+                    <div className="col-span-12 w-full sm:col-span-4 md:col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
                         <h5 className="font-medium text-sm text-white mb-3">Job Oriented Programs</h5>
-                        {jobOrientedPrograms?.map(({ label, href }, index) => (
+                        {[
+                            { label: "Electric Vehicle", href: "/courses/electric-vehicle" },
+                            { label: "Data Science", href: "/courses/data-science" },
+                            { label: "Programming", href: "/" },
+                            { label: "Mechatronics", href: "/courses/mechatronics" },
+                            { label: "Design Engineering", href: "/" },
+                        ]?.map(({ label, href }, index) => (
                             <Link key={index} href={href}>
                                 <a className="font-light text-xs text-white text-opacity-75">{label}</a>
                             </Link>
                         ))}
                     </div>
-                    <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                    <div className="col-span-12 w-full sm:col-span-4 md:col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
                         <h5 className="font-medium text-sm text-white mb-3">Capabl</h5>
-                        {capablQuickLinks?.map(({ label, href }, index) => (
+                        {[
+                            { label: "About", href: "/" },
+                            { label: "Careers", href: "/" },
+                            { label: "Counselling", href: "/" },
+                            { label: "Careers Transformed", href: "/" },
+                            { label: "Colleges", href: "/" },
+                            { label: "Club", href: "/" },
+                            { label: "Community", href: "/" },
+                            { label: "Read", href: "/" },
+                            { label: "Free Courses", href: "/" },
+                            { label: "Competitions", href: "/" },
+                            { label: "Projects", href: "/" },
+                        ]?.map(({ label, href }, index) => (
                             <Link key={index} href={href}>
                                 <a className="font-light text-xs text-white text-opacity-75">{label}</a>
                             </Link>
                         ))}
                     </div>
-                    <div className="col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
+                    <div className="col-span-12 w-full sm:col-span-4 md:col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
                         <h5 className="font-medium text-sm text-white mb-3">Information</h5>
-                        {information?.map(({ label, href }, index) => (
+                        {[
+                            { label: "FAQ", href: "/" },
+                            { label: "Blog", href: "/" },
+                            { label: "Support", href: "/" },
+                            { label: "Capabl in Media", href: "/" },
+                            { label: "Interview Corner", href: "/" },
+                            { label: "Experts Talks", href: "/" },
+                            { label: "Events", href: "/" },
+                        ]?.map(({ label, href }, index) => (
                             <Link key={index} href={href}>
                                 <a className="font-light text-xs text-white text-opacity-75">{label}</a>
                             </Link>
                         ))}
                     </div>
 
-                    <div className="bg-white py-6 px-10 bg-opacity-10 col-span-4 max-w-sm h-fit pb-10 justify-self-end">
+                    <div className="hidden md:block col-span-1" />
+
+                    <div className="col-span-12 mt-4 md:mt-0 w-full md:col-span-5 bg-white py-6 px-10 bg-opacity-10 max-w-sm mr-auto md:mr-0 h-fit pb-10 justify-self-end">
                         <h5 className="font-medium text-white text-sm mb-5">Subscribe to our newsletter</h5>
                         <form
                             onSubmit={(e) => {
@@ -133,16 +117,16 @@ export default function Footer() {
                 </div>
                 <hr className="mt-10 mb-8 border-white border-opacity-20" />
 
-                <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center justify-start gap-4">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="flex flex-col md:flex-row items-center justify-start gap-4">
                         {/* logo */}
                         <div className="flex flex-col items-start justify-start gap-1">
-                            <img className="w-full max-w-[8rem] object-contain mr-4" src="/logo_white.svg" alt="capabl logo" />
+                            <img className="w-full max-w-[8rem] object-contain mr-4 flex-shrink-0" src="/logo_white.svg" alt="capabl logo" />
                             <p className="text-[0.6rem] font-light text-white text-opacity-70">Capabl from Elite Techno Groups</p>
                         </div>
 
                         {/* terms , privacy & policy */}
-                        <div className="flex items-center justify-start flex-wrap gap-4">
+                        <div className="flex items-center justify-center md:justify-start flex-wrap gap-x-4 gap-y-2 my-3 md:my-0">
                             {[
                                 { label: "Terms", href: "/" },
                                 { label: "Privacy Policy", href: "/" },
@@ -157,10 +141,10 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-end gap-4">
-                        <p className="text-xs text-white text-opacity-50">{`copyright © 2023 Elite Techno Groups Pvt Ltd.`}</p>
+                    <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center md:justify-end gap-4">
+                        <p className="text-xs text-white text-opacity-50 order-2 text-center lg:text-left lg:order-1">{`copyright © 2023 Elite Techno Groups Pvt Ltd.`}</p>
 
-                        <div className="flex items-center justify-end gap-4">
+                        <div className="flex items-center justify-center md:justify-end gap-4 order-1 lg:order-2">
                             {[
                                 { icon: FaLinkedinIn, href: "#", name: "LinkedIn" },
                                 { icon: FaFacebookF, href: "#", name: "Facebook" },
