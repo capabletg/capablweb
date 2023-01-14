@@ -30,9 +30,6 @@ export default function Home() {
                 {/* Hero Section */}
                 <section
                     key={"hero_section"}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
                     id="hero"
                     className="flex flex-col md:flex-row md:gap-14 items-center md:items-start md:justify-between my-10 md:mt-24 px-4 container mx-auto max-w-7xl w-full"
                 >
