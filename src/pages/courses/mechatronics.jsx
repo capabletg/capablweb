@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import React from "react";
 import { FaPlay } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
@@ -32,11 +33,58 @@ export default function Courses() {
     const openCtaForm = useGeneralStore((state) => state.openCtaForm);
     return (
         <div>
-            <Head>
-                <title>Mechatronics - Capabl Courses</title>
-                <meta name="description" content="Capable Website" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+      <Head>
+        <title>Complete Mechatronics Course | Get certified & placed with Capabl</title>
+        <meta name="keywords" content="mechatronics courses" />
+        <meta
+          name="description"
+          content="Get certified & placed in top tech companies with our mechatronics course. Topics covered from scratch to advanced with live industry projects to work on."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Script
+        id="app-ld-json"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Mechatronics Course",
+            "image": " <<Insert Link of the page you will create>>",
+            "description": "Get certified & placed in top tech companies with our mechatronics course. Topics covered from scratch to advanced with live industry projects to work on.",
+            "brand": {
+            "@type": "Brand",
+            "name": "Capabl"
+            },
+            "offers": {
+            "@type": "Offer",
+            "url": "<<Insert Link of the page you will create>>",
+            "priceCurrency": "INR",
+            "price": "260000",
+            "availability": "https://schema.org/OnlineOnly",
+            "itemCondition": "https://schema.org/NewCondition"
+            },
+            "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "ratingCount": "1",
+            "reviewCount": "1"
+            },
+            "review": {
+            "@type": "Review",
+            "name": "Ankit Singh Chauhan",
+            "reviewBody": "",
+            "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+            },
+            "datePublished": "2022-06-15",
+            "author": {"@type": "Person", "name": ""}
+            }
+            }),
+        }}
+      />
 
             <Header />
 
