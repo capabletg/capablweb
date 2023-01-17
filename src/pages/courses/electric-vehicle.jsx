@@ -94,7 +94,7 @@ export default function Courses() {
                             </svg>
                         </h1>
 
-                        <p className="text-[#636363] text-sm text-center md:text-left">{`Graduate not just with a degree but with a job!`}</p>
+                        <p className="text-[#636363] text-sm text-center md:text-left">{`The best program now comes with the best Scholarship!`}</p>
 
                         <div className="flex items-center justify-center md:justify-start gap-2 mt-6">
                             <button
@@ -112,28 +112,28 @@ export default function Courses() {
                             </button>
                         </div>
 
-                        <div className="hidden max-w-lg relative z-[2] rounded-lg p-6 light_shadow shadow-none bg-white md:bg-[#f2f4f7] md:flex items-start justify-between gap-4 md:gap-6 mt-5 md:mt-10">
-                            <p className="flex flex-col justify-start items-start gap-1">
+                        <div className="hidden max-w-xl relative z-[2] rounded-lg p-6 light_shadow shadow-none bg-white md:bg-[#f2f4f7] md:flex items-start justify-between gap-4 md:gap-6 mt-5 md:mt-10">
+                            {/* <p className="flex flex-col justify-start items-start gap-1">
                                 <span className="text-[#371B69] font-semibold text-lg">10,000+</span>
                                 <span className="text-black text-xs text-left">Students</span>
-                            </p>
+                            </p> */}
                             <p className="flex flex-col items-start justify-start gap-1">
                                 <span className="text-[#371B69] font-semibold text-lg flex gap-1 items-center">
-                                    4.7 <IoStar className="text-[#FCA600] mb-0.5" />
+                                    4.8 <IoStar className="text-[#FCA600] mb-0.5" />
                                 </span>
-                                <span className="text-black text-xs text-left">Rating</span>
+                                <span className="text-black text-xs text-left">By 9,000+ Students</span>
                             </p>
                             <p className="flex flex-col items-start justify-start gap-1">
-                                <span className="text-[#371B69] font-semibold text-lg">100cr+</span>
-                                <span className="text-black text-xs text-left">Sponsorship</span>
+                                <span className="text-[#371B69] font-semibold text-lg">{`₹ 10 Crore+`}</span>
+                                <span className="text-black text-xs text-left">Worth of Scholarship</span>
                             </p>
                             <p className="flex flex-col items-start justify-start gap-1">
-                                <span className="text-[#371B69] font-semibold text-lg">42+</span>
-                                <span className="text-black text-xs text-left">Projects</span>
+                                <span className="text-[#371B69] font-semibold text-lg">40+</span>
+                                <span className="text-black text-xs text-left">Industrial Projects</span>
                             </p>
                             <p className="flex flex-col items-start justify-start gap-1">
                                 <span className="text-[#371B69] font-semibold text-lg">6</span>
-                                <span className="text-black text-xs text-left">Months</span>
+                                <span className="text-black text-xs text-left">Months Min.</span>
                             </p>
                         </div>
                     </div>
