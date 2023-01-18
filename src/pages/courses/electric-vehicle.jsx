@@ -42,7 +42,7 @@ export default function Courses() {
 
             <main className="min-h-screen w-full">
                 {/* Hero Section */}
-                <section id="hero" className="px-4 pt-6 md:pt-7 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-2 max-w-7xl mx-auto">
+                <section id="hero" className="px-4 pt-6 md:pt-7 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-2 max-w-7xl mx-auto overflow-hidden">
                     <div className="col-span-1 md:col-span-2 lg:col-span-1 w-full relative flex items-center justify-center md:order-1">
                         <img
                             className="absolute z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-md md:max-w-2xl"
@@ -100,13 +100,13 @@ export default function Courses() {
                             <button
                                 onClick={() => openCtaForm()}
                                 style={{ background: "#07E595" }}
-                                className="font-normal text-center py-2 px-3 border border-transparent rounded-lg text-sm text-white hover:scale-95 transition-all duration-300"
+                                className="font-normal text-center py-2 px-3 border border-transparent rounded-lg text-sm text-white hover_animation"
                             >
                                 Talk to Counselor
                             </button>
                             <button
                                 onClick={() => openCtaForm()}
-                                className="font-normal text-center py-2 px-3 border border-black bg-transparent rounded-lg text-sm text-black hover:scale-95 transition-all duration-300"
+                                className="font-normal text-center py-2 px-3 border border-black bg-transparent rounded-lg text-sm text-black hover_animation"
                             >
                                 Apply for Scholarship
                             </button>
@@ -162,7 +162,7 @@ export default function Courses() {
                 </section>
 
                 {/* Take the journey now to be Capabl */}
-                <section className="mt-16 md:mt-20 max-w-7xl mx-auto">
+                <section className="mt-16 md:mt-20 max-w-7xl mx-auto overflow-hidden">
                     <h2 className="text-center font-medium text-lg md:text-2xl max-w-xs md:max-w-sm mx-auto px-4">
                         Why wait, Take the journey now to be <span style={{ color: "#07E595" }}>Capabl</span>
                     </h2>
@@ -199,121 +199,24 @@ export default function Courses() {
                 <section className="max-w-7xl mt-20 mx-auto px-4">
                     <div className="bg-transparent md:bg-[#F2F6F7] md:rounded-3xl p-0 md:p-6">
                         <div className="bg-transparent md:bg-white md:bg-opacity-30 md:rounded-3xl md:px-6 md:pt-10 md:pb-4">
-                            <div className="hidden w-fit mx-auto mb-5 md:flex items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
+                            <h3 className="text-center text-xl sm:text-2xl md:text-3xl font-light mb-4">
+                                Sponsorship of upto <span className="font-medium">2 Lakhs</span>
+                            </h3>
+                            <div className="flex flex-col items-center justify-start text-center">
+                                <img src="/images/courses/news.png" alt="sponsorship" className="w-4/5 object-contain max-w-xs -mb-0.5" />
+                                <p className="text-lg sm:text-xl md:text-2xl font-extralight border-4 rounded-md border-capabl_primary px-3 py-1.5">
+                                    {`Because, We Know You're `}
+                                    <span className="font-semibold">{`Capabl.`}</span>{" "}
+                                </p>
+                            </div>
+
+                            <div className="flex w-fit mt-10 mb-4 items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
                                 <span className="w-3 h-3 rounded-full bg-capabl_primary flex-shrink-0" />
-                                <span className="text-black text-sm font-light">The Scholarship Initiative</span>
+                                <span className="text-black text-sm font-light">Our Scolarship Partners</span>
                             </div>
+                            <p className="text-sm font-light">{`We're partnered with various organizations, companies and even goverment bodies to make the program affordable and best!. And the list of associates is only growing.`}</p>
 
-                            <h3 className="hidden md:block text-center text-2xl font-medium mb-16 max-w-md mx-auto">How the Scholarship System Works</h3>
-
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
-                                {[
-                                    {
-                                        label: "With",
-                                        desc: `Govt Bodies, Education Organizations and Industries`,
-                                    },
-                                    {
-                                        label: "To",
-                                        desc: `Create a world-class engineering ecosystem`,
-                                    },
-                                    {
-                                        label: "That",
-                                        desc: `Results in creating skilled Engineers right after Graduation!`,
-                                    },
-                                    {
-                                        label: "And",
-                                        desc: `Make Parents proud by graudating with a job in 1/20th of expense on degree`,
-                                    },
-                                ].map(({ label, desc }, index) => (
-                                    <div key={index} className="mb-6 group">
-                                        <div className="relative flex items-center justify-center mb-4">
-                                            <svg
-                                                className="w-full object-contain max-w-[5rem] relative z-0"
-                                                viewBox="0 0 93 101"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    className="origin-center transform rotate-0 transition duration-1000 group-hover:rotate-180"
-                                                    d="M4.23815 36.2118C0.201637 12.4226 27.7173 -4.04108 47.3099 10.4404L81.7497 35.896C97.1077 47.2476 95.9616 70.28 79.5501 80.0997L52.2057 96.4609C35.7942 106.281 14.4977 96.6765 11.3335 78.0287L4.23815 36.2118Z"
-                                                    fill="#FF696D"
-                                                />
-                                                <path
-                                                    className="origin-center transform rotate-0 transition duration-1000 group-hover:-rotate-180"
-                                                    opacity="0.5"
-                                                    d="M16.7797 17.4171C25.1447 -5.51308 58.3807 -5.5357 68.8058 17.3816L87.131 57.6658C95.303 75.6301 82.6272 95.1883 62.8038 95.2019L29.7746 95.2244C9.95121 95.2379 -4.48135 75.6982 2.07575 57.7238L16.7797 17.4171Z"
-                                                    fill="#CF2323"
-                                                />
-                                            </svg>
-
-                                            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-white text-xl z-[2] mt-1">
-                                                {label}
-                                            </p>
-                                        </div>
-                                        <p className="text-center text-sm max-w-[13rem] mx-auto">{desc}</p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/*  */}
-                            <div className="hidden w-fit mx-auto mt-16 mb-5 md:flex items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
-                                <span className="w-3 h-3 rounded-full bg-capabl_primary flex-shrink-0" />
-                                <span className="text-black text-sm font-light">Scholarship Breakdown</span>
-                            </div>
-
-                            <h3 className="hidden md:block text-center text-2xl font-medium mb-10 max-w-md mx-auto">{`ETG Contribution in Strengthening Future Engineers`}</h3>
-
-                            <div className="overflow-x-scroll scrollbar-hide p-6 mt-8 md:mt-0">
-                                <div
-                                    style={{ boxShadow: "0px 8px 20px rgba(177, 194, 193, 0.2)" }}
-                                    className="w-full min-w-[45rem] bg-white rounded-xl overflow-hidden"
-                                >
-                                    <table className="w-full relative">
-                                        <thead className="relative">
-                                            <tr className="relative after:content-[''] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-capabl_primary z-0 after:shadow-md after:rounded-xl">
-                                                <th className="align-middle text-left text-sm md:text-base font-medium text-[#231F20] pl-6 pr-4 py-4 md:py-5 relative z-[1]">
-                                                    Particulars
-                                                </th>
-                                                <th className="align-middle text-left text-sm md:text-base font-medium text-[#231F20] pl-6 pr-4 py-4 md:py-5 relative z-[1]">
-                                                    ETG Investment
-                                                </th>
-                                                <th className="align-middle text-left text-sm md:text-base font-medium text-[#231F20] pl-6 pr-4 py-4 md:py-5 relative z-[1]">
-                                                    Student Investment
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {[
-                                                { particulars: `Technical Training`, etg: `1,30,000`, st_investment: `30,000` },
-                                                { particulars: `Placement Training`, etg: `6,200`, st_investment: `0` },
-                                                { particulars: `Software Access`, etg: `25,000`, st_investment: `0` },
-                                                { particulars: `ETG - SAEINDIA, ARK-Ansys, Siemens, Altair Certification`, etg: `50,000`, st_investment: `0` },
-                                                { particulars: `SAE Membership of 1 Year`, etg: `400`, st_investment: `0` },
-                                                { particulars: `No Cost EMI Financing Benefits`, etg: `8,400`, st_investment: `0` },
-                                            ].map(({ particulars, etg, st_investment }, index) => (
-                                                <tr key={index}>
-                                                    <td className="pl-6 pr-4 py-4 md:py-4 text-sm text-[#545d61] border-b-[0.05rem] border-b-[#e9e9e9]">
-                                                        <p className="max-w-[18rem] md:max-w-xs flex items-start justify-start gap-2">
-                                                            <span>{index + 1}.</span>
-                                                            <span>{particulars}</span>
-                                                        </p>
-                                                    </td>
-                                                    <td className="pl-6 pr-4 py-4 md:py-4 text-sm text-[#545d61] border-b-[0.05rem] border-b-[#e9e9e9]">
-                                                        {etg}
-                                                    </td>
-                                                    <td className="pl-6 pr-4 py-4 md:py-4 text-sm text-[#545d61] border-b-[0.05rem] border-b-[#e9e9e9]">
-                                                        {st_investment}
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                            <tr>
-                                                <td className="pl-6 pr-4 py-4 md:py-4 text-sm font-medium text-[#231f20]">Total Investment</td>
-                                                <td className="pl-6 pr-4 py-4 md:py-4 text-sm font-medium text-[#231f20]">{`₹ 2,20,000`}</td>
-                                                <td className="pl-6 pr-4 py-4 md:py-4 text-sm font-medium text-[#231f20]">{`₹ 30,000`}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                            <img src="/images/courses/partners.png" alt="partners" className="mt-8 md:mt-10 mx-auto w-full max-w-5xl object-contain" />
                         </div>
 
                         {/*  */}
@@ -352,7 +255,7 @@ export default function Courses() {
 
                                 <button
                                     onClick={() => openCtaForm()}
-                                    className="rounded-lg px-10 md:px-12 py-2.5 bg-capabl_primary text-[#272727] text-center font-normal text-sm border-2 border-transparent hover:scale-95 transition-all duration-300"
+                                    className="rounded-lg px-10 md:px-12 py-2.5 bg-capabl_primary text-[#272727] text-center font-normal text-sm border-2 border-transparent hover_animation"
                                 >
                                     Start Now
                                 </button>
@@ -492,7 +395,7 @@ export default function Courses() {
 
                         <button
                             onClick={() => openCtaForm()}
-                            className="absolute bottom-0 left-1/2 z-[2] transform -translate-x-1/2 translate-y-1/2 bg-capabl_primary rounded-md px-4 md:px-8 py-1.5 md:py-2.5 text-black text-[0.8rem] md:text-sm hover:scale-95 transition-all duration-300"
+                            className="absolute bottom-0 left-1/2 z-[2] transform -translate-x-1/2 translate-y-1/2 bg-capabl_primary rounded-md px-4 md:px-8 py-1.5 md:py-2.5 text-black text-[0.8rem] md:text-sm hover_animation"
                         >
                             Explore More
                         </button>

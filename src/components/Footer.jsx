@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 
 export default function Footer() {
     return (
         <footer className="bg-[#14213D] text-white min-h-[200px] w-full px-6 pt-4 pb-4">
-            <div className="max-w-7xl mx-auto mt-10 mb-8">
+            <div className="max-w-7xl mx-auto mt-10">
                 {/* Capabl */}
                 <div className="mb-8">
                     <h4 className="text-sm font-medium mb-2">Capabl</h4>
@@ -141,27 +141,30 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center md:justify-end gap-4">
-                        <p className="text-xs text-white text-opacity-50 order-2 text-center lg:text-left lg:order-1">{`copyright © 2023 Elite Techno Groups Pvt Ltd.`}</p>
-
-                        <div className="flex items-center justify-center md:justify-end gap-4 order-1 lg:order-2">
-                            {[
-                                { icon: FaLinkedinIn, href: "#", name: "LinkedIn" },
-                                { icon: FaFacebookF, href: "#", name: "Facebook" },
-                                { icon: FaTwitter, href: "#", name: "Twitter" },
-                            ].map(({ icon: Icon, href, name }, index) => (
-                                <a
-                                    key={index}
-                                    className="w-10 h-10 rounded-full flex items-center justify-center p-3 border text-white border-white border-opacity-25 transition-all duration-300 hover:scale-95 hover:bg-white hover:bg-opacity-10"
-                                    href={href}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <Icon />
-                                </a>
-                            ))}
-                        </div>
+                    <div className="flex items-center justify-center md:justify-end gap-4 order-1 lg:order-2">
+                        {[
+                            { icon: FaYoutube, href: "https://www.youtube.com/@EliteTechnoGroupsSkills", name: "Youtube" },
+                            { icon: FaLinkedinIn, href: "https://in.linkedin.com/company/cabapl-elite-techno-groups", name: "LinkedIn" },
+                            { icon: FaInstagram, href: "https://www.instagram.com/capabl.india/", name: "Instagram" },
+                            { icon: FaTwitter, href: "https://twitter.com/ETgroups", name: "Twitter" },
+                            { icon: FaFacebookF, href: "https://www.facebook.com/CapablfromEtgroups", name: "Facebook" },
+                            { icon: FaWhatsapp, href: "https://wa.me/917795940242", name: "Whatsapp" },
+                        ].map(({ icon: Icon, href, name }, index) => (
+                            <a
+                                key={index}
+                                className="w-10 h-10 rounded-full flex items-center justify-center p-3 border text-white border-white border-opacity-25 transition-all duration-300 hover:scale-95 hover:bg-white hover:bg-opacity-10"
+                                href={href}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <Icon />
+                            </a>
+                        ))}
                     </div>
+                </div>
+
+                <div>
+                    <p className="text-xs text-white text-opacity-50 order-2 text-center py-4">{`copyright © 2023 Elite Techno Groups Pvt Ltd.`}</p>
                 </div>
             </div>
         </footer>

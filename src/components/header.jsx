@@ -117,13 +117,13 @@ export default function Header() {
                                     </React.Fragment>
                                 ))}
 
-                                <button
+                                {/* <button
                                     onClick={() => openCtaForm()}
                                     style={{ boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)" }}
-                                    className="relative z-10 font-medium text-sm text-[#272727] rounded-lg py-3 px-6 bg-capabl_primary hover:scale-95 transition-all duration-300"
+                                    className="relative z-10 font-medium text-sm text-[#272727] rounded-lg py-3 px-6 bg-capabl_primary hover_animation"
                                 >
                                     Join Our Tribe
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </div>

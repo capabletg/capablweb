@@ -68,14 +68,14 @@ export default function FeatureComparison({ showAllFeatures = false, showCount =
                         </p>
                     ))}
                     <div className="mt-2 md:mt-4 flex items-center justify-center px-2">
-                        {showAll && (
+                        {/* {showAll && (
                             <button
                                 onClick={() => openCtaForm()}
                                 className="bg-white w-full py-3 px-2 font-medium rounded-lg text-[0.6rem] md:text-sm text-center text-black hover:scale-95 transition-all duration-300"
                             >
                                 Join Our Tribe
                             </button>
-                        )}
+                        )} */}
                         {!showAll && (
                             <button
                                 onClick={() => setShowAll((prev) => !prev)}
@@ -103,14 +103,14 @@ export default function FeatureComparison({ showAllFeatures = false, showCount =
                                     </p>
                                 ))}
                                 <div className="mt-4 flex items-center justify-center px-2">
-                                    {showAll && (
+                                    {/* {showAll && (
                                         <button
                                             onClick={() => openCtaForm()}
                                             className="bg-white w-full py-3 px-2 font-normal rounded-lg text-xs text-center text-black hover:scale-95 transition-all duration-300"
                                         >
                                             Join Our Tribe
                                         </button>
-                                    )}
+                                    )} */}
                                     {!showAll && (
                                         <button
                                             onClick={() => setShowAll((prev) => !prev)}

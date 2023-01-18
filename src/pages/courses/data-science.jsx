@@ -33,59 +33,59 @@ export default function Courses() {
     const openCtaForm = useGeneralStore((state) => state.openCtaForm);
     return (
         <div>
-      <Head>
-        <title>Data Science course with 100% Job Guarantee for students | Capabl</title>
-        <meta name="keywords" content="data science course" />
-        <meta
-          name="description"
-          content="Get certified & placed in top tech companies with our data science course. Topics covered from scratch to advanced with live industry projects to work on."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Script
-        id="app-ld-json"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            {
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": "Data Science Course",
-            "image": " <<Insert Link of the page you will create>>",
-            "description": "Get certified & placed in top tech companies with our data science course. Topics covered from scratch to advanced with live industry projects to work on.",
-            "brand": {
-            "@type": "Brand",
-            "name": "Capabl"
-            },
-            "offers": {
-            "@type": "Offer",
-            "url": "<<Insert Link of the page you will create>>",
-            "priceCurrency": "",
-            "price": "",
-            "availability": "https://schema.org/OnlineOnly",
-            "itemCondition": "https://schema.org/NewCondition"
-            },
-            "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "ratingCount": "1",
-            "reviewCount": "1"
-            },
-            "review": {
-            "@type": "Review",
-            "name": "Ankit Singh Chauhan",
-            "reviewBody": "",
-            "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-            },
-            "datePublished": "2022-06-15",
-            "author": {"@type": "Person", "name": ""}
-            }
-            }),
-        }}
-      />
+            <Head>
+                <title>Data Science course with 100% Job Guarantee for students | Capabl</title>
+                <meta name="keywords" content="data science course" />
+                <meta
+                    name="description"
+                    content="Get certified & placed in top tech companies with our data science course. Topics covered from scratch to advanced with live industry projects to work on."
+                />
+                <meta name="robots" content="index, follow" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <Script
+                id="app-ld-json"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org/",
+                        "@type": "Product",
+                        name: "Data Science Course",
+                        image: " <<Insert Link of the page you will create>>",
+                        description:
+                            "Get certified & placed in top tech companies with our data science course. Topics covered from scratch to advanced with live industry projects to work on.",
+                        brand: {
+                            "@type": "Brand",
+                            name: "Capabl",
+                        },
+                        offers: {
+                            "@type": "Offer",
+                            url: "<<Insert Link of the page you will create>>",
+                            priceCurrency: "",
+                            price: "",
+                            availability: "https://schema.org/OnlineOnly",
+                            itemCondition: "https://schema.org/NewCondition",
+                        },
+                        aggregateRating: {
+                            "@type": "AggregateRating",
+                            ratingValue: "5",
+                            ratingCount: "1",
+                            reviewCount: "1",
+                        },
+                        review: {
+                            "@type": "Review",
+                            name: "Ankit Singh Chauhan",
+                            reviewBody: "",
+                            reviewRating: {
+                                "@type": "Rating",
+                                ratingValue: "5",
+                            },
+                            datePublished: "2022-06-15",
+                            author: { "@type": "Person", name: "" },
+                        },
+                    }),
+                }}
+            />
 
             <Header />
 
@@ -142,7 +142,7 @@ export default function Courses() {
                         <div className="flex items-center justify-center md:justify-start gap-2 mt-6">
                             <button
                                 onClick={() => openCtaForm()}
-                                className="font-normal text-center py-2 px-3 border border-transparent rounded-lg text-sm text-[#272727] bg-capabl_primary hover:scale-95 transition-all duration-300"
+                                className="font-normal text-center py-2 px-3 border border-transparent rounded-lg text-sm text-[#272727] bg-capabl_primary hover_animation"
                             >
                                 Talk to Counselor
                             </button>
@@ -388,7 +388,7 @@ export default function Courses() {
 
                                 <button
                                     onClick={() => openCtaForm()}
-                                    className="rounded-lg px-10 md:px-12 py-2.5 bg-capabl_primary text-[#272727] text-center font-normal text-sm border-2 border-transparent hover:scale-95 transition-all duration-300"
+                                    className="rounded-lg px-10 md:px-12 py-2.5 bg-capabl_primary text-[#272727] text-center font-normal text-sm border-2 border-transparent hover_animation"
                                 >
                                     Start Now
                                 </button>
@@ -528,7 +528,7 @@ export default function Courses() {
 
                         <button
                             onClick={() => openCtaForm()}
-                            className="absolute bottom-0 left-1/2 z-[2] transform -translate-x-1/2 translate-y-1/2 bg-capabl_primary rounded-md px-4 md:px-8 py-1.5 md:py-2.5 text-black text-[0.8rem] md:text-sm hover:scale-95 transition-all duration-300"
+                            className="absolute bottom-0 left-1/2 z-[2] transform -translate-x-1/2 translate-y-1/2 bg-capabl_primary rounded-md px-4 md:px-8 py-1.5 md:py-2.5 text-black text-[0.8rem] md:text-sm hover_animation"
                         >
                             Explore More
                         </button>

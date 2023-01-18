@@ -120,13 +120,13 @@ export default function Home() {
                         <div className="mt-4 md:mt-10 flex items-center gap-3">
                             <button
                                 onClick={() => openCtaForm()}
-                                className="text-[#272727] font-medium border border-capabl_primary bg-capabl_primary rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base"
+                                className="text-[#272727] font-medium border border-capabl_primary bg-capabl_primary rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation"
                             >
                                 Talk to Counselor
                             </button>
 
                             <Link href="/#programs">
-                                <a className="text-[#ff696d] font-medium bg-transparent border border-[#ff696d] rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base">
+                                <a className="text-[#ff696d] font-medium bg-transparent border border-[#ff696d] rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation">
                                     Explore Programs
                                 </a>
                             </Link>
@@ -166,14 +166,14 @@ export default function Home() {
                     </div>
                 </section>
 
-                <Link href="/#student_testimonials">
-                    <a className="hidden mx-auto rounded-full w-16 h-16 md:flex items-center justify-center bg-capabl_primary p-5">
+                <Link href="/#associations">
+                    <a className="hidden mx-auto rounded-full w-16 h-16 md:flex items-center justify-center bg-capabl_primary p-5 hover_animation">
                         <img className="w-full object-contain pt-1" src="/images/svgs/chevron_down.svg" alt="chevron" />
                     </a>
                 </Link>
 
                 {/* Student Testimonials */}
-                <section id="student_testimonials" className="py-4 md:py-20 container mx-auto max-w-7xl">
+                <section id="student_testimonials" className="hidden py-4 md:py-20 container mx-auto max-w-7xl">
                     <div className="mb-10 md:mb-12 max-w-md md:max-w-3xl mx-auto px-4">
                         <h2 className="text-center text-black font-semibold text-xl sm:text-3xl md:font-medium mb-4">{`Proud Stories`}</h2>
                         <p className="text-center font-normal text-[#636363] text-sm md:text-base">{`Meet our alumni whom we could help live their career dreams`}</p>
@@ -431,7 +431,7 @@ export default function Home() {
 
                                 <button
                                     onClick={() => openCtaForm()}
-                                    className="z-[1] bg-black rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0"
+                                    className="z-[1] bg-black rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0 hover_animation"
                                 >
                                     Know More
                                 </button>
