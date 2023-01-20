@@ -24,6 +24,30 @@ const data = [
     { feature: "Placement Assistance", capable: true, coursera: false, yt_udemy: true, offline: false },
 ];
 
+// const dataObj2 = {
+//     compareItems: {
+//         evacademy: "Evacademy, DIY Guru",
+//         skill_lync: "Skill Lync, Decibels",
+//         udemy_coursera: "Udemy/Skill Share/ Coursera",
+//         fmae: "FMAE",
+//     },
+//     comparisons: [
+//         { feature: "Doubt solving", capable: true, evacademy: true, skill_lync: true, udemy_coursera: true, fmae: true },
+//         { feature: "Doubt solving", capable: true, evacademy: true, skill_lync: true, udemy_coursera: true, fmae: true },
+//         { feature: "Doubt solving", capable: true, evacademy: true, skill_lync: true, udemy_coursera: true, fmae: true },
+//         { feature: "Doubt solving", capable: true, evacademy: true, skill_lync: true, udemy_coursera: true, fmae: true },
+//         { feature: "Doubt solving", capable: true, evacademy: true, skill_lync: true, udemy_coursera: true, fmae: true },
+//     ],
+// };
+
+// const formatData = () => {
+//     const { compareItems, comparisons } = dataObj2;
+
+//     for (let i = 0; i < comparisons?.length; i++) {
+//         const element = comparisons[i];
+//     }
+// };
+
 export default function FeatureComparison({ showAllFeatures = false, showCount = 4 }) {
     const openCtaForm = useGeneralStore((state) => state.openCtaForm);
 

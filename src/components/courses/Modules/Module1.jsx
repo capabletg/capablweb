@@ -31,11 +31,6 @@ export default function Module1() {
                 src="/images/courses/circuit_illustration_2.svg"
                 alt="circuit illustration"
             />
-            <img
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full object-contain max-w-[16.67%] z-0 opacity-20"
-                src="/images/courses/data_science.jpg"
-                alt="data science"
-            />
 
             <div className="relative z-[1]">
                 <div className="items-center justify-start hidden md:flex md:mb-4">

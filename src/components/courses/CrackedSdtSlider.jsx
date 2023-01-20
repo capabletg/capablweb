@@ -3,7 +3,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Slider from "react-slick";
 import { crackedStudents } from "../../utils/data/courses/crackedStudents";
 
-export default function CrackedSdtSlider() {
+export default function CrackedSdtSlider({ theme = { primary: "", text: "" } }) {
     const [activeSlide, setActiveSlide] = useState(0);
 
     const sliderRef = useRef();
@@ -76,14 +76,16 @@ export default function CrackedSdtSlider() {
                 <button
                     onClick={() => prev()}
                     disabled={activeSlide === 0}
-                    className="rounded-full text-lg md:text-2xl outline-none border-none bg-white text-capabl_primary flex items-center justify-center transition duration-200 w-8 h-8 md:w-12 md:h-12 disabled:opacity-40"
+                    style={{ color: theme.primary }}
+                    className="rounded-full text-lg md:text-2xl outline-none border-none bg-white flex items-center justify-center transition duration-200 w-8 h-8 md:w-12 md:h-12 disabled:opacity-40"
                 >
                     <FiChevronLeft />
                 </button>
                 <button
                     disabled={activeSlide === crackedStudents?.length - 1}
                     onClick={() => next()}
-                    className="rounded-full text-lg md:text-2xl outline-none border-none bg-white text-capabl_primary flex items-center justify-center transition duration-200 w-8 h-8 md:w-12 md:h-12 disabled:opacity-40"
+                    style={{ color: theme.primary }}
+                    className="rounded-full text-lg md:text-2xl outline-none border-none bg-white flex items-center justify-center transition duration-200 w-8 h-8 md:w-12 md:h-12 disabled:opacity-40"
                 >
                     <FiChevronRight />
                 </button>

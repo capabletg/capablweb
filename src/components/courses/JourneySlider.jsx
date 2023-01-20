@@ -1,11 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import classes from "./style.module.css";
 
 // min Slide Length = 5
 
-export default function JourneySlider({ arr = [] }) {
+export default function JourneySlider({ arr = [], theme = { primary: "", text: "" } }) {
     const [slides, setSlides] = useState([]);
     const [slideLeft, setSlideLeft] = useState(true);
 
@@ -21,17 +20,17 @@ export default function JourneySlider({ arr = [] }) {
         if (arr?.length) setSlides([...arr]);
     }, [arr]);
 
-    useEffect(() => {
-        if (!!slides?.length) {
-            if (!!timerRef.current) clearTimeout(timerRef.current);
-            timerRef.current = setTimeout(() => {
-                shiftArray(1);
-            }, 2500);
-        }
-        return () => {
-            !!timerRef.current && clearTimeout(timerRef.current);
-        };
-    }, [slides]);
+    // useEffect(() => {
+    //     if (!!slides?.length) {
+    //         if (!!timerRef.current) clearTimeout(timerRef.current);
+    //         timerRef.current = setTimeout(() => {
+    //             shiftArray(1);
+    //         }, 2500);
+    //     }
+    //     return () => {
+    //         !!timerRef.current && clearTimeout(timerRef.current);
+    //     };
+    // }, [slides]);
 
     if (!slides?.length) return <></>;
 
@@ -96,9 +95,11 @@ export default function JourneySlider({ arr = [] }) {
 
                 {/* Slider 3 - MAIN */}
                 <div className="bg-[#f2f4f7] flex-shrink-0 transition-all duration-300 rounded-full p-2 sm:p-3 lg:p-4 w-full max-w-[10rem] sm:max-w-[13rem] lg:max-w-[15rem]">
-                    <div
-                        className={`rounded-full w-fit mx-auto p-2 relative z-[0] after:z-[0] after:absolute after:rounded-full after:left-0 after:top-0 after:w-full after:h-full after:border-2 after:border-capabl_primary after:border-r-[#dfe0e3] after:border-t-[#dfe0e3] ${classes.slider_main_border}`}
-                    >
+                    <div className="rounded-full w-fit mx-auto p-2 relative z-[0]">
+                        <span
+                            style={{ borderLeftColor: theme.primary, borderBottomColor: theme.primary }}
+                            className="z-[0] absolute rounded-full left-0 top-0 w-full h-full border-2 border-r-[#dfe0e3] border-t-[#dfe0e3] slider_main_item_border"
+                        />
                         <div className="relative w-fit">
                             <div className="w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 relative overflow-hidden rounded-full transition-all duration-300">
                                 <ImageOnChange src={slides?.[2]?.image} alt={slides?.[2]?.name} toLeft={slideLeft} />
@@ -116,7 +117,7 @@ export default function JourneySlider({ arr = [] }) {
                         <p className="text-[0.6rem] sm:text-[0.7rem] lg:text-xs font-light text-center text-[#282828] line-clamp-6 h-[5.5rem] sm:h-[6.3rem] lg:h-[6rem]">
                             {slides?.[2]?.feedback}
                         </p>
-                        <span className="bg-black w-6 lg:w-10 h-0.5 inline-block" />
+                        <span style={{ background: theme.primary }} className="w-6 lg:w-10 h-0.5 inline-block" />
                         <div className="flex flex-col items-center justify-start gap-1">
                             <p className="text-center font-medium text-xs sm:text-[0.8rem] lg:text-sm text-[#14213D]">{slides?.[2]?.name}</p>
                             <p className="text-[#6b6b6b] text-[0.6rem] sm:text-[0.7rem] lg:text-xs text-center">{slides?.[2]?.designation}</p>

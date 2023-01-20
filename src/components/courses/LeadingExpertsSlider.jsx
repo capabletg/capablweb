@@ -3,7 +3,7 @@ import { FaPlay } from "react-icons/fa";
 import Slider from "react-slick";
 import { leadingExperts } from "../../utils/data/courses/leadingExperts";
 
-export default function LeadingExpertsSlider() {
+export default function LeadingExpertsSlider({ theme = { primary: "", text: "" } }) {
     const [centerSlide, setCenterSlide] = useState(0);
 
     const settings = {
@@ -27,10 +27,10 @@ export default function LeadingExpertsSlider() {
     return (
         <>
             <div className="flex items-center justify-center gap-0.5 mt-2.5 md:mt-3">
-                <span className="bg-capabl_primary rounded-full w-1.5 h-1" />
-                <span className="bg-capabl_primary rounded-full w-1.5 h-1" />
-                <span className="bg-capabl_primary rounded-full w-8 h-1" />
-                <span className="bg-capabl_primary rounded-full w-1.5 h-1" />
+                <span style={{ background: theme.primary }} className="rounded-full w-1.5 h-1" />
+                <span style={{ background: theme.primary }} className="rounded-full w-1.5 h-1" />
+                <span style={{ background: theme.primary }} className="rounded-full w-8 h-1" />
+                <span style={{ background: theme.primary }} className="rounded-full w-1.5 h-1" />
             </div>
 
             <div className="mt-2 md:mt-4">
@@ -60,19 +60,20 @@ export default function LeadingExpertsSlider() {
                                             centerSlide === index ? "opacity-100 scale-100" : "opacity-0 scale-0"
                                         }`}
                                     >
-                                        <span className="text-xs sm:text-sm md:text-base ml-1 text-[#4B0AFF]">
+                                        <span style={{ color: theme.primary }} className="text-xs sm:text-sm md:text-base ml-1">
                                             <FaPlay />
                                         </span>
                                     </div>
                                 </div>
 
                                 <svg
-                                    className={`relative mx-auto w-16 sm:w-24 md:w-28 mt-0 sm:-mt-1.5 md:-mt-1 lg:mt-0 object-contain fill-capabl_primary transform transition-all duration-300 ${
+                                    className={`relative mx-auto w-16 sm:w-24 md:w-28 mt-0 sm:-mt-1.5 md:-mt-1 lg:mt-0 object-contain transform transition-all duration-300 ${
                                         centerSlide === index ? "scale-100 opacity-100" : "hidden scale-0 opacity-0"
                                     }`}
                                     viewBox="0 0 147 98"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
+                                    style={{ fill: theme.primary }}
                                 >
                                     <path
                                         d="M138.007 65.6814C138.007 69.9842 137.184 74.0339 135.539 77.8305C134.02 81.5006 131.869 84.791 129.085 87.7017C126.301 90.4859 123.01 92.7006 119.214 94.3458C115.544 95.991 111.557 96.8136 107.254 96.8136C101.812 96.8136 97.0034 95.6113 92.8272 93.2068C88.7774 90.8023 85.2972 87.7017 82.3865 83.9051C79.6023 79.9819 77.4509 75.5526 75.9322 70.617C74.5401 65.5548 73.8441 60.4294 73.8441 55.2407C73.8441 49.5458 74.6034 43.9141 76.1221 38.3458C77.6407 32.7774 79.7921 27.5887 82.5763 22.7797C85.487 17.9706 89.0305 13.6045 93.2068 9.68136C97.3831 5.75819 102.066 2.53107 107.254 0L123.959 8.92204C120.669 12.2124 117.822 16.009 115.417 20.3119C113.139 24.6147 112 29.1074 112 33.7898V35.4983C115.67 36.1311 119.087 37.3333 122.251 39.1051C125.415 40.8768 128.136 43.0915 130.414 45.7492C132.818 48.4068 134.653 51.4441 135.919 54.861C137.311 58.278 138.007 61.8848 138.007 65.6814ZM64.1627 65.6814C64.1627 69.9842 63.3401 74.0339 61.6949 77.8305C60.1763 81.5006 58.0249 84.791 55.2407 87.7017C52.4565 90.4859 49.1661 92.7006 45.3695 94.3458C41.6994 95.991 37.713 96.8136 33.4102 96.8136C27.9684 96.8136 23.1593 95.6113 18.9831 93.2068C14.9333 90.8023 11.4531 87.7017 8.54238 83.9051C5.75819 79.9819 3.60678 75.5526 2.08814 70.617C0.696045 65.5548 0 60.4294 0 55.2407C0 49.5458 0.759322 43.9141 2.27797 38.3458C3.79661 32.7774 5.94802 27.5887 8.73221 22.7797C11.6429 17.9706 15.1864 13.6045 19.3627 9.68136C23.539 5.75819 28.2215 2.53107 33.4102 0L50.1153 8.92204C46.8249 12.2124 43.9774 16.009 41.5729 20.3119C39.2949 24.6147 38.1559 29.1074 38.1559 33.7898V35.4983C41.826 36.1311 45.243 37.3333 48.4068 39.1051C51.5706 40.8768 54.2915 43.0915 56.5695 45.7492C58.974 48.4068 60.8091 51.4441 62.0746 54.861C63.4667 58.278 64.1627 61.8848 64.1627 65.6814Z"
