@@ -48,7 +48,7 @@ import {
 } from "../../components/courses/svgs";
 
 const theme = {
-  primary: "#0ceca1",
+  primary: "#FFCC00",
   text: "#FFFFFF",
 };
 
@@ -152,7 +152,7 @@ export default function Courses() {
   return (
     <div>
       <Head>
-        <title>Electric Vehicles - Capabl Courses</title>
+        <title>Data Science - Capabl Courses</title>
         <meta name="description" content="Capable Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -197,7 +197,7 @@ export default function Courses() {
               <span style={{ color: theme.primary }}>{` Hero `}</span>
               {`in `}
               <span className={`relative font-semibold`}>
-                {`Electric Vehicles`}
+                {`Data Science`}
 
                 <span
                   style={{ background: theme.primary }}

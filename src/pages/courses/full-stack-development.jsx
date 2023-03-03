@@ -20,15 +20,14 @@ import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider"
 import RegsiterForm from "../../components/courses/RegsiterForm";
 import Faqs from "../../components/courses/Faqs";
 import Footer from "../../components/Footer";
-import Module1 from "../../components/courses/EV/Modules/Module1";
-import Module2 from "../../components/courses/EV/Modules/Module2";
-import Module3 from "../../components/courses/EV/Modules/Module3";
-import Module4 from "../../components/courses/EV/Modules/Module4";
-import Module5 from "../../components/courses/EV/Modules/Module5";
-import Module6 from "../../components/courses/EV/Modules/Module6";
-import Module7 from "../../components/courses/EV/Modules/Module7";
-import Module8 from "../../components/courses/EV/Modules/Module8";
-import Module9 from "../../components/courses/EV/Modules/Module9";
+import Module1 from "../../components/courses/Fullstack/Modules/Module1";
+import Module2 from "../../components/courses/Fullstack/Modules/Module2";
+import Module3 from "../../components/courses/Fullstack/Modules/Module3";
+import Module4 from "../../components/courses/Fullstack/Modules/Module4";
+import Module5 from "../../components/courses/Fullstack/Modules/Module5";
+import Module6 from "../../components/courses/Fullstack/Modules/Module6";
+import Module7 from "../../components/courses/Fullstack/Modules/Module7";
+import Module8 from "../../components/courses/Fullstack/Modules/Module8";
 import FeatureComparison from "../../components/FeatureComparison";
 import Header from "../../components/header";
 import useGeneralStore from "../../store/generalStore";
@@ -152,7 +151,7 @@ export default function Courses() {
   return (
     <div>
       <Head>
-        <title>Electric Vehicles - Capabl Courses</title>
+        <title>Full Stack Development - Capabl Courses</title>
         <meta name="description" content="Capable Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -197,7 +196,7 @@ export default function Courses() {
               <span style={{ color: theme.primary }}>{` Hero `}</span>
               {`in `}
               <span className={`relative font-semibold`}>
-                {`Electric Vehicles`}
+                {`Full Stack Devolopment`}
 
                 <span
                   style={{ background: theme.primary }}
@@ -511,7 +510,6 @@ export default function Courses() {
             <Module6 />
             <Module7 />
             <Module8 />
-            <Module9 />
           </div>
           <section className="max-w-7xl mx-auto flex items-center justify-center px-4 mt-8 md:mt-[4.5rem]">
             <button

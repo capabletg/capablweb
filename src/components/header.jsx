@@ -13,8 +13,11 @@ const navs = [
       { label: "Electric Vehicle", href: "/courses/electric-vehicle" },
       { label: "Data Science", href: "/courses/data-science" },
       { label: "Mechatronics", href: "/courses/mechatronics" },
-      { label: "Design Engineering", href: "/#design-and-engineering" },
-      { label: "Full Stack Development", href: "/#full-stack-development" },
+      { label: "Design Engineering", href: "/courses/design" },
+      {
+        label: "Full Stack Development",
+        href: "/courses/full-stack-development",
+      },
     ],
   },
   {
@@ -165,7 +168,7 @@ export default function Header(props) {
   );
 }
 
-function Drawer({ show, setShow, showTribeBtn,  openCtaForm}) {
+function Drawer({ show, setShow, showTribeBtn, openCtaForm }) {
   const [activeMenu, setActiveMenu] = useState("programs");
 
   const close = () => {
@@ -261,20 +264,22 @@ function Drawer({ show, setShow, showTribeBtn,  openCtaForm}) {
           ))}
           {showTribeBtn ? (
             <a
-                onClick={() => {
-                    close(); openCtaForm(); }}
-                className={`py-3 flex items-center justify-between cursor-pointer border-t border-t-[#e3e3e3]`}
+              onClick={() => {
+                close();
+                openCtaForm();
+              }}
+              className={`py-3 flex items-center justify-between cursor-pointer border-t border-t-[#e3e3e3]`}
             >
-                Join Our Tribe
+              Join Our Tribe
             </a>
-            // <button
-            //   onClick={() => openCtaForm()}
-            //   style={{ boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)" }}
-            //   className="relative z-10 font-medium text-sm text-[#272727] rounded-lg py-3 px-6 bg-capabl_primary hover_animation"
-            // >
-            //   Join Our Tribe
-            // </button>
-          ) : null}
+          ) : // <button
+          //   onClick={() => openCtaForm()}
+          //   style={{ boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)" }}
+          //   className="relative z-10 font-medium text-sm text-[#272727] rounded-lg py-3 px-6 bg-capabl_primary hover_animation"
+          // >
+          //   Join Our Tribe
+          // </button>
+          null}
         </div>
       </div>
     </>
