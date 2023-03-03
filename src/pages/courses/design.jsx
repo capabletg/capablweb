@@ -20,15 +20,14 @@ import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider"
 import RegsiterForm from "../../components/courses/RegsiterForm";
 import Faqs from "../../components/courses/Faqs";
 import Footer from "../../components/Footer";
-import Module1 from "../../components/courses/EV/Modules/Module1";
-import Module2 from "../../components/courses/EV/Modules/Module2";
-import Module3 from "../../components/courses/EV/Modules/Module3";
-import Module4 from "../../components/courses/EV/Modules/Module4";
-import Module5 from "../../components/courses/EV/Modules/Module5";
-import Module6 from "../../components/courses/EV/Modules/Module6";
-import Module7 from "../../components/courses/EV/Modules/Module7";
-import Module8 from "../../components/courses/EV/Modules/Module8";
-import Module9 from "../../components/courses/EV/Modules/Module9";
+import Module1 from "../../components/courses/Design/Modules/Module1";
+import Module2 from "../../components/courses/Design/Modules/Module2";
+import Module3 from "../../components/courses/Design/Modules/Module3";
+import Module4 from "../../components/courses/Design/Modules/Module4";
+import Module5 from "../../components/courses/Design/Modules/Module5";
+import Module6 from "../../components/courses/Design/Modules/Module6";
+import Module7 from "../../components/courses/Design/Modules/Module7";
+import Module8 from "../../components/courses/Design/Modules/Module8";
 import FeatureComparison from "../../components/FeatureComparison";
 import Header from "../../components/header";
 import useGeneralStore from "../../store/generalStore";
@@ -48,7 +47,7 @@ import {
 } from "../../components/courses/svgs";
 
 const theme = {
-  primary: "#0ceca1",
+  primary: "#076DE5",
   text: "#FFFFFF",
 };
 
@@ -152,7 +151,7 @@ export default function Courses() {
   return (
     <div>
       <Head>
-        <title>Electric Vehicles - Capabl Courses</title>
+        <title>Design & Engineering - Capabl Courses</title>
         <meta name="description" content="Capable Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -197,7 +196,7 @@ export default function Courses() {
               <span style={{ color: theme.primary }}>{` Hero `}</span>
               {`in `}
               <span className={`relative font-semibold`}>
-                {`Electric Vehicles`}
+                {`Design`}
 
                 <span
                   style={{ background: theme.primary }}
@@ -394,7 +393,7 @@ export default function Courses() {
               <path d="M1.8445 35.5129C9.30516 18.0189 24.767 6.88707 39.1312 5.42451C57.0058 3.60239 72.1618 14.7657 83.3751 29.2976C88.7616 36.2783 93.424 44.117 97.7779 52.2347C91.8514 51.0025 85.4661 50.9979 79.3161 53.2543C77.7989 53.8135 78.2278 56.4457 79.6859 56.0743C86.1741 54.4213 92.3842 53.2676 98.6614 53.8934C99.1698 54.8542 99.6743 55.8184 100.176 56.7849C101.439 59.217 104.95 56.7005 103.936 54.224C104.33 54.0275 104.665 53.5927 104.684 52.9775C104.855 47.6206 105.185 42.1982 105.77 36.8063C106.026 34.4647 106.358 32.1211 106.691 29.7783C107.126 26.7091 107.562 23.641 107.823 20.5805C107.999 18.5024 105.639 18.2583 105.045 20.2895C102.13 30.2743 101.891 41.4647 102.498 51.4313C93.3018 33.871 82.7452 16.9061 67.4389 7.54826C52.9028 -1.33695 34.6432 -2.84197 18.3685 9.55601C10.5893 15.4803 4.10768 24.3696 0.3156 34.7529C-0.123815 35.9476 1.33922 36.6947 1.8445 35.5129Z" />
             </svg>
 
-            <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Ace your dream career in Electric Vehicles!`}</h2>
+            <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Ace your dream career in Design!`}</h2>
             <p className="text-xs md:text-sm max-w-sm md:max-w-lg mx-auto text-center font-light text-[#636363]">{`With expert guidance and your efforts, nothing can stop you from making your dream career a reality.`}</p>
           </div>
 
@@ -511,7 +510,6 @@ export default function Courses() {
             <Module6 />
             <Module7 />
             <Module8 />
-            <Module9 />
           </div>
           <section className="max-w-7xl mx-auto flex items-center justify-center px-4 mt-8 md:mt-[4.5rem]">
             <button
