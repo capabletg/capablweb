@@ -10,7 +10,7 @@ html,
 body {
     font-family: "Poppins", sans-serif;
     background-color: #fff;
-    color: #000;
+    color: #000000;
     scroll-behavior: smooth;
     scroll-padding-top: 4rem;
     width: 100%;
@@ -65,5 +65,21 @@ body {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+.h-85{
+    min-height: 85vh;
+}
+@media (max-width: 320px) {
+    .h-85 .font-320{
+        font-size: 1.2rem;
+    }
+    .btn-txt{
+        font-size: 0.5rem;
+    }
+}
+@media (min-width: 768px) {
+    .h-85 .font-320{
+        font-size: 1.7rem;
     }
 }

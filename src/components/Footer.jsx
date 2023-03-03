@@ -58,7 +58,7 @@ export default function Footer() {
                             { label: "Counselling", href: "/" },
                             { label: "Careers Transformed", href: "/" },
                             { label: "Colleges", href: "/" },
-                            { label: "Club", href: "/" },
+                            { label: "Club", href: "club" },
                             { label: "Community", href: "/" },
                             { label: "Read", href: "/" },
                             { label: "Free Courses", href: "/" },
