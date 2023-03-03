@@ -13,8 +13,11 @@ const navs = [
       { label: "Electric Vehicle", href: "/courses/electric-vehicle" },
       { label: "Data Science", href: "/courses/data-science" },
       { label: "Mechatronics", href: "/courses/mechatronics" },
-      { label: "Design Engineering", href: "/#design-and-engineering" },
-      { label: "Full Stack Development", href: "/#full-stack-development" },
+      { label: "Design Engineering", href: "/courses/design" },
+      {
+        label: "Full Stack Development",
+        href: "/courses/full-stack-development",
+      },
     ],
   },
   {
