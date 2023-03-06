@@ -173,7 +173,7 @@ export default function Courses() {
             <div className="w-full h-full max-h-80 max-w-xs md:max-w-md z-[1] relative overflow-hidden rounded-xl">
               <img
                 className="w-full h-full object-cover"
-                src={`https://images.unsplash.com/photo-1516557070061-c3d1653fa646?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60`}
+                src={`/images/home/design_cae.jpg`}
                 alt="video bg"
               />
             </div>
@@ -322,7 +322,7 @@ export default function Courses() {
 
         <section className="px-4 lg:px-6 mt-6 lg:mt-8 max-w-7xl mx-auto">
           <h2 className="text-center font-medium text-lg md:text-2xl mb-3 lg:mb-4">
-            Become a real EV Engineer with the Capabl Ecosystem!
+            Become a real Design Engineer with the Capabl Ecosystem!
           </h2>
           <p className="text-center text-[#636363] text-xs md:text-sm max-w-xl mx-auto">
             {`To become the best, you need the best. You need not just a course but an ecosystem of Stanford/IIT that helps you crack your dream EV jobs with the likes of Daimler, Tata, Ather, Honda, etc., or get into your dream university!`}
