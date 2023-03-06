@@ -173,7 +173,7 @@ export default function Courses() {
             <div className="w-full h-full max-h-80 max-w-xs md:max-w-md z-[1] relative overflow-hidden rounded-xl">
               <img
                 className="w-full h-full object-cover"
-                src={`https://images.unsplash.com/photo-1516557070061-c3d1653fa646?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60`}
+                src={`/images/home/full_stack.jpg`}
                 alt="video bg"
               />
             </div>
