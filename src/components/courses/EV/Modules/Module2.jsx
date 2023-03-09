@@ -125,12 +125,11 @@ export default function Module2(data) {
             </p>
 
             <p className="text-[#B3BEC4] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mt-3 sm:mt-5">{`Roles you're ready for after the module`}</p>
-
             <p className="text-white text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mt-1 sm:mt-2">
-              {`Data Analyst`} <span className="text-[#738793]">{` | `}</span>{" "}
-              {`Python Developer`}
+              {`${data?.data?.content3[0]}`}{" "}
+              <span className="text-[#738793]">{` | `}</span>{" "}
+              {`${data?.data?.content3[1]}`}
             </p>
-
             <button
               onClick={() => {
                 ShowModal(), ModuleValue(1);

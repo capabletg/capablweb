@@ -31,23 +31,34 @@ export default function Modal(moduleData = []) {
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <h5>{`${moduleData?.moduleData?.heading1}`}</h5>
-                  {moduleData?.moduleData?.content1?.map((content) => (
+                  {moduleData?.moduleData?.content1?.map((content, index) => (
                     <p
                       className="my-4 text-slate-800 text-sm leading-relaxed"
-                      key={content}
+                      key={index}
                     >
-                      {content}
+                      {index + 1}. {content}
                     </p>
                   ))}
                 </div>
                 <div className="relative p-6 flex-auto">
                   <h5>{`${moduleData?.moduleData?.heading2}`}</h5>
-                  {moduleData?.moduleData?.content2?.map((content) => (
+                  {moduleData?.moduleData?.content2?.map((content, index) => (
                     <p
                       className="my-4 text-slate-800 text-sm leading-relaxed"
-                      key={content}
+                      key={index}
                     >
-                      {content}
+                      {index + 1}. {content}
+                    </p>
+                  ))}
+                </div>
+                <div className="relative p-6 flex-auto">
+                  <h5>{`${moduleData?.moduleData?.heading3}`}</h5>
+                  {moduleData?.moduleData?.content3?.map((content, index) => (
+                    <p
+                      className="my-4 text-slate-800 text-sm leading-relaxed"
+                      key={index}
+                    >
+                      {index + 1}. {content}
                     </p>
                   ))}
                 </div>
