@@ -373,7 +373,7 @@ export default function Courses() {
         </section>
 
         {/* Path section */}
-        <section className="max-w-7xl hidden mx-auto px-6 mt-16 mb-10 md:mb-16 md:mt-28 lg:mt-32">
+        <section className="max-w-7xl mx-auto px-6 mt-16 mb-10 md:mb-16 md:mt-28 lg:mt-32">
           <div className="hidden md:block w-full px-6">
             <HorizontalPathAnimation />
           </div>
@@ -651,7 +651,7 @@ export default function Courses() {
         </section>
 
         {/* Leading Experts  */}
-        <section className="max-w-5xl mx-auto px-4 mt-16 md:mt-20">
+        <section className="max-w-5xl hidden mx-auto px-4 mt-16 md:mt-20">
           <h1 className="text-center text-xl md:text-2xl font-light text-[#14213D]">
             {`Hear from our`}{" "}
             <span className="font-semibold">{`Leading Experts !`}</span>
@@ -765,7 +765,7 @@ export default function Courses() {
         </section>
 
         {/* Hear from our Students */}
-        <section className="max-w-7xl mx-auto px-4 md:px-6 mt-16 md:mt-24">
+        <section className="max-w-7xl mx-auto px-4 hidden md:px-6 mt-16 md:mt-24">
           <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Hear From Our Alumni`}</h2>
           <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">{`Before putting your faith in us, read some of our success stories!`}</p>
 
