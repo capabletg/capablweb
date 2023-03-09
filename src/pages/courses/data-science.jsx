@@ -18,17 +18,10 @@ import DownloadBrochure from "../../components/courses/DownloadBrochure";
 import Projects from "../../components/courses/Projects/Projects";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
-import Faqs from "../../components/courses/Faqs";
+import Faqs from "../../components/courses/Faqs_datascience";
 import Footer from "../../components/Footer";
-import Module1 from "../../components/courses/EV/Modules/Module1";
-import Module2 from "../../components/courses/EV/Modules/Module2";
-import Module3 from "../../components/courses/EV/Modules/Module3";
-import Module4 from "../../components/courses/EV/Modules/Module4";
-import Module5 from "../../components/courses/EV/Modules/Module5";
-import Module6 from "../../components/courses/EV/Modules/Module6";
-import Module7 from "../../components/courses/EV/Modules/Module7";
-import Module8 from "../../components/courses/EV/Modules/Module8";
-import Module9 from "../../components/courses/EV/Modules/Module9";
+import Modal from "../../components/courses/Module Modal/modal";
+import Module1 from "../../components/courses/DataScience/Modules/Module1";
 import FeatureComparison from "../../components/FeatureComparison";
 import Header from "../../components/header";
 import useGeneralStore from "../../store/generalStore";
@@ -147,8 +140,232 @@ const scolarshipProcess = [
   },
 ];
 
+const moduleData = [
+  {
+    name: "Module 1",
+    modulename: "Python Programming",
+    moduleindex: 0,
+    intro:
+      " Python is a popular programming language used for web development (server-side), software development, mathematics, system scripting",
+    heading1: "Projects",
+    content1: [
+      "Inventory Management System",
+      "Library Management System",
+      "Encryption of files",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Solid knowledge of the Python programming language",
+      "Python Frameworks",
+      "Python Libraries",
+    ],
+    Sub_topics: "5",
+    No_Projects: "6",
+    heading3: "Job Roles",
+    content3: [
+      "Python Developer",
+      "Python programmer",
+      "Python Programming Language Application Developer",
+      "Software Engineer",
+    ],
+  },
+  {
+    name: "Module 2",
+    modulename: " Automotive Plastic Design",
+    moduleindex: 1,
+    intro:
+      "Data analytics is the process of analyzing data sets in order to make decisions based on the information available and visualization is the graphical representation of information ",
+    heading1: "Projects",
+    content1: [
+      "Data Analysis on Covid Analysis",
+      "IMDB Movie Recommendation",
+      "Swiggy EDA And Visualization",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "SQL",
+      "Statistical visualization",
+      "Data cleaning and preparation",
+      "Data analysis and exploration",
+    ],
+    Sub_topics: "6",
+    No_Projects: "18",
+    heading3: "Job Roles",
+    content3: [
+      "Data Analyst",
+      "Data Science Engineer",
+      "Business Data Analyst",
+      "Product Analyst",
+    ],
+  },
+  {
+    name: "Module 3",
+    modulename: "Web Scraping",
+    moduleindex: 2,
+    intro: " It’s a a technique to fetch data from websites",
+    heading1: "Projects",
+    content1: [
+      "IMDB Top 250 Shows Scraper",
+      "Facebook Profile Scraper",
+      "IMDB Celebrities Scraper with Multiprocessing",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Python",
+      "Beautifulsoup library",
+      "Know to inspect elements on a web page",
+    ],
+    Sub_topics: "3",
+    No_Projects: "6",
+    heading3: "Job Roles",
+    content3: [
+      "Web Scraping Expert",
+      "Web Scraping Data Engineer",
+      "Web Scraping Developer",
+      "Python Developer with Web Scraping",
+    ],
+  },
+  {
+    name: "Module 4",
+    modulename: "Machine Learning",
+    moduleindex: 3,
+    intro:
+      " It enables computers to “self-learn” from training data and improve over time, without being explicitly programmed",
+    heading1: "Projects",
+    content1: [
+      "Predicting Heart disease using KNN",
+      "Predicting Ad clicks",
+      "Predict Taxi Trip Duration",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: ["Python", "Machine Learning Algorithms", "Maths & Statistics"],
+    Sub_topics: "4",
+    No_Projects: "4",
+    heading3: "Job Roles",
+    content3: [
+      "Machine Learning Engineer",
+      "Machine Learning Data Engineer",
+      "Software engineer",
+      "Machine Learning Operations Engineering",
+    ],
+  },
+  {
+    name: "Module 5",
+    modulename: "Deep Learning",
+    moduleindex: 4,
+    intro:
+      " It is a subset of Machine Learning that uses mathematical functions to map the input to the output",
+    heading1: "Projects",
+    content1: [
+      "Fraud Detection",
+      "Twitter Sentiment Analysis",
+      "Image Classification with CIFAR-10 Dataset",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Probability & Statistics",
+      "Python",
+      "Machine Learning Knowledge",
+      "Deep Learning Algorithms and frameworks",
+    ],
+    Sub_topics: "4",
+    No_Projects: "5",
+    heading3: "Job Roles",
+    content3: [
+      "Deep Learning Engineer",
+      "Data Scientist- Deep Learning",
+      "Senior systems software engineer,  Deep learning accelerator",
+      "Senior manager- Data science- Deep  learning",
+    ],
+  },
+  {
+    name: "Module 6",
+    modulename: "Image Processing",
+    moduleindex: 5,
+    intro:
+      " It is a method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it.",
+    heading1: "Projects",
+    content1: [
+      "MNIST Project on ANN vs CNN",
+      "Cat vs Dog classifier",
+      "Face Recognition",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: ["Python", "MATLAB", "Machine learning and classifications"],
+    Sub_topics: "3",
+    No_Projects: "4",
+    heading3: "Job Roles",
+    content3: [
+      "Software Engineer for Image Processing",
+      "Image Processing Software Developer",
+      "ML Engineer ( Audio / Image Processing)",
+    ],
+  },
+  {
+    name: "Module 7",
+    modulename: "Computer Vision",
+    moduleindex: 6,
+    intro:
+      "It enables computers to derive information from images, videos and other inputs",
+    heading1: "Projects",
+    content1: [
+      "Human Emotion Recognition",
+      "Handwritten Digit Recognition",
+      "Face mask detection",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Machine learning libraries and tools",
+      "Image Processing",
+      "Deep Learning",
+    ],
+    Sub_topics: "3",
+    No_Projects: "4",
+    heading3: "Job Roles",
+    content3: [
+      "Computer vision engineer",
+      "Technical expert-Deep learning",
+      "Computer vision Expert",
+      "Computer vision Software Developer",
+    ],
+  },
+  {
+    name: "Module 8",
+    modulename: " Natural Language Processing",
+    moduleindex: 7,
+    intro:
+      " It is a branch of artificial intelligence that deals with analyzing, understanding, and generating the languages that humans use naturally in order to interface with computers in both written and spoken contexts using natural human languages instead of computer languages.",
+    heading1: "Projects",
+    content1: ["Chatbot", "Language identifier", "Predictive text generator"],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Python",
+      "Machine Learning Methods",
+      "ML Frameworks and Libraries",
+    ],
+    Sub_topics: "4",
+    No_Projects: "4",
+    heading3: "Job Roles",
+    content3: [
+      "Natural language processing engineer",
+      "Data Scientists",
+      "Software Engineers",
+    ],
+  },
+];
+
 export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+  const moduleno = useGeneralStore((state) => state.module_no);
+
   return (
     <div>
       <Head>
@@ -497,21 +714,20 @@ export default function Courses() {
             </svg>
 
             {/* Module 1 */}
-            <Module1 />
+            <Module1 data={moduleData[0]} />
 
             {/* Module 2 */}
-            <Module2 />
+            <Module1 data={moduleData[1]} />
 
             {/* Module 3 */}
-            <Module3 />
+            <Module1 data={moduleData[2]} />
 
             {/* Module 4 */}
-            <Module4 />
-            <Module5 />
-            <Module6 />
-            <Module7 />
-            <Module8 />
-            <Module9 />
+            <Module1 data={moduleData[3]} />
+            <Module1 data={moduleData[4]} />
+            <Module1 data={moduleData[5]} />
+            <Module1 data={moduleData[6]} />
+            <Module1 data={moduleData[7]} />
           </div>
           <section className="max-w-7xl mx-auto flex items-center justify-center px-4 mt-8 md:mt-[4.5rem]">
             <button
@@ -809,6 +1025,7 @@ export default function Courses() {
       <Footer />
 
       <CtaForm />
+      <Modal moduleData={moduleData[moduleno]} />
     </div>
   );
 }
