@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React from "react";
 import { FaPlay } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
 import { FiChevronUp } from "react-icons/fi";
@@ -33,7 +33,6 @@ import FeatureComparison from "../../components/FeatureComparison";
 import Header from "../../components/header";
 import useGeneralStore from "../../store/generalStore";
 import CtaForm from "../../components/CtaForm";
-import Modal from "../../components/courses/Module Modal/modal";
 import VideoGridTestimonials from "../../components/VideoGridTestimonials";
 import ScolarshipProcess from "../../components/courses/ScolarshipProcess";
 import CompaniesUniversities from "../../components/courses/CompaniesUniversities";
@@ -49,7 +48,7 @@ import {
 } from "../../components/courses/svgs";
 
 const theme = {
-  primary: "#0ceca1",
+  primary: "#FFCC00",
   text: "#FFFFFF",
 };
 
@@ -148,206 +147,12 @@ const scolarshipProcess = [
   },
 ];
 
-const moduleData = [
-  {
-    name: "Module 1",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "5",
-  },
-  {
-    name: "Module 2",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "1. Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "2. Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "3. Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "3",
-  },
-  {
-    name: "Module 2",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "1. Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "2. Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "3. Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "3",
-  },
-  {
-    name: "Module 2",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "1. Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "2. Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "3. Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "3",
-  },
-  {
-    name: "Module 2",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "1. Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "2. Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "3. Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "3",
-  },
-  {
-    name: "Module 2",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "1. Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "2. Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "3. Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "3",
-  },
-  {
-    name: "Module 2",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "1. Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "2. Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "3. Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "3",
-  },
-  {
-    name: "Module 2",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "1. Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "2. Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "3. Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "3",
-  },
-  {
-    name: "Module 2",
-    intro:
-      "Learn basic concepts and calculations needed to design an EV Powertrain",
-    heading1: "Projects",
-    content1: [
-      "1. Develop a Mathematical model of a Li-ion Battery Pack for an Electric Vehicle",
-      "2. Powertrain Sizing of Electric Bike to find SOC & component specifications using MATLAB Simulink",
-      "3. Powertrain sizing of an electric car using different Drive Cycle Data and analysis of the results with the existing model",
-    ],
-    skills: "3-4",
-    heading2: "Skills",
-    content2: [
-      "1. Powertrain Design",
-      "2. Battery cell modeling calculation",
-      "3. EV transmission calculation",
-      "4. Battery pack design",
-    ],
-    Sub_topics: "10",
-    No_Projects: "3",
-  },
-];
-
 export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
-  const moduleno = useGeneralStore((state) => state.module_no);
-
   return (
     <div>
       <Head>
-        <title>Electric Vehicles - Capabl Courses</title>
+        <title>Mechatronics - Capabl Courses</title>
         <meta name="description" content="Capable Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -369,7 +174,7 @@ export default function Courses() {
             <div className="w-full h-full max-h-80 max-w-xs md:max-w-md z-[1] relative overflow-hidden rounded-xl">
               <img
                 className="w-full h-full object-cover"
-                src={`/images/home/electric_vehicle.jpg`}
+                src={`/images/home/mechatronics.jpg`}
                 alt="video bg"
               />
             </div>
@@ -392,7 +197,7 @@ export default function Courses() {
               <span style={{ color: theme.primary }}>{` Hero `}</span>
               {`in `}
               <span className={`relative font-semibold`}>
-                {`Electric Vehicles`}
+                {`Mechatronics`}
 
                 <span
                   style={{ background: theme.primary }}
@@ -474,7 +279,7 @@ export default function Courses() {
           </div>
         </section>
 
-        {/* Students Cracked Data Science Jobs! */}
+        {/* Students Cracked Mechatronics Jobs! */}
         <section className="max-w-7xl hidden mx-auto mt-16 md:mt-20 pl-0 md:pl-4">
           <div className="p-4 md:py-10 md:pl-10 md:rounded-tl-2xl md:rounded-bl-2xl bg-[#14213D] grid grid-cols-1 md:grid-cols-7 gap-4 md:gap-20">
             <div className="col-span-1 md:col-span-2 text-white pt-8 md:pt-0 flex flex-col justify-start md:justify-center max-w-lg">
@@ -569,7 +374,7 @@ export default function Courses() {
         </section>
 
         {/* Path section */}
-        <section className="max-w-7xl  mx-auto px-6 mt-16 mb-10 md:mb-16 md:mt-28 lg:mt-32">
+        <section className="max-w-7xl mx-auto px-6 mt-16 mb-10 md:mb-16 md:mt-28 lg:mt-32">
           <div className="hidden md:block w-full px-6">
             <HorizontalPathAnimation />
           </div>
@@ -692,16 +497,16 @@ export default function Courses() {
             </svg>
 
             {/* Module 1 */}
-            <Module1 data={moduleData[0]} />
+            <Module1 />
 
             {/* Module 2 */}
-            <Module2 data={moduleData[1]} />
+            <Module2 />
 
             {/* Module 3 */}
-            <Module3 data={moduleData[2]} />
+            <Module3 />
 
             {/* Module 4 */}
-            <Module4 data={moduleData[3]} />
+            <Module4 />
             <Module5 />
             <Module6 />
             <Module7 />
@@ -1004,7 +809,6 @@ export default function Courses() {
       <Footer />
 
       <CtaForm />
-      <Modal moduleData={moduleData[moduleno]} />
     </div>
   );
 }

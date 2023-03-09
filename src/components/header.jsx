@@ -44,7 +44,7 @@ const navs = [
     key: "others",
     subMenu: [
       { label: "About Us", href: "/" },
-      { label: "In Media", href: "/" },
+      { label: "In Media", href: "/media" },
     ],
   },
 ];
