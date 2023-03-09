@@ -2,8 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
 import useGeneralStore from "../../../../store/generalStore";
 
-export default function Module7() {
-  const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+export default function Module7(data) {
+  const ShowModal = useGeneralStore((state) => state.openModal);
+  const ModuleValue = useGeneralStore((state) => state.module);
 
   const [playing, setPlaying] = useState(true);
   const videoRef = useRef();
@@ -60,13 +61,13 @@ export default function Module7() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-6 sm:mt-9 lg:mt-8">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-4 sm:mt-7">
           <div className="flex flex-col items-start justify-start md:gap-1 h-full">
             {/* Video here */}
             <div className="bg-white mb-3 sm:mb-5 flex-grow w-full relative overflow-hidden rounded-sm h-[9rem] sm:h-[12rem] md:h-[15rem] lg:h-[12rem] group cursor-pointer">
               <video
                 ref={videoRef}
-                src="/videos/loop_video_4.mp4"
+                src="/videos/loop_video_2.mp4"
                 autoPlay={false}
                 loop={true}
                 className="w-full h-full object-cover transition-all duration-500"
@@ -111,18 +112,28 @@ export default function Module7() {
           </div>
 
           <div className="flex flex-col items-start justify-start h-full">
-            <p className="text-[#B3BEC4] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mb-0.5 sm:mb-1">{`Learn how CAN Protocols function to perform communication between the electronic components`}</p>
-            <p className="text-[#B3BEC4] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mb-0.5 sm:mb-1">{`Understand Data Science Evolution`}</p>
-            <p className="text-[#B3BEC4] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mb-0.5 sm:mb-1">{`Introduction to the program`}</p>
+            <p className="text-[#80929D] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mb-2 sm:mb-4">{`Learn different Architectures & Topologies and their application in EV’s`}</p>
 
-            <p className="text-white text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mt-3 sm:mt-4">
-              {`4 Modules`} <span className="text-[#738793]">{` | `}</span>{" "}
-              {`2 Projects`}
+            <p className="text-[#B3BEC4] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs">{`Introduction to the program`}</p>
+
+            <p className="text-white text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mt-2 sm:mt-3">
+              {`${data?.data?.Sub_topics} Modules`}{" "}
+              <span className="text-[#738793]">{` | `}</span>{" "}
+              {`${data?.data?.No_Projects} Projects`}
             </p>
 
+            <p className="text-[#B3BEC4] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mt-3 sm:mt-5">{`Roles you're ready for after the module`}</p>
+
+            <p className="text-white text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mt-1 sm:mt-2">
+              {`${data?.data?.content3[0]}`}{" "}
+              <span className="text-[#738793]">{` | `}</span>{" "}
+              {`${data?.data?.content3[1]}`}
+            </p>
             <button
-              onClick={() => openCtaForm()}
-              className="mt-4 sm:mt-4 md:mb-1 flex-shrink-0 bg-capabl_primary cursor-pointer rounded-md px-3 py-1 sm:py-1.5 text-black text-[0.6rem] sm:text-xs md:text-sm lg:text-xs hover:scale-95 transition-all duration-300"
+              onClick={() => {
+                ShowModal(), ModuleValue(6);
+              }}
+              className="mt-4 sm:mt-6 md:mb-1 flex-shrink-0 bg-capabl_primary cursor-pointer rounded-md px-3 py-1 sm:py-1.5 text-black text-[0.6rem] sm:text-xs md:text-sm lg:text-xs hover:scale-95 transition-all duration-300"
             >
               View Modules
             </button>
