@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { HiOutlineChevronDown, HiOutlineSearch } from "react-icons/hi";
-import { faqs } from "../../utils/data/courses/faqs";
+import { faqs } from "../../utils/data/courses/faqs_fullstack";
 
 export default function Faqs() {
   const [search, setSearch] = useState("");

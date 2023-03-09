@@ -18,9 +18,10 @@ import DownloadBrochure from "../../components/courses/DownloadBrochure";
 import Projects from "../../components/courses/Projects/Projects";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
-import Faqs from "../../components/courses/Faqs";
+import Faqs from "../../components/courses/Faqs_fullstack";
 import Footer from "../../components/Footer";
 import Module1 from "../../components/courses/Fullstack/Modules/Module1";
+import Modal from "../../components/courses/Module Modal/modal";
 import Module2 from "../../components/courses/Fullstack/Modules/Module2";
 import Module3 from "../../components/courses/Fullstack/Modules/Module3";
 import Module4 from "../../components/courses/Fullstack/Modules/Module4";
@@ -146,8 +147,164 @@ const scolarshipProcess = [
   },
 ];
 
+const moduleData = [
+  {
+    name: "Module 1",
+    modulename: "Fundamentals of Programming in Python",
+    moduleindex: 0,
+    intro:
+      "Python is a high-level, interpreted programming language known for its simplicity and ease of use, used for web development (server-side), software development, mathematics, system scripting",
+    heading1: "Projects",
+    content1: [],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Knowledge of the Python programming language",
+      "Python Frameworks, Libraries.",
+      "Object Oriented Programming",
+    ],
+    Sub_topics: "10",
+    No_Projects: "5",
+    heading3: "Job Roles",
+    content3: ["Software Developer", "Python Developer"],
+  },
+  {
+    name: "Module 2",
+    modulename: " Data Structure and Algorithms - Python",
+    moduleindex: 1,
+    intro:
+      "DSA Python is the application of data structures and algorithms using the Python programming language.",
+    heading1: "Projects",
+    content1: [],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Data Structure and algorithm",
+      "Functions",
+      "Object-oriented programming",
+    ],
+    Sub_topics: "8",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: ["Software Developer", "Python Developer"],
+  },
+  {
+    name: "Module 3",
+    modulename: "Fundamentals of Programming in JAVA",
+    moduleindex: 2,
+    intro:
+      "Java programming is the process of writing code using the Java programming language, which is a high-level, class-based, and object-oriented language known for its platform independence and security features.",
+    heading1: "Projects",
+    content1: [],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: ["Java", "Dynamic Programming", "Logic Building"],
+    Sub_topics: "8",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: ["Java Developer", "Software Developer", "Software Architect"],
+  },
+  {
+    name: "Module 4",
+    modulename: "Data Structures and Algorithms - JAVA",
+    moduleindex: 3,
+    intro:
+      "Frontend development is the process of creating the user interface of a website or web application using HTML, CSS, and JavaScript",
+    heading1: "Projects",
+    content1: [],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Java Programming",
+      "Data Structures and Algorithm",
+      "Dynamic Programming",
+    ],
+    Sub_topics: "8",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: ["Software Developer", "Java Developer"],
+  },
+  {
+    name: "Module 5",
+    modulename: "Web development fundamentals (frontend",
+    moduleindex: 4,
+    intro:
+      "Frontend development is the process of creating the user interface of a website or web application using HTML, CSS, and JavaScript.",
+    heading1: "Projects",
+    content1: [],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: ["Knowledge of HTML", "CSS", "Proficiency in JavaScript"],
+    Sub_topics: "8",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: [
+      "Frontend Developer",
+      "Software Developer",
+      "Full Stack Developer",
+    ],
+  },
+  {
+    name: "Module 6",
+    modulename: " React Fundamentals",
+    moduleindex: 5,
+    intro:
+      "React fundamentals are the basic concepts and principles that form the foundation of the React JavaScript library, including components, props, state, and the virtual DOM.",
+    heading1: "Projects",
+    content1: [],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: ["React Components", "Conditional Rendering", "React Router"],
+    Sub_topics: "8",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: ["React Developer", "Full-Stack Developer", "Software Engineer"],
+  },
+  {
+    name: "Module 7",
+    modulename: " Web development fundamentals (backend)",
+    moduleindex: 6,
+    intro:
+      "Backend development is the process of creating the server-side of a web application, which includes the database, server, and application logic, using a backend programming.",
+    heading1: "Projects",
+    content1: [],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: ["Server-side Programming", "Databases", "Express JS"],
+    Sub_topics: "8",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: ["Backend Developer", "Backend Engineer"],
+  },
+  {
+    name: "Module 8",
+    modulename: "Deployment and Hosting",
+    moduleindex: 7,
+    intro:
+      " Deployment and hosting refer to the process of making a web application available for public use by installing it on a server and ensuring that it is accessible",
+    heading1: "Projects",
+    content1: [],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Deployment",
+      "Continuous Integration and Continuous Deployment (CI/CD)",
+      "Cloud Hosting",
+    ],
+    Sub_topics: "8",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: [
+      "Software Developer",
+      "Full-Stack Developer",
+      "Software Engineer",
+    ],
+  },
+];
+
 export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+  const moduleno = useGeneralStore((state) => state.module_no);
   return (
     <div>
       <Head>
@@ -496,20 +653,20 @@ export default function Courses() {
             </svg>
 
             {/* Module 1 */}
-            <Module1 />
+            <Module1 data={moduleData[0]} />
 
             {/* Module 2 */}
-            <Module2 />
+            <Module1 data={moduleData[1]} />
 
             {/* Module 3 */}
-            <Module3 />
+            <Module1 data={moduleData[2]} />
 
             {/* Module 4 */}
-            <Module4 />
-            <Module5 />
-            <Module6 />
-            <Module7 />
-            <Module8 />
+            <Module1 data={moduleData[3]} />
+            <Module1 data={moduleData[4]} />
+            <Module1 data={moduleData[5]} />
+            <Module1 data={moduleData[6]} />
+            <Module1 data={moduleData[7]} />
           </div>
           <section className="max-w-7xl mx-auto flex items-center justify-center px-4 mt-8 md:mt-[4.5rem]">
             <button
@@ -807,6 +964,7 @@ export default function Courses() {
       <Footer />
 
       <CtaForm />
+      <Modal moduleData={moduleData[moduleno]} />
     </div>
   );
 }

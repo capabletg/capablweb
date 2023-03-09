@@ -18,9 +18,10 @@ import DownloadBrochure from "../../components/courses/DownloadBrochure";
 import Projects from "../../components/courses/Projects/Projects";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
-import Faqs from "../../components/courses/Faqs";
+import Faqs from "../../components/courses/Faqs_design";
 import Footer from "../../components/Footer";
 import Module1 from "../../components/courses/Design/Modules/Module1";
+import Modal from "../../components/courses/Module Modal/modal";
 import Module2 from "../../components/courses/Design/Modules/Module2";
 import Module3 from "../../components/courses/Design/Modules/Module3";
 import Module4 from "../../components/courses/Design/Modules/Module4";
@@ -146,8 +147,221 @@ const scolarshipProcess = [
   },
 ];
 
+const moduleData = [
+  {
+    name: "Module 1",
+    modulename: "Vehicle Dynamics",
+    moduleindex: 0,
+    intro:
+      " Learn suspension terminologies, load transfer, steering geometry, & tire dynamics",
+    heading1: "Projects",
+    content1: [
+      "Design a steering system for Ackerman geometry",
+      "Design & Analysis of Knuckle",
+      "Design of Suspension Geometry & Chassis for an ATV",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "CAD modeling",
+      "Suspension system tuning",
+      "Weldments & standards",
+      "Design optimization",
+    ],
+    Sub_topics: "8",
+    No_Projects: "11",
+    heading3: "Job Roles",
+    content3: [
+      "MBD engineer",
+      "Suspension engineer",
+      "Steering engineer",
+      "R&D Vehicle Dynamics",
+    ],
+  },
+  {
+    name: "Module 2",
+    modulename: " Automotive Plastic Design",
+    moduleindex: 1,
+    intro:
+      "Learn the principles of design of automotive plastic components using CATIA V5 with DFA and DFM.",
+    heading1: "Projects",
+    content1: [
+      "Design of Alloy Wheel using Part modeling workbench",
+      "Front Fender using Surface workbench",
+      "Game controller - Product design using Surface modeling",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "CAD modeling",
+      "Geometric Dimensioning & Tolerancing",
+      "Surface modeling",
+      "Self Quality Control (QC)",
+    ],
+    Sub_topics: "8",
+    No_Projects: "7",
+    heading3: "Job Roles",
+    content3: [
+      "Plastic engineer",
+      "Trim design engineer",
+      "Mechanical draftsman",
+      "Product engineer",
+    ],
+  },
+  {
+    name: "Module 3",
+    modulename: "BIW & Sheet Metal design",
+    moduleindex: 2,
+    intro:
+      "Design sheet metal panels of automobiles using Catia V5 considering DFA",
+    heading1: "Projects",
+    content1: [
+      "BIW upper body sheet metal design",
+      "Closers - Hood panel design",
+      "Closers - Door panel design (Front)",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Surface modeling",
+      "BIW techniques & guidelines",
+      "DFA, DFM & DFS",
+      "Automotive regulations",
+    ],
+    Sub_topics: "8",
+    No_Projects: "7",
+    heading3: "Job Roles",
+    content3: [
+      "BIW engineer",
+      "Sheet metal engineer",
+      "R&D engineer",
+      "Product engineer",
+    ],
+  },
+  {
+    name: "Module 4",
+    modulename: "BIW Fixture Design",
+    moduleindex: 3,
+    intro:
+      "Using Siemens UG NX as a tool to learn to model BIW fixtures and units",
+    heading1: "Projects",
+    content1: [
+      "Material Handling fixture design",
+      "Unit detailing and (Bill Of Materials) BOM creation",
+      "Welding fixture design using Standardized parts",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "CAD modeling",
+      "Geometric Dimensioning & Tolerancing",
+      "Bill Of Material (BOM) creation",
+      "Component/Material selection",
+    ],
+    Sub_topics: "8",
+    No_Projects: "8",
+    heading3: "Job Roles",
+    content3: [
+      "BIW Fixture engineer",
+      "Assembly-line specialist",
+      "R&D engineer",
+      "Jigs/Fixture engineer",
+    ],
+  },
+  {
+    name: "Module 5",
+    modulename: "Engineering Design ",
+    moduleindex: 4,
+    intro: " Learn to use Solidworks as a tool for various CAD applications.",
+    heading1: "Projects",
+    content1: [
+      "Surface Generation - Impeller Blade & Casing",
+      "BLDC Motor design using Solidworks",
+      "Design of Plastic Chair with DFM",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "CAD modeling",
+      "Surface modeling",
+      "Sheet metal modeling",
+      "Geometric Dimensioning & Tolerancing",
+    ],
+    Sub_topics: "8",
+    No_Projects: "6",
+    heading3: "Job Roles",
+    content3: [
+      "Design Engineer",
+      "Product Designer",
+      "CAD Drafter",
+      "Automotive Engineer",
+    ],
+  },
+  {
+    name: "Module 6",
+    modulename: "FEA & Optimization",
+    moduleindex: 5,
+    intro:
+      " Learn about FEA meshing, static, transient simulations & Topology Optimization.",
+    heading1: "Projects",
+    content1: [
+      "Topology Optimization of Farming equipment to reduce weight",
+      "Tubular Chassis crash simulation",
+      "Structural Analysis of Door Panel",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Geometric Cleanup",
+      "1D, 2D, & 3D meshing",
+      "Static & Transient Analysis",
+      "Topology Optimization",
+    ],
+    Sub_topics: "6",
+    No_Projects: "9",
+    heading3: "Job Roles",
+    content3: [
+      "FEA analyst",
+      "CAE analyst",
+      "Product engineer",
+      "R&D engineer",
+    ],
+  },
+  {
+    name: "Module 7",
+    modulename: " CFD & Aerodynamics ",
+    moduleindex: 6,
+    intro:
+      "Get the knowledge of CFD cases and models for simulating applications like pumps & propellers",
+    heading1: "Projects",
+    content1: [
+      "CFD analysis of a propeller for varying speeds",
+      "Thermal Performance analysis of a radiator",
+      "Perform Lift Analysis on Airbus Aircraft to evaluate the thrust force",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Mesh generation",
+      "Thermal analysis",
+      "Aerodynamics, Lift & Drag",
+      "Air Flow analysis",
+    ],
+    Sub_topics: "7",
+    No_Projects: "10",
+    heading3: "Job Roles",
+    content3: [
+      "CFD analyst",
+      "Heat-flow analyst",
+      "Product engineer",
+      "R&D engineer",
+    ],
+  },
+];
+
 export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+  const moduleno = useGeneralStore((state) => state.module_no);
   return (
     <div>
       <Head>
@@ -496,20 +710,19 @@ export default function Courses() {
             </svg>
 
             {/* Module 1 */}
-            <Module1 />
+            <Module1 data={moduleData[0]} />
 
             {/* Module 2 */}
-            <Module2 />
+            <Module1 data={moduleData[1]} />
 
             {/* Module 3 */}
-            <Module3 />
+            <Module1 data={moduleData[2]} />
 
             {/* Module 4 */}
-            <Module4 />
-            <Module5 />
-            <Module6 />
-            <Module7 />
-            <Module8 />
+            <Module1 data={moduleData[3]} />
+            <Module1 data={moduleData[4]} />
+            <Module1 data={moduleData[5]} />
+            <Module1 data={moduleData[6]} />
           </div>
           <section className="max-w-7xl mx-auto flex items-center justify-center px-4 mt-8 md:mt-[4.5rem]">
             <button
@@ -807,6 +1020,7 @@ export default function Courses() {
       <Footer />
 
       <CtaForm />
+      <Modal moduleData={moduleData[moduleno]} />
     </div>
   );
 }

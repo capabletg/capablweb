@@ -18,17 +18,10 @@ import DownloadBrochure from "../../components/courses/DownloadBrochure";
 import Projects from "../../components/courses/Projects/Projects";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
-import Faqs from "../../components/courses/Faqs";
+import Faqs from "../../components/courses/Faqs_mechatronics";
 import Footer from "../../components/Footer";
-import Module1 from "../../components/courses/EV/Modules/Module1";
-import Module2 from "../../components/courses/EV/Modules/Module2";
-import Module3 from "../../components/courses/EV/Modules/Module3";
-import Module4 from "../../components/courses/EV/Modules/Module4";
-import Module5 from "../../components/courses/EV/Modules/Module5";
-import Module6 from "../../components/courses/EV/Modules/Module6";
-import Module7 from "../../components/courses/EV/Modules/Module7";
-import Module8 from "../../components/courses/EV/Modules/Module8";
-import Module9 from "../../components/courses/EV/Modules/Module9";
+import Modal from "../../components/courses/Module Modal/modal";
+import Module1 from "../../components/courses/Mechatronics/Modules/Module1";
 import FeatureComparison from "../../components/FeatureComparison";
 import Header from "../../components/header";
 import useGeneralStore from "../../store/generalStore";
@@ -147,8 +140,163 @@ const scolarshipProcess = [
   },
 ];
 
+const moduleData = [
+  {
+    name: "Module 1",
+    modulename: "Mechatronics Overview",
+    moduleindex: 0,
+    intro:
+      " Study about the history and evolution of mechatronics and various Applications such as predator drone, KUKA robots",
+    heading1: "Projects",
+    content1: [
+      "Designing the Voltage Regulator Circuit",
+      "Designing the electrical inverter circuit for 12V DC to 240V AC",
+      "Intelligent Street light system",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Basic Electronics Knowledge",
+      "Basics of sensors and its integration",
+      "Basic Knowledge of Control System",
+    ],
+    Sub_topics: "9",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: ["Testing engineer", "Mechatronics engineer", "Product engineer"],
+  },
+  {
+    name: "Module 2",
+    modulename: " Automotive Plastic DesignEmbedded System in Mechatronics",
+    moduleindex: 1,
+    intro:
+      "Learn about various Microcontroller Programming and Embedded Systems",
+    heading1: "Projects",
+    content1: [
+      "RFID based Door Lock System",
+      "Health Monitoring  System",
+      "Vehicle Speed Indicator",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Basic Knowledge in Embedded System",
+      "Basics Knowledge of Microcontroller working",
+      "Basic Knowledge in Communication Protocols",
+    ],
+    Sub_topics: "15",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: [
+      "Embedded software developer",
+      "Firmware developer",
+      "Embedded programming Engineer",
+    ],
+  },
+  {
+    name: "Module 3",
+    modulename: "Robot Operating System",
+    moduleindex: 2,
+    intro:
+      " Learn Robot Operating System,Turtlesim, mapping and Simulation of Robots",
+    heading1: "Projects",
+    content1: [
+      "Drawing a Circle using Turtlesim in ROS-Python",
+      "Environment mapping and Navigation Simulation",
+      "Working with OpenCV to Identify Objects",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: ["ROS", "Python", "Machine Vision", "Mapping"],
+    Sub_topics: "9",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: [
+      "ROS developer",
+      "Integration and Validation Engineer",
+      "Robot Software engineer",
+    ],
+  },
+  {
+    name: "Module 4",
+    modulename: "Industrial Automation",
+    moduleindex: 3,
+    intro: "Learn about various PLCs, PLC Programming and SCADA systems",
+    heading1: "Projects",
+    content1: [
+      "Automated Assembly Line",
+      "Automated Storage and Retrieval System",
+      "Packing system using Robotics Arm",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Basic Knowledge on Actuators and Sensors",
+      "Basic Understanding of Logic gates",
+      "Basic Knowledge of ladder logic Programming",
+      "Basic Knowledge of HMI & SCADA",
+    ],
+    Sub_topics: "8",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: [
+      "PLC programmer",
+      "Automation Engineer",
+      "Automation Specialist",
+    ],
+  },
+  {
+    name: "Module 5",
+    modulename: "Internet of Things",
+    moduleindex: 4,
+    intro: "  Learn IoT system Design, Smart System and Product Design",
+    heading1: "Projects",
+    content1: [
+      "Home Automation",
+      "Smart Anti-Theft Systems",
+      "IoT Based Multi-Sensor Data Acquisition System",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Basic Knowledge of IoT",
+      "Basic Knowledge of Smart Systems",
+      "Basic knowledge in the operation of Raspberry pi",
+    ],
+    Sub_topics: "7",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: ["IoT Developer", "Network Engineer", "Thingworx Developer"],
+  },
+  {
+    name: "Module 6",
+    modulename: "AI & ML",
+    moduleindex: 5,
+    intro:
+      " Learn about Neural Networks, Machine Learning , Deep Learning and AI Algorithms",
+    heading1: "Projects",
+    content1: [
+      "The image detecting Robot with ML",
+      "Reinforcement Learning for Car Driving",
+      "Artificial Intelligence- Based Chatbot for Appliance Control",
+    ],
+    skills: "3-4",
+    heading2: "Skills",
+    content2: [
+      "Advance Python programming",
+      "Implementation of MySQL",
+      "Mapping & Navigation",
+    ],
+    Sub_topics: "7",
+    No_Projects: "3",
+    heading3: "Job Roles",
+    content3: ["Research Scientist", "Software Architect"],
+  },
+];
+
 export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+  const moduleno = useGeneralStore((state) => state.module_no);
   return (
     <div>
       <Head>
@@ -497,21 +645,18 @@ export default function Courses() {
             </svg>
 
             {/* Module 1 */}
-            <Module1 />
+            <Module1 data={moduleData[0]} />
 
             {/* Module 2 */}
-            <Module2 />
+            <Module1 data={moduleData[1]} />
 
             {/* Module 3 */}
-            <Module3 />
+            <Module1 data={moduleData[2]} />
 
             {/* Module 4 */}
-            <Module4 />
-            <Module5 />
-            <Module6 />
-            <Module7 />
-            <Module8 />
-            <Module9 />
+            <Module1 data={moduleData[3]} />
+            <Module1 data={moduleData[4]} />
+            <Module1 data={moduleData[5]} />
           </div>
           <section className="max-w-7xl mx-auto flex items-center justify-center px-4 mt-8 md:mt-[4.5rem]">
             <button
@@ -809,6 +954,7 @@ export default function Courses() {
       <Footer />
 
       <CtaForm />
+      <Modal moduleData={moduleData[moduleno]} />
     </div>
   );
 }
