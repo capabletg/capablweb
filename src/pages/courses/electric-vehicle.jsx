@@ -49,7 +49,7 @@ import {
 } from "../../components/courses/svgs";
 
 const theme = {
-  primary: "#0ceca1",
+  primary: "#74cf5a",
   text: "#FFFFFF",
 };
 
