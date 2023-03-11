@@ -9,4 +9,19 @@ export const faqs = [
     answer:
       "Artificial Intelligence (AI) and Machine Learning (ML) are two fields that are closely related to Mechatronics. They involve the development of algorithms and software that can be used to make machines and robots more intelligent and adaptable. In Mechatronics, AI and ML can be used to create robots that can learn from their environment, adapt to changing conditions, and make decisions based on the data they collect.",
   },
+  {
+    question: "How do I Get/Install the required software?",
+    answer:
+      "We will send you a download link & a tutorial video of how to install the software.",
+  },
+  {
+    question: "How do I submit the projects?",
+    answer:
+      "Make a submission report (.pdf format) and included all the points that were asked in the problem statement. Pay attention to Formatting & Presentation for the solution.",
+  },
+  {
+    question: "Is There Any Limit For Referrals?",
+    answer:
+      "No, there is no limit both in terms of the number and amount of referrals. You can share with as many friends as you wish to.",
+  },
 ];

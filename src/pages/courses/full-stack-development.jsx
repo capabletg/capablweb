@@ -15,20 +15,13 @@ import {
   toolsLearnt,
 } from "../../utils/data/courses/toolsAndSkills";
 import DownloadBrochure from "../../components/courses/DownloadBrochure";
-import Projects from "../../components/courses/Projects/Projects";
+import Projects from "../../components/courses/Projects/Projects_fullstack";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
 import Faqs from "../../components/courses/Faqs_fullstack";
 import Footer from "../../components/Footer";
 import Module1 from "../../components/courses/Fullstack/Modules/Module1";
 import Modal from "../../components/courses/Module Modal/modal";
-import Module2 from "../../components/courses/Fullstack/Modules/Module2";
-import Module3 from "../../components/courses/Fullstack/Modules/Module3";
-import Module4 from "../../components/courses/Fullstack/Modules/Module4";
-import Module5 from "../../components/courses/Fullstack/Modules/Module5";
-import Module6 from "../../components/courses/Fullstack/Modules/Module6";
-import Module7 from "../../components/courses/Fullstack/Modules/Module7";
-import Module8 from "../../components/courses/Fullstack/Modules/Module8";
 import FeatureComparison from "../../components/FeatureComparison";
 import Header from "../../components/header";
 import useGeneralStore from "../../store/generalStore";
@@ -48,7 +41,7 @@ import {
 } from "../../components/courses/svgs";
 
 const theme = {
-  primary: "#0ceca1",
+  primary: "#627FFD",
   text: "#FFFFFF",
 };
 
@@ -302,6 +295,89 @@ const moduleData = [
   },
 ];
 
+const moduleDataExtended = [
+  [
+    "Variables and data types",
+    "Operators and Expressions",
+    "Conditional statements",
+    "Loops and iteration",
+    "Functions",
+    "Strings and string manipulation",
+    "Lists and arrays",
+    "File I/O",
+  ],
+  [
+    "Variables and data types",
+    "Operators and Expressions",
+    "Conditional statements",
+    "Loops and iteration",
+    "Functions",
+    "Arrays and ArrayLists",
+    "Classes and Objects",
+    "Exception handling",
+  ],
+  [
+    "Arrays",
+    "Linked lists",
+    "Stacks and Queues",
+    "Trees",
+    "Hash tables",
+    "Sorting and Searching",
+    "Graphs",
+    "Dynamic programming",
+  ],
+  [
+    "Arrays and Linked Lists",
+    "Stacks and Queues",
+    "Trees",
+    "Hash Tables",
+    "Sorting Algorithms",
+    "Searching Algorithms",
+    "Graph Algorithms",
+    "Dynamic Programming",
+  ],
+  [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Responsive Design",
+    "Bootstrap",
+    "DOM Manipulation",
+    "jQuery",
+    "AJAX",
+  ],
+  [
+    "React Components",
+    "JSX",
+    "Props and State",
+    "Event Handling",
+    "Conditional Rendering",
+    "Lists and Keys",
+    "Forms and Refs",
+    "React Router",
+  ],
+  [
+    "Server-side Programming",
+    "RESTful API Design",
+    "Expressjs",
+    "Databases",
+    "Object-Relational Mapping (ORM)",
+    "Session and Cookies",
+    "Authentication and Authorization",
+    "Deployment",
+  ],
+  [
+    "Overview of Deployment",
+    "Cloud Hosting",
+    "Virtual Private Servers (VPS)",
+    "Containers and Containerization",
+    "Load Balancing",
+    "Domain Name System (DNS)",
+    "SSL Certificates",
+    "Continuous Integration and Continuous Deployment (CI/CD)",
+  ],
+];
+
 export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
   const moduleno = useGeneralStore((state) => state.module_no);
@@ -334,12 +410,12 @@ export default function Courses() {
                 alt="video bg"
               />
             </div>
-            <button
+            {/* <button
               style={{ background: theme.primary, color: theme.text }}
               className="absolute z-[2] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-sm w-10 h-10 rounded-full pl-0.5"
             >
               <FaPlay />
-            </button>
+            </button> */}
           </div>
 
           <div className="col-span-1 md:col-span-3 lg:col-span-1 mt-12 md:pb-12">
@@ -823,9 +899,9 @@ export default function Courses() {
               boxShadow:
                 "-11px -15px 30px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
             }}
-            className="bg-[#f4f4f4] rounded-2xl py-9 sm:py-10 md:py-12 px-1 md:px-4"
+            className="bg-[url('/images/courses/image.png')] bg-contain rounded-2xl py-9 sm:py-10 md:py-12 px-1 md:px-4"
           >
-            <h2 className="text-center text-[#181818] font-medium text-lg sm:text-xl md:text-2xl mb-10 md:mb-12">
+            <h2 className="text-center text-white font-medium text-lg sm:text-xl md:text-2xl mb-10 md:mb-12">
               {`We're better than the rest! If not,`}
               <br />
               <span className="text-capabl_primary">{`take the program for free`}</span>
@@ -864,13 +940,7 @@ export default function Courses() {
                     key={index}
                     className="flex flex-col sm:flex-row items-center justify-start gap-2 sm:gap-4 mb-4 md:mb-3"
                   >
-                    <div
-                      style={{
-                        boxShadow:
-                          "-6px -6px 15px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
-                      }}
-                      className="w-20 sm:w-16 md:w-[4.5rem] lg:w-20 h-20 sm:h-16 md:h-[4.5rem] lg:h-20 flex-shrink-0 flex items-center justify-center p-1 md:p-2 rounded-xl"
-                    >
+                    <div className="bg-white w-20 sm:w-16 md:w-[4.5rem] lg:w-20 h-20 sm:h-16 md:h-[4.5rem] lg:h-20 flex-shrink-0 flex items-center justify-center p-1 md:p-2 rounded-xl">
                       <img
                         className="w-full object-contain mt-1"
                         src={item?.icon}
@@ -882,7 +952,7 @@ export default function Courses() {
                       <p className="text-capabl_primary font-semibold text-base lg:text-xl">
                         {item?.count}
                       </p>
-                      <p className="text-xs lg:text-sm text-black text-center sm:text-left">
+                      <p className="text-xs lg:text-sm text-white text-center sm:text-left">
                         {item?.label}
                       </p>
                     </div>
@@ -896,13 +966,7 @@ export default function Courses() {
               </div>
 
               <div className="col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
-                <div
-                  style={{
-                    boxShadow:
-                      "-11px -15px 30px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
-                  }}
-                  className="rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6"
-                >
+                <div className="bg-white rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6">
                   <div className="flex flex-col items-center justify-start gap-2">
                     <p className="text-[#545D61] text-sm font-light text-center">{`Get India’s Biggest Scholarship`}</p>
                     <p className="text-[#CF2323] text-base sm:text-lg md:text-xl text-center font-semibold">{`Societies`}</p>
@@ -964,7 +1028,12 @@ export default function Courses() {
       <Footer />
 
       <CtaForm />
-      <Modal moduleData={moduleData[moduleno]} />
+      <Modal
+        moduleData={{
+          moduleData: moduleData[moduleno],
+          moduleDataExtended: moduleDataExtended[moduleno],
+        }}
+      />
     </div>
   );
 }

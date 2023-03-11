@@ -65,7 +65,7 @@ export default function Module1(data) {
           <div className="flex flex-col items-start justify-start md:gap-1 h-full">
             {/* Video here */}
             <div className="bg-white mb-3 sm:mb-5 flex-grow w-full relative overflow-hidden rounded-sm h-[9rem] sm:h-[12rem] md:h-[15rem] lg:h-[12rem] group cursor-pointer">
-              <video
+              {/* <video
                 ref={videoRef}
                 src="/videos/loop_video_2.mp4"
                 autoPlay={false}
@@ -73,8 +73,14 @@ export default function Module1(data) {
                 className="w-full h-full object-cover transition-all duration-500"
                 muted={true}
                 type="video/mp4"
+              /> */}
+              <img
+                className="w-full h-full object-cover transition-all duration-500"
+                src={`/images/courses/FullStackIcons/Module${
+                  moduleindex + 1
+                }.jpg`}
+                alt={`Module ${moduleindex + 1}`}
               />
-
               <div onClick={() => toggleVideo()}>
                 <div
                   className={`absolute top-0 left-0 w-full h-full bg-black transition-all duration-200 ${

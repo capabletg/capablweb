@@ -15,7 +15,7 @@ import {
   toolsLearnt,
 } from "../../utils/data/courses/toolsAndSkills";
 import DownloadBrochure from "../../components/courses/DownloadBrochure";
-import Projects from "../../components/courses/Projects/Projects";
+import Projects from "../../components/courses/Projects/Projects_mechatronics";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
 import Faqs from "../../components/courses/Faqs_mechatronics";
@@ -294,6 +294,83 @@ const moduleData = [
   },
 ];
 
+const moduleDataExtended = [
+  [
+    "Introduction to mechatronics",
+    "Fundamentals of Electronics",
+    "Analog Circuits and Design",
+    "Digital Circuits and Systems",
+    "Sensors and transducers",
+    "Electrical Machines",
+    "Hydraulics & Pneumatics actuators",
+    "Automatic Control System",
+  ],
+  [
+    "Introduction to Embedded System",
+    "Embedded C/C++ Programming",
+    "Introduction to Microcontrollers",
+    "ARM Microcontrollers",
+    "General Purpose I/O’s",
+    "Introduction to PWM",
+    "Introduction to USART",
+    "Introduction to I2C",
+    "Introduction to SPI",
+    "Introduction to Timers/Counters",
+    "Introduction to CAN",
+    "Introduction to ADC",
+    "STM32 Microcontrollers",
+    "Introduction to LCD",
+  ],
+  [
+    "ROS Introduction and basics",
+    "Scripting in ROS",
+    "ROS build system",
+    "ROS Turtlesim",
+    "ROS Tools & Utilities",
+    "Simulation in Gazebo",
+    "TF - TransForm",
+    "Robot Mapping & Navigation",
+    "Hands-on Hardware",
+  ],
+  [
+    "Introduction of Industrial Automation",
+    "Components and Devices",
+    "Process Variables Measurements",
+    "Process Control",
+    "Programmable Logic Controllers (PLC’s)",
+    "PLC Programming",
+    "Industrial Communication",
+    "Industrial Management",
+  ],
+  [
+    "Introduction to Robotics",
+    "Fundamentals of Robot Mechanics",
+    "Mechanical Structure and Manipulators",
+    "Hydraulic and Pneumatic Actuator",
+    "Robot End Effectors",
+    "Introduction to Industrial Robotics",
+    "Classification of Robot Workspace",
+  ],
+  [
+    "Concepts & Technology behind IoT",
+    "IoT Device Design",
+    "Cloud",
+    "IoT Product design",
+    "Hands-on using Raspberry Pi board",
+    "Introduction to Industry 4.0",
+    "IoT in Smart Manufacturing",
+  ],
+  [
+    "Overview of Artificial Intelligence (AI)",
+    "Neural Networks",
+    "Machine Learning",
+    "Deep Learning",
+    "Computational Intelligence Algorithms",
+    "Implementing Applications with AI",
+    "Machine Learning in Robotics",
+  ],
+];
+
 export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
   const moduleno = useGeneralStore((state) => state.module_no);
@@ -326,12 +403,12 @@ export default function Courses() {
                 alt="video bg"
               />
             </div>
-            <button
+            {/* <button
               style={{ background: theme.primary, color: theme.text }}
               className="absolute z-[2] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-sm w-10 h-10 rounded-full pl-0.5"
             >
               <FaPlay />
-            </button>
+            </button> */}
           </div>
 
           <div className="col-span-1 md:col-span-3 lg:col-span-1 mt-12 md:pb-12">
@@ -813,9 +890,9 @@ export default function Courses() {
               boxShadow:
                 "-11px -15px 30px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
             }}
-            className="bg-[#f4f4f4] rounded-2xl py-9 sm:py-10 md:py-12 px-1 md:px-4"
+            className="bg-[url('/images/courses/image.png')] bg-contain rounded-2xl py-9 sm:py-10 md:py-12 px-1 md:px-4"
           >
-            <h2 className="text-center text-[#181818] font-medium text-lg sm:text-xl md:text-2xl mb-10 md:mb-12">
+            <h2 className="text-center text-white font-medium text-lg sm:text-xl md:text-2xl mb-10 md:mb-12">
               {`We're better than the rest! If not,`}
               <br />
               <span className="text-capabl_primary">{`take the program for free`}</span>
@@ -854,13 +931,7 @@ export default function Courses() {
                     key={index}
                     className="flex flex-col sm:flex-row items-center justify-start gap-2 sm:gap-4 mb-4 md:mb-3"
                   >
-                    <div
-                      style={{
-                        boxShadow:
-                          "-6px -6px 15px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
-                      }}
-                      className="w-20 sm:w-16 md:w-[4.5rem] lg:w-20 h-20 sm:h-16 md:h-[4.5rem] lg:h-20 flex-shrink-0 flex items-center justify-center p-1 md:p-2 rounded-xl"
-                    >
+                    <div className="bg-white w-20 sm:w-16 md:w-[4.5rem] lg:w-20 h-20 sm:h-16 md:h-[4.5rem] lg:h-20 flex-shrink-0 flex items-center justify-center p-1 md:p-2 rounded-xl">
                       <img
                         className="w-full object-contain mt-1"
                         src={item?.icon}
@@ -872,7 +943,7 @@ export default function Courses() {
                       <p className="text-capabl_primary font-semibold text-base lg:text-xl">
                         {item?.count}
                       </p>
-                      <p className="text-xs lg:text-sm text-black text-center sm:text-left">
+                      <p className="text-xs lg:text-sm text-white text-center sm:text-left">
                         {item?.label}
                       </p>
                     </div>
@@ -886,13 +957,7 @@ export default function Courses() {
               </div>
 
               <div className="col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
-                <div
-                  style={{
-                    boxShadow:
-                      "-11px -15px 30px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
-                  }}
-                  className="rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6"
-                >
+                <div className="bg-white rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6">
                   <div className="flex flex-col items-center justify-start gap-2">
                     <p className="text-[#545D61] text-sm font-light text-center">{`Get India’s Biggest Scholarship`}</p>
                     <p className="text-[#CF2323] text-base sm:text-lg md:text-xl text-center font-semibold">{`Societies`}</p>
@@ -954,7 +1019,12 @@ export default function Courses() {
       <Footer />
 
       <CtaForm />
-      <Modal moduleData={moduleData[moduleno]} />
+      <Modal
+        moduleData={{
+          moduleData: moduleData[moduleno],
+          moduleDataExtended: moduleDataExtended[moduleno],
+        }}
+      />
     </div>
   );
 }

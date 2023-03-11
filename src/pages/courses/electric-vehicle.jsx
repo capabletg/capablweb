@@ -18,7 +18,7 @@ import DownloadBrochure from "../../components/courses/DownloadBrochure";
 import Projects from "../../components/courses/Projects/Projects";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
-import Faqs from "../../components/courses/Faqs";
+import Faqs from "../../components/courses/Faqs_ev";
 import Footer from "../../components/Footer";
 import Module1 from "../../components/courses/EV/Modules/Module1";
 import Module2 from "../../components/courses/EV/Modules/Module2";
@@ -402,6 +402,64 @@ const moduleData = [
   },
 ];
 
+const moduleDataExtended = [
+  [
+    "Automotive Industry",
+    "Introduction to batteries",
+    "MATLAB Modeling",
+    "Finding input parameters for Vehicle Model",
+  ],
+  [
+    "Electric Vehicle Architecture",
+    "Control Systems Architecture",
+    "Architecture for EVs",
+    "EV Retrofitting & Charging Protocols",
+    "EV Policy Landscape, Patent Landscape, and Case Studies",
+  ],
+  [
+    "Vehicle Technology History & Evolution",
+    "Lithium-ion Battery Technology",
+    "Lithium-ion Battery Terminologies",
+    "Battery Pack Engineering",
+    "Battery Pack Thermal Engineering",
+    "Battery Management System",
+  ],
+  [
+    "Introduction to Battery and Battery Pack design",
+    "Battery Pack Component Selection",
+    "Creo Modeling Introduction",
+    "Battery Pack Modeling",
+    "Battery Pack Analysis",
+    "Thermal Modeling of Li-ion Batteries",
+  ],
+  [
+    "Introduction to EV motors",
+    "Fundamentals of Electric Motor",
+    "Types of Electric Motors",
+    "Design Considerations of EV Motor",
+    "Mechanical Design of the motor",
+    "Motor design and simulation",
+  ],
+  [
+    "Introduction of Power Electronics in EV",
+    "Insight into Power Electronic Circuits",
+    "Circuits components & Selection",
+    "Converters, Inverters & Motor Drivers",
+    "Battery Algorithms & Chargers",
+    "Battery Thermal System Design",
+    "Future of Power Electronics in EVs",
+  ],
+  ["Introduction to CAN", "CAN Analyzing", "LIN & Flexray protocols"],
+  [
+    "Introduction To Wiring Harness Design",
+    "Wiring Harness Design",
+    "Wiring Harness Component Specifications & Selection Parameters",
+    "Wiring Harness Designing",
+    "Manufacturing & Documentation",
+  ],
+  ["Homologation Basics", "Testing Standards", "EV Testing", "Safety in EV’s"],
+];
+
 export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
   const moduleno = useGeneralStore((state) => state.module_no);
@@ -435,12 +493,12 @@ export default function Courses() {
                 alt="video bg"
               />
             </div>
-            <button
+            {/* <button
               style={{ background: theme.primary, color: theme.text }}
               className="absolute z-[2] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-sm w-10 h-10 rounded-full pl-0.5"
             >
               <FaPlay />
-            </button>
+            </button> */}
           </div>
 
           <div className="col-span-1 md:col-span-3 lg:col-span-1 mt-12 md:pb-12">
@@ -925,9 +983,9 @@ export default function Courses() {
               boxShadow:
                 "-11px -15px 30px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
             }}
-            className="bg-[#f4f4f4] rounded-2xl py-9 sm:py-10 md:py-12 px-1 md:px-4"
+            className="bg-[url('/images/courses/image.png')] bg-contain rounded-2xl py-9 sm:py-10 md:py-12 px-1 md:px-4"
           >
-            <h2 className="text-center text-[#181818] font-medium text-lg sm:text-xl md:text-2xl mb-10 md:mb-12">
+            <h2 className="text-center text-white font-medium text-lg sm:text-xl md:text-2xl mb-10 md:mb-12">
               {`We're better than the rest! If not,`}
               <br />
               <span className="text-capabl_primary">{`take the program for free`}</span>
@@ -966,13 +1024,7 @@ export default function Courses() {
                     key={index}
                     className="flex flex-col sm:flex-row items-center justify-start gap-2 sm:gap-4 mb-4 md:mb-3"
                   >
-                    <div
-                      style={{
-                        boxShadow:
-                          "-6px -6px 15px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
-                      }}
-                      className="w-20 sm:w-16 md:w-[4.5rem] lg:w-20 h-20 sm:h-16 md:h-[4.5rem] lg:h-20 flex-shrink-0 flex items-center justify-center p-1 md:p-2 rounded-xl"
-                    >
+                    <div className="bg-white w-20 sm:w-16 md:w-[4.5rem] lg:w-20 h-20 sm:h-16 md:h-[4.5rem] lg:h-20 flex-shrink-0 flex items-center justify-center p-1 md:p-2 rounded-xl">
                       <img
                         className="w-full object-contain mt-1"
                         src={item?.icon}
@@ -984,7 +1036,7 @@ export default function Courses() {
                       <p className="text-capabl_primary font-semibold text-base lg:text-xl">
                         {item?.count}
                       </p>
-                      <p className="text-xs lg:text-sm text-black text-center sm:text-left">
+                      <p className="text-xs lg:text-sm text-white text-center sm:text-left">
                         {item?.label}
                       </p>
                     </div>
@@ -998,13 +1050,7 @@ export default function Courses() {
               </div>
 
               <div className="col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
-                <div
-                  style={{
-                    boxShadow:
-                      "-11px -15px 30px #FFFFFF, 6px 4px 24px rgba(177, 194, 193, 0.61)",
-                  }}
-                  className="rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6"
-                >
+                <div className="bg-white rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6">
                   <div className="flex flex-col items-center justify-start gap-2">
                     <p className="text-[#545D61] text-sm font-light text-center">{`Get India’s Biggest Scholarship`}</p>
                     <p className="text-[#CF2323] text-base sm:text-lg md:text-xl text-center font-semibold">{`Societies`}</p>
@@ -1066,7 +1112,12 @@ export default function Courses() {
       <Footer />
 
       <CtaForm />
-      <Modal moduleData={moduleData[moduleno]} />
+      <Modal
+        moduleData={{
+          moduleData: moduleData[moduleno],
+          moduleDataExtended: moduleDataExtended[moduleno],
+        }}
+      />
     </div>
   );
 }
