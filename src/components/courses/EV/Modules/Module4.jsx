@@ -65,7 +65,7 @@ export default function Module4(data) {
           <div className="flex flex-col items-start justify-start md:gap-1 h-full">
             {/* Video here */}
             <div className="bg-white mb-3 sm:mb-5 flex-grow w-full relative overflow-hidden rounded-sm h-[9rem] sm:h-[12rem] md:h-[15rem] lg:h-[12rem] group cursor-pointer">
-              <video
+              {/* <video
                 ref={videoRef}
                 src="/videos/loop_video_2.mp4"
                 autoPlay={false}
@@ -73,6 +73,11 @@ export default function Module4(data) {
                 className="w-full h-full object-cover transition-all duration-500"
                 muted={true}
                 type="video/mp4"
+              /> */}
+              <img
+                className="w-full h-full object-cover transition-all duration-500"
+                src="/images/courses/EVIcons/EV Module 4.jpg"
+                alt="Mod 4"
               />
 
               <div onClick={() => toggleVideo()}>

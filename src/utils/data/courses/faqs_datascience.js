@@ -16,4 +16,14 @@ export const faqs = [
     answer:
       "Yes, coding is an essential component of data science, and it is typically taught to beginners as part of their data science education. In fact, learning to code is often one of the first steps in becoming a data scientist.",
   },
+  {
+    question: "How do I submit the projects?",
+    answer:
+      "Make a submission report (.pdf format) and included all the points that were asked in the problem statement. Pay attention to Formatting & Presentation for the solution.",
+  },
+  {
+    question: "Is There Any Limit For Referrals?",
+    answer:
+      "No, there is no limit both in terms of the number and amount of referrals. You can share with as many friends as you wish to.",
+  },
 ];
