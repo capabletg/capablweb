@@ -7,6 +7,7 @@ export default function Module1(data) {
   const ModuleValue = useGeneralStore((state) => state.module);
   const [playing, setPlaying] = useState(true);
   const videoRef = useRef();
+  const moduleindex = data?.data?.moduleindex;
 
   const playVideo = () => {
     setPlaying(true);
@@ -39,14 +40,13 @@ export default function Module1(data) {
       <div className="relative z-[1]">
         <div className="items-center justify-start hidden md:flex md:mb-4">
           <p className="uppercase text-[#ff696d] font-semibold text-xs bg-white rounded-full px-3 py-1">
-            Module 1
+            {`${data?.data?.name}`}
           </p>
         </div>
 
         <div className="flex items-start justify-between gap-4 pt-1 sm:pt-4 md:pt-2 lg:pt-0">
           <p className="text-white text-base sm:text-2xl font-light">
-            Fundamentals of <br />{" "}
-            <span className="font-medium">EV & Powertrain</span>
+            {`${data?.data?.modulename}`}
           </p>
 
           <div className="flex items-center justify-end gap-2.5 sm:gap-4">
@@ -76,8 +76,8 @@ export default function Module1(data) {
               /> */}
               <img
                 className="w-full h-full object-cover transition-all duration-500"
-                src="/images/courses/EVIcons/EV Module 1.jpg"
-                alt="Mod 1"
+                src={`/images/courses/EVIcons/Module${moduleindex + 1}.jpg`}
+                alt={`Module ${moduleindex + 1}`}
               />
               <div onClick={() => toggleVideo()}>
                 <div
@@ -88,7 +88,7 @@ export default function Module1(data) {
                   }`}
                 />
 
-                {!!playing && (
+                {/* {!!playing && (
                   <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-[#FF0000] text-white rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-95 transition-all duration-500">
                     <FaPause className="text-xs ml-0.5" />
                   </button>
@@ -98,7 +98,7 @@ export default function Module1(data) {
                   <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-[#FF0000] text-white rounded-full group-hover:scale-95 transition-all duration-500">
                     <FaPlay className="text-xs ml-0.5" />
                   </button>
-                )}
+                )} */}
               </div>
             </div>
 
@@ -135,7 +135,7 @@ export default function Module1(data) {
             </p>
             <button
               onClick={() => {
-                ShowModal(), ModuleValue(0);
+                ShowModal(), ModuleValue(moduleindex);
               }}
               className="mt-4 sm:mt-6 md:mb-1 flex-shrink-0 bg-capabl_primary cursor-pointer rounded-md px-3 py-1 sm:py-1.5 text-black text-[0.6rem] sm:text-xs md:text-sm lg:text-xs hover:scale-95 transition-all duration-300"
             >

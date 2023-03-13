@@ -41,18 +41,61 @@ export default function Content({ content = null }) {
           ref={contentRef}
           className="h-full max-h-[30rem] overflow-y-scroll scrollbar-hide relative z-0 pr-4 pb-6"
         >
-          <h3 className="text-sm font-normal text-black mb-4">
+          <h3 className=" text-base font-bold text-black mb-4">
             {content?.project_title}
           </h3>
-          {Array.isArray(content.project_description) ? (
-            content?.project_description?.map((item, index) => (
-              <p className="text-[#6c6c6c] text-sm font-light" key={index}>{`${
-                index + 1
-              }. ${item}`}</p>
+          <h6 className="text-base font-normal text-black mb-1">
+            Software/Tool
+          </h6>
+          {Array.isArray(content.project_Softwares) ? (
+            content?.project_Softwares?.map((item, index) => (
+              <p
+                className="text-[#6c6c6c] text-sm font-light mb-4"
+                key={index}
+              >{`${index + 1}. ${item}`}</p>
             ))
           ) : (
-            <p className="text-[#6c6c6c] text-sm font-light">
+            <p className="text-[#6c6c6c] text-sm mb-4 font-light">
+              {content?.project_Softwares}
+            </p>
+          )}
+          <h6 className="text-base font-normal text-black mb-1">Industry</h6>
+          {Array.isArray(content.project_industry) ? (
+            content?.project_industry?.map((item, index) => (
+              <p
+                className="text-[#6c6c6c] text-sm font-light mb-4"
+                key={index}
+              >{`${index + 1}. ${item}`}</p>
+            ))
+          ) : (
+            <p className="text-[#6c6c6c] text-sm mb-4 font-light">
+              {content?.project_Industry}
+            </p>
+          )}
+          <h6 className="text-base font-normal text-black mb-1">What to do</h6>
+          {Array.isArray(content.project_description) ? (
+            content?.project_description?.map((item, index) => (
+              <p
+                className="text-[#6c6c6c] text-sm font-light mb-4"
+                key={index}
+              >{`${index + 1}. ${item}`}</p>
+            ))
+          ) : (
+            <p className="text-[#6c6c6c] text-sm mb-4 font-light">
               {content?.project_description}
+            </p>
+          )}
+          <h6 className="text-base font-normal text-black mb-1">Skills</h6>
+          {Array.isArray(content.project_Skills) ? (
+            content?.project_Skills?.map((item, index) => (
+              <p
+                className="text-[#6c6c6c] text-sm font-light mb-4"
+                key={index}
+              >{`${index + 1}. ${item}`}</p>
+            ))
+          ) : (
+            <p className="text-[#6c6c6c] text-sm mb-4 font-light">
+              {content?.project_Skills}
             </p>
           )}
         </div>

@@ -78,7 +78,7 @@ const accordianData = [
   },
   {
     title: `Competitions, Projects, Credits & More!`,
-    description: `Get - updates on national/international events, your major-minor projects done, credits for internships, industrial projects in Electric Vehicle, and services that help you be Capabl`,
+    description: `Get - updates on national/international events, your major-minor projects done, credits for internships, industrial projects in Data Science, and services that help you be Capabl`,
     image: <CompetitionsProjectsSvg theme={theme} />,
   },
   {
@@ -444,7 +444,7 @@ export default function Courses() {
 
           <div className="col-span-1 md:col-span-3 lg:col-span-1 mt-12 md:pb-12">
             <h1
-              title="From 0 to Hero in Electric Vehicles Graduate with a core job, not just a degree!"
+              title="From 0 to Hero in Data Science Graduate with a core job, not just a degree!"
               className="relative text-lg md:text-3xl text-center md:text-left text-black font-medium mb-3 md:mb-2.5 max-w-md mx-auto md:max-w-lg md:mx-0 md:leading-[3rem]"
             >
               {`From`}
@@ -539,7 +539,7 @@ export default function Courses() {
         <section className="max-w-7xl hidden mx-auto mt-16 md:mt-20 pl-0 md:pl-4">
           <div className="p-4 md:py-10 md:pl-10 md:rounded-tl-2xl md:rounded-bl-2xl bg-[#14213D] grid grid-cols-1 md:grid-cols-7 gap-4 md:gap-20">
             <div className="col-span-1 md:col-span-2 text-white pt-8 md:pt-0 flex flex-col justify-start md:justify-center max-w-lg">
-              <h2 className="font-semibold text-lg md:text-xl mb-3 md:mb-5">{`Our alumni going places in the Electric Vehicles Domain!`}</h2>
+              <h2 className="font-semibold text-lg md:text-xl mb-3 md:mb-5">{`Our alumni going places in the Data Science Domain!`}</h2>
               <p className="text-sm mb-3 md:mb-6 font-light">
                 {`Your success is our reward! Hear it from our alumni who made it to their dream careers with their efforts and our support ❤️`}
               </p>
@@ -579,7 +579,7 @@ export default function Courses() {
 
         <section className="px-4 lg:px-6 mt-6 lg:mt-8 max-w-7xl mx-auto">
           <h2 className="text-center font-medium text-lg md:text-2xl mb-3 lg:mb-4">
-            Become a real EV Engineer with the Capabl Ecosystem!
+            Become a real Data Science Engineer with the Capabl Ecosystem!
           </h2>
           <p className="text-center text-[#636363] text-xs md:text-sm max-w-xl mx-auto">
             {`To become the best, you need the best. You need not just a course but an ecosystem of Stanford/IIT that helps you crack your dream EV jobs with the likes of Daimler, Tata, Ather, Honda, etc., or get into your dream university!`}
@@ -650,7 +650,7 @@ export default function Courses() {
               <path d="M1.8445 35.5129C9.30516 18.0189 24.767 6.88707 39.1312 5.42451C57.0058 3.60239 72.1618 14.7657 83.3751 29.2976C88.7616 36.2783 93.424 44.117 97.7779 52.2347C91.8514 51.0025 85.4661 50.9979 79.3161 53.2543C77.7989 53.8135 78.2278 56.4457 79.6859 56.0743C86.1741 54.4213 92.3842 53.2676 98.6614 53.8934C99.1698 54.8542 99.6743 55.8184 100.176 56.7849C101.439 59.217 104.95 56.7005 103.936 54.224C104.33 54.0275 104.665 53.5927 104.684 52.9775C104.855 47.6206 105.185 42.1982 105.77 36.8063C106.026 34.4647 106.358 32.1211 106.691 29.7783C107.126 26.7091 107.562 23.641 107.823 20.5805C107.999 18.5024 105.639 18.2583 105.045 20.2895C102.13 30.2743 101.891 41.4647 102.498 51.4313C93.3018 33.871 82.7452 16.9061 67.4389 7.54826C52.9028 -1.33695 34.6432 -2.84197 18.3685 9.55601C10.5893 15.4803 4.10768 24.3696 0.3156 34.7529C-0.123815 35.9476 1.33922 36.6947 1.8445 35.5129Z" />
             </svg>
 
-            <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Ace your dream career in Electric Vehicles!`}</h2>
+            <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Ace your dream career in Data Science!`}</h2>
             <p className="text-xs md:text-sm max-w-sm md:max-w-lg mx-auto text-center font-light text-[#636363]">{`With expert guidance and your efforts, nothing can stop you from making your dream career a reality.`}</p>
           </div>
 
@@ -718,9 +718,9 @@ export default function Courses() {
             className="w-8 md:w-12 h-1.5 md:h-2 mx-auto mb-6 md:mb-10"
           />
 
-          <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Pathway to become a kick-ass EV Engineer!`}</h2>
+          <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Pathway to become a kick-ass Data Scientist!`}</h2>
           <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">
-            {`Our Electric Vehicles module is verified by working professionals from companies like Ather, Google, and Ola Electric and graduates of Stanford & IITs, taught by top industry experts in a systematic manner, with a practical foundation.`}
+            {`Our data science module is verified by working professionals from companies like Facebook, Google, and Walmart and graduates of Standford & IITs, taught by top industry experts in a systematic manner, with practical foundation. `}
           </p>
 
           <div className="mt-10 sm:mt-12 md:mt-14 lg:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 relative">

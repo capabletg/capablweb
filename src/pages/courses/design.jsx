@@ -85,7 +85,7 @@ const accordianData = [
   },
   {
     title: `Competitions, Projects, Credits & More!`,
-    description: `Get - updates on national/international events, your major-minor projects done, credits for internships, industrial projects in Electric Vehicle, and services that help you be Capabl`,
+    description: `Get - updates on national/international events, your major-minor projects done, credits for internships, industrial projects in Design Engineering, and services that help you be Capabl`,
     image: <CompetitionsProjectsSvg theme={theme} />,
   },
   {
@@ -465,7 +465,7 @@ export default function Courses() {
 
           <div className="col-span-1 md:col-span-3 lg:col-span-1 mt-12 md:pb-12">
             <h1
-              title="From 0 to Hero in Electric Vehicles Graduate with a core job, not just a degree!"
+              title="From 0 to Hero in Design Engineerings Graduate with a core job, not just a degree!"
               className="relative text-lg md:text-3xl text-center md:text-left text-black font-medium mb-3 md:mb-2.5 max-w-md mx-auto md:max-w-lg md:mx-0 md:leading-[3rem]"
             >
               {`From`}
@@ -560,7 +560,7 @@ export default function Courses() {
         <section className="max-w-7xl hidden mx-auto mt-16 md:mt-20 pl-0 md:pl-4">
           <div className="p-4 md:py-10 md:pl-10 md:rounded-tl-2xl md:rounded-bl-2xl bg-[#14213D] grid grid-cols-1 md:grid-cols-7 gap-4 md:gap-20">
             <div className="col-span-1 md:col-span-2 text-white pt-8 md:pt-0 flex flex-col justify-start md:justify-center max-w-lg">
-              <h2 className="font-semibold text-lg md:text-xl mb-3 md:mb-5">{`Our alumni going places in the Electric Vehicles Domain!`}</h2>
+              <h2 className="font-semibold text-lg md:text-xl mb-3 md:mb-5">{`Our alumni going places in the Design Engineerings Domain!`}</h2>
               <p className="text-sm mb-3 md:mb-6 font-light">
                 {`Your success is our reward! Hear it from our alumni who made it to their dream careers with their efforts and our support ❤️`}
               </p>
@@ -739,9 +739,9 @@ export default function Courses() {
             className="w-8 md:w-12 h-1.5 md:h-2 mx-auto mb-6 md:mb-10"
           />
 
-          <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Pathway to become a kick-ass EV Engineer!`}</h2>
+          <h2 className="text-center font-medium text-lg md:text-2xl mb-3 md:mb-4 text-black">{`Pathway to become a kick-ass Design Engineer!`}</h2>
           <p className="text-xs md:text-sm max-w-md md:max-w-2xl mx-auto text-center font-normal text-[#6c6c6c]">
-            {`Our Electric Vehicles module is verified by working professionals from companies like Ather, Google, and Ola Electric and graduates of Stanford & IITs, taught by top industry experts in a systematic manner, with a practical foundation.`}
+            {`Our Design & CAE module is verified by working professionals from companies like SAE India, Tata, and Daimler and graduates of Standford & IITs, taught by top industry experts in a systematic manner, with practical foundation. `}
           </p>
 
           <div className="mt-10 sm:mt-12 md:mt-14 lg:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 relative">

@@ -88,7 +88,7 @@ export default function Module1(data) {
                   }`}
                 />
 
-                {!!playing && (
+                {/* {!!playing && (
                   <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-[#FF0000] text-white rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-95 transition-all duration-500">
                     <FaPause className="text-xs ml-0.5" />
                   </button>
@@ -98,7 +98,7 @@ export default function Module1(data) {
                   <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center bg-[#FF0000] text-white rounded-full group-hover:scale-95 transition-all duration-500">
                     <FaPlay className="text-xs ml-0.5" />
                   </button>
-                )}
+                )} */}
               </div>
             </div>
 
