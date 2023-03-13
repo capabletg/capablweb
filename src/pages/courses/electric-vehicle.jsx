@@ -151,6 +151,8 @@ const scolarshipProcess = [
 const moduleData = [
   {
     name: "Module 1",
+    modulename: "Fundamentals of EV & Powertrain",
+    moduleindex: 0,
     intro:
       "Learn basic concepts and calculations needed to design an EV Powertrain",
     heading1: "Projects",
@@ -179,6 +181,8 @@ const moduleData = [
   },
   {
     name: "Module 2",
+    modulename: "E/E Architecture",
+    moduleindex: 1,
     intro:
       "Learn different Architectures & Topologies and their application in EV’s",
     heading1: "Projects",
@@ -207,6 +211,8 @@ const moduleData = [
   },
   {
     name: "Module 3",
+    modulename: "Li-ion Cell & BMS Modeling",
+    moduleindex: 2,
     intro:
       " Learn about Cell Types, Cell Chemistries & Usage of BMS to manage the Li-ion Cells.",
     heading1: "Projects",
@@ -235,6 +241,8 @@ const moduleData = [
   },
   {
     name: "Module 4",
+    modulename: "EV Battery Design & Analysis",
+    moduleindex: 3,
     intro:
       "Learn design & analysis of Battery Components in PTC Creo & Ansys Fluent",
     heading1: "Projects",
@@ -264,6 +272,8 @@ const moduleData = [
   },
   {
     name: "Module 5",
+    modulename: "EV Motor Technology",
+    moduleindex: 4,
     intro:
       "Learn about the various Motors in EV’s & their design and simulation in Altair FluxMotor",
     heading1: "Projects",
@@ -292,6 +302,8 @@ const moduleData = [
   },
   {
     name: "Module 6",
+    modulename: " Power Electronics",
+    moduleindex: 5,
     intro:
       " Learn about the electronic components like MOSFETS, Converters, Inverters & Protection circuits in EV",
     heading1: "Projects",
@@ -320,6 +332,8 @@ const moduleData = [
   },
   {
     name: "Module 7",
+    modulename: " Communication Protocols",
+    moduleindex: 6,
     intro:
       " Learn how CAN Protocols function to perform communication between the electronic components",
     heading1: "Projects",
@@ -347,6 +361,8 @@ const moduleData = [
   },
   {
     name: "Module 8",
+    modulename: "  Wiring Harness Design",
+    moduleindex: 7,
     intro:
       "Learn the design & calculation of Wiring Harness using Siemens CHS & Catia",
     heading1: "Projects",
@@ -375,6 +391,8 @@ const moduleData = [
   },
   {
     name: "Module 9",
+    modulename: " Testing & Homologation",
+    moduleindex: 8,
     intro: "Learn about the testing standards & homologation standards of EV’s",
     heading1: "Projects",
     content1: [
@@ -815,18 +833,18 @@ export default function Courses() {
             <Module1 data={moduleData[0]} />
 
             {/* Module 2 */}
-            <Module2 data={moduleData[1]} />
+            <Module1 data={moduleData[1]} />
 
             {/* Module 3 */}
-            <Module3 data={moduleData[2]} />
+            <Module1 data={moduleData[2]} />
 
             {/* Module 4 */}
-            <Module4 data={moduleData[3]} />
-            <Module5 data={moduleData[4]} />
-            <Module6 data={moduleData[5]} />
-            <Module7 data={moduleData[6]} />
-            <Module8 data={moduleData[7]} />
-            <Module9 data={moduleData[8]} />
+            <Module1 data={moduleData[3]} />
+            <Module1 data={moduleData[4]} />
+            <Module1 data={moduleData[5]} />
+            <Module1 data={moduleData[6]} />
+            <Module1 data={moduleData[7]} />
+            <Module1 data={moduleData[8]} />
           </div>
           <section className="max-w-7xl mx-auto flex items-center justify-center px-4 mt-8 md:mt-[4.5rem]">
             <button
