@@ -178,7 +178,7 @@ export default function AceYourDreamSlider() {
               className="flex-shrink-0 min-h-[18rem] bg-white w-[13rem] mx-auto relative flex items-center justify-start flex-col p-4 rounded-lg transition-all duration-300 border border-transparent hover:border-capabl_primary hover:shadow-lg hover:shadow-[#e5e5e5]"
             >
               <img
-                className="w-28 object-contain"
+                className="w-28 h-28 object-contain"
                 src={item?.image}
                 alt={item?.title}
               />

@@ -44,7 +44,7 @@ export default function Module1(data) {
           </p>
         </div>
 
-        <div className="flex items-start justify-between gap-4 pt-1 sm:pt-4 md:pt-2 lg:pt-0">
+        <div className="flex items-start justify-between gap-4 pt-1 sm:pt-4 md:pt-2 lg:pt-0 lg:min-h-[64px] items-cente">
           <p className="text-white text-base sm:text-2xl font-light">
             {`${data?.data?.modulename}`}
           </p>

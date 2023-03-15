@@ -38,13 +38,13 @@ export default function Module1(data) {
       />
 
       <div className="relative z-[1]">
-        <div className="items-center justify-start hidden md:flex md:mb-4">
+        <div className="items-center justify-start hidden md:flex md:mb-4 ">
           <p className="uppercase text-[#ff696d] font-semibold text-xs bg-white rounded-full px-3 py-1">
             {`${data?.data?.name}`}
           </p>
         </div>
 
-        <div className="flex items-start justify-between gap-4 pt-1 sm:pt-4 md:pt-2 lg:pt-0">
+        <div className="flex justify-between gap-4 pt-1 sm:pt-4 md:pt-2 lg:pt-0 lg:min-h-[64px] items-center">
           <p className="text-white text-base sm:text-2xl font-light">
             {`${data?.data?.modulename}`}
           </p>
@@ -116,7 +116,7 @@ export default function Module1(data) {
           </div>
 
           <div className="flex flex-col items-start justify-start h-full">
-            <p className="text-[#80929D] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mb-2 sm:mb-4">{`Learn different Architectures & Topologies and their application in EV’s`}</p>
+            <p className="text-[#80929D] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs mb-2 sm:mb-4">{`${data?.data?.intro}`}</p>
 
             <p className="text-[#B3BEC4] font-normal sm:font-light text-[0.6rem] sm:text-xs md:text-sm lg:text-xs">{`Introduction to the program`}</p>
 

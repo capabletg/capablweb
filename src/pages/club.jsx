@@ -18,7 +18,7 @@ export default function Courses() {
       <Head>
         <title>Capabl Club</title>
         <meta name="description" content="Capable Club" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Header showTribe={true} />
@@ -28,44 +28,68 @@ export default function Courses() {
           <div className="py-8 px-16 lg:px-32 grid grid-cols-1 gap-3 md:grid-cols-3">
             <div className="grid grid-row-2 gap-3 h-85">
               <div className="bg-[#FF0860] text-white rounded-lg pt-10 pl-6">
-                <p className="text-2xl md:text-3xl font-bold font-320">Capabl</p>
+                <p className="text-2xl md:text-3xl font-bold font-320">
+                  Capabl
+                </p>
                 <p className="text-2xl md:text-3xl font-bold font-320">Blogs</p>
               </div>
               <div className="bg-[#178EFC] text-white rounded-lg justify-end pr-6 pt-8">
-                <p className="text-2xl md:text-3xl font-bold text-right font-320">Expert</p>
-                <p className="text-2xl md:text-3xl font-bold text-right font-320">Talks</p>
+                <p className="text-2xl md:text-3xl font-bold text-right font-320">
+                  Expert
+                </p>
+                <p className="text-2xl md:text-3xl font-bold text-right font-320">
+                  Talks
+                </p>
               </div>
             </div>
             <div className="flex flex-col gap-3 justify-between h-85">
               <div className="bg-[#371B69] text-white rounded-lg pt-8 h-3/4">
-                <p className="text-2xl md:text-3xl font-bold text-center font-320">Free</p>
-                <p className="text-2xl md:text-3xl font-bold text-center font-320">Courses</p>
+                <p className="text-2xl md:text-3xl font-bold text-center font-320">
+                  Free
+                </p>
+                <p className="text-2xl md:text-3xl font-bold text-center font-320">
+                  Courses
+                </p>
               </div>
               <div className="bg-[#FFFFFF] text-black rounded-lg pl-6 grid items-center h-1/4">
-                <p className="text-2xl md:text-3xl font-bold font-320">Competions</p>
+                <p className="text-2xl md:text-3xl font-bold font-320">
+                  Competions
+                </p>
               </div>
             </div>
             <div className="grid grid-row-3 gap-3 h-85">
               <div className="bg-[#0D9DBD] text-white rounded-lg flex flex-col justify-center pr-6">
-                <p className="text-2xl md:text-3xl font-bold text-right font font-320">Interview</p>
-                <p className="text-2xl md:text-3xl font-bold text-right font font-320">Corner</p>
+                <p className="text-2xl md:text-3xl font-bold text-right font font-320">
+                  Interview
+                </p>
+                <p className="text-2xl md:text-3xl font-bold text-right font font-320">
+                  Corner
+                </p>
               </div>
               <div className="bg-[#FFB81E] text-white rounded-lg grid items-center pl-6">
-                <p className="text-2xl md:text-3xl font-bold font-320">Events</p>
+                <p className="text-2xl md:text-3xl font-bold font-320">
+                  Events
+                </p>
               </div>
               <div className="bg-[#F50057] text-white rounded-lg pr-6 pt-8">
-                <p className="text-2xl md:text-3xl font-bold text-right font-320">Projects</p>
+                <p className="text-2xl md:text-3xl font-bold text-right font-320">
+                  Projects
+                </p>
               </div>
             </div>
           </div>
           <div className="grid grid-flow-col gap-3 md:gap-6 justify-center relative top-6 md:top-10">
             <button className="bg-[#00A859] rounded-lg border-4 border-white grid grid-flow-col gap-2 md:gap-4 px-2 md:px-8 py-2 md:py-4 items-center">
               <FaWhatsapp className="fill-[#006F1F] w-6 md:w-10 h-6 md:h-10" />
-              <p className="text-white text-xs md:text-base font-medium btn-txt">Join Whatsapp</p>
+              <p className="text-white text-xs md:text-base font-medium btn-txt">
+                Join Whatsapp
+              </p>
             </button>
             <button className="bg-[#3D1F63] rounded-lg border-4 border-white grid grid-flow-col gap-2 md:gap-4 px-2 md:px-8 py-2 md:py-4 items-center">
               <FaDiscord className="fill-[#001423] w-6 md:w-10 h-6 md:h-10" />
-              <p className="text-white text-xs md:text-base font-medium btn-txt">Join Discord</p>
+              <p className="text-white text-xs md:text-base font-medium btn-txt">
+                Join Discord
+              </p>
             </button>
           </div>
         </section>
