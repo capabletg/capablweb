@@ -5,11 +5,11 @@ import ExposureAccordian from "../components/homePage/ExposureAccordian";
 import { studentTestimonials } from "../utils/data/homePage/student_testimonials";
 import { presentColleges } from "../utils/data/homePage/present_colleges";
 import FaculyTestimonials from "../components/homePage/FaculyTestimonials";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer_intrim";
 import IndustrialPrograms from "../components/homePage/IndustrialPrograms";
 import Services from "../components/homePage/Services";
 import CtaForm from "../components/CtaForm";
-import Header from "../components/header";
+import Header from "../components/header_intrim";
 import useGeneralStore from "../store/generalStore";
 import VideoGridTestimonials from "../components/VideoGridTestimonials";
 import FeatureComparison from "../components/FeatureComparison";
@@ -30,7 +30,11 @@ export default function Home() {
           content="Online courses in data science, data analytics, mechatronics, design and other engineering domains."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+        ></link>
       </Head>
       <Script
         id="app-ld-json"
@@ -85,11 +89,6 @@ export default function Home() {
                   className="absolute w-full h-full object-cover"
                   src="/images/raw_images/hero_girl.jpg"
                   alt="hero girl capabl"
-                />
-                <img
-                  className="object-contain w-10 z-[2]"
-                  src="/images/svgs/play.svg"
-                  alt="play button"
                 />
               </button>
 
@@ -546,13 +545,11 @@ export default function Home() {
                   <p className="text-black text-xl font-medium mb-4 md:mb-2 text-center md:text-left">{`Join the engineering revolution`}</p>
                   <p className="text-black font-light text-sm mb-8 md:mb-0 text-center md:text-left">{`Join AIC. Talk to our team to know about AIC and the process to join it.`}</p>
                 </div>
-
-                <button
-                  onClick={() => openCtaForm()}
-                  className="z-[1] bg-black rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0 hover_animation"
-                >
-                  Know More
-                </button>
+                <Link href="https://placements.capabl.in">
+                  <button className="z-[1] bg-black rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0 hover_animation">
+                    Know More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

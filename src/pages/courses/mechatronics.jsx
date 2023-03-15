@@ -19,11 +19,11 @@ import Projects from "../../components/courses/Projects/Projects_mechatronics";
 import LeadingExpertsSlider from "../../components/courses/LeadingExpertsSlider";
 import RegsiterForm from "../../components/courses/RegsiterForm";
 import Faqs from "../../components/courses/Faqs_mechatronics";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer_intrim";
 import Modal from "../../components/courses/Module Modal/modal";
 import Module1 from "../../components/courses/Mechatronics/Modules/Module1";
 import FeatureComparison from "../../components/FeatureComparison";
-import Header from "../../components/header";
+import Header from "../../components/header_intrim";
 import useGeneralStore from "../../store/generalStore";
 import CtaForm from "../../components/CtaForm";
 import VideoGridTestimonials from "../../components/VideoGridTestimonials";
@@ -407,7 +407,7 @@ export default function Courses() {
       <Head>
         <title>Mechatronics - Capabl Courses</title>
         <meta name="description" content="Capable Website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Header />
@@ -735,19 +735,21 @@ export default function Courses() {
               />
             </svg>
 
-            <svg
-              className="w-24 fill-capabl_primary z-10 hidden lg:block absolute -bottom-7 left-1/2 transform -translate-x-1/2"
-              viewBox="0 0 112 53"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M32.0177 44.2917L32.0177 44.2917C48.9519 50.5008 66.5447 43.4772 81.2292 32.0751C89.3987 25.7318 96.9118 18.0109 104.184 9.94339C97.8867 9.68786 91.4062 8.07316 85.7523 4.19793L85.7517 4.19754C84.8298 3.56368 84.7856 2.43856 85.1114 1.66413C85.2777 1.26888 85.5613 0.901817 85.9498 0.694912C86.359 0.477009 86.8473 0.459461 87.3234 0.718884C93.9137 4.30964 100.266 7.18438 107.303 7.83054C107.876 7.88181 108.113 8.40172 108.164 8.74384C108.192 8.93551 108.181 9.1451 108.115 9.33916C108.11 9.35313 108.105 9.3672 108.099 9.3813C108.227 9.51212 108.345 9.65554 108.452 9.80901C108.505 9.6506 108.558 9.49262 108.611 9.33508L108.611 9.33327C108.765 8.884 109.048 8.5558 109.431 8.40768C109.806 8.26247 110.202 8.31984 110.527 8.48752C111.176 8.82241 111.632 9.63124 111.42 10.5765C110.235 15.8694 109.19 21.2632 108.404 26.6891C108.065 29.0431 107.801 31.4198 107.535 33.8047L107.535 33.8109C107.188 36.9293 106.84 40.0618 106.321 43.1454L106.321 43.1458C106.218 43.7556 105.956 44.2352 105.577 44.5475C105.197 44.8607 104.728 44.9795 104.274 44.9123C103.353 44.776 102.612 43.9187 102.57 42.6683L102.57 42.6681C102.27 33.5508 104.157 24.0733 106.675 15.4674C93.0669 30.5351 78.1854 44.8179 60.4402 50.2346L60.4402 50.2346C43.7075 55.3406 25.1092 52.1901 12.06 35.7409C5.8289 27.8888 1.65708 17.4421 0.537733 6.21108C0.449199 5.3405 0.972669 4.7018 1.63311 4.55795C1.95769 4.48726 2.31442 4.53946 2.6122 4.7505C2.91341 4.96395 3.10814 5.30639 3.17377 5.73077L3.17384 5.7312C6.07937 24.6347 18.4056 39.3025 32.0177 44.2917Z"
-                fill="inherit"
-                stroke="white"
-                strokeWidth="0.94422"
-              />
-            </svg>
+            {moduleData.length % 2 == 0 && (
+              <svg
+                className="w-24 fill-capabl_primary z-10 hidden lg:block absolute -bottom-7 left-1/2 transform -translate-x-1/2"
+                viewBox="0 0 112 53"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32.0177 44.2917L32.0177 44.2917C48.9519 50.5008 66.5447 43.4772 81.2292 32.0751C89.3987 25.7318 96.9118 18.0109 104.184 9.94339C97.8867 9.68786 91.4062 8.07316 85.7523 4.19793L85.7517 4.19754C84.8298 3.56368 84.7856 2.43856 85.1114 1.66413C85.2777 1.26888 85.5613 0.901817 85.9498 0.694912C86.359 0.477009 86.8473 0.459461 87.3234 0.718884C93.9137 4.30964 100.266 7.18438 107.303 7.83054C107.876 7.88181 108.113 8.40172 108.164 8.74384C108.192 8.93551 108.181 9.1451 108.115 9.33916C108.11 9.35313 108.105 9.3672 108.099 9.3813C108.227 9.51212 108.345 9.65554 108.452 9.80901C108.505 9.6506 108.558 9.49262 108.611 9.33508L108.611 9.33327C108.765 8.884 109.048 8.5558 109.431 8.40768C109.806 8.26247 110.202 8.31984 110.527 8.48752C111.176 8.82241 111.632 9.63124 111.42 10.5765C110.235 15.8694 109.19 21.2632 108.404 26.6891C108.065 29.0431 107.801 31.4198 107.535 33.8047L107.535 33.8109C107.188 36.9293 106.84 40.0618 106.321 43.1454L106.321 43.1458C106.218 43.7556 105.956 44.2352 105.577 44.5475C105.197 44.8607 104.728 44.9795 104.274 44.9123C103.353 44.776 102.612 43.9187 102.57 42.6683L102.57 42.6681C102.27 33.5508 104.157 24.0733 106.675 15.4674C93.0669 30.5351 78.1854 44.8179 60.4402 50.2346L60.4402 50.2346C43.7075 55.3406 25.1092 52.1901 12.06 35.7409C5.8289 27.8888 1.65708 17.4421 0.537733 6.21108C0.449199 5.3405 0.972669 4.7018 1.63311 4.55795C1.95769 4.48726 2.31442 4.53946 2.6122 4.7505C2.91341 4.96395 3.10814 5.30639 3.17377 5.73077L3.17384 5.7312C6.07937 24.6347 18.4056 39.3025 32.0177 44.2917Z"
+                  fill="inherit"
+                  stroke="white"
+                  strokeWidth="0.94422"
+                />
+              </svg>
+            )}
 
             {/* Module 1 */}
             <Module1 data={moduleData[0]} />
@@ -765,7 +767,9 @@ export default function Courses() {
           </div>
           <section className="max-w-7xl mx-auto flex items-center justify-center px-4 mt-8 md:mt-[4.5rem]">
             <button
-              onClick={() => download("/pdfs/brochure.pdf", "Brochure")}
+              onClick={() =>
+                download("/pdfs/Capabl-Brochure.pdf", "Capabl Brochure")
+              }
               style={{ background: theme.primary, color: theme.text }}
               className="flex-shrink-0 flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm border border-transparent hover_animation"
             >

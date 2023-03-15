@@ -79,10 +79,10 @@ export default function FaculyTestimonials() {
   return (
     <>
       <div className="flex items-start justify-start md:justify-between gap-4 mb-2 md:mb-10 px-4">
-        <h3 className="text-black font-medium text-base md:text-3xl md:max-w-xs">
+        <h3 className="text-black font-medium text-base md:text-3xl md:max-w-xs hidden">
           What faculties have say about capabl
         </h3>
-        <div className="flex items-center justify-start gap-2">
+        <div className="flex items-center justify-start gap-2 ">
           <button
             onClick={() => prev()}
             disabled={activeSlide === 0}
@@ -107,7 +107,7 @@ export default function FaculyTestimonials() {
           </button>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full hidden">
         <Slider {...settings} ref={sliderRef}>
           {facultyTestimonials.map((item, index) => (
             <div key={index} className="py-3 px-3 pb-12">
