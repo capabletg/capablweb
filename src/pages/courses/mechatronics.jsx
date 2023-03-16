@@ -657,12 +657,12 @@ export default function Courses() {
         <section className="max-w-7xl mx-auto px-4 mt-12 md:mt-28">
           <CompaniesUniversities
             companies={[
-              "/images/courses/company_tcs.png",
-              "/images/courses/company_lg.png",
-              "/images/courses/company_ather.png",
-              "/images/courses/company_mahle.png",
-              "/images/courses/company_hyundai.png",
-              "/images/courses/company_mahindra.png",
+              "/images/courses/Logos_Mechatronics/google.png",
+              "/images/courses/Logos_Mechatronics/abb.png",
+              "/images/courses/Logos_Mechatronics/Amazon_logo.svg",
+              "/images/courses/Logos_Mechatronics/honeywell.png",
+              "/images/courses/Logos_Mechatronics/tesla.png",
+              "/images/courses/Logos_Mechatronics/iemens.png",
             ]}
             moreCount="20"
             roles={[

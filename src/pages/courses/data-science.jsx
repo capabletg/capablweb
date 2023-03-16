@@ -169,6 +169,7 @@ const moduleData = [
       "Python Programming Language Application Developer",
       "Software Engineer",
     ],
+    tool_images: ["Jupyter_logo.png", "Google_Colaboratory_SVG_Logo.png"],
   },
   {
     name: "Module 2",
@@ -199,6 +200,12 @@ const moduleData = [
       "Business Data Analyst",
       "Product Analyst",
     ],
+    tool_images: [
+      "Jupyter_logo.png",
+      "Google_Colaboratory_SVG_Logo.png",
+      "sql.jpeg",
+      "tableau-software.svg",
+    ],
   },
   {
     name: "Module 3",
@@ -227,6 +234,12 @@ const moduleData = [
       "Web Scraping Developer",
       "Python Developer with Web Scraping",
     ],
+    tool_images: [
+      "Jupyter_logo.png",
+      "Google_Colaboratory_SVG_Logo.png",
+      "Numpy.png",
+      "Pandas_logo.png",
+    ],
   },
   {
     name: "Module 4",
@@ -251,6 +264,12 @@ const moduleData = [
       "Machine Learning Data Engineer",
       "Software engineer",
       "Machine Learning Operations Engineering",
+    ],
+    tool_images: [
+      "Jupyter_logo.png",
+      "Google_Colaboratory_SVG_Logo.png",
+      "scikit learn.png",
+      "TensorFlow_logo.png",
     ],
   },
   {
@@ -282,6 +301,12 @@ const moduleData = [
       "Senior systems software engineer,  Deep learning accelerator",
       "Senior manager- Data science- Deep  learning",
     ],
+    tool_images: [
+      "Jupyter_logo.png",
+      "opencv.png",
+      "Pandas_logo.png",
+      "TensorFlow_logo.png",
+    ],
   },
   {
     name: "Module 6",
@@ -306,6 +331,7 @@ const moduleData = [
       "Image Processing Software Developer",
       "ML Engineer ( Audio / Image Processing)",
     ],
+    tool_images: ["Jupyter_logo.png", "Pandas_logo.png", "TensorFlow_logo.png"],
   },
   {
     name: "Module 7",
@@ -335,6 +361,7 @@ const moduleData = [
       "Computer vision Expert",
       "Computer vision Software Developer",
     ],
+    tool_images: ["Jupyter_logo.png", "Pandas_logo.png", "TensorFlow_logo.png"],
   },
   {
     name: "Module 8",
@@ -359,6 +386,7 @@ const moduleData = [
       "Data Scientists",
       "Software Engineers",
     ],
+    tool_images: ["Jupyter_logo.png", "nltk.png", "Pandas_logo.png"],
   },
 ];
 
@@ -660,12 +688,11 @@ export default function Courses() {
         <section className="max-w-7xl mx-auto px-4 mt-12 md:mt-28">
           <CompaniesUniversities
             companies={[
-              "/images/courses/company_tcs.png",
-              "/images/courses/company_lg.png",
-              "/images/courses/company_ather.png",
-              "/images/courses/company_mahle.png",
-              "/images/courses/company_hyundai.png",
-              "/images/courses/company_mahindra.png",
+              "/images/courses/Logos_DataScience/Google.png",
+              "/images/courses/Logos_DataScience/fb.png",
+              "/images/courses/Logos_DataScience/Amazon_logo.svg",
+              "/images/courses/Logos_DataScience/Microsoft_logo_(2012).png",
+              "/images/courses/Logos_DataScience/flipkart.svg",
             ]}
             moreCount="20"
             roles={[
@@ -682,27 +709,32 @@ export default function Courses() {
             ]}
             universities={[
               {
-                image: "/images/courses/university_mit.jpg",
+                image:
+                  "/images/courses/Logos_DataScience/stanford-university-logo.png",
                 degree: "for MS/Ph.D. in",
                 courses: ["Course #1", "Course #2"],
               },
               {
-                image: "/images/courses/university_michigan.jpg",
+                image:
+                  "/images/courses/Logos_DataScience/Harvard_University_logo.png",
                 degree: "for MS in",
                 courses: ["Automotive"],
               },
               {
-                image: "/images/courses/university_oxford_brookes.jpg",
+                image:
+                  "/images/courses/Logos_DataScience/University_of_Manchester-Logo.wine.png",
                 degree: "for MS in",
                 courses: ["EV Engineering"],
               },
               {
-                image: "/images/courses/university_east_london.jpg",
+                image:
+                  "/images/courses/Logos_DataScience/Harvard_University_logo.png",
                 degree: "for M.Sc. in",
                 courses: ["Automotive with EV"],
               },
               {
-                image: "/images/courses/university_conventry.jpg",
+                image:
+                  "/images/courses/Logos_DataScience/National_University_of_Singapore-Logo.wine.png",
                 degree: "for M.Sc. in",
                 courses: ["EV Technology"],
               },

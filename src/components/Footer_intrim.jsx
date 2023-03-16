@@ -43,8 +43,8 @@ export default function Footer() {
         <div className="mb-8">
           <h4 className="text-sm font-medium mb-2">Cities</h4>
           <p className="text-xs md:text-sm font-light text-[#bfbfbf]">
-            City wise presence (eg. learn data science in Bangalore, Chennai,
-            Coimbatore, Mumbai, etc.)
+            Bengaluru | Hyderabad | Delhi | Chennai | Mumbai | Pune | Coimbatore
+            | Mysuru | Coimbatore | Vijayawada
           </p>
         </div>
 
