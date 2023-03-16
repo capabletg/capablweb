@@ -16,7 +16,6 @@ import FeatureComparison from "../components/FeatureComparison";
 
 export default function Home() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
-
   return (
     <div>
       <Head>
