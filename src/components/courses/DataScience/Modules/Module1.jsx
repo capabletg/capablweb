@@ -8,6 +8,7 @@ export default function Module1(data) {
   const [playing, setPlaying] = useState(true);
   const videoRef = useRef();
   const moduleindex = data?.data?.moduleindex;
+  console.log(data?.data?.tool_images);
 
   const playVideo = () => {
     setPlaying(true);
@@ -102,15 +103,26 @@ export default function Module1(data) {
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 sm:gap-4 justify-end w-full">
+            <div className="flex items-center gap-2.5 sm:gap-4 justify-start w-full">
               <p className="text-[0.6rem] sm:text-xs md:text-sm lg:text-xs text-white font-light">
                 Softwares
               </p>
 
-              <div className="flex items-center gap-1.5 sm:gap-2 justify-end">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
-                <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
-                <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
+              <div className="flex items-center gap-1.5 sm:gap-2 justify-start">
+                {data?.data?.tool_images.map((toolimage) => (
+                  <>
+                    <div
+                      className={`w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full} bg-grey"]`}
+                      key={moduleindex}
+                    >
+                      <img
+                        className="w-full h-full object-contain transition-all duration-500"
+                        src={`/images/courses/Logos_DataScience/${toolimage}`}
+                        alt={`Module ${moduleindex + 1}`}
+                      />
+                    </div>
+                  </>
+                ))}
               </div>
             </div>
           </div>
