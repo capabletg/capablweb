@@ -8,7 +8,6 @@ export default function Module1(data) {
   const [playing, setPlaying] = useState(true);
   const videoRef = useRef();
   const moduleindex = data?.data?.moduleindex;
-  console.log(data?.data?.tool_images);
 
   const playVideo = () => {
     setPlaying(true);

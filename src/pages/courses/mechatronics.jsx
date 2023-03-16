@@ -164,6 +164,7 @@ const moduleData = [
     No_Projects: "3",
     heading3: "Job Roles",
     content3: ["Testing engineer", "Mechatronics engineer", "Product engineer"],
+    tool_images: ["Jupyter_logo.png", "Google_Colaboratory_SVG_Logo.png"],
   },
   {
     name: "Module 2",
@@ -192,6 +193,7 @@ const moduleData = [
       "Firmware developer",
       "Embedded programming Engineer",
     ],
+    tool_images: ["Jupyter_logo.png", "Google_Colaboratory_SVG_Logo.png"],
   },
   {
     name: "Module 3",
@@ -216,6 +218,7 @@ const moduleData = [
       "Integration and Validation Engineer",
       "Robot Software engineer",
     ],
+    tool_images: ["Jupyter_logo.png", "Google_Colaboratory_SVG_Logo.png"],
   },
   {
     name: "Module 4",
@@ -244,6 +247,7 @@ const moduleData = [
       "Automation Engineer",
       "Automation Specialist",
     ],
+    tool_images: ["Jupyter_logo.png", "Google_Colaboratory_SVG_Logo.png"],
   },
   {
     name: "Module 5",
@@ -272,6 +276,7 @@ const moduleData = [
       "Lead Robotics designer",
       "Hardware Engineer",
     ],
+    tool_images: ["Jupyter_logo.png", "Google_Colaboratory_SVG_Logo.png"],
   },
   {
     name: "Module 6",
@@ -295,6 +300,7 @@ const moduleData = [
     No_Projects: "3",
     heading3: "Job Roles",
     content3: ["IoT Developer", "Network Engineer", "Thingworx Developer"],
+    tool_images: ["Jupyter_logo.png", "Google_Colaboratory_SVG_Logo.png"],
   },
   {
     name: "Module 7",
@@ -319,6 +325,7 @@ const moduleData = [
     No_Projects: "3",
     heading3: "Job Roles",
     content3: ["Research Scientist", "Software Architect"],
+    tool_images: ["Jupyter_logo.png", "Google_Colaboratory_SVG_Logo.png"],
   },
 ];
 
@@ -662,7 +669,7 @@ export default function Courses() {
               "/images/courses/Logos_Mechatronics/Amazon_logo.svg",
               "/images/courses/Logos_Mechatronics/honeywell.png",
               "/images/courses/Logos_Mechatronics/tesla.png",
-              "/images/courses/Logos_Mechatronics/iemens.png",
+              "/images/courses/Logos_Mechatronics/siemens.png",
             ]}
             moreCount="20"
             roles={[
