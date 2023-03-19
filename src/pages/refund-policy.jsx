@@ -74,17 +74,9 @@ export default function Home() {
               Refund & Cancellation Policy
             </h1>
             <p className="text-xs md:text-sm font-light text-[#000000]">
-              The refund policy intends to clearly delineate the ETG Career Labs
-              Pvt. Ltd. ( hereinafter "company") policy of refund of
-              subscription fee charged by the company for all the courses
-              offered by it. All cases of request of refund by the participants
-              of the course shall be subjected to this policy and no request
-              whatsoever which is beyond the scope of this policy shall be
-              entertained. The company reserves the full right to amend this
-              policy from time to time as per its discretion. However, the terms
-              stipulated on the day of subscription of the course shall be
-              applicable at the time of any request of refund by the
-              participants.
+              {
+                'The refund policy intends to clearly delineate the ETG Career Labs Pvt. Ltd. ( hereinafter "company") policy of refund of subscription fee charged by the company for all the courses offered by it. All cases of request of refund by the participants of the course shall be subjected to this policy and no request whatsoever which is beyond the scope of this policy shall be entertained. The company reserves the full right to amend the policy from time to time as per its discretion. However, the terms stipulated on the day of subscription of the course shall be applicable at the time of any request of refund by the participants.'
+              }
             </p>
           </div>
 
