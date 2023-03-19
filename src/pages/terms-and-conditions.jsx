@@ -146,10 +146,9 @@ export default function Home() {
                   </li>
                   <li className="mb-2">
                     <i className="fa fa-angle-double-right text-blue-500"></i>
-                    Upload, transmit or otherwise distribute content that
-                    infringes upon another party's intellectual property rights
-                    or other proprietary, contractual or fiduciary rights or
-                    obligations; Prevent others from using the Service;
+                    {
+                      "Upload, transmit or otherwise distribute content that infringes upon another party's intellectual property rights or other proprietary, contractual or fiduciary rights or obligations; Prevent others from using the Service;"
+                    }
                   </li>
                   <li className="mb-2">
                     <i className="fa fa-angle-double-right text-blue-500"></i>
@@ -299,8 +298,8 @@ export default function Home() {
                   or in any way related to your use of the Service, including
                   any liability or expense arising from all claims, losses,
                   damages (actual and consequential), suits, judgments,
-                  litigation costs and attorneys' fees, of every kind and
-                  nature. In such a case,{" "}
+                  litigation costs and attorneys fees, of every kind and nature.
+                  In such a case,{" "}
                   <span className="font-bold text-sm">
                     Elite Techno Groups{" "}
                   </span>{" "}
@@ -487,7 +486,7 @@ export default function Home() {
                   You agree to defend, indemnify and hold Elite Techno Groups
                   and its affiliate and related companies harmless from any and
                   all liabilities, costs and expenses, including reasonable
-                  attorneys' fees, related to any Violation of this Agreement by
+                  attorneys fees, related to any Violation of this Agreement by
                   you or users of your account, or in connection with the use of
                   the Elite Techno Groups Site or the Internet or the placement
                   or transmission of any message, information, software or other

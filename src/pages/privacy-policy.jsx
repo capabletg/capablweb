@@ -192,7 +192,7 @@ export default function Home() {
             <h4 className="text-sm font-light mb-4 ">
               {" "}
               cookie is a small file which asks permission to be placed on your
-              computer's hard drive. Once you agree, the file is added and the
+              computers hard drive. Once you agree, the file is added and the
               cookie helps analyse web traffic or lets you know when you visit a
               particular site. Cookies allow web applications to respond to you
               as an individual. The web application can tailor its operations to
