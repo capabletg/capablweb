@@ -86,8 +86,7 @@ export default function Home() {
                 by almost every website you visit because they help to make your
                 online experience as smooth as possible. For security reasons,
                 many websites will not function at all without the use of
-                cookies (or other similar technologies, such as "web beacons" or
-                "tags").
+                cookies (or other similar technologies, such as &quot;web beacons&quot; or &quot;tags&quot;).
               </p>
               <p className="text-xs md:text-sm font-light text-[#000000] mb-8">
                 Cookies generally do not hold any information to identify an
@@ -97,11 +96,11 @@ export default function Home() {
               <p className="text-xs md:text-sm font-light text-[#000000] mb-8">
                 If you prefer, you can restrict, block or delete cookies by
                 changing your browser settings but that may mean that the
-                website won't work properly
+                website won&apos;t work properly
               </p>
               <p className="text-xs md:text-sm font-light text-[#000000] mb-8">
                 For more information about cookies and their impact on you and
-                your browsing visit{" "}
+                your browsing visit&nbsp;
                 <a
                   href="http://www.aboutcookies.org"
                   target="_blank"
@@ -142,17 +141,17 @@ export default function Home() {
                 similar technologies to cookies, known as `web beacons` or
                 `tags`. These are anonymous and, as they are only used for
                 statistical purposes, they do not contain or collect any
-                information that identifies you."
+                information that identifies you.&quot;
               </p>
               <h3 className="mb-2">Targeting cookies</h3>
               <p className="text-xs md:text-sm font-light text-[#000000] mb-4">
                 We have relationships with carefully selected and monitored
                 suppliers (third parties) who may also set cookies during your
-                visit. The purpose of these cookies is "behavioural advertising"
-                (also known as "behavioural targeting" or "remarketing"), which
+                visit. The purpose of these cookies is &quot;behavioural advertising&quot;
+                (also known as &quot;behavioural targeting&quot; or &quot;remarketing&quot;), which
                 is a means of showing you relevant products and services based
                 on what you appear to be interested in. Although these cookies
-                can track your visits around the web they don't know who you
+                can track your visits around the web they don&apos;t know who you
                 are. Without these cookies, online advertisements you encounter
                 will be less relevant to you and your interests.
               </p>
@@ -182,17 +181,17 @@ export default function Home() {
               <h4 className="mb-4">Google Chrome</h4>
               <ol className="list-decimal ml-4 mb-4 text-xs md:text-sm font-light text-[#000000] mb-8">
                 <li>
-                  Click "Tools" at the top of your browser and select
-                  "Settings".
+                  Click &quot;Tools&quot; at the top of your browser and select
+                  &quot;Settings&quot;.
                 </li>
                 <li>
-                  Click "Show advanced settings", scroll down to the section
-                  "Privacy" and click "Content Settings."
+                  Click &quot;Show advanced settings&quot;, scroll down to the section
+                  &quot;Privacy&quot; and click &quot;Content Settings.&quot;
                 </li>
                 <li>
-                  Select "Allow local data to be set". To only acept first-party
-                  cookies, check the box next to "Block all third-party cookies
-                  without exception"
+                  Select &quot;Allow local data to be set&quot;. To only acept first-party
+                  cookies, check the box next to &quot;Block all third-party cookies
+                  without exception&quot;
                 </li>
               </ol>
               <h4 className="mb-4">
@@ -200,8 +199,8 @@ export default function Home() {
               </h4>
               <ol className="list-decimal ml-4 mb-4 text-xs md:text-sm font-light text-[#000000] mb-8">
                 <li>
-                  Click "Tools" at the top of your browser and select "Internet
-                  Options", then click the "Privacy" tab.
+                  Click &quot;Tools&quot; at the top of your browser and select &quot;Internet
+                  Options&quot;, then click the &quot;Privacy&quot; tab.
                 </li>
                 <li>
                   Check that the level of your privacy is set to Medium or
@@ -214,25 +213,25 @@ export default function Home() {
               <h4 className="mb-4">Mozilla Firefox</h4>
               <ol className="list-decimal ml-4 mb-4 text-xs md:text-sm font-light text-[#000000] mb-8">
                 <li>
-                  Click "Tools" at the top of your browser and select "Options".
+                  Click &quot;Tools&quot; at the top of your browser and select &quot;Options&quot;.
                 </li>
-                <li>Then select the "Privacy" icon.</li>
+                <li>Then select the &quot;Privacy&quot; icon.</li>
                 <li>
-                  Click the "Cookies" and select "Allow pages to create a
-                  cookie."
+                  Click the &quot;Cookies&quot; and select &quot;Allow pages to create a
+                  cookie.&quot;
                 </li>
               </ol>
               <h4 className="mb-4">Safari</h4>
               <ol className="list-decimal ml-4 mb-4 text-xs md:text-sm font-light text-[#000000] mb-8">
                 <li>
                   Click the gear icon at the top of your browser and select
-                  "Settings".
+                  &quot;Settings&quot;.
                 </li>
                 <li>
-                  Click the "Privacy" tab, then select the option "Disable the
-                  use of cookies by third parties and advertising cookies."
+                  Click the &quot;Privacy&quot; tab, then select the option &quot;Disable the
+                  use of cookies by third parties and advertising cookies.&quot;
                 </li>
-                <li>Click "Save".</li>
+                <li>Click &quot;Save&quot;.</li>
               </ol>
               <h3 className="mb-4">How to manage cookies on your Mac</h3>
               <p className="text-xs md:text-sm font-light text-[#000000] mb-8">
@@ -241,46 +240,48 @@ export default function Home() {
               <h4 className="mb-4">Microsoft Internet Explorer 5.0 on OSX</h4>
               <ol className=" list-decimal ml-4 text-xs md:text-sm font-light text-[#000000] mb-4">
                 <li>
-                  Click on "Explorer" at the top of your browser and select
-                  "Settings".
+                  Click on &quot;Explorer&quot; at the top of your browser and select
+                  &quot;Settings&quot;.
                 </li>
                 <li>
-                  Scroll down to the "Cookies" section in the "Received Files".
+                  Scroll down to the &quot;Cookies&quot; section in the &quot;Received Files&quot;.
                 </li>
-                <li>Select "Do not ask."</li>
+                <li>Select &quot;Do not ask.&quot;</li>
               </ol>
               <h4>Safari on OSX</h4>
               <ol className=" list-decimal ml-4 text-xs md:text-sm font-light text-[#000000] mb-8">
                 <li>
-                  Click "Safari" on the top of your browser and select
-                  "Settings".
+                  Click &quot;Safari&quot; on the top of your browser and select
+                  &quot;Settings&quot;.
                 </li>
-                <li>Click the "Privacy" and then "Enable cookies."</li>
-                <li>Select "only the pages you have visited."</li>
+                <li>Click the &quot;Privacy&quot; and then &quot;Enable cookies.&quot;</li>
+                <li>Select &quot;only the pages you have visited.&quot;</li>
               </ol>
               <h4 className="mb-4">Mozilla and Netscape on OSX</h4>
               <ol className="list-decimal ml-4  text-xs md:text-sm font-light text-[#000000] mb-8">
                 <li>
-                  Click "Mozilla" or "Netscape" at the top of your browser and
-                  select "Settings".
+                  Click &quot;Mozilla&quot; or &quot;Netscape&quot; at the top of your browser and
+                  select &quot;Settings&quot;.
                 </li>
                 <li>
-                  Scroll down to the "Cookies" under "Privacy &amp; Security".
+                  Scroll down to the &quot;Cookies&quot; under &quot;Privacy &amp; Security&quot;.
                 </li>
-                <li>Select "Allow cookies only to the original site."</li>
+                <li>Select &quot;Allow cookies only to the original site.&quot;</li>
               </ol>
               <h4 className="mb-4">Opera</h4>
               <ol className="list-decimal ml-4 text-xs md:text-sm font-light text-[#000000] mb-8">
                 <li>
-                  Click "Menu" on the top of your browser and select "Settings".
+                  Click &quot;Menu&quot; on the top of your browser and select &quot;Settings&quot;.
                 </li>
-                <li>Then select "Options" tab and the "Advanced".</li>
-                <li>Select "Enable cookies."</li>
+                <li>Then select &quot;Options&quot; tab and the &quot;Advanced&quot;.</li>
+                <li>Select &quot;Enable cookies.&quot;</li>
               </ol>
             </div>
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

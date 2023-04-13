@@ -43,14 +43,14 @@ export default function Module2() {
                         Python for <br /> <span className="font-medium">Data Science</span>
                     </p>
 
-                    <div className="flex items-center justify-end gap-2.5 sm:gap-4">
+                    {/* <div className="flex items-center justify-end gap-2.5 sm:gap-4">
                         <p className="text-[0.6rem] sm:text-xs md:text-sm lg:text-xs text-white font-light">Experts from</p>
                         <div className="flex items-center justify-center gap-1.5 sm:gap-2">
                             <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
                             <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
                             <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-4 sm:mt-7">

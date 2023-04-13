@@ -48,7 +48,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-12 gap-x-4 gap-y-4 justify-items-start">
+        {/* <div className="grid grid-cols-12 gap-x-4 gap-y-4 justify-items-start">
           <div className="col-span-12 w-full sm:col-span-4 md:col-span-2 pt-6 flex flex-col items-start justify-start gap-1.5">
             <h5 className="font-medium text-sm text-white mb-3">
               Job Oriented Programs
@@ -140,7 +140,7 @@ export default function Footer() {
               subscribe to our newsletter.
             </p>
           </div>
-        </div>
+        </div> */}
         <hr className="mt-10 mb-8 border-white border-opacity-20" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">

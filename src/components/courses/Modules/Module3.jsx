@@ -41,14 +41,14 @@ export default function Module3() {
                 <div className="flex items-start justify-between gap-4 pt-1 sm:pt-4 md:pt-2 lg:pt-0">
                     <p className="text-white text-base sm:text-2xl font-light">Statistics</p>
 
-                    <div className="flex items-center justify-end gap-2.5 sm:gap-4">
+                    {/* <div className="flex items-center justify-end gap-2.5 sm:gap-4">
                         <p className="text-[0.6rem] sm:text-xs md:text-sm lg:text-xs text-white font-light">Experts from</p>
                         <div className="flex items-center justify-center gap-1.5 sm:gap-2">
                             <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
                             <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
                             <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-6 sm:mt-9 lg:mt-8">

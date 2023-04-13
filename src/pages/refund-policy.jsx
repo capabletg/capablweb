@@ -127,6 +127,9 @@ export default function Home() {
           {/* Cities */}
         </div>
       </main>
+
+      <Footer />
+
     </div>
   );
 }

@@ -671,7 +671,7 @@ export default function Courses() {
           <AceYourDreamSlider />
         </section>
 
-        <section className="max-w-7xl mx-auto px-4 mt-12 md:mt-28">
+        {/* <section className="max-w-7xl mx-auto px-4 mt-12 md:mt-28">
           <CompaniesUniversities
             companies={[
               "/images/courses/company_tcs.png",
@@ -723,7 +723,7 @@ export default function Courses() {
             ]}
             theme={theme}
           />
-        </section>
+        </section> */}
 
         {/* Pathway to become a kick-ass Data Scientist for college student */}
         <section className="max-w-7xl mx-auto px-4 mt-20">
@@ -805,7 +805,7 @@ export default function Courses() {
         </section>
 
         {/* All tools learnt & Skills Acquired */}
-        <section className="max-w-7xl mx-auto px-4 mt-4 md:mt-8 lg:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        {/* <section className="max-w-7xl mx-auto px-4 mt-4 md:mt-8 lg:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="bg-[#f2f4f7] rounded-2xl px-6 pb-8 lg:pb-12 transition-all duration-200">
             <div className="flex items-center justify-start gap-3.5">
               <div className="bg-[#e3e7ec] rounded-b-full px-3 pt-4 pb-2.5 sm:pb-3 w-full max-w-[3rem] sm:max-w-[3.3rem]">
@@ -853,7 +853,7 @@ export default function Courses() {
             </div>
           </div>
 
-          {/*  */}
+          
           <div className="bg-[#f2f4f7] rounded-2xl px-6 pb-8 lg:pb-12 transition-all duration-200">
             <div className="flex items-center justify-start gap-3.5">
               <div className="bg-[#e3e7ec] rounded-b-full px-3.5 pt-4 pb-2.5 sm:pb-3 w-full max-w-[3rem] sm:max-w-[3.3rem]">
@@ -916,7 +916,7 @@ export default function Courses() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Download Brochure */}
         <section className="max-w-7xl mx-auto px-4 mt-8 md:mt-[4.5rem]">
