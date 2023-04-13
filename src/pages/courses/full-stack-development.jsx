@@ -912,7 +912,7 @@ export default function Courses() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-0 md:px-2 lg:px-8">
-              <div className="col-span-1 md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4 px-2 sm:px-6 md:px-0">
+              <div className="hidden md:grid col-span-1 md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4 px-2 sm:px-6 md:px-0">
                 {[
                   {
                     count: "1.5 Crore",
