@@ -102,7 +102,7 @@ export default function Module1(data) {
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 sm:gap-4 justify-end w-full">
+            {/* <div className="flex items-center gap-2.5 sm:gap-4 justify-end w-full">
               <p className="text-[0.6rem] sm:text-xs md:text-sm lg:text-xs text-white font-light">
                 Softwares
               </p>
@@ -112,7 +112,7 @@ export default function Module1(data) {
                 <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
                 <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-9 lg:h-9 rounded-full bg-[#f1f1f1]" />
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col items-start justify-start h-full">
