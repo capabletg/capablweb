@@ -21,7 +21,7 @@ export default function Content({ content = null }) {
   return (
     <div
       style={{ boxShadow: "-17px 13px 25px rgba(195, 207, 248, 0.22)" }}
-      className="md:col-span-8 lg:col-span-9 hidden md:block rounded-2xl md:py-6 md:pr-4 md:pl-6 lg:py-8 lg:pl-10 h-full max-h-[34.5rem] bg-[#f2f4f7]"
+      className="md:col-span-8 lg:col-span-9 md:block rounded-2xl md:py-6 md:pr-4 md:pl-6 lg:py-8 lg:pl-10 h-full max-h-[34.5rem] bg-[#f2f4f7]"
     >
       <div className="relative h-full">
         {/* Scrollbar */}

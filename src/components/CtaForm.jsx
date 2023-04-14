@@ -6,6 +6,8 @@ import { VscChromeClose } from "react-icons/vsc";
 import OtpInput from "react-otp-input";
 import useForm from "../hooks/useForm";
 import useGeneralStore from "../store/generalStore";
+import axios from "../pages/api/http";
+import apiEndPoints from "../pages/api/endpoints";
 
 const otpStatuses = Object.freeze({
   SUCCESS: "success",
@@ -14,9 +16,12 @@ const otpStatuses = Object.freeze({
   LOADING: "loading",
 });
 
-export default function CtaForm() {
+export default function CtaForm(props) {
+  const { source, reqType } = props;
   const isOpen = useGeneralStore((state) => state.show_cta_form);
   const closeCtaForm = useGeneralStore((state) => state.closeCtaForm);
+  const setToasterInfo = useGeneralStore((state) => state.setToasterInfo);
+  const openToaster = useGeneralStore((state) => state.openToaster);
 
   const [otp, setOtp] = useState("");
   const [otpRequestLoading, setOtpRequestLoading] = useState(false);
@@ -28,9 +33,12 @@ export default function CtaForm() {
   const [details, handleDetails, resetDetails] = useForm({
     name: "",
     email: "",
-    mobile: "",
-    profile_info: "",
-    referral: "",
+    collageName: "",
+    phoneNumber: "",
+    courseYear: "",
+    department: "",
+    departmentDetails: "",
+    // referral: "",
   });
 
   const closeModal = () => {
@@ -42,18 +50,80 @@ export default function CtaForm() {
     resetDetails();
   };
 
-  const onFormSubmit = () => {
-    console.log("submitting..>>> ", details);
+  const sentOtp = async () => {
+    try {
+      const data = {
+        email: details?.email,
+        // phoneNumber: `+91${details.phoneNumber}`,
+      };
+      await axios.post(apiEndPoints.SENT_OTP, data);
+      setToasterInfo({
+        isSuccess: true,
+        header: "Success",
+        body: "Otp sent successfully",
+        showCta: false,
+        position: "top-right",
+      });
+      openToaster();
+      setOtpRequestLoading(false);
+      setOtpRequestSend(true);
+    } catch (err) {
+      setOtpRequestLoading(false);
+      setOtpRequestSend(false);
+      setToasterInfo({
+        isSuccess: false,
+        header: "Error",
+        body: err?.response?.data?.error?.message || err.message,
+        showCta: false,
+        position: "top-right",
+      });
+      openToaster();
+    }
+  };
+
+  const onFormSubmit = async () => {
+    try {
+      details["phoneNumber"] = `+91${details.phoneNumber}`;
+
+      details["department"] =
+        details.department === "Others"
+          ? `${details.departmentDetails}`
+          : details.department;
+
+      delete details.departmentDetails;
+      details = { ...details, ...{ source, reqType, otp } };
+      const result = await axios.post(apiEndPoints.ENQUIRIES_ADD, details);
+      closeModal();
+      setToasterInfo({
+        isSuccess: true,
+        header: "Success",
+        body: "Otp sent successfully",
+        showCta: false,
+        position: "top-right",
+      });
+    } catch (err) {
+      setToasterInfo({
+        isSuccess: false,
+        header: "Error",
+        body: err?.response?.data?.error?.message || err.message,
+        showCta: false,
+        position: "top-right",
+      });
+      openToaster();
+    }
   };
 
   useEffect(() => {
     if (otp.length === 6) {
       setOtpVerficationStatus(otpStatuses.LOADING);
-
-      setTimeout(() => {
-        if (otp === "123456") setOtpVerficationStatus(otpStatuses.SUCCESS);
-        else setOtpVerficationStatus(otpStatuses.FAILED);
-      }, 1500);
+      const resp = axios.post(apiEndPoints.VERIFY_OTP, {
+        otp: otp,
+        email: details?.email,
+        phoneNumber: `+91${details.phoneNumber}`,
+      });
+      resp.status === 200
+        ? setOtpVerficationStatus(otpStatuses.SUCCESS)
+        : setOtpVerficationStatus(otpStatuses.FAILED);
     }
   }, [otp]);
   return (
@@ -116,6 +186,18 @@ export default function CtaForm() {
               </div>
 
               <div className="flex flex-col items-start justify-start mb-5">
+                <p className="text-xs mb-0.5">Collage Name</p>
+                <input
+                  type="text"
+                  placeholder="Collage Name"
+                  required
+                  value={details?.collageName}
+                  onChange={(e) => handleDetails("collageName", e.target.value)}
+                  className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
+                />
+              </div>
+
+              <div className="flex flex-col items-start justify-start mb-5">
                 <p className="text-xs mb-0.5">Phone No.</p>
                 <div className="flex items-center justify-start gap-3 w-full">
                   <p className="bg-[#f5f5f5] border border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black py-2 pl-3 pr-4 text-center">
@@ -127,10 +209,10 @@ export default function CtaForm() {
                     minLength={10}
                     required
                     placeholder="XXXXXXXXXX"
-                    value={details?.mobile}
+                    value={details?.phoneNumber}
                     onChange={(e) =>
                       !isNaN(e.target.value)
-                        ? handleDetails("mobile", e.target.value?.trim())
+                        ? handleDetails("phoneNumber", e.target.value?.trim())
                         : {}
                     }
                     className="w-full flex-grow bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
@@ -138,13 +220,14 @@ export default function CtaForm() {
                   <button
                     type="button"
                     disabled={
-                      details?.mobile?.length !== 10 || otpRequestLoading
+                      details?.phoneNumber?.length !== 10 ||
+                      otpRequestLoading ||
+                      otpVerficationStatus === "success"
                     }
                     onClick={() => {
                       setOtpRequestLoading(true);
                       setTimeout(() => {
-                        setOtpRequestLoading(false);
-                        setOtpRequestSend(true);
+                        sentOtp();
                       }, 1500);
                     }}
                     className="text-black px-3 py-2 border border-transparent bg-capabl_primary rounded-md text-sm whitespace-nowrap hover:scale-95 transition-all duration-200 disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed"
@@ -200,10 +283,8 @@ export default function CtaForm() {
                 <select
                   required
                   className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
-                  value={details?.profile_info}
-                  onChange={(e) =>
-                    handleDetails("profile_info", e.target.value)
-                  }
+                  value={details?.courseYear}
+                  onChange={(e) => handleDetails("courseYear", e.target.value)}
                 >
                   <option value="">Choose</option>
                   {[
@@ -220,6 +301,68 @@ export default function CtaForm() {
               </div>
 
               <div className="flex flex-col items-start justify-start mb-5">
+                <p className="text-xs mb-0.5">{`Department`}</p>
+                <select
+                  required
+                  className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
+                  value={details?.department}
+                  onChange={(e) => handleDetails("department", e.target.value)}
+                >
+                  <option value="">Choose</option>
+                  {[
+                    {
+                      label: "Mechanical/ Automobile/ Production",
+                      value: "Mechanical/ Automobile/ Production",
+                    },
+                    {
+                      label: "Computer Science/ IT",
+                      value: "Computer Science/ IT",
+                    },
+                    {
+                      label: "Data Science/ ML/ AI",
+                      value: "Data Science/ ML/ AI",
+                    },
+                    {
+                      label: "Mechatronics/ Robotics",
+                      value: "Mechatronics/ Robotics",
+                    },
+                    {
+                      label: "Electronics/ Electrical",
+                      value: "Electronics/ Electrical",
+                    },
+                    {
+                      label: "Aerospace/ Aeronautical",
+                      value: "Aerospace/ Aeronautical",
+                    },
+                    { label: "Civil", value: "Civil" },
+                    { label: "Chemical", value: "Chemical" },
+                    { label: "Others", value: "Others" },
+                  ].map(({ label, value }, index) => (
+                    <option key={index} value={value}>
+                      {label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {details?.department == "Others" && (
+                <div className="flex flex-col items-start justify-start mb-5">
+                  {" "}
+                  <p className="text-xs mb-0.5">Enter Department Name</p>{" "}
+                  <input
+                    type="text"
+                    placeholder="Enter Department Name"
+                    required
+                    value={details?.departmentDetails}
+                    onChange={(e) =>
+                      handleDetails("departmentDetails", e.target.value)
+                    }
+                    className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
+                  />
+                </div>
+              )}
+
+              {/* <div className="flex flex-col items-start justify-start mb-5">
                 <p className="text-xs mb-0.5">Referral Code (If Any)</p>
                 <input
                   type="text"
@@ -228,7 +371,7 @@ export default function CtaForm() {
                   value={details?.referral}
                   onChange={(e) => handleDetails("referral", e.target.value)}
                 />
-              </div>
+              </div> */}
 
               <button
                 type="submit"
@@ -236,8 +379,12 @@ export default function CtaForm() {
                   otpVerficationStatus !== otpStatuses.SUCCESS ||
                   !details?.name ||
                   !details?.email ||
-                  !details?.mobile ||
-                  !details?.profile_info
+                  !details?.collageName ||
+                  !details?.phoneNumber ||
+                  !details?.courseYear ||
+                  !details?.department ||
+                  (details.department === "Others" &&
+                    !details.departmentDetails)
                 }
                 className="text-black w-full p-3 font-semibold uppercase border border-transparent bg-capabl_primary rounded-md text-sm whitespace-nowrap hover:scale-[0.98] transition-all duration-200 disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed"
               >

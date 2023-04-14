@@ -1,5 +1,6 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from 'next/router'
 import { FaPlay } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
 import { FiChevronUp } from "react-icons/fi";
@@ -39,6 +40,7 @@ import {
   TrueCareerPlatformSvg,
   WorldClassExposureAndNetworkingSvg,
 } from "../../components/courses/svgs";
+import Alret from "../../components/alert";
 
 const theme = {
   primary: "#A442D7",
@@ -433,6 +435,9 @@ export default function Courses() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
   const moduleno = useGeneralStore((state) => state.module_no);
 
+  const router = useRouter();
+  const [reqType, setReqType] = useState();
+
   return (
     <div>
       <Head>
@@ -507,14 +512,20 @@ export default function Courses() {
 
             <div className="flex items-center justify-center md:justify-start gap-2 mt-6">
               <button
-                onClick={() => openCtaForm()}
+                onClick={() => {
+                  setReqType('Talk to Counselor'); 
+                  openCtaForm(); 
+                }}
                 style={{ background: theme.primary, color: theme.text }}
                 className="font-normal text-center py-2 px-3 border border-transparent rounded-lg text-sm hover_animation"
               >
                 Talk to Counselor
               </button>
               <button
-                onClick={() => openCtaForm()}
+                onClick={() => {
+                  setReqType('Apply for Scholarship');
+                  openCtaForm(); 
+                }}
                 style={{ borderColor: theme.primary, color: theme.primary }}
                 className="font-normal text-center py-2 px-3 border bg-transparent rounded-lg text-sm hover_animation"
               >
@@ -1087,7 +1098,8 @@ export default function Courses() {
       {/* Footer */}
       <Footer />
 
-      <CtaForm />
+      <CtaForm source={router.pathname} reqType = {reqType} />
+      <Alret />
       <Modal
         moduleData={{
           moduleData: moduleData[moduleno],

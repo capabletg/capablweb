@@ -17,6 +17,14 @@ const store = (set) => ({
   openModal: () => set((state) => ({ show_modal: true })),
   closeModal: () => set((state) => ({ show_modal: false })),
   module: (moduleno) => set((state) => ({ module_no: moduleno })),
+
+  // toaster
+  show_toaster: false,
+  openToaster: () => set(() => ({ show_toaster: true })),
+  closeToaster: () => set(() => ({ show_toaster: false })),
+  toasterInfo: {},
+  setToasterInfo: (info) => set(() => ({ toasterInfo: info })),
+  resetToasterInfo: () => set(() => ({ toasterInfo: {} })),
 });
 
 const useGeneralStore = create(devtools(store));
