@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { useRouter } from 'next/router'
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
@@ -17,6 +19,9 @@ import Alret from "../components/alert";
 
 export default function Home() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
+  
+  const router = useRouter();
+  const [reqType, setReqType] = useState('/home')
 
   return (
     <div>
@@ -145,7 +150,10 @@ export default function Home() {
             </p>
             <div className="mt-4 md:mt-10 flex items-center gap-3">
               <button
-                onClick={() => openCtaForm()}
+                onClick={() => { 
+                  setReqType('Talk to Counselor'); 
+                  openCtaForm()
+                }}
                 className="text-[#272727] font-medium border border-capabl_primary bg-capabl_primary rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation "
               >
                 Talk to Counselor
@@ -557,7 +565,7 @@ export default function Home() {
         </section>
       </main>
 
-      <CtaForm />
+      <CtaForm source={router.pathname} reqType = {reqType} />
       <Alret />
 
       <Footer />
