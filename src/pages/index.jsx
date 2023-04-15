@@ -13,7 +13,7 @@ import Header from "../components/header_intrim";
 import useGeneralStore from "../store/generalStore";
 import VideoGridTestimonials from "../components/VideoGridTestimonials";
 import FeatureComparison from "../components/FeatureComparison";
-import Alret from "../../components/alert";
+import Alret from "../components/alert";
 
 export default function Home() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
