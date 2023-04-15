@@ -54,7 +54,7 @@ export default function CtaForm(props) {
     try {
       const data = {
         email: details?.email,
-        // phoneNumber: `+91${details.phoneNumber}`,
+        phoneNumber: `+91${details.phoneNumber}`,
       };
       await axios.post(apiEndPoints.SENT_OTP, data);
       setToasterInfo({
