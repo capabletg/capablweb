@@ -97,10 +97,11 @@ export default function CtaForm(props) {
       setToasterInfo({
         isSuccess: true,
         header: "Success",
-        body: "Otp sent successfully",
+        body: "Request has been recorded",
         showCta: false,
         position: "top-right",
       });
+      openToaster();
     } catch (err) {
       setToasterInfo({
         isSuccess: false,
@@ -116,14 +117,15 @@ export default function CtaForm(props) {
   useEffect(() => {
     if (otp.length === 6) {
       setOtpVerficationStatus(otpStatuses.LOADING);
-      const resp = axios.post(apiEndPoints.VERIFY_OTP, {
+      axios.post(apiEndPoints.VERIFY_OTP, {
         otp: otp,
         email: details?.email,
         phoneNumber: `+91${details.phoneNumber}`,
+      }).then(() => {
+        setOtpVerficationStatus(otpStatuses.SUCCESS)
+      }).catch(() => {
+        setOtpVerficationStatus(otpStatuses.FAILED);
       });
-      resp.status === 200
-        ? setOtpVerficationStatus(otpStatuses.SUCCESS)
-        : setOtpVerficationStatus(otpStatuses.FAILED);
     }
   }, [otp]);
   return (
@@ -288,10 +290,13 @@ export default function CtaForm(props) {
                 >
                   <option value="">Choose</option>
                   {[
-                    { label: "1st Year Student", value: "1st_year_student" },
-                    { label: "2nd Year Student", value: "2nd_year_student" },
-                    { label: "3rd Year Student", value: "3rd_year_student" },
-                    { label: "4th Year Student", value: "4th_year_student" },
+                    { label: "1st Year Student", value: "1st Year Student" },
+                    { label: "2nd Year Student", value: "2nd Year Student" },
+                    { label: "3rd Year Student", value: "3rd Year Student" },
+                    { label: "4th Year Student", value: "4th Year Student" },
+                    { label: "Graduated but not Working", value: "Graduated but not Working" },
+                    { label: "Working Professional", value: "Working Professional" },
+                    { label: "Faculty", value: "Faculty" },
                   ].map(({ label, value }, index) => (
                     <option key={index} value={value}>
                       {label}
@@ -311,31 +316,47 @@ export default function CtaForm(props) {
                   <option value="">Choose</option>
                   {[
                     {
-                      label: "Mechanical/ Automobile/ Production",
-                      value: "Mechanical/ Automobile/ Production",
+                      label: "Aerospace Engineering",
+                      value: "Aerospace Engineering",
                     },
                     {
-                      label: "Computer Science/ IT",
-                      value: "Computer Science/ IT",
+                      label: "AI & ML",
+                      value: "AI & ML",
                     },
                     {
-                      label: "Data Science/ ML/ AI",
-                      value: "Data Science/ ML/ AI",
+                      label: "Automobile",
+                      value: "Automobile",
                     },
                     {
-                      label: "Mechatronics/ Robotics",
-                      value: "Mechatronics/ Robotics",
+                      label: "Chemical",
+                      value: "Chemical",
                     },
                     {
-                      label: "Electronics/ Electrical",
-                      value: "Electronics/ Electrical",
+                      label: "Civil",
+                      value: "Civil",
                     },
                     {
-                      label: "Aerospace/ Aeronautical",
-                      value: "Aerospace/ Aeronautical",
+                      label: "Computer Science",
+                      value: "Computer Science",
                     },
-                    { label: "Civil", value: "Civil" },
-                    { label: "Chemical", value: "Chemical" },
+                    {
+                      label: "Data Science",
+                      value: "Data Science",
+                    },
+                    {
+                      label: "Electrical and Electronics",
+                      value: "Electrical and Electronics",
+                    },
+                    {
+                      label: "Electronics and Communication",
+                      value: "Electronics and Communication",
+                    },
+                    { label: "Information Technology", value: "Information Technology" },
+                    { label: "Instrumentation and Control", value: "Instrumentation and Control" },
+                    { label: "Mechanical", value: "Mechanical" },
+                    { label: "Mechatronics", value: "Mechatronics" },
+                    { label: "Production", value: "Production" },
+                    { label: "Robotics", value: "Robotics" },
                     { label: "Others", value: "Others" },
                   ].map(({ label, value }, index) => (
                     <option key={index} value={value}>

@@ -978,7 +978,7 @@ export default function Courses() {
 
               {/* form */}
               <div className="col-span-1 md:col-span-2 px-2 sm:px-6 md:px-0">
-                <RegsiterForm />
+                <RegsiterForm source={router.pathname} reqType = {'program_request'}/>
               </div>
 
               <div className="col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
