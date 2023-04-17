@@ -33,7 +33,7 @@ export default function CtaForm(props) {
   const [details, handleDetails, resetDetails] = useForm({
     name: "",
     email: "",
-    collageName: "",
+    collegeName: "",
     phoneNumber: "",
     courseYear: "",
     department: "",
@@ -188,13 +188,13 @@ export default function CtaForm(props) {
               </div>
 
               <div className="flex flex-col items-start justify-start mb-5">
-                <p className="text-xs mb-0.5">Collage Name</p>
+                <p className="text-xs mb-0.5">college Name</p>
                 <input
                   type="text"
-                  placeholder="Collage Name"
+                  placeholder="college Name"
                   required
-                  value={details?.collageName}
-                  onChange={(e) => handleDetails("collageName", e.target.value)}
+                  value={details?.collegeName}
+                  onChange={(e) => handleDetails("collegeName", e.target.value)}
                   className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-md text-sm placeholder:text-gray-400 text-black"
                 />
               </div>
@@ -400,7 +400,7 @@ export default function CtaForm(props) {
                   otpVerficationStatus !== otpStatuses.SUCCESS ||
                   !details?.name ||
                   !details?.email ||
-                  !details?.collageName ||
+                  !details?.collegeName ||
                   !details?.phoneNumber ||
                   !details?.courseYear ||
                   !details?.department ||

@@ -31,7 +31,7 @@ export default function RegsiterForm(props) {
   const [details, handleDetails, resetDetails] = useForm({
     name: "",
     email: "",
-    collageName: "",
+    collegeName: "",
     phoneNumber: "",
     courseYear: "",
     department: "",
@@ -280,14 +280,14 @@ export default function RegsiterForm(props) {
         {show && (
           <div className="w-full flex flex-col items-start justify-start gap-4">
             <label className="flex flex-col w-full items-start justify-start gap-1">
-              <p className="text-xs text-white">Collage Name</p>
+              <p className="text-xs text-white">college Name</p>
               <input
                 className="rounded-sm text-sm border w-full border-[#CBCBCB] bg-[#EBEBEB] placeholder:text-[#cbcbcb] px-4 py-2.5"
                 type="text"
-                placeholder="Collage Name"
+                placeholder="college Name"
                 required
-                value={details?.collageName}
-                onChange={(e) => handleDetails("collageName", e.target.value)}
+                value={details?.collegeName}
+                onChange={(e) => handleDetails("collegeName", e.target.value)}
               />
             </label>
 
@@ -410,7 +410,7 @@ export default function RegsiterForm(props) {
             <button
               disabled={
                 otpVerficationStatus !== otpStatuses.SUCCESS ||
-                !details?.collageName ||
+                !details?.collegeName ||
                 !details?.courseYear ||
                 !details?.department ||
                 (details.department === "Others" && !details.departmentDetails)

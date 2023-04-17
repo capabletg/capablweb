@@ -1036,7 +1036,7 @@ export default function Courses() {
                 <RegsiterForm source={router.pathname} reqType = {'program_request'}/>
               </div>
 
-              <div className="col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
+              <div className="hidden md:block col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
                 <div className="bg-white rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6">
                   <div className="flex flex-col items-center justify-start gap-2">
                     <p className="text-[#545D61] text-sm font-light text-center">{`Get India’s Biggest Scholarship`}</p>

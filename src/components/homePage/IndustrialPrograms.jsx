@@ -64,7 +64,7 @@ const data = [
   },
   {
     image: "/images/home/design_cae.jpg",
-    target: "/",
+    target: "/courses/design",
     id: "design-and-engineering",
     title: "Design Engineering",
     background: "#fd6768",
@@ -83,7 +83,7 @@ const data = [
   },
   {
     image: "/images/home/full_stack.jpg",
-    target: "/",
+    target: "/courses/full-stack-development",
     id: "full-stack-development",
     title: "Full Stack Development",
     background: "#627ffd",

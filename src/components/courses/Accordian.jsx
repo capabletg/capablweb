@@ -19,7 +19,7 @@ export default function Accordian({ data = [], theme = { primary: "", text: "" }
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 lg:mt-10">
-            <div className="col-span-1 lg:order-1">
+            <div className="hidden md:block col-span-1 lg:order-1">
                 <div className="w-full max-w-2xl mx-auto py-4 md:py-8 h-full">
                     {data?.map(({ image }, index) => (
                         <AnimatePresence key={index}>
