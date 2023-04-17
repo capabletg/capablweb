@@ -456,12 +456,12 @@ export default function Courses() {
               className="relative text-lg md:text-3xl text-center md:text-left text-black font-medium mb-3 md:mb-2.5 max-w-md mx-auto md:max-w-lg md:mx-0 md:leading-[3rem]"
             >
               {`Be`}
-              <span style={{ color: theme.primary }}>{` NaukriSaksham `}</span>
+              <span style={{ color: theme.primary }}>{` NaukriSaksham in `}</span>
               {/* {`in `}
               <span style={{ color: theme.primary }}>{` Hero `}</span>
               {`in `} */}
               <span className={`relative font-semibold`}>
-                {`NaukriSaksham`}
+                {`Mechatronics`}
 
                 <span
                   style={{ background: theme.primary }}
