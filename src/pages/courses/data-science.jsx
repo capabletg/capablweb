@@ -477,11 +477,11 @@ export default function Courses() {
 
           <div className="col-span-1 md:col-span-3 lg:col-span-1 mt-12 md:pb-12">
             <h1
-              title="Be NakriSaksham in Data Science with a core job, not just a degree!"
+              title="Be NaukriSaksham in Data Science with a core job, not just a degree!"
               className="relative text-lg md:text-3xl text-center md:text-left text-black font-medium mb-3 md:mb-2.5 max-w-md mx-auto md:max-w-lg md:mx-0 md:leading-[3rem]"
             >
               {`Be`}
-              <span style={{ color: theme.primary }}>{` NakriSaksham `}</span>
+              <span style={{ color: theme.primary }}>{` NaukriSaksham in`}</span>
               {/* {`in `}
               <span style={{ color: theme.primary }}>{` Hero `}</span>
               {`in `} */}
