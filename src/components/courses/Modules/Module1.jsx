@@ -52,7 +52,7 @@ export default function Module1() {
                     </div> */}
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-4 sm:mt-7">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6 mt-4 sm:mt-7">
                     <div className="hidden md:flex flex-col items-start justify-start md:gap-1 h-full">
                         {/* Video here */}
                         <div className="bg-white mb-3 sm:mb-5 flex-grow w-full relative overflow-hidden rounded-sm h-[9rem] sm:h-[12rem] md:h-[15rem] lg:h-[12rem] group cursor-pointer">

@@ -426,23 +426,23 @@ export default function Courses() {
 
           <div className="col-span-1 md:col-span-3 lg:col-span-1 mt-12 md:pb-12">
             <h1
-              title="From 0 to Hero in Full-Stack Graduate with a core job, not just a degree!"
+              title="Be NakriSaksham in Data Science with a core job, not just a degree!"
               className="relative text-lg md:text-3xl text-center md:text-left text-black font-medium mb-3 md:mb-2.5 max-w-md mx-auto md:max-w-lg md:mx-0 md:leading-[3rem]"
             >
-              {`From`}
-              <span style={{ color: theme.primary }}>{` 0 `}</span>
-              {`to`}
+              {`Be`}
+              <span style={{ color: theme.primary }}>{` NakriSaksham `}</span>
+              {/* {`in `}
               <span style={{ color: theme.primary }}>{` Hero `}</span>
-              {`in `}
+              {`in `} */}
               <span className={`relative font-semibold`}>
-                {`Full Stack Devolopment`}
+                {`Data Science`}
 
                 <span
                   style={{ background: theme.primary }}
                   className="w-full h-0.5 md:h-[0.1875rem] rounded-full absolute bottom-0 left-0"
                 />
               </span>
-              {` Graduate with a core job, not just a degree!`}
+              {` with a core job, not just a degree!`}
 
               <svg
                 style={{ fill: theme.primary }}
@@ -457,7 +457,7 @@ export default function Courses() {
               </svg>
             </h1>
 
-            <p className="text-[#636363] text-sm text-center md:text-left">{`The best program now comes with the best Scholarship!`}</p>
+            <p className="text-[#636363] text-sm text-center md:text-left">{`The best program now comes with pay after placement and 100% job guarantee!`}</p>
 
             <div className="flex items-center justify-center md:justify-start gap-2 mt-6">
               <button
@@ -581,7 +581,7 @@ export default function Courses() {
           <div className="bg-transparent md:bg-[#F2F6F7] md:rounded-3xl p-0 md:p-6">
             <div className="bg-transparent md:bg-white md:bg-opacity-30 md:rounded-3xl md:px-6 md:pt-10 md:pb-4">
               <h3 className="text-center text-xl sm:text-2xl md:text-3xl font-light mb-4">
-                Sponsorship of upto <span className="font-medium">2 Lakhs</span>
+                Pay After Placement - <span className="font-medium">100% Guarantee with Money Refund</span>
               </h3>
               <div className="flex flex-col items-center justify-start text-center">
                 <img
