@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { FaPlay } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
 import { FiChevronUp } from "react-icons/fi";
@@ -394,7 +395,25 @@ export default function Courses() {
         <meta name="description" content="Capable Website" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-Q3GNQFZWRP"
+        strategy="afterInteractive"
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-Q3GNQFZWRP');`}
+      </Script>
+      <Script id="microsoft-clarity" strategy="afterInteractive">
+        {`(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "gqd7z47i88");`}
+      </Script>
       <Header />
 
       <main className="min-h-screen w-full">

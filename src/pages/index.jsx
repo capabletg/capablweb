@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
@@ -19,9 +19,9 @@ import Alret from "../components/alert";
 
 export default function Home() {
   const openCtaForm = useGeneralStore((state) => state.openCtaForm);
-  
+
   const router = useRouter();
-  const [reqType, setReqType] = useState('/home')
+  const [reqType, setReqType] = useState("/home");
 
   return (
     <div>
@@ -73,7 +73,25 @@ export default function Home() {
           }),
         }}
       />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-Q3GNQFZWRP"
+        strategy="afterInteractive"
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-Q3GNQFZWRP');`}
+      </Script>
+      <Script id="microsoft-clarity" strategy="afterInteractive">
+        {`(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "gqd7z47i88");`}
+      </Script>
       <Header />
 
       <main className="min-h-screen w-full">
@@ -150,9 +168,9 @@ export default function Home() {
             </p>
             <div className="mt-4 md:mt-10 flex items-center gap-3">
               <button
-                onClick={() => { 
-                  setReqType('Talk to Counselor'); 
-                  openCtaForm()
+                onClick={() => {
+                  setReqType("Talk to Counselor");
+                  openCtaForm();
                 }}
                 className="text-[#272727] font-medium border border-capabl_primary bg-capabl_primary rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation "
               >
@@ -565,7 +583,7 @@ export default function Home() {
         </section>
       </main>
 
-      <CtaForm source={router.pathname} reqType = {reqType} />
+      <CtaForm source={router.pathname} reqType={reqType} />
       <Alret />
 
       <Footer />
