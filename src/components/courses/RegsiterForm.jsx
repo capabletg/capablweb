@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from 'next/router'
 import OtpInput from "react-otp-input";
 import { HiCheckCircle, HiXCircle } from "react-icons/hi2";
 import { RiLoader2Line } from "react-icons/ri";
@@ -16,6 +17,7 @@ const otpStatuses = Object.freeze({
 
 export default function RegsiterForm(props) {
   const { source, reqType } = props;
+  const router = useRouter()
 
   const [show, setShow] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
@@ -278,135 +280,136 @@ export default function RegsiterForm(props) {
         )}
 
         {show && (
-          <div className="w-full flex flex-col items-start justify-start gap-4">
-            <label className="flex flex-col w-full items-start justify-start gap-1">
-              <p className="text-xs text-white">college Name</p>
+        <div className="w-full flex flex-col items-start justify-start gap-4">
+          <label className="flex flex-col w-full items-start justify-start gap-1">
+            <p className="text-xs text-white">College Name</p>
+            <input
+              className="rounded-sm text-sm border w-full border-[#CBCBCB] bg-[#EBEBEB] placeholder:text-[#cbcbcb] px-4 py-2.5"
+              type="text"
+              placeholder="College Name"
+              required
+              value={details?.collegeName}
+              onChange={(e) => handleDetails("collegeName", e.target.value)}
+            />
+          </label>
+
+          <label className="flex flex-col w-full items-start justify-start gap-1">
+            <p className="text-xs text-white">I am</p>
+            <select
+              required
+              className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-sm text-sm placeholder:text-gray-400 text-black"
+              value={details?.courseYear}
+              onChange={(e) => handleDetails("courseYear", e.target.value)}
+            >
+              <option value="">Choose</option>
+              {[
+                { label: "Graduating in 2023", value: "Graduating in 2023" },
+                { label: "Graduating in 2024", value: "Graduating in 2024" },
+                { label: "Graduating in 2025", value: "Graduating in 2025" },
+                { label: "Graduating in 2026", value: "Graduating in 2026" },
+                {
+                  label: "Graduated but not Working",
+                  value: "Graduated but not Working",
+                },
+                {
+                  label: "Working Professional",
+                  value: "Working Professional",
+                },
+                { label: "Faculty", value: "Faculty" },
+              ].map(({ label, value }, index) => (
+                <option key={index} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="flex flex-col w-full items-start justify-start gap-1">
+            <p className="text-xs text-white">Department</p>
+            <select
+              required
+              className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-sm text-sm placeholder:text-gray-400 text-black"
+              value={details?.department}
+              onChange={(e) => handleDetails("department", e.target.value)}
+            >
+              <option value="">Choose</option>
+              {[
+                {
+                  label: "Aerospace Engineering",
+                  value: "Aerospace Engineering",
+                },
+                {
+                  label: "AI & ML",
+                  value: "AI & ML",
+                },
+                {
+                  label: "Automobile",
+                  value: "Automobile",
+                },
+                {
+                  label: "Chemical",
+                  value: "Chemical",
+                },
+                {
+                  label: "Civil",
+                  value: "Civil",
+                },
+                {
+                  label: "Computer Science",
+                  value: "Computer Science",
+                },
+                {
+                  label: "Data Science",
+                  value: "Data Science",
+                },
+                {
+                  label: "Electrical and Electronics",
+                  value: "Electrical and Electronics",
+                },
+                {
+                  label: "Electronics and Communication",
+                  value: "Electronics and Communication",
+                },
+                {
+                  label: "Information Technology",
+                  value: "Information Technology",
+                },
+                {
+                  label: "Instrumentation and Control",
+                  value: "Instrumentation and Control",
+                },
+                { label: "Mechanical", value: "Mechanical" },
+                { label: "Mechatronics", value: "Mechatronics" },
+                { label: "Production", value: "Production" },
+                { label: "Robotics", value: "Robotics" },
+                { label: "Others", value: "Others" },
+              ].map(({ label, value }, index) => (
+                <option key={index} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+          {details?.department == "Others" && (
+            <div className="flex flex-col w-full items-start justify-start mb-5">
+              {" "}
+              <p className="text-xs mb-0.5 text-white">
+                Enter Department Name
+              </p>{" "}
               <input
-                className="rounded-sm text-sm border w-full border-[#CBCBCB] bg-[#EBEBEB] placeholder:text-[#cbcbcb] px-4 py-2.5"
                 type="text"
-                placeholder="college Name"
+                placeholder="Enter Department Name"
                 required
-                value={details?.collegeName}
-                onChange={(e) => handleDetails("collegeName", e.target.value)}
+                value={details?.departmentDetails}
+                onChange={(e) =>
+                  handleDetails("departmentDetails", e.target.value)
+                }
+                className="rounded-sm text-sm border w-full border-[#CBCBCB] bg-[#EBEBEB] placeholder:text-[#cbcbcb] px-4 py-2.5"
               />
-            </label>
+            </div>
+          )}
 
-            <label className="flex flex-col w-full items-start justify-start gap-1">
-              <p className="text-xs text-white">I am</p>
-              <select
-                required
-                className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-sm text-sm placeholder:text-gray-400 text-black"
-                value={details?.courseYear}
-                onChange={(e) => handleDetails("courseYear", e.target.value)}
-              >
-                <option value="">Choose</option>
-                {[
-                  { label: "1st Year Student", value: "1st Year Student" },
-                  { label: "2nd Year Student", value: "2nd Year Student" },
-                  { label: "3rd Year Student", value: "3rd Year Student" },
-                  { label: "4th Year Student", value: "4th Year Student" },
-                  {
-                    label: "Graduated but not Working",
-                    value: "Graduated but not Working",
-                  },
-                  {
-                    label: "Working Professional",
-                    value: "Working Professional",
-                  },
-                  { label: "Faculty", value: "Faculty" },
-                ].map(({ label, value }, index) => (
-                  <option key={index} value={value}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label className="flex flex-col w-full items-start justify-start gap-1">
-              <p className="text-xs text-white">Department</p>
-              <select
-                required
-                className="w-full bg-[#f5f5f5] border-[#d1d1d1] rounded-sm text-sm placeholder:text-gray-400 text-black"
-                value={details?.department}
-                onChange={(e) => handleDetails("department", e.target.value)}
-              >
-                <option value="">Choose</option>
-                {[
-                  {
-                    label: "Aerospace Engineering",
-                    value: "Aerospace Engineering",
-                  },
-                  {
-                    label: "AI & ML",
-                    value: "AI & ML",
-                  },
-                  {
-                    label: "Automobile",
-                    value: "Automobile",
-                  },
-                  {
-                    label: "Chemical",
-                    value: "Chemical",
-                  },
-                  {
-                    label: "Civil",
-                    value: "Civil",
-                  },
-                  {
-                    label: "Computer Science",
-                    value: "Computer Science",
-                  },
-                  {
-                    label: "Data Science",
-                    value: "Data Science",
-                  },
-                  {
-                    label: "Electrical and Electronics",
-                    value: "Electrical and Electronics",
-                  },
-                  {
-                    label: "Electronics and Communication",
-                    value: "Electronics and Communication",
-                  },
-                  {
-                    label: "Information Technology",
-                    value: "Information Technology",
-                  },
-                  {
-                    label: "Instrumentation and Control",
-                    value: "Instrumentation and Control",
-                  },
-                  { label: "Mechanical", value: "Mechanical" },
-                  { label: "Mechatronics", value: "Mechatronics" },
-                  { label: "Production", value: "Production" },
-                  { label: "Robotics", value: "Robotics" },
-                  { label: "Others", value: "Others" },
-                ].map(({ label, value }, index) => (
-                  <option key={index} value={value}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </label>
-            {details?.department == "Others" && (
-              <div className="flex flex-col w-full items-start justify-start mb-5">
-                {" "}
-                <p className="text-xs mb-0.5 text-white">
-                  Enter Department Name
-                </p>{" "}
-                <input
-                  type="text"
-                  placeholder="Enter Department Name"
-                  required
-                  value={details?.departmentDetails}
-                  onChange={(e) =>
-                    handleDetails("departmentDetails", e.target.value)
-                  }
-                  className="rounded-sm text-sm border w-full border-[#CBCBCB] bg-[#EBEBEB] placeholder:text-[#cbcbcb] px-4 py-2.5"
-                />
-              </div>
-            )}
-
+          <div className="flex items-center justify-start gap-3 w-full">
             <button
               disabled={
                 otpVerficationStatus !== otpStatuses.SUCCESS ||
@@ -417,8 +420,24 @@ export default function RegsiterForm(props) {
               }
               className="mt-3 md:mt-4 rounded-lg border-[0.1rem] border-capabl_primary bg-capabl_primary transition-all duration-300 w-full py-3 text-[#231F20] text-sm disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:border-0"
               type="submit"
-            >{`Next : Fill Academic Details`}</button>
+            >{`Submit`}</button>
+            <button
+              disabled={
+                otpVerficationStatus !== otpStatuses.SUCCESS ||
+                !details?.collegeName ||
+                !details?.courseYear ||
+                !details?.department ||
+                (details.department === "Others" && !details.departmentDetails)
+              }
+              className="mt-3 md:mt-4 rounded-lg border-[0.1rem] border-capabl_primary bg-capabl_primary transition-all duration-300 w-full py-3 text-[#231F20] text-sm disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:border-0"
+              onClick={(e) => {
+                e.preventDefault();
+                onFormSubmit();
+                router.push('/join-now')
+              }}
+            >{`Join Now`}</button>
           </div>
+        </div>
         )}
       </form>
     </div>

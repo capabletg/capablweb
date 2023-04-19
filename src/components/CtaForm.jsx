@@ -188,10 +188,10 @@ export default function CtaForm(props) {
               </div>
 
               <div className="flex flex-col items-start justify-start mb-5">
-                <p className="text-xs mb-0.5">college Name</p>
+                <p className="text-xs mb-0.5">College Name</p>
                 <input
                   type="text"
-                  placeholder="college Name"
+                  placeholder="College Name"
                   required
                   value={details?.collegeName}
                   onChange={(e) => handleDetails("collegeName", e.target.value)}
@@ -290,10 +290,10 @@ export default function CtaForm(props) {
                 >
                   <option value="">Choose</option>
                   {[
-                    { label: "1st Year Student", value: "1st Year Student" },
-                    { label: "2nd Year Student", value: "2nd Year Student" },
-                    { label: "3rd Year Student", value: "3rd Year Student" },
-                    { label: "4th Year Student", value: "4th Year Student" },
+                    { label: "Graduating in 2023", value: "Graduating in 2023" },
+                    { label: "Graduating in 2024", value: "Graduating in 2024" },
+                    { label: "Graduating in 2025", value: "Graduating in 2025" },
+                    { label: "Graduating in 2026", value: "Graduating in 2026" },
                     { label: "Graduated but not Working", value: "Graduated but not Working" },
                     { label: "Working Professional", value: "Working Professional" },
                     { label: "Faculty", value: "Faculty" },

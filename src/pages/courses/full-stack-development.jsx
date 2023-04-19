@@ -42,6 +42,7 @@ import {
   WorldClassExposureAndNetworkingSvg,
 } from "../../components/courses/svgs";
 import Alret from "../../components/alert";
+import Link from "next/link";
 
 const theme = {
   primary: "#627FFD",
@@ -489,16 +490,14 @@ export default function Courses() {
               >
                 Talk to Counselor
               </button>
+              <Link href="/join-now">
               <button
-                onClick={() => {
-                  setReqType("Apply for Scholarship");
-                  openCtaForm();
-                }}
                 style={{ borderColor: theme.primary, color: theme.primary }}
                 className="font-normal text-center py-2 px-3 border bg-transparent rounded-lg text-sm hover_animation"
               >
-                Apply for Scholarship
+                Join Now
               </button>
+              </Link>
             </div>
 
             <div className="hidden max-w-xl relative z-[2] rounded-lg p-6 light_shadow shadow-none bg-white md:bg-[#f2f4f7] md:flex items-start justify-between gap-4 md:gap-6 mt-5 md:mt-10">
@@ -517,11 +516,11 @@ export default function Courses() {
               </p>
               <p className="flex flex-col items-center justify-start gap-1">
                 <p className="flex flex-row items-center justify-start gap-1">
-                  <span className="text-[#371B69] font-semibold font-serif text-lg">{`₹`}</span>
-                  <span className="text-[#371B69] font-semibold text-lg">{` 10 Crore+`}</span>
+                  {/* <span className="text-[#371B69] font-semibold font-serif text-lg">{`₹`}</span> */}
+                  <span className="text-[#371B69] font-semibold text-lg">{` 08`}</span>
                 </p>
                 <span className="text-black text-xs text-left">
-                  Worth of Scholarship
+                Industrial Projects 
                 </span>
               </p>
               <p className="flex flex-col items-center justify-start gap-1">
@@ -529,7 +528,7 @@ export default function Courses() {
                   40+
                 </span>
                 <span className="text-black text-xs text-left">
-                  Industrial Projects
+                  Case Stydies
                 </span>
               </p>
               <p className="flex flex-col items-center justify-start gap-1">
@@ -637,11 +636,14 @@ export default function Courses() {
         </section>
 
         {/* Path section */}
-        <section className="max-w-7xl mx-auto px-6 mt-16 mb-10 md:mb-16 md:mt-28 lg:mt-32">
-          <div className="hidden md:block w-full px-6">
+        <section className="max-w-7xl mx-auto px-6 mt-16 mb-10 md:mb-16">
+          <h2 className="text-center font-medium text-lg md:text-2xl my-3 lg:mb-4">
+            Your Journey with Us
+          </h2>
+          <div className="hidden md:block w-full px-6 pt-20">
             <HorizontalPathAnimation />
           </div>
-          <div className="block md:hidden w-full px-4">
+          <div className="block md:hidden w-full px-4 pt-4">
             <VerticalPathAnimation />
           </div>
         </section>
@@ -946,28 +948,28 @@ export default function Courses() {
               <div className="hidden md:grid col-span-1 md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4 px-2 sm:px-6 md:px-0">
                 {[
                   {
-                    count: "1.5 Crore",
-                    label: "Scholarship Budget",
+                    count: "100%",
+                    label: "Placement Guarantee",
                     icon: "/images/courses/pig.svg",
                   },
                   {
-                    count: "100",
-                    label: "No. of Seats",
+                    count: "2.2 L",
+                    label: "Learner",
                     icon: "/images/courses/pig.svg",
                   },
                   {
-                    count: "55",
-                    label: "Applications Received",
+                    count: "800+",
+                    label: "Colleges",
                     icon: "/images/courses/pig.svg",
                   },
                   {
-                    count: "25",
-                    label: "Seats Allocated",
+                    count: "25 LPA",
+                    label: "Highest Package Offered",
                     icon: "/images/courses/pig.svg",
                   },
                   {
-                    count: "75",
-                    label: "Seats Vacant",
+                    count: "6.1 LPA",
+                    label: "Average Fresher Package",
                     icon: "/images/courses/pig.svg",
                   },
                 ]?.map((item, index) => (
@@ -1000,7 +1002,7 @@ export default function Courses() {
                 <RegsiterForm source={router.pathname} reqType = {'program_request'}/>
               </div>
 
-              <div className="hidden md:block col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
+              <div className="hidden col-span-1 md:col-span-3 px-10 sm:px-6 md:px-0">
                 <div className="bg-white rounded-2xl px-6 py-10 flex flex-col sm:flex-row items-center justify-start sm:justify-evenly gap-6">
                   <div className="flex flex-col items-center justify-start gap-2">
                     <p className="text-[#545D61] text-sm font-light text-center">{`Get India’s Biggest Scholarship`}</p>
