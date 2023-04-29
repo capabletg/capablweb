@@ -110,6 +110,46 @@ export default function RegsiterForm(props) {
     }
   };
 
+  const formSubmitRedirect = async () => {
+    try {
+      details["phoneNumber"] = `+91${details.phoneNumber}`;
+
+      details["department"] =
+        details.department === "Others"
+          ? `${details.departmentDetails}`
+          : details.department;
+
+      delete details.departmentDetails;
+      details = { ...details, ...{ source, reqType, otp } };
+      const result = await axios.post(apiEndPoints.ENQUIRIES_ADD, details);
+      setOtpRequestSend(false);
+      setOtpRequestLoading(false);
+      setOtpVerficationStatus(otpStatuses.NOT_INITIATED);
+      setOtp("");
+      resetDetails();
+      setActiveStep(0);
+      setShow(false);
+      setToasterInfo({
+        isSuccess: true,
+        header: "Success",
+        body: "Request has been recorded",
+        showCta: false,
+        position: "top-right",
+      });
+      openToaster();
+      router.push('/join-now');
+    } catch (err) {
+      setToasterInfo({
+        isSuccess: false,
+        header: "Error",
+        body: err?.response?.data?.error?.message || err.message,
+        showCta: false,
+        position: "top-right",
+      });
+      openToaster();
+    }
+  };
+
   useEffect(() => {
     if (otp.length === 6) {
       setOtpVerficationStatus(otpStatuses.LOADING);
@@ -432,8 +472,7 @@ export default function RegsiterForm(props) {
               className="mt-3 md:mt-4 rounded-lg border-[0.1rem] border-capabl_primary bg-capabl_primary transition-all duration-300 w-full py-3 text-[#231F20] text-sm disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:border-0"
               onClick={(e) => {
                 e.preventDefault();
-                onFormSubmit();
-                router.push('/join-now')
+                formSubmitRedirect();
               }}
             >{`Join Now`}</button>
           </div>
