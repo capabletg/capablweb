@@ -234,7 +234,7 @@ export default function CtaForm(props) {
                     }}
                     className="text-black px-3 py-2 border border-transparent bg-capabl_primary rounded-md text-sm whitespace-nowrap hover:scale-95 transition-all duration-200 disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed"
                   >
-                    {otpRequestLoading ? "Sending..." : "Sent OTP"}
+                    {otpRequestLoading ? "Sending..." : "Send OTP"}
                   </button>
                 </div>
               </div>
