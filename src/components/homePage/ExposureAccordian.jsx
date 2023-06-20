@@ -3,35 +3,45 @@ import React, { useEffect, useState } from "react";
 
 const exposure = [
   {
-    title: "Tech Guru Mentor",
-    description: `A dedicated mentor assigned to you to look at your career growth, 1:1 counselling on performance, projects, internships, jobs and competitions to stay on top! Skilling made personal - that too life long!`,
-    image: "/images/home/tech_guru_mentor.png",
+    title: `Internships/Jobs`,
+    description: `Your search for a fortune 500 company, tech startups or a core role ends here. A dedicated product, an award winning placement team and 1000+ companies are waiting for you! That too with Soft-Skill & Interview Training.`,
+    image: "/images/home/internship_jobs.png",
   },
+  // {
+  //   title: "Tech Guru Mentor",
+  //   description: `A dedicated mentor assigned to you to look at your career growth, 1:1 counselling on performance, projects, internships, jobs and competitions to stay on top! Skilling made personal - that too life long!`,
+  //   image: "/images/home/tech_guru_mentor.png",
+  // },
   {
-    title: `Multidisciplinary Specializations`,
-    description: `Industry 4.0 and Industry 5.0 are about the integrated world and integrated technologies. Today's time asks for skill development in multiple fields. Why stick to only 1 discipline when you can have exposure to all the important ones for your career?`,
+    title: `Meet All Tech Needs`,
+    description: `Industry 4.0 and Industry 5.0 technologies taught under one platfform be it EV, Data Science or Full Stack, Design & CAE. So be it Multidisciplinary technologies or placement prep, all are covered`,
     image: "/images/home/multidisciplinary_specializations.svg",
   },
-  {
-    title: `Scholarship Support`,
-    description: `Worried about a World-class quality skilling ecosystem costing a bomb! Well, we've got you covered - scholarships worth 2 Lakhs+ from industries and organizations to give students the best platform at affordable prices.`,
-    image: "/images/home/scholarship_support.svg",
-  },
+  // {
+  //   title: `Scholarship Support`,
+  //   description: `Worried about a World-class quality skilling ecosystem costing a bomb! Well, we've got you covered - scholarships worth 2 Lakhs+ from industries and organizations to give students the best platform at affordable prices.`,
+  //   image: "/images/home/scholarship_support.svg",
+  // },
   {
     title: `Industrial Projects`,
     description: `Multiple industry projects = better industrial insights = Career growth. Simple equations made simpler via easy access. We provide you with top-notch industry projects, exciting boot camp, and 1-1 mentorship from industry experts.`,
     image: "/images/home/industry_projects.png",
   },
   {
+      title: `Industrial Exposure`,
+      description: `Talk to Industry Leaders, CEOs, Scientiests, know the latest tech changes, understand different roles & what future path you can take. We ensure you become an engineer by making best use of your college time.`,
+      image: "/images/home/scholarship_support.svg",
+    },
+  {
     title: `Community`,
     description: `Join an ever-evolving and growing community of 1.5 Lakh+ students and industry experts, who are at the forefront of a new revolution. Learn, compete, work together, get exposure and a lot more!`,
-    image: "/images/home/community.svg",
+    image: "/images/svgs/community.svg",
   },
-  {
-    title: `Internships/Jobs`,
-    description: `Your search for a fortune 500 company ends here. With our projects and mentorship, you're just a few steps away from your dream placement.`,
-    image: "/images/home/internship_jobs.png",
-  },
+  // {
+  //   title: `Internships/Jobs`,
+  //   description: `Your search for a fortune 500 company ends here. With our projects and mentorship, you're just a few steps away from your dream placement.`,
+  //   image: "/images/home/internship_jobs.png",
+  // },
 ];
 
 export default function ExposureAccordian() {

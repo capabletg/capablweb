@@ -33,6 +33,7 @@ import ScolarshipProcess from "../../components/courses/ScolarshipProcess";
 import CompaniesUniversities from "../../components/courses/CompaniesUniversities";
 import { HiOutlineDownload } from "react-icons/hi";
 import {
+  ProjectsSvg,
   CompetitionsProjectsSvg,
   LeaderboardLearningEnvironmentSvg,
   MadeForCollegeStudentsSvg,
@@ -61,9 +62,9 @@ function download(dataurl, filename) {
 
 const accordianData = [
   {
-    title: "Top Certifications",
-    description: `Exclusive Certifications only for Capabl Students - Internationally Accredited (UK, ISO) Certification with 5+ Industries and technical organizations that stamps your performance and credibility`,
-    image: <TopCertificationsSvg theme={theme} />,
+    title: `A True Career Platform`,
+    description: `We help you build your profile on platforms like Kaggle, GIT, LinkedIn, Github etc. Support in interviews, resumes, profiling. And, finally Internship and Job Guarantee!`,
+    image: <TrueCareerPlatformSvg theme={theme} />,
   },
   {
     title: "Made for College Students",
@@ -83,17 +84,18 @@ const accordianData = [
   {
     title: `Competitions, Projects, Credits & More!`,
     description: `Get - updates on national/international events, your major-minor projects done, credits for internships, industrial projects in Data Science, and services that help you be Capabl`,
-    image: <CompetitionsProjectsSvg theme={theme} />,
+    image: <ProjectsSvg theme={theme} />,
+    // image: "/images/svgs/1-01.svg",
   },
   {
-    title: `A true Career Platform`,
-    description: `Profile on platforms like LinkedIn, etc. Support in interviews, resumes, and profiling. And, finally Internship and Job Guarantee!`,
-    image: <TrueCareerPlatformSvg theme={theme} />,
-  },
-  {
-    title: `Leaderboards & Learning Environment`,
-    description: `Keep a track of your performance against 1000s of others to stay ahead of the competition. The more you stay ahead of the competition, chances are higher to get noticed by Industry! What more, you get exclusive perks like exclusive skilling, discounts, and more for good performance.`,
+    title: `Leaderboards & Competitiveness`,
+    description: `Keep a track of your performance against 1000s of others to stay ahead of the competition. The more you stay ahead of the competition, chances are higher to get noticed by Industry!`,
     image: <LeaderboardLearningEnvironmentSvg theme={theme} />,
+  },
+  {
+    title: "Top Certifications",
+    description: `Exclusive Certifications only for Capabl Students - Internationally Accredited (UK, ISO) Certification with 5+ Industries and technical organizations that stamps your performance and credibility`,
+    image: <TopCertificationsSvg theme={theme} />,
   },
 ];
 
@@ -517,7 +519,7 @@ export default function Courses() {
 
               <svg
                 style={{ fill: theme.primary }}
-                className="hidden md:block absolute -top-[1.8rem] left-[5ch] object-contain w-20"
+                className="hidden md:block absolute -top-[1.8rem] left-[3.5ch] object-contain w-20"
                 viewBox="0 0 104 43"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -541,13 +543,15 @@ export default function Courses() {
               >
                 Talk to Counselor
               </button>
-              <Link href="/join-now">
+              <Link href="/join-now" passHref>
+                <a> 
               <button
                 style={{ borderColor: theme.primary, color: theme.primary }}
                 className="font-normal text-center py-2 px-3 border bg-transparent rounded-lg text-sm hover_animation"
               >
                 Join Now
               </button>
+              </a>
               </Link>
             </div>
 
@@ -636,7 +640,7 @@ export default function Courses() {
 
         <section className="px-4 lg:px-6 mt-6 lg:mt-8 max-w-7xl mx-auto">
           <h2 className="text-center font-medium text-lg md:text-2xl mb-3 lg:mb-4">
-            Become a real Data Science Engineer with the Capabl Ecosystem!
+            Become a real Data Scientist with the Capabl Ecosystem!
           </h2>
           <p className="text-center text-[#636363] text-xs md:text-sm max-w-xl mx-auto">
             {`To become the best, you need the best. You need not just a course but an ecosystem of Stanford/IIT that helps you crack your dream EV jobs with the likes of Daimler, Tata, Ather, Honda, etc., or get into your dream university!`}
@@ -664,7 +668,7 @@ export default function Courses() {
                 </p>
               </div>
 
-              <div className="flex w-fit mt-10 mb-4 items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
+              {/* <div className="flex w-fit mt-10 mb-4 items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
                 <span className="w-3 h-3 rounded-full bg-capabl_primary flex-shrink-0" />
                 <span className="text-black text-sm font-light">
                   Our Scolarship Partners
@@ -676,13 +680,13 @@ export default function Courses() {
                 src="/images/courses/partners.png"
                 alt="partners"
                 className="mt-8 md:mt-10 mx-auto w-full max-w-5xl object-contain"
-              />
+              /> */}
             </div>
 
             {/*  */}
-            <div className="hidden">
+            {/* <div className="hidden">
               <ScolarshipProcess data={scolarshipProcess} />
-            </div>
+            </div> */}
           </div>
         </section>
         {/* Path section */}
@@ -1004,27 +1008,27 @@ export default function Courses() {
                   {
                     count: "100%",
                     label: "Placement Guarantee",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-1.png",
                   },
                   {
                     count: "2.2 L",
                     label: "Learner",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-2.png",
                   },
                   {
                     count: "800+",
                     label: "Colleges",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-3.png",
                   },
                   {
                     count: "25 LPA",
                     label: "Highest Package Offered",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-4.png",
                   },
                   {
                     count: "6.1 LPA",
                     label: "Average Fresher Package",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-5.png",
                   },
                 ]?.map((item, index) => (
                   <div

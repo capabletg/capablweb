@@ -91,7 +91,7 @@ export default function CtaForm(props) {
           : details.department;
 
       delete details.departmentDetails;
-      details = { ...details, ...{ source, reqType, otp } };
+    const  details = { ...details, ...{ source, reqType, otp } };
       const result = await axios.post(apiEndPoints.ENQUIRIES_ADD, details);
       closeModal();
       setToasterInfo({

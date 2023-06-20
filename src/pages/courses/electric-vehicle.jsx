@@ -61,9 +61,9 @@ function download(dataurl, filename) {
 
 const accordianData = [
   {
-    title: "Top Certifications",
-    description: `Exclusive Certifications only for Capabl Students - Internationally Accredited (UK, ISO) Certification with 5+ Industries and technical organizations that stamps your performance and credibility`,
-    image: <TopCertificationsSvg theme={theme} />,
+    title: `A True Career Platform`,
+    description: `We help you build your profile on platforms like Kaggle, GIT, LinkedIn, Github etc. Support in interviews, resumes, profiling. And, finally Internship and Job Guarantee!`,
+    image: <TrueCareerPlatformSvg theme={theme} />,
   },
   {
     title: "Made for College Students",
@@ -86,14 +86,14 @@ const accordianData = [
     image: <CompetitionsProjectsSvg theme={theme} />,
   },
   {
-    title: `A true Career Platform`,
-    description: `Profile on platforms like LinkedIn, etc. Support in interviews, resumes, and profiling. And, finally Internship and Job Guarantee!`,
-    image: <TrueCareerPlatformSvg theme={theme} />,
-  },
-  {
-    title: `Leaderboards & Learning Environment`,
+    title: `Leaderboards & Competitiveness`,
     description: `Keep a track of your performance against 1000s of others to stay ahead of the competition. The more you stay ahead of the competition, chances are higher to get noticed by Industry! What more, you get exclusive perks like exclusive skilling, discounts, and more for good performance.`,
     image: <LeaderboardLearningEnvironmentSvg theme={theme} />,
+  },
+  {
+    title: "Top Certifications",
+    description: `Exclusive Certifications only for Capabl Students - Internationally Accredited (UK, ISO) Certification with 5+ Industries and technical organizations that stamps your performance and credibility`,
+    image: <TopCertificationsSvg theme={theme} />,
   },
 ];
 
@@ -555,10 +555,13 @@ export default function Courses() {
                 />
               </span>
               {` with a core job, not just a degree!`}
+              {/* <div className="img w-20 ml-60 top-10 mt-0" style={{ position: 'relative' }}>
+  <img src="/images/raw_images/Group 2.png" style={{ position: 'absolute', top: -100 }} />
+</div> */}
 
               <svg
                 style={{ fill: theme.primary }}
-                className="hidden md:block absolute -top-[1.8rem] left-[5ch] object-contain w-20"
+                className="hidden md:block absolute -top-[1.8rem] left-[3.5ch] object-contain w-20"
                 viewBox="0 0 104 43"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -568,8 +571,14 @@ export default function Courses() {
                 <path d="M98.9279 33.1836C92.0995 32.9095 84.8485 33.9203 78.6529 37.3377C77.3596 38.0534 78.3858 40.0327 79.668 39.4746C85.9687 36.7323 92.0949 34.5282 98.8917 34.1255C99.4248 34.0957 99.4846 33.2075 98.9279 33.1836Z" />
               </svg>
             </h1>
+            {/* <div className="img w-20 ml-50">
+                <img src="/images/raw_images/Group 2.png"  />
+              </div> */}
 
-            <p className="text-[#636363] text-sm text-center md:text-left">{`The best program now comes with pay after placement and 100% job guarantee!`}</p>
+            <p className="text-[#636363] text-sm text-center md:text-left">The best program now comes with pay after placement <br/> and 100% job guarantee!</p>
+            <div className="img mt-0" style={{ position: 'relative', width: '20%', left: '65%' }}>
+  <img src="/images/raw_images/Group 3.png" style={{ position: 'absolute', top: -90 }} />
+</div>
 
             <div className="flex items-center justify-center md:justify-start gap-2 mt-6">
               <button
@@ -582,14 +591,19 @@ export default function Courses() {
               >
                 Talk to Counselor
               </button>
-              <Link href="/join-now">
+              <Link href="/join-now" passHref>
+                <a>
               <button
                 style={{ borderColor: theme.primary, color: theme.primary }}
                 className="font-normal text-center py-2 px-3 border bg-transparent rounded-lg text-sm hover_animation"
               >
                 Join Now
               </button>
+              </a>
               </Link>
+              {/* <div className="img w-20">
+                <img src="/images/raw_images/Group 2.png"  />
+              </div> */}
             </div>
 
             <div className="hidden max-w-xl relative z-[2] rounded-lg p-6 light_shadow shadow-none bg-white md:bg-[#f2f4f7] md:flex items-start justify-between gap-4 md:gap-6 mt-5 md:mt-10">
@@ -705,7 +719,7 @@ export default function Courses() {
                 </p>
               </div>
 
-              <div className="flex w-fit mt-10 mb-4 items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
+              {/* <div className="flex w-fit mt-10 mb-4 items-center justify-center gap-2 bg-capabl_primary bg-opacity-[0.15] rounded-3xl py-1 pl-3 pr-3">
                 <span className="w-3 h-3 rounded-full bg-capabl_primary flex-shrink-0" />
                 <span className="text-black text-sm font-light">
                   Our Scolarship Partners
@@ -717,13 +731,13 @@ export default function Courses() {
                 src="/images/courses/partners.png"
                 alt="partners"
                 className="mt-8 md:mt-10 mx-auto w-full max-w-5xl object-contain"
-              />
+              /> */}
             </div>
 
             {/*  */}
-            <div className="hidden">
+            {/* <div className="hidden">
               <ScolarshipProcess data={scolarshipProcess} />
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -1044,27 +1058,27 @@ export default function Courses() {
                   {
                     count: "100%",
                     label: "Placement Guarantee",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-1.png",
                   },
                   {
                     count: "2.2 L",
                     label: "Learner",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-2.png",
                   },
                   {
                     count: "800+",
                     label: "Colleges",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-3.png",
                   },
                   {
                     count: "25 LPA",
                     label: "Highest Package Offered",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-4.png",
                   },
                   {
                     count: "6.1 LPA",
                     label: "Average Fresher Package",
-                    icon: "/images/courses/pig.svg",
+                    icon: "/images/courses/logo-5.png",
                   },
                 ]?.map((item, index) => (
                   <div

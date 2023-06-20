@@ -1,0 +1,27 @@
+{
+    "aboutMasterclass": {  
+      "title": "About this Masterclass",
+      "details": "Designing a responsive and seamless website might sound like an easy task, but it is not. With consumers navigating through websites on various devices, building a website that works on every screen and dimension is important and a must-know for every aspiring Front-end Developer.",
+       "about":
+      "Do you want to crack down on Responsive Web-page Design and nail Frontend interviews?",
+      "about2":
+      "Join Bipin Kalra in this comprehensive Bootcamp on April 21, Thursday at 8 PM and come prepared to master Responsive Web Designing, LIVE. Register now!"
+    },
+    "gainMasterclass": {
+      "title": "What you will gain from this Masterclass",
+      "details": [
+        "Design and develop Responsive Websites",
+        "Demystify infamous CSS topics like positioning, display, flexboxes etc. from scratch",
+        "Prepare for Frontend interviews"
+      ]
+    },
+    "meetBipinKalra": {
+      "title": "Meet Bipin Kalra (LinkedIn)",
+      "details": [
+        "Developed a custom CSS framework & UI templating library ground up for Coding Blocks (1M+ downloads)",
+        "Designed & Developed IDE for Coding Minutes",
+        "Prepare for Frontend interviews"
+      ]
+    }
+  }
+  

@@ -4,24 +4,25 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import useGeneralStore from "../store/generalStore";
 
 const data = [
-    { feature: "Live Doubt Session", capable: true, coursera: false, yt_udemy: true, offline: true },
-    { feature: "Personal Tech-Guru", capable: true, coursera: false, yt_udemy: false, offline: true },
+    { feature: "Job & Internships Guarantee", capable: true, coursera: false, yt_udemy: true, offline: false, },
+    { feature: "Live Classes", capable: true, coursera: false, yt_udemy: true, offline: true },
+    { feature: "Industry Exposure", capable: true, coursera: false, yt_udemy: false, offline: true },
     { feature: "1:1 Counselling", capable: true, coursera: false, yt_udemy: true, offline: false },
     { feature: "Engagement with Industry Experts", capable: true, coursera: false, yt_udemy: true, offline: false },
     { feature: "Engineering Community", capable: true, coursera: true, yt_udemy: false, offline: false },
-    { feature: "Internships", capable: true, coursera: false, yt_udemy: false, offline: false },
+    // { feature: "Internships", capable: true, coursera: false, yt_udemy: false, offline: false },
     { feature: "Minor-Major Projects", capable: true, coursera: false, yt_udemy: true, offline: false },
     { feature: "Events & Competition Support", capable: true, coursera: false, yt_udemy: false, offline: false },
     { feature: "Research Paper & Project Support", capable: true, coursera: false, yt_udemy: false, offline: false },
-    { feature: "Scholarship for College Students", capable: true, coursera: false, yt_udemy: false, offline: false },
-    { feature: "Flexible learning as per college", capable: true, coursera: false, yt_udemy: false, offline: false },
+    // { feature: "Scholarship for College Students", capable: true, coursera: false, yt_udemy: false, offline: false },
+    { feature: "Flexible as per college schedule ", capable: true, coursera: false, yt_udemy: false, offline: false },
     { feature: "LoR/SoP support", capable: true, coursera: false, yt_udemy: false, offline: false },
     { feature: "Internationally Accredited Certificate", capable: true, coursera: true, yt_udemy: true, offline: false },
-    { feature: "Offline Programs*", capable: true, coursera: false, yt_udemy: false, offline: true },
-    { feature: "Profile Building on Internet", capable: true, coursera: false, yt_udemy: true, offline: false },
+    // { feature: "Offline Programs*", capable: true, coursera: false, yt_udemy: false, offline: true },
+    { feature: "Profile Building", capable: true, coursera: false, yt_udemy: true, offline: false },
     { feature: "Multiple Domain Expertise", capable: true, coursera: true, yt_udemy: true, offline: false },
     { feature: "Mock Interviews", capable: true, coursera: false, yt_udemy: true, offline: false },
-    { feature: "Placement Assistance", capable: true, coursera: false, yt_udemy: true, offline: false },
+    // { feature: "Placement Assistance", capable: true, coursera: false, yt_udemy: true, offline: false },
 ];
 
 // const dataObj2 = {

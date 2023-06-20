@@ -49,7 +49,7 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
 
-            "@type": "CollegeOrUniversity",
+            "@type": "CollegeOrUniversity",             
 
             name: "Elite Techno Groups",
 
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="relative md:order-2 flex-shrink-0 pt-5 md:pt-0">
             <div className="z-[2] relative bg-capabl_primary rounded-md mb-6 w-[14rem] md:w-[22.5rem] h-[17.5rem] md:h-[28rem] p-4 transform translate-x-[7.5%] md:translate-x-0">
               <p className="text-xs md:text-base text-black font-normal">
-                {`Check out why we are Rated 4.8 & voted best for engineering students.`}
+                {`Check out why Capabl is Rated 4.8 & voted best for engineering students.`}
               </p>
 
               <button className="absolute w-4/5 h-4/5 top-1/4 -left-[15%] overflow-hidden rounded-md flex items-center justify-center group">
@@ -177,7 +177,7 @@ export default function Home() {
                 Talk to Counselor
               </button>
 
-              <Link href="/#programs">
+              <Link href="/#programs" legacyBehavior>
                 <a className="text-[#ff696d] font-medium bg-transparent border border-[#ff696d] rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation">
                   Explore Programs
                 </a>
@@ -232,7 +232,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Link href="/#associations">
+        <Link href="/#associations" legacyBehavior>
           <a className="hidden mx-auto rounded-full w-16 h-16 md:flex items-center justify-center bg-capabl_primary p-5 hover_animation">
             <img
               className="w-full object-contain pt-1"
@@ -318,7 +318,7 @@ export default function Home() {
               <div className="w-full px-4">
                 <img
                   className="w-full object-contain max-w-lg md:max-w-2xl -mb-0.5 mx-auto z-0 relative transition-all duration-300"
-                  src="/images/home/achievements.png"
+                  src="/images/home/group.png"
                   alt="won"
                 />
               </div>
@@ -367,18 +367,34 @@ export default function Home() {
                 Courses Designed by Experts from
               </p>
               <div className="col-span-3 md:col-span-4 grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
-                <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
+                {/* <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem] ">
                   <img
-                    className="w-full object-contain"
+                    className="w-full object-contain opacity-0.5 hover:opacity-1"
                     src="/images/raw_images/tesla_logo.jpg"
                     alt="tesla"
                   />
-                </div>
+                </div> */}
+                <img
+          className="w-12 object-contain"
+  src="/images/raw_images/tesla_logo.jpg"
+  alt="tesla"
+  style={{
+    opacity: 1,
+    color: "#ffcc00",
+    transition: "opacity 0.3s ease",
+  }}
+/>
+
                 <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
                   <img
-                    className="w-full object-contain"
-                    src="/images/raw_images/tata_logo.jpg"
+          className="w-20 object-contain"
+          src="/images/raw_images/tata_logo.jpg"
                     alt="tata"
+                    style={{
+                      opacity: 1,
+                      transition: "opacity 0.3s ease",
+                    }}
+                  
                   />
                 </div>
                 <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
@@ -386,6 +402,11 @@ export default function Home() {
                     className="w-full object-contain"
                     src="/images/raw_images/kn_logo.jpg"
                     alt="kn"
+                    style={{
+                      opacity: 1,
+                      transition: "opacity 0.3s ease",
+                    }}
+                  
                   />
                 </div>
                 <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
@@ -393,6 +414,10 @@ export default function Home() {
                     className="w-full object-contain"
                     src="/images/raw_images/ather_logo.jpg"
                     alt="ather"
+                    style={{
+                      opacity: 1,
+                      transition: "opacity 0.3s ease",
+                    }}
                   />
                 </div>
                 <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
@@ -400,6 +425,11 @@ export default function Home() {
                     className="w-full object-contain"
                     src="/images/raw_images/amazon_logo.jpg"
                     alt="amazon"
+                    style={{
+                      opacity: 1,
+                      transition: "opacity 0.3s ease",
+                    }}
+                  
                   />
                 </div>
                 <div className="w-full max-w-[2rem] md:max-w-[3rem] lg:max-w-[3.5rem]">
@@ -407,6 +437,18 @@ export default function Home() {
                     className="w-full object-contain"
                     src="/images/raw_images/benz_logo.jpg"
                     alt="benz"
+                    style={{
+                      opacity: 1,
+                      transition: "opacity 0.3s ease",
+                    }}
+
+                    // onMouseEnter={(e) => {
+                    //   e.target.style.opacity = 1;
+                    // }}
+                    // onMouseLeave={(e) => {
+                    //   e.target.style.opacity = 0.6;
+                    // }}
+                  
                   />
                 </div>
               </div>
@@ -450,10 +492,10 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-[#636363] font-normal text-xs md:text-sm max-w-xs">
-                  {`We're proud to be the `}
-                  <span className="text-capabl_primary">only</span>
-                  {` platform who understands students like no one else :) An ecosystem that gives you an IIT/
-                                    MIT/Stanford like exposure in your college`}
+                  {`Only platform that meets all needs of an enginering student `}
+                  {/* <span className="text-capabl_primary">only</span> */}
+                  {` An ecosystem of an IIT/
+                                    MIT/Stanford in your college`}
                 </p>
               </div>
             </div>
@@ -474,10 +516,10 @@ export default function Home() {
         >
           <div className="mb-10 md:mb-12 max-w-md md:max-w-3xl mx-auto px-4">
             <h2 className="text-center text-black font-semibold text-xl sm:text-3xl md:font-medium mb-4 md:mb-6">
-              {`See why we are the best Engineering Ecosystem!`}
+              {`Why Capabl is highest rated Engineering Ecosystem`}
             </h2>
             <p className="text-center font-normal text-[#636363] text-xs sm:text-sm">
-              {`Don't believe us? Prove us wrong and you can take the programs for free. We care for you and your parents' hard earned money. Hence, we are giving you our best - the best engineering ecosystem for you!`}
+              {`Don't believe us? Prove us wrong and take the programs for free. We care for you and your parents' hard earned money. Hence, we are giving you our best - the best engineering ecosystem!`}
             </p>
           </div>
 
@@ -572,10 +614,12 @@ export default function Home() {
                   <p className="text-black text-xl font-medium mb-4 md:mb-2 text-center md:text-left">{`Join the engineering revolution`}</p>
                   <p className="text-black font-light text-sm mb-8 md:mb-0 text-center md:text-left">{`Join AIC. Talk to our team to know about AIC and the process to join it.`}</p>
                 </div>
-                <Link href="https://placements.capabl.in">
-                  <button className="z-[1] bg-black rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0 hover_animation">
+                <Link href="https://placements.capabl.in" legacyBehavior>
+                  <a>
+                  <button className="z-[1]  rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0 hover_animation">
                     Know More
                   </button>
+                  </a>
                 </Link>
               </div>
             </div>
