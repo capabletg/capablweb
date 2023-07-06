@@ -46,68 +46,56 @@ const About = () => {
             </div>
             <div className="col-lg-5">
               <div className="about-page-middle rpt-55 rpb-30 wow fadeInRight delay-0-2s">
-              {/* <div class="image-container">
-              <img src="/images/about/about.png" alt="About" />
-  <div class="top-left">Arbaz Shaikh</div>
-  <div class="top-right">Sneha Jadhav</div>
-  <div class="bottom-left">Prerna Singh</div>
-  <div class="bottom-right">Arjun Anand</div>
-</div> */}
 
                 <img src="/images/about/about1.png" alt="About" />
               </div>
             </div>
             <div className="col-lg-1 col-xs-1 col-sm-2">
         <div className="counter-wrap style-two wow fadeInRight delay-0-4s">
-          
-        {/* <div>
-        <Counter end={1.5} decimals={1} />
-        <br />
-        <Counter end={100} decimals={0} />
-      </div> */}
-          {/* <div className="success-item">
-            <span
-              className="count-text plus"
-              data-speed={1000}
-              data-stop="11.5"
-            >
-              <Counter end={11.5} decimals={1} />
-              &nbsp;Lacs
-            </span>
-            <span>Students</span>
-          </div> */}
+<div className="success-item">
+  <span
+    className="count-text plus"
+    data-speed={1000}
+    data-stop="11.5"
+  >
+    <Counter end={1.5} decimals={1} />
+    &nbsp;Lacs
+  </span>
+  <span>Students</span>
+</div>
 
-          <div className="success-item">
-            <span
-              className="count-text plus"
-              data-speed={1000}
-              data-stop="800"
-            >
+<div className="success-item">
+  <span
+    className="count-text plus"
+    data-speed={1000}
+    data-stop="800"
+  >
+    <Counter end={100} decimals={0} />
+  </span>
+  <span>Colleges</span>
+</div>
 
-      {/* <Counter end={100} decimals={0} /> */}
-            </span>
-            <span>Colleges</span>
-          </div>
-          <div className="success-item">
-            <span
-              className="count-text plus"
-              data-speed={1000}
-              data-stop="350"
-            >
-              {/* <Counter end={350} /> */}
-            </span>
-            <span>Hiring Partners</span>
-          </div>
-          <div className="success-item">
-            <span
-              className="count-text plus"
-              data-speed={1000}
-              data-stop="83"
-            >
-              {/* <Counter end={83} /> */}
-            </span>
-            <span>Experts</span>
-          </div>
+<div className="success-item">
+  <span
+    className="count-text plus"
+    data-speed={1000}
+    data-stop="350"
+  >
+    <Counter end={350} />
+  </span>
+  <span>Hiring Partners</span>
+</div>
+
+<div className="success-item">
+  <span
+    className="count-text plus"
+    data-speed={1000}
+    data-stop="83"
+  >
+    <Counter end={83} />
+  </span>
+  <span>Experts</span>
+</div>
         </div>
       </div>
           </div>
@@ -128,7 +116,6 @@ const About = () => {
                    iconStyle={{ background: '#ffcc00', color: '#fff', boxShadow:'none' }}
                   >
                      <h3 className="vertical-timeline-element-title black" style={{color: 'black', fontSize: '24px', fontWeight: '700'}}>Training by Capabl (Then ETG) Launched</h3>
-                     {/* <h4 className="vertical-timeline-element-subtitle white">Miami, FL</h4> */}
                    <p className="color white">
                      Capabl Engagged with more than 400 engineering college sessions to 1.5 Lakh students throughout INDIA, UAE, South Africa,and Malaysia to inform them about the Industrial trend and Opportunities and how they can be Industry Favorite Engineers. (2014-Present)      
                              </p>
@@ -318,7 +305,6 @@ const About = () => {
                 </div>
                 <h4 className='text2'>Inviting New <br/> Perspective</h4>
                 <p>
-                {/* Clear communication, stronger connections. Capabl helps you express yourself effectively. */}
                 Ignites transformative growth through innovation and diverse viewpoints.
                 
                 </p>
@@ -602,7 +588,7 @@ ORGANIZATION FOR STANDARDIZATION,
                 <div className="blog-image1 mr-4 mt-7">
                   <img src="/images/media/media4.png" alt="Blog" style={{width:'100%'}} />
                 </div>
-                {/* <div className="blog-content">
+                <div className="blog-content">
                   <div className="content">
                   <Link href="/media">
                       <a className="read-more">
@@ -610,7 +596,7 @@ ORGANIZATION FOR STANDARDIZATION,
                       </a>
                     </Link>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
 

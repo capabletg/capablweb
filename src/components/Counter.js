@@ -17,5 +17,4 @@ const Counter = ({ end, decimals }) => {
     </CountUp>
   );
 };
-
 export default Counter;

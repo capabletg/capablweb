@@ -205,7 +205,11 @@ export default function Courses() {
                     key={index}
                     className="bg-white rounded-lg shadow-2xl 
                      w-32 h-32 justify-self-center md:w-56 md:h-56 m-8"
-                  ></div>
+                  >
+                    {/* Elite Techno Groups is an India-based company focused on creating an engineering ecosystem around Skills needed for industry. */}
+
+
+                  </div>
                 ))}
             </div>
           </div>

@@ -11,13 +11,6 @@ const navs = [
     key: "about",
     subMenu: [],
   },
-  // {
-  //   label: "About",
-  //   href: "/media/index1",
-  //   key: "about",
-  //   subMenu: [],
-  // },
-
   {
     label: "Placements",
     href: "https://placements.capabl.in/",
@@ -37,15 +30,6 @@ const navs = [
         label: "Full Stack Development",
         href: "/courses/full-stack-development",
       },
-    ],
-  },
-  {
-    label: "Bootcamp",
-    key: "event",
-    href:  "",
-    subMenu: [
-      { label: "ds", href: "/bootcamp/dataScienceBootcampPage" },
-      { label: "full-stack", href: "/bootcamp/full-stackBootcampPage" },
     ],
   },
   {

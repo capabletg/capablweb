@@ -6,50 +6,55 @@ import useGeneralStore from "../store/generalStore";
 
 const navs = [
   {
-    label: "Programs",
-    key: "programs",
-    href: "",
-    subMenu: [
-      { label: "Electric Vehicle", href: "/courses/electric-vehicle" },
-      { label: "Data Science", href: "/courses/data-science" },
-      { label: "Mechatronics", href: "/courses/mechatronics" },
-      { label: "Design Engineering", href: "/courses/design" },
-      {
-        label: "Full Stack Development",
-        href: "/courses/full-stack-development",
-      },
-    ],
+    label: "About Us",
+    href: "/about/index1",
+    key: "about",
+    subMenu: [],
   },
-
   {
     label: "Placements",
     href: "https://placements.capabl.in/",
     key: "placements",
     subMenu: [],
   },
-
   {
-    label: "About",
-    href: "/about/index1",
-    key: "about",
-    subMenu: [],
-  },
-
-  {
-    label: "Events",
-    key: "event",
+    label: "Programs",
+    key: "programs",
     href: "",
     subMenu: [
-      { label: "EV", href: "/courses/ev-webinar" },
-      { label: "Data Science", href: "/courses/ds-webinar" },
-      { label: "Design Engineering", href: "/courses/design-webinar" },
+      { label: "Electric Vehicle", href: "/courses/electric-vehicle" },
+      { label: "Data Science", href: "/courses/data-science" },
+      // { label: "Mechatronics", href: "/courses/mechatronics" },
+      { label: "Design & CAE", href: "/courses/design" },
       {
         label: "Full Stack Development",
-        href: "/courses/full-stack-webinar",
+        href: "/courses/full-stack-development",
+      },
+    ],
+  },
+  {
+    label: "Community",
+    key: "community",
+    href: "",
+    subMenu: [
+      { label: "Electric Vehicle", href: "https://chat.whatsapp.com/CRJx8C9uJQVFaAM8QOd3Xw" },
+      { label: "Data Science", href: "https://chat.whatsapp.com/LZXDlY51utwDI4Vmw2hVk6" },
+      // { label: "Mechatronics", href: "/courses/mechatronics" },
+      { label: "Design & CAE", href:"https://chat.whatsapp.com/BTWrlvzJRMhHKuIsRWLsQY" },
+      {
+        label: "Full Stack Development",
+        href: "https://chat.whatsapp.com/HBxLiVBClnb9ZEEyhiWgFF",
       },
     ],
   },
 
+
+  // {
+  //   label: "Placements",
+  //   href: "https://placements.capabl.in/",
+  //   key: "placements",
+  //   subMenu: [],
+  // },
 ];
 
 export default function Header(props) {
@@ -63,7 +68,7 @@ export default function Header(props) {
     <>
       <header>
         {/* fixed */}
-        <div className="bg-[#fbfbfb] fixed top-0 left-0 w-full z-20">
+        {/* <div className="bg-[#fbfbfb] fixed top-0 left-0 w-full z-20">
           <div className="max-w-7xl mx-auto container flex items-center justify-end gap-2 px-4 md:py-2 font-medium text-[10px] md:text-sm h-7 md:h-8">
             <a
               href="tel:8998798798"
@@ -84,9 +89,9 @@ export default function Header(props) {
               ></i>
             </a>
           </div>
-        </div>
+        </div> */}
 
-        <div className="fixed top-7 lg:top-8 left-0 w-full bg-white md:light_shadow z-20">
+        <div className="fixed top-0 lg:top-0 left-0 w-full bg-white md:light_shadow z-20">
           <div className="container max-w-7xl mx-auto flex items-center justify-between px-4 h-10 md:h-20">
             <Link href="/">
               <img
@@ -108,17 +113,19 @@ export default function Header(props) {
               </button>
 
               {/* Nav Items */}
+
               <div className="hidden lg:flex items-center justify-end gap-4 lg:gap-8">
+
                 {navs?.map(({ label, subMenu, href }, index) => (
                   <React.Fragment key={index}>
                     {!subMenu?.length && (
-                      <Link href={href}>
-                        <a className="font-normal text-sm text-black transition-all duration-300 relative after:absolute after:-bottom-1 after:left-0 after:content-[''] after:w-0 hover:after:w-3/4 after:h-0.5 after:opacity-0 hover:after:opacity-100 after:bg-capabl_primary after:rounded-full after:block after:transition-all after:duration-500">
+                <Link href={href} passHref>
+                <a className="font-normal text-sm text-black transition-all duration-300 relative after:absolute after:-bottom-1 after:left-0 after:content-[''] after:w-0 hover:after:w-3/4 after:h-0.5 after:opacity-0 hover:after:opacity-100 after:bg-capabl_primary after:rounded-full after:block after:transition-all after:duration-500">
                           {label}
                         </a>
                       </Link>
                     )}
-                  
+
                     {!!subMenu?.length && (
                       <div className="relative group">
                         <p className="font-normal text-sm text-black">
@@ -131,11 +138,13 @@ export default function Header(props) {
                           className="absolute bg-white flex-col items-start justify-start w-fit max-h-0 px-3 overflow-hidden group-hover:py-3 group-hover:max-h-screen transition-all duration-500"
                         >
                           {subMenu?.map((el, indx) => (
-                            <Link key={`${index}_${indx}`} href={el?.href}>
-                              <a
+                      <Link key={`${index}_${indx}`} href={el?.href} passHref>
+                      <a
                                 className={`block py-2.5 pr-16 whitespace-nowrap text-sm hover:font-medium hover:pl-4 groups transition-all duration-300 relative ${
                                   indx !== 0 && "border-t border-t-[#e3e3e3]"
-                                } before:content-[''] before:absolute before:bg-capabl_primary before:top-1/2 before:left-0 before:-translate-y-1/2 before:h-2 before:w-2 before:rounded-full before:scale-0 hover:before:inline-block hover:before:scale-100 before:transition-all before:duration-300`}
+                                }
+                                 before:content-[''] before:absolute before:bg-capabl_primary before:top-1/2 before:left-0 before:-translate-y-1/2 before:h-2 before:w-2 before:rounded-full before:scale-0 hover:before:inline-block hover:before:scale-100 before:transition-all before:duration-300`
+                                }
                               >
                                 {el?.label}
                               </a>
@@ -144,10 +153,26 @@ export default function Header(props) {
                         </div>
                       </div>
                     )}
-
-                    
                   </React.Fragment>
                 ))}
+            <a
+              href="tel:7795940242"
+              target="_blank"
+              rel="noreferrer"
+              className="pr-2 border-r border-r-[#cdcdcd] text-black"
+            >
+              <i
+                style={{ fontSize: "1.5em" }}
+                className="fa fa-phone "
+                aria-hidden="true"
+              ></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=917795940242&text=Hello%20ETG!%0AI%20am%20interested%20in%20your%20course%2Finternship%20on%20">
+              <i
+                style={{ fontSize: "1.5em", color: "green" }}
+                className="fa fa-whatsapp whatsapp-icon  text-success"
+              ></i>
+            </a>
 
                 {showTribe ? (
                   <button
@@ -172,9 +197,11 @@ export default function Header(props) {
           openCtaForm={openCtaForm}
         />
 
+
         {/* spacer */}
         <div className="w-full h-10 lg:h-20" />
         <div className="w-full h-7 md:h-8" />
+        
       </header>
     </>
   );

@@ -40,12 +40,12 @@ export default function HeadlinesSlider() {
                 <div
                   className={` overflow-hidden rounded-xl transition-all duration-300 relative mb-12    ${
                     centerSlide === index
-                      ? "h-[560px] lg:h-auto xl:h-auto w-[260%] sm:w-[220%] lg:w-[1000px] xl:w-[1000px] opacity-100 shadow-3xl"
+                      ? "h-[560px] lg:h-auto xl:h-[360px] w-[260%] sm:w-[220%] lg:w-[1000px] xl:w-[1000px] opacity-100 shadow-3xl"
                       : "h-[550px] lg:h-[350px] opacity-100 text-opacity-0"
                   } `}
                 >
                   <img
-                    className="relative w-full h-full object-cover group-hover:scale-100  transform transition-all duration-500"
+                    className="relative w-full h-full object-cover object-center group-hover:scale-100  transform transition-all duration-500"
                     src={item?.image}
                     alt={item?.name}
                   />
