@@ -576,9 +576,9 @@ export default function Courses() {
               </div> */}
 
             <p className="text-[#636363] text-sm text-center md:text-left">The best program now comes with pay after placement <br/> and 100% job guarantee!</p>
-            <div className="img mt-0" style={{ position: 'relative', width: '20%', left: '65%' }}>
+            {/*<div className="img mt-0" style={{ position: 'relative', width: '20%', left: '65%' }}>
   <img src="/images/raw_images/Group 3.png" style={{ position: 'absolute', top: -90 }} />
-</div>
+            </div>*/}
 
             <div className="flex items-center justify-center md:justify-start gap-2 mt-6">
               <button
@@ -591,7 +591,7 @@ export default function Courses() {
               >
                 Talk to Counselor
               </button>
-              <Link href="/join-now" passHref>
+              <Link href="https://pages.razorpay.com/join-now" passHref>
                 <a>
               <button
                 style={{ borderColor: theme.primary, color: theme.primary }}

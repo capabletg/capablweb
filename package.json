@@ -21,6 +21,9 @@
     "react-lottie-player": "^1.4.3",
     "react-otp-input": "^2.4.0",
     "react-slick": "^0.29.0",
+    "react-locomotive-scroll": "0.2.2",
+    "react-vertical-timeline-component": "3.6.0",
+    "react-nice-select": "1.0.4",
     "slick-carousel": "^1.8.1",
     "tailwind-scrollbar-hide": "^1.1.7",
     "zustand": "^4.3.1"

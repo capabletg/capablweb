@@ -589,13 +589,13 @@ ORGANIZATION FOR STANDARDIZATION,
                   <img src="/images/media/media4.png" alt="Blog" style={{width:'100%'}} />
                 </div>
                 <div className="blog-content">
-                  <div className="content">
+                  {/*<div className="content">
                   <Link href="/media">
                       <a className="read-more">
                         Show more <i className="" />
                       </a>
                     </Link>
-                  </div>
+                  </div>*/}
                 </div>
               </div>
             </div>

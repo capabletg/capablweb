@@ -3,10 +3,12 @@ import gsap from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
 
-const ScrollTriggerProxy = () => {
+export const sidebarOnclick = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { scroll } = useLocomotiveScroll();
   gsap.registerPlugin(ScrollTrigger);
-
+  
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (scroll) {
       const element = scroll?.el;
@@ -39,5 +41,3 @@ const ScrollTriggerProxy = () => {
 
   return null;
 };
-
-export default ScrollTriggerProxy;

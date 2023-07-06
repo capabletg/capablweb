@@ -490,7 +490,7 @@ export default function Courses() {
               >
                 Talk to Counselor
               </button>
-              <Link href="/join-now" passHref>
+              <Link href="https://pages.razorpay.com/join-now" passHref>
                 <a>
               <button
                 style={{ borderColor: theme.primary, color: theme.primary }}
