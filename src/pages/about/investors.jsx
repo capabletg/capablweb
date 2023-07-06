@@ -56,7 +56,7 @@ const Team = () => {
       {
         name: 'Ramaravo RVV',
         designation: "Founder & Chairman R & R Associates",
-        image: '/images/teams/Ramarao1.png',
+        image: '/images/teams/ramarao1.png',
       },
       {
         name: 'Gurava Murari',
