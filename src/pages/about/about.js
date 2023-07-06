@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from "next/link";
-import Slider from "react-slick";
-import Counter from "../../components/Counter";
+//import Slider from "react-slick";
+//import Counter from "../../components/Counter";
 import Layout from "../../layout/Layout";
 import Investors from "./investors";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
@@ -52,7 +52,7 @@ const About = () => {
             </div>
             <div className="col-lg-1 col-xs-1 col-sm-2">
         <div className="counter-wrap style-two wow fadeInRight delay-0-4s">
-<div className="success-item">
+{/* <div className="success-item">
   <span
     className="count-text plus"
     data-speed={1000}
@@ -95,7 +95,7 @@ const About = () => {
     <Counter end={83} />
   </span>
   <span>Experts</span>
-</div>
+</div> */}
         </div>
       </div>
           </div>
