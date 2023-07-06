@@ -3049,6 +3049,11 @@ export const WorldClassExposureAndNetworkingSvg = ({ theme = { primary: "" } }) 
         <path opacity="0.6" d="M738.459 340.055L748.903 350.162L728.461 375.304L718.293 364.614L738.459 340.055Z" fill="white" />
     </svg>
 );
+export const ProjectsSvg = () => (
+    <div className="image w-80 mt-20">
+    <img src="/images/svgs/1-01.svg"/>
+    </div>
+)
 export const CompetitionsProjectsSvg = ({ theme = { primary: "" } }) => (
     <svg className="w-full object-contain" viewBox="0 0 1280 853" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path

@@ -31,7 +31,7 @@ const data = [
     background: "#a442d7",
     title: "Data Science",
     short_desc:
-      "Don't know coding or scared of how to start - the perfect program for you!",
+      "From statistics to advanced algorithm, cover the entire data science domain.",
     stat: {
       rating: "4.9",
       projects: "50+",
@@ -43,30 +43,30 @@ const data = [
       `Git, Numpy, Pandas, Tableau, Scikit, Tensorflow, OpenCV`,
     ],
   },
-  {
-    image: "/images/home/mechatronics.jpg",
-    target: "/courses/mechatronics",
-    id: "mechatronics",
-    title: "Mechatronics",
-    background: "#fec749",
-    short_desc:
-      "Be a master of Robotics, Mechatronics, IoT, etc. - start from scratch & become a pro!",
-    stat: {
-      rating: "4.7",
-      projects: "45+",
-      companies: "300+",
-    },
-    points: [
-      `Embedded Systems, Robot Operating System, Industrial Automation, Robotics, Internet of Things & IIoT, AI/ML in Mechatronix`,
-      `Get a firm grip on digital control systems, Real-time OS's, Robotics, IoT device design and automation techniques.`,
-      `PLC, Scada, ROS, STM Cube MX, factory automation, robodk, polyscope etc.`,
-    ],
-  },
+  // {
+  //   image: "/images/home/mechatronics.jpg",
+  //   target: "/courses/mechatronics",
+  //   id: "mechatronics",
+  //   title: "Mechatronics",
+  //   background: "#fec749",
+  //   short_desc:
+  //     "Be a master of Robotics, Mechatronics, IoT, etc. - start from scratch & become a pro!",
+  //   stat: {
+  //     rating: "4.7",
+  //     projects: "45+",
+  //     companies: "300+",
+  //   },
+  //   points: [
+  //     `Embedded Systems, Robot Operating System, Industrial Automation, Robotics, Internet of Things & IIoT, AI/ML in Mechatronix`,
+  //     `Get a firm grip on digital control systems, Real-time OS's, Robotics, IoT device design and automation techniques.`,
+  //     `PLC, Scada, ROS, STM Cube MX, factory automation, robodk, polyscope etc.`,
+  //   ],
+  // },
   {
     image: "/images/home/design_cae.jpg",
     target: "/courses/design",
     id: "design-and-engineering",
-    title: "Design Engineering",
+    title: "Design & CAE ",
     background: "#fd6768",
     short_desc:
       "A ferrari, water bottle or may be a rocket - be the engineer who can design it all!",
@@ -177,7 +177,7 @@ export default function IndustrialPrograms() {
           <hr className="border-t-[0.05rem] border-t-[#d2d2d2] mb-3 md:mb-6" />
         </div>
 
-        <div className="w-full mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+        <div className="w-full mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
           {data.map((item, index) => (
             <Card key={index} details={item} />
           ))}

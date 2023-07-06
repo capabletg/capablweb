@@ -81,7 +81,7 @@ export default function RegsiterForm(props) {
           : details.department;
 
       delete details.departmentDetails;
-      details = { ...details, ...{ source, reqType, otp } };
+    const  details = { ...details, ...{ source, reqType, otp } };
       const result = await axios.post(apiEndPoints.ENQUIRIES_ADD, details);
       setOtpRequestSend(false);
       setOtpRequestLoading(false);
@@ -120,7 +120,7 @@ export default function RegsiterForm(props) {
           : details.department;
 
       delete details.departmentDetails;
-      details = { ...details, ...{ source, reqType, otp } };
+     const details = { ...details, ...{ source, reqType, otp } };
       const result = await axios.post(apiEndPoints.ENQUIRIES_ADD, details);
       setOtpRequestSend(false);
       setOtpRequestLoading(false);
