@@ -337,7 +337,7 @@ const About = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="feature-three-item wow fadeInUp delay-0-8s">
                 <div className="icon">
-                  <img src="/images/features/Play to win.png" alt="Icon" />
+                  <img src="/images/features/PLay to win.png" alt="Icon" />
                 </div>
                 <h4 className='text2'>Play to<br/>win</h4>
                 <p>
