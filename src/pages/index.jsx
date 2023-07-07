@@ -178,7 +178,7 @@ export default function Home() {
               </button>
 
               <Link href="/#programs" legacyBehavior>
-                <a className="text-[#ff696d] font-medium bg-transparent border border-[#ff696d] rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation">
+                <a className="text-[#ff696d] font-medium bg-transparent border border-[#ff696d] rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation" style={{borderColor: '#ff696d'}}>
                   Explore Programs
                 </a>
               </Link>
