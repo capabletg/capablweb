@@ -1,4 +1,4 @@
-// import Head from 'next/head';
+import Head from 'next/head';
 import Link from "next/link";
 //import Slider from "react-slick";
 //import Counter from "../../components/Counter";
@@ -12,15 +12,15 @@ const About = () => {
   return (
     <Layout>
 
-      // <Head>
+      <Head>
 
-      //   <link
-      //     rel="stylesheet"
-      //     href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      //     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      //     crossOrigin="anonymous"
-      //   />
-      // </Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossOrigin="anonymous"
+        />
+      </Head>
 
 
       <div className="team1">
