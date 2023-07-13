@@ -577,7 +577,6 @@ Register Now
 
 <section className="hero-section-three bg-white relative rel justify-center z-1 pt-10 rpt-150">
   <div className="container mb-10">
-              <Datascience/>
               </div>
               </section>
 <Footer/>
