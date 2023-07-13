@@ -34,7 +34,7 @@ const navs = [
     ],
   },
   {
-    label: "Capabl-Adda",
+    label: "CapablConnect",
     key: "capabl",
     href: "",
     subMenu: [
