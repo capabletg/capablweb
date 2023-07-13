@@ -246,7 +246,7 @@ const bootcamp16 = () => {
               <div className="about-three-content wow fadeInLeft delay-0-2s">
               <div className="member-description">
         <span className="sub-title-three ml-4 mt-20">
-          Meet {mentorName}{' '}
+          About {mentorName}{' '}
           <Link href={getLinkedInId(mentorName)}>
             <a className="team fs-10 ml-0 blue">(LinkedIn)</a>
           </Link>
@@ -491,40 +491,31 @@ const bootcamp16 = () => {
   <div className="container">
     <div className="row">
     <div className="col-lg-6 mb-4">
-  <div className="card ml-4" style={{ width: '80%', height: '100%' }}>
-  <img src="/images/categories/Data Science.png" alt="" className="card-img-top"/>
-      <div className="card-body" >
-      <h4 >
-                  <Link href="bootcamp">
-                  Unlocking the Power of Containers : Docker                  </Link>
-                </h4>
-                <ul className="coach-footer">
-                  <li>
-                  
-                    <span>
-                    STARTS Time:
-July 18, 2023 5:30 PM  <br/>
-ENDS Time:
-June 10, 2023 6:30 PM
-
-                    </span>
-                  </li>
-                </ul>
-                <Link href="bootcamp">
-
-                <a href="" 
-                    style={{
-                      boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)",
-                    }}
-                    className="relative z-10 font-medium text-sm text-[#272727] rounded-lg py-2 px-6 bg-capabl_primary hover_animation"
-                  >
-Register Now
-
-</a>
-</Link>
-
-      </div>
-      </div>
+    <div className="card mx-4" style={{ width: '60%', height: '110%' }}>
+  <img src="/images/categories/Data Science.png" alt="" className="card-img-top" />
+  <div className="card-body">
+    <h4 style={{fontSize: '20px'}}>
+      <Link href="bootcamp">
+        Unlocking the Power of Containers: Docker
+      </Link>
+    </h4>
+    <span className="mt-5" style={{ top: '10%', marginBottom: '10px' }}>
+      Time: July 18, 2023 5:30 PM<br />
+    </span>
+    <Link href="bootcamp">
+      <a
+        href=""
+        style={{
+          boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)",
+          marginTop: '6%'
+        }}
+        className="relative mt-3 z-1 font-medium text-sm text-[#272727] rounded-lg py-2 px-6 bg-capabl_primary hover_animation"
+      >
+        Register Now
+      </a>
+    </Link>
+  </div>
+</div>
     </div>
   </div>
 </div>

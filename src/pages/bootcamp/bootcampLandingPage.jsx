@@ -182,8 +182,8 @@ const LandingPage = () => {
                     <ul className="coach-footer">
                       <li>
                         <span>
-                          STARTS Time: {bootcamp.startTime} <br />
-                          ENDS Time: {bootcamp.endTime}
+                          Start Time: {bootcamp.startTime} <br />
+                          End Time: {bootcamp.endTime}
                         </span>
                       </li>
                     </ul>

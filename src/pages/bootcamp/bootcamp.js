@@ -291,7 +291,7 @@ const Bootcamp = () => {
               <div className="about-three-content wow fadeInLeft delay-0-2s">
               <div className="member-description">
         <span className="sub-title-three ml-4 mt-20">
-          Meet {mentorName}{' '}
+          About {mentorName}{' '}
           <Link href={getLinkedInId(mentorName)}>
             <a className="team fs-10 ml-0 blue">(LinkedIn)</a>
           </Link>

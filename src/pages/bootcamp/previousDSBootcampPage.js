@@ -121,12 +121,9 @@ const previousDSBootcampPage = () => {
 
             <Head>
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossOrigin="anonymous"
-/>
+            <link rel="stylesheet" href="/images/css/style.css" />
+
+            <link rel="stylesheet" href="/images/css/bootstrap-4.5.3.min.css" />
 </Head>
 
       <Header/>
@@ -247,7 +244,7 @@ const previousDSBootcampPage = () => {
               <div className="about-three-content wow fadeInLeft delay-0-2s">
               <div className="member-description">
         <span className="sub-title-three ml-4 mt-20">
-          Meet {mentorName}{' '}
+          About {mentorName}{' '}
           <Link href={getLinkedInId(mentorName)}>
             <a className="team fs-10 ml-0 blue">(LinkedIn)</a>
           </Link>
@@ -492,42 +489,31 @@ const previousDSBootcampPage = () => {
   <div className="container">
     <div className="row">
     <div className="col-lg-6 mb-4">
-  <div className="card ml-4" style={{ width: '80%', height: '100%' }}>
-      <img src="/images/categories/Design & CAE.png" alt="" className="card-img-top"/>
-      <div className="card-body" >
-      <h4 >
-                  <Link href="full-stackBootcampPage">
-                  Multi-threading & Concurrency using Java
-                  </Link>
-                </h4>
-                <ul className="coach-footer">
-                  <li>
-                  
-                    <span>
-                    STARTS Time:
-June 10, 2023 5:00 PM (IST)  <br/>
-ENDS Time:
-June 10, 2023 8:00 PM (IST)
-
-                    </span>
-                  </li>
-                </ul>
-                <Link href="full-stackBootcampPage">
-
-                <a href="" 
-                    style={{
-                      boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)",
-                    }}
-                    className="relative z-10 font-medium text-sm text-[#272727] rounded-lg py-2 px-6 bg-capabl_primary hover_animation"
-                  >
-Register Now
-
-</a>
-</Link>
-
-
-      </div>
-      </div>
+    <div className="card mx-4" style={{ width: '60%', height: '110%' }}>
+  <img src="/images/categories/Data Science.png" alt="" className="card-img-top" />
+  <div className="card-body">
+    <h4 style={{fontSize: '20px'}}>
+      <Link href="bootcamp">
+        Unlocking the Power of Containers: Docker
+      </Link>
+    </h4>
+    <span className="mt-5" style={{ top: '10%', marginBottom: '10px' }}>
+      Time: July 18, 2023 5:30 PM<br />
+    </span>
+    <Link href="bootcamp">
+      <a
+        href=""
+        style={{
+          boxShadow: "0px 9px 15px rgba(255, 190, 49, 0.6)",
+          marginTop: '6%'
+        }}
+        className="relative mt-3 z-1 font-medium text-sm text-[#272727] rounded-lg py-2 px-6 bg-capabl_primary hover_animation"
+      >
+        Register Now
+      </a>
+    </Link>
+  </div>
+</div>
     </div>
   {/* <div className="col-lg-6 mb-4">
   <div className="card ml-4" style={{ width: '80%', height: '100%' }}>
@@ -577,7 +563,6 @@ Register Now
 
 <section className="hero-section-three bg-white relative rel justify-center z-1 pt-10 rpt-150">
   <div className="container mb-10">
-              <Datascience/>
               </div>
               </section>
 <Footer/>
