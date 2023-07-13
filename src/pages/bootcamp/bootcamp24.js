@@ -4,7 +4,7 @@ import Head from "next/head";
 import Layout from "../../layout/Layout";
 import Header from '../../components/header_intrim'
 import bootcampData from './bootcampsData.json'
-import Footer from '../../components/footer_intrim'
+import Footer from '../../components/Footer_intrim'
 
 
 const bootcamp24 = () => {
