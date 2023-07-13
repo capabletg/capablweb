@@ -2,15 +2,18 @@ import Head from 'next/head';
 import Link from "next/link";
 //import Slider from "react-slick";
 //import Counter from "../../components/Counter";
-import Layout from "../../layout/Layout";
-import Investors from "./investors";
+import Layout from "../layout/Layout";
+import Investors from "./about/investors";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import Header from "../components/header_intrim";
+import Footer from "../components/Footer_intrim";
 
 const About = () => {
 
   return (
     <Layout>
+    <Header/>
 
       <Head>
       <link rel="stylesheet" href="/images/css/bootstrap-4.5.3.min.css" />
@@ -457,7 +460,7 @@ AND ATAL
             </div>
             <div className="col-lg-5 ml-20">
               <div className="about-page-middle1 mb-20 wow fadeInRight delay-0-2s">
-                <img src="/images/media/achievement1.png" alt="About" />
+                <img src="/images/media/achievement1.png" alt="About" style={{width: '50%'}}/>
               </div>
             </div>
 
@@ -465,7 +468,7 @@ AND ATAL
           <div className="row align-items-center large-gap">
           <div className="col-lg-5 ml-20">
               <div className="about-page-middle1 wow fadeInRight delay-0-2s">
-                <img src="/images/media/achievement2.png" alt="About" />
+                <img src="/images/media/achievement2.png" alt="About"  />
               </div>
             </div>
 
@@ -490,7 +493,7 @@ STUDENTS
           <div className="row align-items-center large-gap">
           <div className="col-lg-5 ml-20">
               <div className="about-page-middle1 mb-30  wow fadeInRight delay-0-2s">
-                <img src="/images/media/achievement4.png" alt="About" />
+                <img src="/images/media/achievement4.png" alt="About" style={{width: '50%'}}/>
               </div>
             </div>
 
@@ -604,6 +607,7 @@ ORGANIZATION FOR STANDARDIZATION,
           </div>
         </div>
       </section>
+      <Footer/>
 
      
     </Layout>

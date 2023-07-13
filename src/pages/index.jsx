@@ -173,12 +173,15 @@ export default function Home() {
                   openCtaForm();
                 }}
                 className="text-[#272727] font-medium border border-capabl_primary bg-capabl_primary rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation "
+                style={{border: '#ff696d'}}
               >
                 Talk to Counselor
               </button>
 
               <Link href="/#programs" legacyBehavior>
-                <a className="text-[#ff696d] font-medium bg-transparent border border-[#ff696d] rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation" style={{borderColor: '#ff696d'}}>
+                <a className="section-text3 text-[#ff696d] font-medium bg-transparent border border-[#ff696d] rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation" 
+                style={{borderColor: '#ff696d'}}
+                >
                   Explore Programs
                 </a>
               </Link>
@@ -616,7 +619,7 @@ export default function Home() {
                 </div>
                 <Link href="https://placements.capabl.in" legacyBehavior>
                   <a>
-                  <button className="z-[1]  rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0 hover_animation">
+                  <button className="z-[1] bg-black rounded-lg px-4 w-1/2 py-3 text-white text-center max-w-[200px] font-medium text-base whitespace-nowrap absolute md:relative bottom-0 left-1/2 md:left-auto md:bottom-auto transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 md:translate-y-0 hover_animation">
                     Know More
                   </button>
                   </a>

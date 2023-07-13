@@ -1,0 +1,101 @@
+[
+    {
+      "id": "./dataScienceBootcampPage",
+      "id1": "./previousDSBootcampPage",
+      "name": "Water Proofing Technology",
+      "startTime": "3 March, 2023  5:30 PM",
+      "endTime": "3 March, 2023 6:60 PM",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/EV.png"
+      
+    },
+    {
+      "id": "./dSBootcampPage",
+      "name": "What skills does it take to get an offer from Microsoft? ",
+      "startTime": "June 10, 2023 5:00 PM",
+      "endTime": "June 10, 2023 6:00 PM",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/Full Stack.png"
+    },
+    {
+      "id": "./fSBootcampPage",
+      "name": "Learn nuances of Javascript for Software Development",
+      "startTime": "2023-04-20T09:00:00",
+      "endTime": "2023-05-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/Data Science.png"
+    },
+    {
+      "id": "./javaBootcampPage",
+      "name": " High-Level design of Youtube Shorts, Insta Reels, Tiktok ",
+      "startTime": "2023-05-20T09:00:00",
+      "endTime": "2023-05-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/EV.png"
+    },
+    {
+      "id": 5,
+      "name": " Build an E-Commerce platform using React ",
+      "startTime": "2023-07-20T09:00:00",
+      "endTime": "2023-07-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/Design & CAE.png"
+    },
+    {
+      "id": 6,
+      "name": "Learn CSS flexboxes in 15 mins",
+      "startTime": "2023-07-20T09:00:00",
+      "endTime": "2023-07-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/Full Stack.png"
+    },
+    {
+      "id": 7,
+      "name": "Learn Monolithic and Micro-services Architecture",
+      "startTime": "2023-05-20T09:00:00",
+      "endTime": "2023-07-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/Data Science.png"
+    },
+    {
+      "id": 8,
+      "name": "What skills does it take to get an offer from Microsoft? ",
+      "startTime": "2023-05-20T09:00:00",
+      "endTime": "2023-07-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/EV.png"
+    },
+    {
+      "id": 9,
+      "name": "Learn nuances of Javascript for Software Development",
+      "startTime": "2023-05-20T09:00:00",
+      "endTime": "2023-07-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/Design & CAE.png"
+    },
+    {
+      "id": 10,
+      "id1": "./dataScienceBootcampPage",
+      "name": " High-Level design of Youtube Shorts, Insta Reels, Tiktok1 ",
+      "startTime": "June 10, 2023 5:00 PM ",
+      "endTime": "June 10, 2023 5:00 PM",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/Full Stack.png"
+    },
+    {
+      "id": 11,
+      "name": " Build an E-Commerce platform using React ",
+      "startTime": "2023-07-20T09:00:00",
+      "endTime": "2023-07-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/EV.png"
+    },
+    {
+      "id": 12,
+      "name": "Learn CSS flexboxes in 15 mins",
+      "startTime": "2023-07-20T09:00:00",
+      "endTime": "2023-07-25T18:00:00",
+      "description": "This is the description for Bootcamp 1.",
+      "image": "/images/categories/Data Science.png"
+    }
+  ]

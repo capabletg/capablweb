@@ -177,7 +177,7 @@ export default function IndustrialPrograms() {
           <hr className="border-t-[0.05rem] border-t-[#d2d2d2] mb-3 md:mb-6" />
         </div>
 
-        <div className="w-full mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+        <div className="w-full mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 px-4">
           {data.map((item, index) => (
             <Card key={index} details={item} />
           ))}
