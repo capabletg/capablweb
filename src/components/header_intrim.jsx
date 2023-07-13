@@ -34,7 +34,7 @@ const navs = [
     ],
   },
   {
-    label: "Connect@capabl",
+    label: "CapablConnect",
     key: "capabl",
     href: "",
     subMenu: [
