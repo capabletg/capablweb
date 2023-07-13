@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 import { HiOutlineChevronDown, HiOutlineMinus } from "react-icons/hi2";
 import useGeneralStore from "../store/generalStore";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 const navs = [
   {
     label: "About Us",
-    href: "/about/index1",
+    href: "/about",
     key: "about",
     subMenu: [],
   },
@@ -33,20 +34,22 @@ const navs = [
     ],
   },
   {
-    label: "Community",
-    key: "community",
+    label: "Capabl-Adda",
+    key: "capabl",
     href: "",
     subMenu: [
-      { label: "Electric Vehicle", href: "https://chat.whatsapp.com/CRJx8C9uJQVFaAM8QOd3Xw" },
-      { label: "Data Science", href: "https://chat.whatsapp.com/LZXDlY51utwDI4Vmw2hVk6" },
-      // { label: "Mechatronics", href: "/courses/mechatronics" },
-      { label: "Design & CAE", href:"https://chat.whatsapp.com/BTWrlvzJRMhHKuIsRWLsQY" },
-      {
-        label: "Full Stack Development",
-        href: "https://chat.whatsapp.com/HBxLiVBClnb9ZEEyhiWgFF",
-      },
+      { label: "Community", href: "https://discord.gg/BFZHCgJ2eR", target: "_blank", rel: "noopener noreferrer" },
+      { label: "Bootcamps", href: "/bootcamp/bootcampLandingPage" },
+      { label: "Summer Internship", href: "https://intern-training.capabl.in", target: "_blank", rel: "noopener noreferrer" },
+  
     ],
   },
+  // {
+  //   label: "Capabl Events",
+  //   href: "/bootcamp/bootcampLandingPage",
+  //   key: "about",
+  //   subMenu: [],
+  // },
 
 
   // {
@@ -161,17 +164,25 @@ export default function Header(props) {
               rel="noreferrer"
               className="pr-2 border-r border-r-[#cdcdcd] text-black"
             >
-              <i
+             <FaPhoneAlt size={18} className="mr-1" />
+
+              {/* <i
                 style={{ fontSize: "1.5em" }}
                 className="fa fa-phone "
                 aria-hidden="true"
-              ></i>
+              ></i> */}
             </a>
-            <a href="https://api.whatsapp.com/send?phone=917795940242&text=Hello%20ETG!%0AI%20am%20interested%20in%20your%20course%2Finternship%20on%20">
-              <i
+            <a href="https://api.whatsapp.com/send?phone=917795940242&text=Hello%20ETG!%0AI%20am%20interested%20in%20your%20course%2Finternship%20on%20"
+              target="_blank"
+              rel="noopener noreferrer"
+            
+            >
+                <FaWhatsapp style={{ fontSize: "1.5em", color: "green" }} size={28} />
+
+              {/* <i
                 style={{ fontSize: "1.5em", color: "green" }}
-                className="fa fa-whatsapp whatsapp-icon  text-success"
-              ></i>
+                className="fa fa-whatsapp whatsapp-icon w-7 h-7 md:h-7  text-success"
+              ></i> */}
             </a>
 
                 {showTribe ? (

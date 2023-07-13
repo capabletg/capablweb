@@ -177,7 +177,7 @@ export default function Footer() {
             {[
               {
                 icon: FaYoutube,
-                href: "https://www.youtube.com/@EliteTechnoGroupsSkills",
+                href: "https://www.youtube.com/@capabl",
                 name: "Youtube",
               },
               {
