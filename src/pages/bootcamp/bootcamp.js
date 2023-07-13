@@ -4,7 +4,7 @@ import Head from "next/head";
 import Layout from "../../layout/Layout";
 import {useState, useEffect } from 'react';
 import Header from '../../components/header_intrim';
-import Footer from '../../components/Footer_intrim'
+import Footer from '../../components/footer_intrim'
 import bootcampData from './bootcampsData.json';
 const Bootcamp = () => {
     const specificData = bootcampData.filter(item => item.Title === 'Unlocking the Power of Containers : Docker');

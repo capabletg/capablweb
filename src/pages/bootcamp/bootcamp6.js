@@ -2,10 +2,8 @@ import Link from "next/link";
 import React from "react";
 import Head from "next/head";
 import Layout from "../../layout/Layout";
-import  Datascience  from "../../components/courses/faqs_datascience";
 import Header from '../../components/header_intrim'
 import bootcampData from './sheet.json'
-import ReactPlayer from 'react-player'
 import Footer from '../../components/footer_intrim'
 
 
