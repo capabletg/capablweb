@@ -173,6 +173,7 @@ export default function Home() {
                   openCtaForm();
                 }}
                 className="text-[#272727] font-medium border border-capabl_primary bg-capabl_primary rounded-md px-3 md:px-4 py-2.5 md:py-3 text-xs md:text-base hover_animation "
+                style={{border: '#ff696d'}}
               >
                 Talk to Counselor
               </button>
