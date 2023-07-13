@@ -7,7 +7,7 @@ import bootcamps from './bootcampsData.json';
 import Head from "next/head";
 import Layout from "../../layout/Layout";
 import Header from '../../components/header_intrim'
-import Footer from '../../components/footer_intrim'
+import Footer from '../../components/Footer_intrim'
 
 const LandingPage = () => {
   const isMobileView = useMediaQuery({ query: '(max-width: 751px)' });

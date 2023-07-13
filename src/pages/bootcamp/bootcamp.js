@@ -28,11 +28,11 @@ const Bootcamp = () => {
 
   const getLinkedInId = (name) => {
     if (name === 'Shubham') {
-      return 'https://www.linkedin.com/in/ramarao-rvv-remella-a8111629/';
+      return 'https://www.linkedin.com/in/shubhamlal';
     } else if (name === 'Vaibhav') {
-      return 'https://www.linkedin.com/in/ramarao-rvv-remella-a8111629/';
-    } else if (name === 'Rishi') {
-      return 'https://www.linkedin.com/in/ramarao-rvv-remella-a8111629/';
+      return 'https://www.linkedin.com/in/vaibhav-gudulkar-5b6597b9';
+    } else if (name === 'Rishi Nigam') {
+      return 'https://www.linkedin.com/in/rishinigam1304/';
     } else if (name === 'Shashank') {
       return 'https://www.linkedin.com/in/shashank-p-patil-aa549b231';
     } else if (name === 'Arbaz') {
@@ -45,7 +45,7 @@ const Bootcamp = () => {
     } else if (name === 'Renjith') {
       return 'https://www.linkedin.com/in/ramarao-rvv-remella-a8111629/';
          } else if (name === 'Umang') {
-          return 'https://www.linkedin.com/in/ramarao-rvv-remella-a8111629/';
+          return 'https://www.linkedin.com/in/umang-surana-75666828/';
         }
       else {
           return '';
@@ -58,7 +58,7 @@ const Bootcamp = () => {
         } else if (name === 'Vaibhav') {
           return 'Research Associate at CAPABL';
         } else if (name === 'Rishi') {
-          return 'Microsoft';
+          return 'Data-Scientist Infosys';
         } else if (name === 'Shashank') {
           return 'Design Mentor at CAPABL';
         } else if (name === 'Arbaz') {
